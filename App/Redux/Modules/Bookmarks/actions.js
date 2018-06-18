@@ -1,4 +1,4 @@
-// Define actions name
+// Define actions name.
 export const ADD_BOOKMARK = 'bookmarks/add';
 export const LOAD_BOOKMARKS = 'bookmarks/load';
 export const REMOVE_BOOKMARK = 'bookmarks/remove';
