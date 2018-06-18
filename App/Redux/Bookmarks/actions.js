@@ -32,11 +32,11 @@ export function removeBookmark(bookmark) {
     type: REMOVE_BOOKMARK,
     payload: bookmark
   });
-}
+};
 
 export function updateBookmark(bookmark) {
   return ({
     type: UPDATE_BOOKMARK,
     payload: bookmark
   });
-}
+};

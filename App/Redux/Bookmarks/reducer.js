@@ -28,8 +28,8 @@ export default function reducer(state = initialState, action) {
       return ({
         ...state,
         bookmarks: state.bookmarks.filter(
-          ookmark => bookmark.id !== action.payload.id
-        );
+          bookmark => bookmark.id !== action.payload.id
+        )
       });
     case UPDATE_BOOKMARK:
       return ({
@@ -41,7 +41,7 @@ export default function reducer(state = initialState, action) {
             });
           }
           return (bookmark);
-        });
+        })
       });
     default:
       return (state);
