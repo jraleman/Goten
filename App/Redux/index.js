@@ -1,7 +1,10 @@
 import {
+  applyMiddleware,
   combineReducers,
   createStore,
 } from 'redux';
+
+import fetchMiddleware from './Middleware/fetchMiddleware';
 import categories from './Modules/Categories/reducer';
 import bookmarks from './Modules/Bookmarks/reducer';
 import {
@@ -22,7 +25,7 @@ const reducers = combineReducers({
 // Object that holds the application's state tree.
 // There should only be a single store in a Redux app,
 // as the composition happens on the reducer level.
-const store = createStore(reducers);
+const store = createStore(reducers, applyMiddleware(fetchMiddleware));
 
 // Subscribe to the store. By doing this, we will listen to any change in the
 // state
