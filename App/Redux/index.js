@@ -2,6 +2,7 @@ import {
   combineReducers,
   createStore,
 } from 'redux';
+import categories from './Modules/Categories/reducer';
 import bookmarks from './Modules/Bookmarks/reducer';
 import {
   loadBookmarks,
@@ -13,7 +14,10 @@ import {
 // Merge all the reducers into a single global object that will be saved in
 // the store. This function will call each reducer with the key in the state
 // that corresponds to that reduce.
-const reducers = combineReducers({ bookmarks });
+const reducers = combineReducers({
+  bookmarks,
+  categories
+});
 
 // Object that holds the application's state tree.
 // There should only be a single store in a Redux app,
