@@ -2,13 +2,13 @@ import {
   combineReducers,
   createStore,
 } from 'redux';
-import bookmarks from './Bookmarks/reducer';
+import bookmarks from './Modules/Bookmarks/reducer';
 import {
   loadBookmarks,
   addBookmark,
   removeBookmark,
   updateBookmark
-} from './Bookmarks/actions';
+} from './Modules/Bookmarks/actions';
 
 const reducers = combineReducers({ bookmarks });
 const store = createStore(reducers);
