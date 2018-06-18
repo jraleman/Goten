@@ -13,6 +13,7 @@ import {
   removeBookmark,
   updateBookmark
 } from './Modules/Bookmarks/actions';
+import { loadCategories } from './Modules/Categories/actions';
 
 // Merge all the reducers into a single global object that will be saved in
 // the store. This function will call each reducer with the key in the state
@@ -44,6 +45,7 @@ store.dispatch(updateBookmark({
   url: 'http://other-edit.com'
 }));
 store.dispatch(removeBookmark({ id: 1 }));
+store.dispatch(loadCategories());
 
 // Stop listening to changes in the state.
 unsubscribe();
