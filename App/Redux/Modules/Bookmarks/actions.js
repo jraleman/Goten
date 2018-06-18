@@ -1,8 +1,11 @@
+// Define actions name
 export const ADD_BOOKMARK = 'bookmarks/add';
 export const LOAD_BOOKMARKS = 'bookmarks/load';
 export const REMOVE_BOOKMARK = 'bookmarks/remove';
 export const UPDATE_BOOKMARK = 'bookmarks/update';
 
+// Create action creations...
+// Payloads of information that send data from your application to your store.
 export function loadBookmarks() {
   return ({
     type: LOAD_BOOKMARKS,
@@ -19,21 +22,18 @@ export function loadBookmarks() {
     ]
   });
 };
-
 export function addBookmark(bookmark) {
   return ({
     type: ADD_BOOKMARK,
     payload: bookmark
   });
 };
-
 export function removeBookmark(bookmark) {
   return ({
     type: REMOVE_BOOKMARK,
     payload: bookmark
   });
 };
-
 export function updateBookmark(bookmark) {
   return ({
     type: UPDATE_BOOKMARK,
