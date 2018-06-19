@@ -21,17 +21,28 @@ class CategoriesScreen extends React.Component {
     this.state = {
       DataSource: this.ds.cloneWithRows(this.props.categories)
     };
-    render () {
-      <Container style={ styles.container }>
-        <Content>
-          <Text style={ styles.toolbar }>{ "Categories" }</Text>
-          <ListView
-            dataSource={ this.state.dataSource }
-            renderRow={ (rowData) => <Text>{ rowData.name }</Text>}
-            enableEmptySections={ true }
-          />
-        </Content>
-      </Container>
+    this.props.dispatch(loadCategories());
+  }
+  // Update the dataSource whenever there are any changes in the
+  // categories array on the global state
+  componentWillReceiveProps (nextProps) {
+    if (this.props.categories !== nextProps.categories) {
+      this.setState({
+        dataSource: this.ds.cloneWithRows(nextProps.categories)
+      });
+    }
+  }
+  render () {
+    <Container style={ styles.container }>
+      <Content>
+        <Text style={ styles.toolbar }>{ "Categories" }</Text>
+        <ListView
+          dataSource={ this.state.dataSource }
+          renderRow={ (rowData) => <Text>{ rowData.name }</Text>}
+          enableEmptySections={ true }
+        />
+      </Content>
+    </Container>
     }
   }
 }
