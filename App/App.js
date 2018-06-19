@@ -1,15 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-
-import RootContainer from './Containers/RootContainer'
+import { Provider } from 'react-redux';
 import store from './Redux';
+import AppNavigator from './Navigation/AppNavigator';
 
-export default class App extends React.Component {
+
+class App extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <RootContainer />
-      </View>
+      <Provider store={ store }>
+        <AppNavigator />
+      </Provider>
     );
   }
 }
+
+export default App;

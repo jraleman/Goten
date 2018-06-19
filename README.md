@@ -9,6 +9,7 @@ login integration.
 
 - [x] Redux implementation
 - [x] Rename App `ScarletRocks` -> `ScarletDog`
+- [ ] Replace `AppNavigator` with `StackNavigator`
 
 ## Resources
 
