@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ListView } from 'react-native';
 import {
   Container,
   Content,
-  ListView,
   Text
 } from 'native-base';
 import { connect } from 'react-redux';
@@ -19,7 +19,7 @@ class CategoriesScreen extends React.Component {
       rowHasChanged: (r1, r2) => r1 !== r2
     });
     this.state = {
-      DataSource: this.ds.cloneWithRows(this.props.categories)
+      dataSource: this.ds.cloneWithRows(this.props.categories)
     };
     this.props.dispatch(loadCategories());
   }
@@ -33,17 +33,18 @@ class CategoriesScreen extends React.Component {
     }
   }
   render () {
-    <Container style={ styles.container }>
-      <Content>
-        <Text style={ styles.toolbar }>{ "Categories" }</Text>
-        <ListView
-          dataSource={ this.state.dataSource }
-          renderRow={ (rowData) => <Text>{ rowData.name }</Text>}
-          enableEmptySections={ true }
-        />
-      </Content>
-    </Container>
-    }
+    return (
+      <Container style={ styles.container }>
+        <Content>
+          <Text style={ styles.toolbar }>{ "Categories" }</Text>
+          <ListView
+            dataSource={ this.state.dataSource }
+            renderRow={ (rowData) => <Text>{ rowData.name }</Text>}
+            enableEmptySections={ true }
+          />
+        </Content>
+      </Container>
+    );
   }
 }
 
