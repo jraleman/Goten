@@ -3,6 +3,7 @@ import {
   Navigator,
   Platform
 } from 'react-native';
+import styles from './styles';
 
 class AppNavigator extends React.Component {
   renderScene (route, navigator) {
@@ -26,3 +27,5 @@ class AppNavigator extends React.Component {
     />
   }
 }
+
+export default AppNavigator;
