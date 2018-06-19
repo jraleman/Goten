@@ -1,4 +1,4 @@
-package com.scarletrocks;
+package com.scarletdog;
 
 import android.app.Application;
 
