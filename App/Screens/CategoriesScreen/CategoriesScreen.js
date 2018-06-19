@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Platform } from 'react-native';
 import {
   Container,
   Content,
@@ -9,6 +8,7 @@ import {
 } from 'native-base';
 import { connect } from 'react-redux';
 import { loadCategories } from '../../Redux/Modules/Categories/actions';
+import styles from './styles';
 
 class CategoriesScreen extends React.Component {
   static propTypes = {
