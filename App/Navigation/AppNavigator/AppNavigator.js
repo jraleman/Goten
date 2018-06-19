@@ -1,30 +1,31 @@
 import React from 'react';
-import {
-  Navigator,
-  Platform
-} from 'react-native';
+import { Platform } from 'react-native';
+import { Navigator } from 'react-native-deprecated-custom-components';
 import styles from './styles';
+import CategoriesScreen from '../../Screens/CategoriesScreen';
 
 class AppNavigator extends React.Component {
   renderScene (route, navigator) {
     return (
-      <Categories navigator={ navigator } />
+      <CategoriesScreen navigator={ navigator } />
     );
   }
   render () {
-    <Navigator
-      styles={ styles.container }
-      configureScene={ (route) => {
-        if (Platform.OS === 'android') {
-          return (Navigator.SceneConfigs.FloatFromBottomAndroid);
-        }
-        else {
-          return (Navigator.SceneConfigs.FloatFromBottom);
-        }
-      }}
-      initialRoute={{}}
-      renderScene={ this.renderScene }
-    />
+    return (
+      <Navigator
+        styles={ styles.container }
+        configureScene={ (route) => {
+          if (Platform.OS === 'android') {
+            return (Navigator.SceneConfigs.FloatFromBottomAndroid);
+          }
+          else {
+            return (Navigator.SceneConfigs.FloatFromBottom);
+          }
+        }}
+        initialRoute={{}}
+        renderScene={ this.renderScene }
+      />
+    );
   }
 }
 
