@@ -3,6 +3,11 @@ import {
   combineReducers,
   createStore,
 } from 'redux';
+import { AsyncStorage } from 'react-native';
+import {
+  persistStore,
+  autoRehydrate
+} from 'redux-persist';
 
 import fetchMiddleware from './Middleware/fetchMiddleware';
 import categories from './Modules/Categories/reducer';
@@ -26,7 +31,11 @@ const reducers = combineReducers({
 // Object that holds the application's state tree.
 // There should only be a single store in a Redux app,
 // as the composition happens on the reducer level.
-const store = createStore(reducers, applyMiddleware(fetchMiddleware));
+// autoRehydrate function load the store with the saved data on the device.
+const createAppStore = applyMiddleware(fetchMiddleware)(createStore);
+const store = autoRehydrate()(createAppStore)(reducers);
+persistStore(store, { storage: AsyncStorage });
+// const store = createStore(reducers, applyMiddleware(fetchMiddleware));
 
 // Subscribe to the store. By doing this, we will listen to any change in the
 // state
