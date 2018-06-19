@@ -36,4 +36,11 @@ class CategoriesScreen extends React.Component {
   }
 }
 
-export default CategoriesScreen;
+// Map and connect the data from state to the props
+const mapStateToProps = (state) => {
+  return ({
+    categories: state.categories.all
+  });
+}
+
+export default connect(mapStateToProps)(CategoriesScreen);
