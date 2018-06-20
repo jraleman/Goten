@@ -11,7 +11,7 @@ login integration.
 - [x] Rename App `ScarletRocks` -> `ScarletDog`
 - [x] Replace `Navigator` -> `StackNavigator`
 - [x] Redux Persist integration
-- [ ] Show network connectivity status
+- [x] Show network connectivity status
 - [ ] Add an Onboarding screen
 - [ ] Integrate a login system
 
