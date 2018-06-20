@@ -6,11 +6,22 @@ import {
 } from 'react-native';
 import styles from './styles';
 
+// Source: https://medium.com/dailyjs/offline-notice-in-react-native-28a8d01e8cd0
 class NetworkIndicator extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isConnected: true
+    };
     return ;
+  }
+  handleConnectivityChange = networkStatus => {
+    if (networkStatus == true) {
+      this.setState({ isConnected: true });
+    }
+    else {
+      this.setState({ isConnected: false });
+    }
   }
   render () {
     return (
