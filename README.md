@@ -9,8 +9,12 @@ login integration.
 
 - [x] Redux implementation
 - [x] Rename App `ScarletRocks` -> `ScarletDog`
-- [x] Replace `Navigator` with `StackNavigator`
+- [x] Replace `Navigator` -> `StackNavigator`
+- [x] Redux Persist integration
+- [ ] Show network connectivity status
+- [ ] Add an Onboarding screen
+- [ ] Integrate a login system
 
 ## Resources
 
-[React Native Cookbook - by Jonathan Lebensold](http://shop.oreilly.com/product/0636920090144.do)
+[React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
