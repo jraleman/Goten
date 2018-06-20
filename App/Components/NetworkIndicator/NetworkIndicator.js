@@ -22,6 +22,21 @@ class NetworkIndicator extends React.Component {
     else {
       this.setState({ isConnected: false });
     }
+    return ;
+  }
+  componentDidMount () {
+    NetInfo.isConnected.addEventListener(
+      'connectionChange',
+      this.handleConnectivityChange
+    );
+    return ;
+  }
+  componentWillUnmount() {
+    NetInfo.isConnected.removeEventListener(
+      'connectionChange',
+      this.handleConnectivityChange
+    );
+    return ;
   }
   render () {
     return (
