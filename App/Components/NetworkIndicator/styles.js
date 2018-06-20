@@ -7,9 +7,9 @@ export default StyleSheet.create({
     flexDirection: 'row',
     height: 30,
     justifyContent: 'center',
-    position: 'absolute',
-    top: 30,
-    width: '100%'
+    // position: 'absolute',
+    // top: 30,
+    // width: '100%'
   },
   text: {
     color: '#fefefe'
