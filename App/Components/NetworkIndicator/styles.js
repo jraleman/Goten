@@ -1,15 +1,20 @@
-import { StyleSheet } from 'react-native';
+import {
+  Platform,
+  StatusBar,
+  StyleSheet
+} from 'react-native';
+
+const statusBarHeight = (Platform.OS === 'ios') ? 20 : StatusBar.currentHeight;
 
 export default StyleSheet.create({
   container: {
     alignItems: 'center',
     backgroundColor: '#393939',
     flexDirection: 'row',
-    height: 30,
+    height: 42,
     justifyContent: 'center',
-    // position: 'absolute',
-    // top: 30,
-    // width: '100%'
+    marginTop: statusBarHeight,
+    width: '100%'
   },
   text: {
     color: '#fefefe'
