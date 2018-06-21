@@ -9,7 +9,7 @@ import CategoriesScreen from '../../Screens/CategoriesScreen';
 // 'float'  -> Stays at the top and animates as screens are changed.
 // 'screen' -> Each screen has a header attached to it,
 //             and the header fades in and out together with the screen.
-const headerMode = (Platform.OS === 'android' ? 'screen' : 'float');
+const mode = (Platform.OS === 'android' ? 'screen' : 'float');
 
 export default StackNavigator(
   {
@@ -19,6 +19,6 @@ export default StackNavigator(
   },
   {
     initialRoute: 'Login',
-    headerMode: 'none'
+    headerMode: mode
   }
 );
