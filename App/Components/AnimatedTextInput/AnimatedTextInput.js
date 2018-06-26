@@ -7,6 +7,7 @@ import styles from './styles';
 class AnimatedTextInput extends React.Component {
   constructor (props) {
     super(props);
+    this.isEmail = this.props.isEmail;
     this.isEnabled = this.props.isEnabled;
     this.isPassword = this.props.isPassword;
     this.state = {
@@ -28,6 +29,7 @@ class AnimatedTextInput extends React.Component {
           <TextInput
             autoCapitalize={ 'none' }
             autoCorrect={ false }
+            keyboardType={ this.isEmail ? 'email-address' : 'default' }
             maxLength={ 50 }
             onFocus={ () => this.handleFocus }
             onBlur={ () => this.handleBlur }
@@ -45,6 +47,7 @@ class AnimatedTextInput extends React.Component {
 
 AnimatedTextInput.propTypes = {
   isEnabled: PropTypes.bool,
+  isEmail: PropTypes.bool,
   isPassword: PropTypes.bool
 }
 
