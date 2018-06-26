@@ -1,4 +1,5 @@
 import React from  'react';
+import PropTypes from 'prop-types';
 import { TextInput } from 'react-native';
 import { View } from 'react-native-animatable';
 import styles from './styles';
@@ -16,6 +17,11 @@ class AnimatedTextInput extends React.Component {
       </View>
     );
   }
+}
+
+AnimatedTextInput.propTypes = {
+  isEnabled: PropTypes.bool,
+  isPassword: PropTypes.bool
 }
 
 export default AnimatedTextInput;
