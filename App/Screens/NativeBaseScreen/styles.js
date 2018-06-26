@@ -7,10 +7,5 @@ export default StyleSheet.create({
   content: {
     marginTop: 12,
     marginLeft: 24
-  },
-
-  // Move these things to its own container
-  mb: {
-    marginBottom: 10
   }
 });
