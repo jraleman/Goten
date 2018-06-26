@@ -17,5 +17,6 @@ login integration.
 
 ## Resources
 
-[React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
-[Network Indicator](https://medium.com/dailyjs/offline-notice-in-react-native-28a8d01e8cd0)
+- [React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
+- [Network Indicator](https://medium.com/dailyjs/offline-notice-in-react-native-28a8d01e8cd0)
+- [Login Screen](https://github.com/mmazzarolo/react-native-login-animation-example)
