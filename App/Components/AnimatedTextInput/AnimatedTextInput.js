@@ -38,6 +38,7 @@ class AnimatedTextInput extends React.Component {
             secureTextEntry={ this.isPassword }
             selectionColor={'#f9f9f9'}
             underlineColorAndroid={ 'transparent' }
+            { ...this.props }
           />
         </View>
       </View>
