@@ -14,8 +14,12 @@ class AnimatedTextInput extends React.Component {
     };
     return ;
   }
-  focus = () => {
-    this.textInputRef.focus()
+  handleFocus () {
+    // this.textInputRef.focus()
+    return (this.setState({ isFocused: true }));
+  }
+  handleBlur () {
+    return (this.setState({ isFocused: false }));
   }
   render () {
     return (
@@ -25,10 +29,11 @@ class AnimatedTextInput extends React.Component {
             autoCapitalize={ 'none' }
             autoCorrect={ false }
             maxLength={ 50 }
-            //onFocus={ () => this.handleFocus }
-            //onBlur={ () => this.handleBlur }
+            onFocus={ () => this.handleFocus }
+            onBlur={ () => this.handleBlur }
             placeholdetTextColor={ '#c9c9c9' }
             ref={ (ref) => this.textInputRef = ref }
+            secureTextEntry={ this.isPassword }
             selectionColor={'#f9f9f9'}
             underlineColorAndroid={ 'transparent' }
           />
