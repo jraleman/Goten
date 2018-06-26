@@ -7,13 +7,32 @@ import styles from './styles';
 class AnimatedTextInput extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.isEnabled = this.props.isEnabled;
+    this.isPassword = this.props.isPassword;
+    this.state = {
+      isFocused: false
+    };
     return ;
+  }
+  focus = () => {
+    this.textInputRef.focus()
   }
   render () {
     return (
       <View style={ styles.container }>
-        <TextInput />
+        <View style={ styles.textInputWrapper }>
+          <TextInput
+            autoCapitalize={ 'none' }
+            autoCorrect={ false }
+            maxLength={ 50 }
+            //onFocus={ () => this.handleFocus }
+            //onBlur={ () => this.handleBlur }
+            placeholdetTextColor={ '#c9c9c9' }
+            ref={ (ref) => this.textInputRef = ref }
+            selectionColor={'#f9f9f9'}
+            underlineColorAndroid={ 'transparent' }
+          />
+        </View>
       </View>
     );
   }
