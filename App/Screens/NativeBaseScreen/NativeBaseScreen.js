@@ -13,6 +13,7 @@ import {
 } from 'native-base';
 import styles from './styles';
 
+import ScarletHeader from '../../Components/ScarletHeader';
 import { BadgesContainer } from '../../Containers/NativeBaseContainers';
 
 class NativeBaseScreen extends React.Component {
@@ -24,20 +25,11 @@ class NativeBaseScreen extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-
-        { /* Header -> Move to its own component */ }
-        <Header>
-          <Left>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
-            </Button>
-          </Left>
-          <Body>
-            <Title>{ "NativeBaseScreen" }</Title>
-          </Body>
-          <Right />
-        </Header>
-
+        <ScarletHeader
+          title={ "NativeBase" }
+          onPress={ () => this.props.navigation.goBack() }
+          icon={ "arrow-back" }
+        />
         <Content style={ styles.content }>
           <H1>{ "Components" }</H1>
           <BadgesContainer />
