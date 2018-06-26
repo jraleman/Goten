@@ -5,6 +5,8 @@ import {
 } from 'react-native-animatable';
 import styles from './styles';
 
+import AnimatedTextInput from '../../Components/AnimatedTextInput';
+
 class LoginScreen extends React.Component {
   constructor (props) {
     super(props);
@@ -19,6 +21,7 @@ class LoginScreen extends React.Component {
       <View style={ styles.container }>
         <View style={ styles.form }>
           <Text>{ "LoginScreen" }</Text>
+          <AnimatedTextInput />
         </View>
       </View>
     );
