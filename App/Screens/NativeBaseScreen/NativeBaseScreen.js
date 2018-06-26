@@ -56,10 +56,11 @@ class NativeBaseScreen extends React.Component {
     return (
       <Container style={ styles.container }>
 
+        { /* Header -> Move to its own component */ }
         <Header>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              {/*<Icon name="arrow-back" />*/}
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -67,6 +68,46 @@ class NativeBaseScreen extends React.Component {
           </Body>
           <Right />
         </Header>
+
+        <Content style={ styles.content }>
+          <H1>{ "Components" }</H1>
+
+          {/* Badge -> Move to its own container */}
+          <Content padder={ true }>
+            <H2>{ "Badges" }</H2>
+            <Badge style={styles.mb}>
+              <Text>2</Text>
+            </Badge>
+            <Badge primary style={styles.mb}>
+              <Text>2</Text>
+            </Badge>
+            <Badge success style={styles.mb}>
+              <Text>2</Text>
+            </Badge>
+            <Badge info style={styles.mb}>
+              <Text>2</Text>
+            </Badge>
+            <Badge warning style={styles.mb}>
+              <Text>2</Text>
+            </Badge>
+            <Badge danger style={styles.mb}>
+              <Text>2</Text>
+            </Badge>
+            <Badge primary style={styles.mb}>
+              <Icon
+                name="star"
+                style={{ fontSize: 15, color: "#fff", lineHeight: 20 }}
+              />
+            </Badge>
+            <Badge
+              style={{ backgroundColor: "black" }}
+              textStyle={{ color: "white" }}
+            >
+              <Text>1866</Text>
+            </Badge>
+          </Content>
+
+        </Content>
 
       </Container>
     );
