@@ -1,24 +1,26 @@
 import React from 'react';
 import {
-  Container,
-  Content,
-  Text
-} from 'native-base';
+  Text,
+  View
+} from 'react-native-animatable';
 import styles from './styles';
 
 class LoginScreen extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.state = {
+      email: null,
+      password: null
+    };
     return;
   }
   render () {
     return (
-      <Container style={ styles.container }>
-        <Content>
+      <View style={ styles.container }>
+        <View style={ styles.form }>
           <Text>{ "LoginScreen" }</Text>
-        </Content>
-      </Container>
+        </View>
+      </View>
     );
   }
 }
