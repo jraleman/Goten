@@ -71,7 +71,8 @@ class ButtonsContainer extends React.Component {
           dark={ true }
           style={ styles.mb15 }
         >
-          <Text>{ "Dark" }</Text>
+          <Icon active name="paw" />
+          <Text>{ "Custom" }</Text>
         </Button>
       </Content>
     );

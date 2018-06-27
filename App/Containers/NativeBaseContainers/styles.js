@@ -10,7 +10,7 @@ export default StyleSheet.create({
   badgeCustom: {
     backgroundColor: 'black',
     color: 'white'
-  }
+  },
   badgeIcon: {
     fontSize: 15,
     color: "#fff",
