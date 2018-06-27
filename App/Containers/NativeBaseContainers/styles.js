@@ -17,6 +17,11 @@ export default StyleSheet.create({
     lineHeight: 20
   },
   checkbox: {
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    borderWidth: 0
+  },
+  formButton: {
+    margin: 15,
+    marginTop: 50
   }
 });

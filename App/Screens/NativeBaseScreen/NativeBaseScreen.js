@@ -18,7 +18,8 @@ import {
   BadgesContainer,
   ButtonsContainer,
   CardsContainer,
-  CheckBoxContainer
+  CheckBoxContainer,
+  FormContainer
 } from '../../Containers/NativeBaseContainers';
 
 class NativeBaseScreen extends React.Component {
@@ -41,6 +42,7 @@ class NativeBaseScreen extends React.Component {
           <ButtonsContainer />
           <CardsContainer />
           <CheckBoxContainer />
+          <FormContainer />
         </Content>
       </Container>
     );
