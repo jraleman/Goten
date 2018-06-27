@@ -17,7 +17,8 @@ import ScarletHeader from '../../Components/ScarletHeader';
 import {
   BadgesContainer,
   ButtonsContainer,
-  CardsContainer
+  CardsContainer,
+  CheckBoxContainer
 } from '../../Containers/NativeBaseContainers';
 
 class NativeBaseScreen extends React.Component {
@@ -39,6 +40,7 @@ class NativeBaseScreen extends React.Component {
           <BadgesContainer />
           <ButtonsContainer />
           <CardsContainer />
+          <CheckBoxContainer />
         </Content>
       </Container>
     );

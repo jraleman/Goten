@@ -15,5 +15,8 @@ export default StyleSheet.create({
     fontSize: 15,
     color: "#fff",
     lineHeight: 20
+  },
+  checkbox: {
+    backgroundColor: 'transparent'
   }
 });
