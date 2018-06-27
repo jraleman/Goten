@@ -25,6 +25,9 @@ export default StyleSheet.create({
     marginTop: 50
   },
   listItem: {
-    backgroundColor: 'transparent',
+    backgroundColor: 'transparent'
+  },
+  radioButton: {
+    backgroundColor: 'transparent'
   }
 });

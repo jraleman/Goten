@@ -6,6 +6,7 @@ import FormContainer from './FormContainer';
 import IconsContainer from './IconsContainer';
 import ListsContainer from './ListsContainer';
 import LoadersContainer from './LoadersContainer';
+import RadioButtonsContainer from './RadioButtonsContainer';
 
 export {
   BadgesContainer,
@@ -15,5 +16,6 @@ export {
   FormContainer,
   IconsContainer,
   ListsContainer,
-  LoadersContainer
+  LoadersContainer,
+  RadioButtonsContainer
 };

@@ -22,7 +22,8 @@ import {
   FormContainer,
   IconsContainer,
   ListsContainer,
-  LoadersContainer
+  LoadersContainer,
+  RadioButtonsContainer
 } from '../../Containers/NativeBaseContainers';
 
 class NativeBaseScreen extends React.Component {
@@ -49,6 +50,7 @@ class NativeBaseScreen extends React.Component {
           <IconsContainer />
           <ListsContainer />
           <LoadersContainer />
+          <RadioButtonsContainer />
         </Content>
       </Container>
     );
