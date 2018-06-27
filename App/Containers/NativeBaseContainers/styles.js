@@ -23,5 +23,8 @@ export default StyleSheet.create({
   formButton: {
     margin: 15,
     marginTop: 50
+  },
+  listItem: {
+    backgroundColor: 'transparent',
   }
 });
