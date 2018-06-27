@@ -11,9 +11,12 @@ login integration.
 - [x] Rename App `ScarletRocks` -> `ScarletDog`
 - [x] Replace `Navigator` -> `StackNavigator`
 - [x] Redux Persist integration
+- [ ] Implement Redux Axios Middleware
 - [x] Show network connectivity status
 - [ ] Add an Onboarding screen
-- [ ] Integrate a login system
+- [ ] Integrate the login system
+- [x] NativeBase components screen (for themes)
+- [ ] Refactor code :/
 
 ## Resources
 
