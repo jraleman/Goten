@@ -21,7 +21,8 @@ import {
   CheckBoxContainer,
   FormContainer,
   IconsContainer,
-  ListsContainer
+  ListsContainer,
+  LoadersContainer
 } from '../../Containers/NativeBaseContainers';
 
 class NativeBaseScreen extends React.Component {
@@ -47,6 +48,7 @@ class NativeBaseScreen extends React.Component {
           <FormContainer />
           <IconsContainer />
           <ListsContainer />
+          <LoadersContainer />
         </Content>
       </Container>
     );

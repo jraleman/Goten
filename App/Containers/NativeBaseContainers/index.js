@@ -5,6 +5,7 @@ import CheckBoxContainer from './CheckBoxContainer';
 import FormContainer from './FormContainer';
 import IconsContainer from './IconsContainer';
 import ListsContainer from './ListsContainer';
+import LoadersContainer from './LoadersContainer';
 
 export {
   BadgesContainer,
@@ -14,4 +15,5 @@ export {
   FormContainer,
   IconsContainer,
   ListsContainer,
+  LoadersContainer
 };
