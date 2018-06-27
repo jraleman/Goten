@@ -14,7 +14,10 @@ import {
 import styles from './styles';
 
 import ScarletHeader from '../../Components/ScarletHeader';
-import { BadgesContainer } from '../../Containers/NativeBaseContainers';
+import {
+  BadgesContainer,
+  ButtonsContainer
+} from '../../Containers/NativeBaseContainers';
 
 class NativeBaseScreen extends React.Component {
   constructor (props) {
@@ -33,6 +36,7 @@ class NativeBaseScreen extends React.Component {
         <Content style={ styles.content }>
           <H1>{ "Components" }</H1>
           <BadgesContainer />
+          <ButtonsContainer />
         </Content>
       </Container>
     );
