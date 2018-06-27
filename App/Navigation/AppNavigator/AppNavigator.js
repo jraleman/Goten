@@ -21,7 +21,7 @@ export default StackNavigator(
     'NativeBase': { screen: NativeBaseScreen }
   },
   {
-    initialRouteName: 'NativeBase',
+    initialRouteName: 'Test',
     headerMode: mode
   }
 );
