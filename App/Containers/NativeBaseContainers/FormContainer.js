@@ -29,7 +29,7 @@ class FormContainer extends React.Component {
     return (
       <Content padder={ true }>
         <Form>
-          <H2 style={ styles.mu15 }>{ "Forms" }</H2>
+          <H2 style={ styles.mb15 }>{ "Forms" }</H2>
           <Item floatingLabel={ true }>
             <Label>{ "Floating label" }</Label>
             <Input />
@@ -73,7 +73,7 @@ class FormContainer extends React.Component {
           </Content>
           <Button
             block={ true }
-            style={{ margin: 15, marginTop: 50 }}
+            style={{ margin: 15 }}
           >
             <Text>{ "Submit" }</Text>
           </Button>
