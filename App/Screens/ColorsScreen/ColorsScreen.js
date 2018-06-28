@@ -9,11 +9,15 @@ import {
 import styles from './styles';
 
 import ScarletHeader from '../../Components/ScarletHeader';
+import ColorsContainer from '../../Containers/ColorsContainer';
 
 class ColorsScreen extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
+    return ;
+  }
+  handleButton () {
     return ;
   }
   render () {
@@ -30,9 +34,11 @@ class ColorsScreen extends React.Component {
             block={ true }
             light={ true }
             style={ styles.button }
+            onPress={ this.handleButton }
           >
-            <Text>{ "Change Color" }</Text>
+            <Text>{ "Randomize Color" }</Text>
           </Button>
+          <ColorsContainer />
         </Content>
       </Container>
     );
