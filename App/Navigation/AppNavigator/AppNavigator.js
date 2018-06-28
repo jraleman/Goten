@@ -6,6 +6,7 @@ import TestScreen from '../../Screens/TestScreen';
 import LoginScreen from '../../Screens/LoginScreen';
 import CategoriesScreen from '../../Screens/CategoriesScreen';
 import NativeBaseScreen from '../../Screens/NativeBaseScreen';
+import ColorsScreen from '../../Screens/ColorsScreen';
 
 // 'float'  -> Stays at the top and animates as screens are changed.
 // 'screen' -> Each screen has a header attached to it,
@@ -18,10 +19,11 @@ export default StackNavigator(
     'Login': { screen: LoginScreen },
     'Test': { screen: TestScreen },
     'Categories': { screen: CategoriesScreen },
-    'NativeBase': { screen: NativeBaseScreen }
+    'NativeBase': { screen: NativeBaseScreen },
+    'Colors': { screen: ColorsScreen }
   },
   {
-    initialRouteName: 'Test',
+    initialRouteName: 'Colors',
     headerMode: mode
   }
 );
