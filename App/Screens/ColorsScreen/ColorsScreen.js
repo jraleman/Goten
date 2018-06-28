@@ -2,7 +2,9 @@ import React from 'react';
 import {
   Container,
   Content,
-  Text
+  Button,
+  Text,
+  H1
 } from 'native-base';
 import styles from './styles';
 
@@ -23,7 +25,14 @@ class ColorsScreen extends React.Component {
           onPress={ () => this.props.navigation.goBack() }
         />
         <Content>
-          <Text>{ "ColorsScreen" }</Text>
+          <H1 style={ styles.title }>{ "Click the button! :)" }</H1>
+          <Button
+            block={ true }
+            light={ true }
+            style={ styles.button }
+          >
+            <Text>{ "Change Color" }</Text>
+          </Button>
         </Content>
       </Container>
     );
