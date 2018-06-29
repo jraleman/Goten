@@ -1,6 +1,6 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
   const pickerTheme = {};
 
   return pickerTheme;

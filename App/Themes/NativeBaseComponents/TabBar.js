@@ -1,6 +1,6 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
   const tabBarTheme = {
     ".tabIcon": {
       height: undefined
@@ -11,20 +11,20 @@ export default (variables = variable) => {
     "NativeBase.Button": {
       ".transparent": {
         "NativeBase.Text": {
-          fontSize: variables.tabFontSize,
-          color: variables.sTabBarActiveTextColor,
+          fontSize: variable.tabFontSize,
+          color: variable.sTabBarActiveTextColor,
           fontWeight: "400"
         },
         "NativeBase.IconNB": {
-          color: variables.sTabBarActiveTextColor
+          color: variable.sTabBarActiveTextColor
         }
       },
       "NativeBase.IconNB": {
-        color: variables.sTabBarActiveTextColor
+        color: variable.sTabBarActiveTextColor
       },
       "NativeBase.Text": {
-        fontSize: variables.tabFontSize,
-        color: variables.sTabBarActiveTextColor,
+        fontSize: variable.tabFontSize,
+        color: variable.sTabBarActiveTextColor,
         fontWeight: "400"
       },
       ".isTabActive": {
@@ -38,7 +38,7 @@ export default (variables = variable) => {
       justifyContent: "center",
       borderRadius: null,
       borderBottomColor: "transparent",
-      backgroundColor: variables.tabBgColor
+      backgroundColor: variable.tabBgColor
     },
     height: 45,
     flexDirection: "row",
@@ -48,7 +48,7 @@ export default (variables = variable) => {
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderBottomColor: "#ccc",
-    backgroundColor: variables.tabBgColor
+    backgroundColor: variable.tabBgColor
   };
 
   return tabBarTheme;

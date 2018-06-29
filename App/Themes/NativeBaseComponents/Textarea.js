@@ -1,18 +1,18 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
   const textAreaTheme = {
     ".underline": {
-      borderBottomWidth: variables.borderWidth,
+      borderBottomWidth: variable.borderWidth,
       marginTop: 5,
-      borderColor: variables.inputBorderColor
+      borderColor: variable.inputBorderColor
     },
     ".bordered": {
       borderWidth: 1,
       marginTop: 5,
-      borderColor: variables.inputBorderColor
+      borderColor: variable.inputBorderColor
     },
-    color: variables.textColor,
+    color: variable.textColor,
     paddingLeft: 10,
     paddingRight: 5,
     fontSize: 15,

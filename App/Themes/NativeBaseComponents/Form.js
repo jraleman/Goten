@@ -1,7 +1,7 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
-  const platform = variables.platform;
+export default (variable = variables) => {
+  const platform = variable.platform;
 
   const theme = {
     "NativeBase.Item": {

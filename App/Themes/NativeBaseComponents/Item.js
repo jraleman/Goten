@@ -1,8 +1,8 @@
 import { Platform } from "react-native";
 
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
   const itemTheme = {
     ".floatingLabel": {
       "NativeBase.Input": {
@@ -25,11 +25,11 @@ export default (variables = variable) => {
         flex: 1,
         height: null,
         width: null,
-        fontSize: variables.inputFontSize
+        fontSize: variable.inputFontSize
       },
       "NativeBase.Input": {
         flex: 2,
-        fontSize: variables.inputFontSize
+        fontSize: variable.inputFontSize
       }
     },
     ".stackedLabel": {
@@ -40,7 +40,7 @@ export default (variables = variable) => {
         right: null,
         paddingTop: 5,
         alignSelf: "flex-start",
-        fontSize: variables.inputFontSize - 2
+        fontSize: variable.inputFontSize - 2
       },
       "NativeBase.Icon": {
         marginTop: 36
@@ -48,11 +48,11 @@ export default (variables = variable) => {
       "NativeBase.Input": {
         alignSelf: Platform.OS === "ios" ? "stretch" : "flex-start",
         flex: 1,
-        width: Platform.OS === "ios" ? null : variables.deviceWidth - 25,
-        fontSize: variables.inputFontSize
+        width: Platform.OS === "ios" ? null : variable.deviceWidth - 25,
+        fontSize: variable.inputFontSize
       },
       flexDirection: null,
-      height: variables.inputHeightBase + 15
+      height: variable.inputHeightBase + 15
     },
     ".inlineLabel": {
       "NativeBase.Label": {
@@ -63,17 +63,17 @@ export default (variables = variable) => {
         paddingRight: 20,
         height: null,
         width: null,
-        fontSize: variables.inputFontSize
+        fontSize: variable.inputFontSize
       },
       "NativeBase.Input": {
         paddingLeft: 5,
-        fontSize: variables.inputFontSize
+        fontSize: variable.inputFontSize
       },
       flexDirection: "row"
     },
     "NativeBase.Label": {
-      fontSize: variables.inputFontSize,
-      color: variables.inputColorPlaceholder,
+      fontSize: variable.inputFontSize,
+      color: variable.inputColorPlaceholder,
       paddingRight: 5
     },
     "NativeBase.Icon": {
@@ -88,28 +88,28 @@ export default (variables = variable) => {
       ".multiline": {
         height: null
       },
-      height: variables.inputHeightBase,
-      color: variables.inputColor,
+      height: variable.inputHeightBase,
+      color: variable.inputColor,
       flex: 1,
       top: Platform.OS === "ios" ? 1.5 : undefined,
-      fontSize: variables.inputFontSize,
-      lineHeight: variables.inputLineHeight
+      fontSize: variable.inputFontSize,
+      lineHeight: variable.inputLineHeight
     },
     ".underline": {
       "NativeBase.Input": {
         paddingLeft: 15
       },
       ".success": {
-        borderColor: variables.inputSuccessBorderColor
+        borderColor: variable.inputSuccessBorderColor
       },
       ".error": {
-        borderColor: variables.inputErrorBorderColor
+        borderColor: variable.inputErrorBorderColor
       },
-      borderWidth: variables.borderWidth * 2,
+      borderWidth: variable.borderWidth * 2,
       borderTopWidth: 0,
       borderRightWidth: 0,
       borderLeftWidth: 0,
-      borderColor: variables.inputBorderColor
+      borderColor: variable.inputBorderColor
     },
     ".regular": {
       "NativeBase.Input": {
@@ -119,13 +119,13 @@ export default (variables = variable) => {
         paddingLeft: 10
       },
       ".success": {
-        borderColor: variables.inputSuccessBorderColor
+        borderColor: variable.inputSuccessBorderColor
       },
       ".error": {
-        borderColor: variables.inputErrorBorderColor
+        borderColor: variable.inputErrorBorderColor
       },
-      borderWidth: variables.borderWidth * 2,
-      borderColor: variables.inputBorderColor
+      borderWidth: variable.borderWidth * 2,
+      borderColor: variable.inputBorderColor
     },
     ".rounded": {
       "NativeBase.Input": {
@@ -135,62 +135,62 @@ export default (variables = variable) => {
         paddingLeft: 10
       },
       ".success": {
-        borderColor: variables.inputSuccessBorderColor
+        borderColor: variable.inputSuccessBorderColor
       },
       ".error": {
-        borderColor: variables.inputErrorBorderColor
+        borderColor: variable.inputErrorBorderColor
       },
-      borderWidth: variables.borderWidth * 2,
+      borderWidth: variable.borderWidth * 2,
       borderRadius: 30,
-      borderColor: variables.inputBorderColor
+      borderColor: variable.inputBorderColor
     },
 
     ".success": {
       "NativeBase.Icon": {
-        color: variables.inputSuccessBorderColor
+        color: variable.inputSuccessBorderColor
       },
       "NativeBase.IconNB": {
-        color: variables.inputSuccessBorderColor
+        color: variable.inputSuccessBorderColor
       },
       ".rounded": {
         borderRadius: 30,
-        borderColor: variables.inputSuccessBorderColor
+        borderColor: variable.inputSuccessBorderColor
       },
       ".regular": {
-        borderColor: variables.inputSuccessBorderColor
+        borderColor: variable.inputSuccessBorderColor
       },
       ".underline": {
-        borderWidth: variables.borderWidth * 2,
+        borderWidth: variable.borderWidth * 2,
         borderTopWidth: 0,
         borderRightWidth: 0,
         borderLeftWidth: 0,
-        borderColor: variables.inputSuccessBorderColor
+        borderColor: variable.inputSuccessBorderColor
       },
-      borderColor: variables.inputSuccessBorderColor
+      borderColor: variable.inputSuccessBorderColor
     },
 
     ".error": {
       "NativeBase.Icon": {
-        color: variables.inputErrorBorderColor
+        color: variable.inputErrorBorderColor
       },
       "NativeBase.IconNB": {
-        color: variables.inputErrorBorderColor
+        color: variable.inputErrorBorderColor
       },
       ".rounded": {
         borderRadius: 30,
-        borderColor: variables.inputErrorBorderColor
+        borderColor: variable.inputErrorBorderColor
       },
       ".regular": {
-        borderColor: variables.inputErrorBorderColor
+        borderColor: variable.inputErrorBorderColor
       },
       ".underline": {
-        borderWidth: variables.borderWidth * 2,
+        borderWidth: variable.borderWidth * 2,
         borderTopWidth: 0,
         borderRightWidth: 0,
         borderLeftWidth: 0,
-        borderColor: variables.inputErrorBorderColor
+        borderColor: variable.inputErrorBorderColor
       },
-      borderColor: variables.inputErrorBorderColor
+      borderColor: variable.inputErrorBorderColor
     },
     ".disabled": {
       "NativeBase.Icon": {
@@ -201,11 +201,11 @@ export default (variables = variable) => {
       }
     },
 
-    borderWidth: variables.borderWidth * 2,
+    borderWidth: variable.borderWidth * 2,
     borderTopWidth: 0,
     borderRightWidth: 0,
     borderLeftWidth: 0,
-    borderColor: variables.inputBorderColor,
+    borderColor: variable.inputBorderColor,
     backgroundColor: "transparent",
     flexDirection: "row",
     alignItems: "center",

@@ -1,22 +1,22 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
-  const platformStyle = variables.platformStyle;
-  const platform = variables.platform;
+export default (variable = variables) => {
+  const platformStyle = variable.platformStyle;
+  const platform = variable.platform;
 
   const iconCommon = {
     "NativeBase.Icon": {
-      color: variables.tabBarActiveTextColor
+      color: variable.tabBarActiveTextColor
     }
   };
   const iconNBCommon = {
     "NativeBase.IconNB": {
-      color: variables.tabBarActiveTextColor
+      color: variable.tabBarActiveTextColor
     }
   };
   const textCommon = {
     "NativeBase.Text": {
-      color: variables.tabBarActiveTextColor
+      color: variable.tabBarActiveTextColor
     }
   };
   const footerTheme = {
@@ -63,8 +63,8 @@ export default (variables = variable) => {
           ...textCommon
         },
         ".full": {
-          height: variables.footerHeight,
-          paddingBottom: variables.footerPaddingBottom,
+          height: variable.footerHeight,
+          paddingBottom: variable.footerPaddingBottom,
           flex: 1
         },
         ...iconCommon,
@@ -95,19 +95,19 @@ export default (variables = variable) => {
       alignSelf: "center",
       alignItems: "flex-end"
     },
-    backgroundColor: variables.footerDefaultBg,
+    backgroundColor: variable.footerDefaultBg,
     flexDirection: "row",
     justifyContent: "center",
     borderTopWidth:
       platform === "ios" && platformStyle !== "material"
-        ? variables.borderWidth
+        ? variable.borderWidth
         : undefined,
     borderColor:
       platform === "ios" && platformStyle !== "material"
         ? "#cbcbcb"
         : undefined,
-    height: variables.footerHeight,
-    paddingBottom: variables.footerPaddingBottom,
+    height: variable.footerHeight,
+    paddingBottom: variable.footerPaddingBottom,
     elevation: 3,
     left: 0,
     right: 0

@@ -1,25 +1,25 @@
 import { Platform } from "react-native";
 
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
-  const platform = variables.platform;
+export default (variable = variables) => {
+  const platform = variable.platform;
 
   const footerTabTheme = {
     "NativeBase.Button": {
       ".active": {
         "NativeBase.Text": {
-          color: variables.tabBarActiveTextColor,
-          fontSize: variables.tabBarTextSize,
+          color: variable.tabBarActiveTextColor,
+          fontSize: variable.tabBarTextSize,
           lineHeight: 16
         },
         "NativeBase.Icon": {
-          color: variables.tabBarActiveTextColor
+          color: variable.tabBarActiveTextColor
         },
         "NativeBase.IconNB": {
-          color: variables.tabBarActiveTextColor
+          color: variable.tabBarActiveTextColor
         },
-        backgroundColor: variables.tabActiveBgColor
+        backgroundColor: variable.tabActiveBgColor
       },
       flexDirection: null,
       backgroundColor: "transparent",
@@ -31,7 +31,7 @@ export default (variables = variable) => {
       shadowOpacity: null,
       alignSelf: "center",
       flex: 1,
-      height: (variables.footerHeight - (variables.isIphoneX ? 34 : 0)),
+      height: (variable.footerHeight - (variable.isIphoneX ? 34 : 0)),
       justifyContent: "center",
       ".badge": {
         "NativeBase.Badge": {
@@ -53,19 +53,19 @@ export default (variables = variable) => {
         }
       },
       "NativeBase.Icon": {
-        color: variables.tabBarTextColor
+        color: variable.tabBarTextColor
       },
       "NativeBase.IconNB": {
-        color: variables.tabBarTextColor
+        color: variable.tabBarTextColor
       },
       "NativeBase.Text": {
-        color: variables.tabBarTextColor,
-        fontSize: variables.tabBarTextSize,
+        color: variable.tabBarTextColor,
+        fontSize: variable.tabBarTextSize,
         lineHeight: 16
       }
     },
     backgroundColor: Platform.OS === "android"
-      ? variables.footerDefaultBg
+      ? variable.footerDefaultBg
       : undefined,
     flexDirection: "row",
     justifyContent: "space-between",

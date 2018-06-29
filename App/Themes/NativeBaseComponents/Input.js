@@ -1,17 +1,17 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
 	const inputTheme = {
 		'.multiline': {
 			height: null,
 		},
-		height: variables.inputHeightBase,
-		color: variables.inputColor,
+		height: variable.inputHeightBase,
+		color: variable.inputColor,
 		paddingLeft: 5,
 		paddingRight: 5,
 		flex: 1,
-		fontSize: variables.inputFontSize,
-		lineHeight: variables.inputLineHeight,
+		fontSize: variable.inputFontSize,
+		lineHeight: variable.inputLineHeight,
 	};
 
 	return inputTheme;

@@ -1,34 +1,34 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
   const checkBoxTheme = {
     ".checked": {
       "NativeBase.Icon": {
-        color: variables.checkboxTickColor
+        color: variable.checkboxTickColor
       },
       "NativeBase.IconNB": {
-        color: variables.checkboxTickColor
+        color: variable.checkboxTickColor
       }
     },
     "NativeBase.Icon": {
       color: "transparent",
-      lineHeight: variables.CheckboxIconSize,
-      marginTop: variables.CheckboxIconMarginTop,
-      fontSize: variables.CheckboxFontSize
+      lineHeight: variable.CheckboxIconSize,
+      marginTop: variable.CheckboxIconMarginTop,
+      fontSize: variable.CheckboxFontSize
     },
     "NativeBase.IconNB": {
       color: "transparent",
-      lineHeight: variables.CheckboxIconSize,
-      marginTop: variables.CheckboxIconMarginTop,
-      fontSize: variables.CheckboxFontSize
+      lineHeight: variable.CheckboxIconSize,
+      marginTop: variable.CheckboxIconMarginTop,
+      fontSize: variable.CheckboxFontSize
     },
-    borderRadius: variables.CheckboxRadius,
+    borderRadius: variable.CheckboxRadius,
     overflow: "hidden",
-    width: variables.checkboxSize,
-    height: variables.checkboxSize,
-    borderWidth: variables.CheckboxBorderWidth,
-    paddingLeft: variables.CheckboxPaddingLeft - 1,
-    paddingBottom: variables.CheckboxPaddingBottom,
+    width: variable.checkboxSize,
+    height: variable.checkboxSize,
+    borderWidth: variable.CheckboxBorderWidth,
+    paddingLeft: variable.CheckboxPaddingLeft - 1,
+    paddingBottom: variable.CheckboxPaddingBottom,
     left: 10
   };
 

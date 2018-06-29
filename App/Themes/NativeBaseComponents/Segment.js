@@ -1,14 +1,14 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
-	const platform = variables.platform;
+export default (variable = variables) => {
+	const platform = variable.platform;
 
 	const segmentTheme = {
 		height: 45,
-		borderColor: variables.segmentBorderColorMain,
+		borderColor: variable.segmentBorderColorMain,
 		flexDirection: "row",
 		justifyContent: "center",
-		backgroundColor: variables.segmentBackgroundColor,
+		backgroundColor: variable.segmentBackgroundColor,
 		"NativeBase.Button": {
 			alignSelf: "center",
 			borderRadius: 0,
@@ -17,12 +17,12 @@ export default (variables = variable) => {
 			backgroundColor: "transparent",
 			borderWidth: 1,
 			borderLeftWidth: 0,
-			borderColor: variables.segmentBorderColor,
+			borderColor: variable.segmentBorderColor,
 			elevation: 0,
 			".active": {
-				backgroundColor: variables.segmentActiveBackgroundColor,
+				backgroundColor: variable.segmentActiveBackgroundColor,
 				"NativeBase.Text": {
-					color: variables.segmentActiveTextColor,
+					color: variable.segmentActiveTextColor,
 				},
 			},
 			".first": {
@@ -35,7 +35,7 @@ export default (variables = variable) => {
 				borderBottomRightRadius: platform === "ios" ? 5 : undefined,
 			},
 			"NativeBase.Text": {
-				color: variables.segmentTextColor,
+				color: variable.segmentTextColor,
 				fontSize: 14,
 			},
 		},

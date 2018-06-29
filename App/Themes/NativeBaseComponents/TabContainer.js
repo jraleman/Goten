@@ -1,9 +1,9 @@
-import variable from './../variable';
+import variables from './../variables';
 import { Platform } from "react-native";
 
-export default (variables = variable) => {
-  const platformStyle = variables.platformStyle;
-  const platform = variables.platform;
+export default (variable = variables) => {
+  const platformStyle = variable.platformStyle;
+  const platform = variable.platform;
 
   const tabContainerTheme = {
     elevation: 3,
@@ -16,8 +16,8 @@ export default (variables = variable) => {
     shadowOpacity: platformStyle === "material" ? 0.2 : undefined,
     shadowRadius: platformStyle === "material" ? 1.2 : undefined,
     justifyContent: "space-around",
-    borderBottomWidth: Platform.OS === "ios" ? variables.borderWidth : 0,
-    borderColor: variables.topTabBarBorderColor
+    borderBottomWidth: Platform.OS === "ios" ? variable.borderWidth : 0,
+    borderColor: variable.topTabBarBorderColor
   };
 
   return tabContainerTheme;
