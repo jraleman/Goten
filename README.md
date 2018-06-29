@@ -5,13 +5,18 @@
 React Native boilerplate (or sample app), with basic redux, native-base and
 login integration.
 
+### Redux
+
+![redux-graph](resources/images/redux.gif)
+Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
+
 ## Goals
 
 - [x] Redux implementation
 - [x] Rename App `ScarletRocks` -> `ScarletDog`
 - [x] Replace `Navigator` -> `StackNavigator`
 - [x] Redux Persist integration
-- [ ] Implement Redux Axios Middleware
+- [x] Implement Redux Axios Middleware
 - [x] Show network connectivity status
 - [ ] Add an Onboarding screen
 - [ ] Integrate the login system
