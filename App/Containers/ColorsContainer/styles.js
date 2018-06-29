@@ -11,8 +11,10 @@ export default StyleSheet.create({
     left: 10,
     width: 150,
     height: 150,
-    borderRadius: 150 / 2,
+    borderRadius: 0 / 2,
     backgroundColor: 'red',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    marginLeft: '23%',
+    marginTop: 24
   }
 });

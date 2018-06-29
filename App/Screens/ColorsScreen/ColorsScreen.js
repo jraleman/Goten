@@ -28,11 +28,9 @@ class ColorsScreen extends React.Component {
           icon={ 'arrow-back' }
           onPress={ () => this.props.navigation.goBack() }
         />
-        <Content>
-          <H1 style={ styles.title }>{ "Click the button! :)" }</H1>
+        <Content style={ styles.content }>
           <Button
-            block={ true }
-            light={ true }
+            info={ true }
             style={ styles.button }
             onPress={ this.handleButton }
           >
