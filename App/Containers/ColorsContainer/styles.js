@@ -12,7 +12,7 @@ export default StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: 0 / 2,
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
     alignSelf: 'center',
     marginLeft: '23%',
     marginTop: 24

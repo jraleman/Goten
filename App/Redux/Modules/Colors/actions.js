@@ -8,8 +8,8 @@ export function loadColor () {
     return (
       axios.get("http://colr.org/json/color/random")
       .then((response) => {
-        dispatch(changeColor('#' + response.data.new_color));
-      });
+        dispatch(changeColor('#' + response.data.new_color))
+      })
     );
   }
 };

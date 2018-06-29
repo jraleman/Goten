@@ -4,7 +4,7 @@ let defaultState = {
   color: 'red'
 };
 
-const reducer = (state = defaultState, action) => {
+const colorReducer = (state = defaultState, action) => {
   if (action.type === 'CHANGE_COLOR') {
     return ({
       ...state,
@@ -18,7 +18,7 @@ const reducer = (state = defaultState, action) => {
   }
 }
 
-export default reducer;
+export default colorReducer;
 
 // export default function reducer(state = initialState, action) {
 //

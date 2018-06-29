@@ -35,12 +35,6 @@ import {
 import { loadCategories } from './Modules/Categories/actions';
 
 
-/*
-** NEWSTORE
-*/
-let newStore = createStore(reducers, applyMiddleware(thunk));
-
-
 
 
 // Merge all the reducers into a single global object that will be saved in
@@ -48,8 +42,22 @@ let newStore = createStore(reducers, applyMiddleware(thunk));
 // that corresponds to that reduce.
 const reducers = combineReducers({
   bookmarks,
-  categories
+  categories,
+  colors
 });
+
+
+
+
+
+/*
+** NEWSTORE
+*/
+let newStore = createStore(colors, applyMiddleware(thunk));
+//let newStore = createStore(reducers, applyMiddleware(thunk));
+
+
+
 
 // Object that holds the application's state tree.
 // There should only be a single store in a Redux app,
