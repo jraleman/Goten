@@ -15,7 +15,7 @@ import OnboardingScreen from '../../Screens/OnboardingScreen';
 // const mode = (Platform.OS === 'android' ? 'screen' : 'float');
 const mode = 'none';
 
-export default StackNavigator(
+const AppNavigator = StackNavigator(
   {
     'Login': { screen: LoginScreen },
     'Test': { screen: TestScreen },
@@ -29,3 +29,5 @@ export default StackNavigator(
     headerMode: mode
   }
 );
+
+export default AppNavigator;
