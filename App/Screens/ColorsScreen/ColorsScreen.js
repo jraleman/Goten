@@ -6,17 +6,11 @@ import {
   Text,
   H1
 } from 'native-base';
+import { connect } from 'react-redux';
 import styles from './styles';
-
+import * as actionCreators from '../../Redux/Modules/Colors/actions';
 import ScarletHeader from '../../Components/ScarletHeader';
 import ColorsContainer from '../../Containers/ColorsContainer';
-
-/*
-** NEW STORE || MOVE THIS FROM HERE, PLACE IT IN REDUX/INDEX.JS
-*/
-import { connect } from 'react-redux';
-import * as actionCreators from '../../Redux/Modules/Colors/actions';
-
 
 class ColorsScreen extends React.Component {
   constructor (props) {
@@ -24,11 +18,7 @@ class ColorsScreen extends React.Component {
     this.state = {};
     return ;
   }
-  handleButton () {
-    return ;
-  }
   render () {
-    alert(this.props.color)
     return (
       <Container style={ styles.container }>
         <ScarletHeader
@@ -40,7 +30,7 @@ class ColorsScreen extends React.Component {
           <Button
             info={ true }
             style={ styles.button }
-            onPress={ this.handleButton }
+            onPress={ () => this.props.loadColor() }
           >
             <Text>{ "Randomize Color" }</Text>
           </Button>

@@ -6,9 +6,14 @@ import axios from 'axios';
 export function loadColor () {
   return (dispatch) => {
     return (
-      axios.get("http://colr.org/json/color/random")
+      // Because iOS is special, I had to do this :)
+      // https://stackoverflow.com/a/46254154
+      axios.get("http://www.colr.org/json/color/random")
       .then((response) => {
         dispatch(changeColor('#' + response.data.new_color))
+      })
+      .catch((error) => {
+        alert(error);
       })
     );
   }
