@@ -9,9 +9,23 @@ import {
   autoRehydrate
 } from 'redux-persist';
 
+/*
+** NEWSTORE
+*/
+import thunk from 'redux-thunk';
+
 import fetchMiddleware from './Middleware/fetchMiddleware';
+
+// reducers
 import categories from './Modules/Categories/reducer';
 import bookmarks from './Modules/Bookmarks/reducer';
+
+/*
+** NEWSTORE
+*/
+import colors from './Modules/Colors/reducer';
+
+// actions
 import {
   loadBookmarks,
   addBookmark,
@@ -19,6 +33,15 @@ import {
   updateBookmark
 } from './Modules/Bookmarks/actions';
 import { loadCategories } from './Modules/Categories/actions';
+
+
+/*
+** NEWSTORE
+*/
+let newStore = createStore(reducers, applyMiddleware(thunk));
+
+
+
 
 // Merge all the reducers into a single global object that will be saved in
 // the store. This function will call each reducer with the key in the state
@@ -59,4 +82,10 @@ store.dispatch(loadCategories());
 // Stop listening to changes in the state.
 unsubscribe();
 
-export default store;
+// export default store;
+
+
+/*
+** NEWSTORE
+*/
+export default newStore; // <- quick fix because idk which version is better...

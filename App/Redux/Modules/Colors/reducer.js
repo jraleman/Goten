@@ -4,7 +4,7 @@ let defaultState = {
   color: 'red'
 };
 
-const mainReducer = (state = defaultState, action) => {
+const reducer = (state = defaultState, action) => {
   if (action.type === 'CHANGE_COLOR') {
     return ({
       ...state,
@@ -18,4 +18,22 @@ const mainReducer = (state = defaultState, action) => {
   }
 }
 
-export default mainReducer;
+export default reducer;
+
+// export default function reducer(state = initialState, action) {
+//
+// const initialState = {
+//   color: 'red'
+// };
+//
+// export default function reducer (state = initialState, action) {
+//   switch (action.type) {
+//     case CHANGE_COLOR:
+//       return ({
+//         ...state,
+//         color: action.color
+//       });
+//     default:
+//       return (state);
+//   }
+// }
