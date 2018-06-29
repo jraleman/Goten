@@ -25,5 +25,6 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 
 ## Resources
 
-[React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
-[Network Indicator](https://medium.com/dailyjs/offline-notice-in-react-native-28a8d01e8cd0)
+- [React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
+- [Network Indicator](https://medium.com/dailyjs/offline-notice-in-react-native-28a8d01e8cd0)
+- [Color API Tutorial](https://www.youtube.com/watch?v=d2Mp66FFBgU)
