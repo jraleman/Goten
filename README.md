@@ -18,7 +18,7 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 - [x] Redux Persist integration
 - [x] Implement Redux Axios Middleware
 - [x] Show network connectivity status
-- [ ] Add an Onboarding screen
+- [x] Add an Onboarding screen
 - [ ] Integrate the login system
 - [x] NativeBase components screen (for themes)
 - [ ] Refactor code :/
