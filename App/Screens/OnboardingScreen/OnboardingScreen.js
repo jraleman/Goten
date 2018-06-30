@@ -5,6 +5,10 @@ import {
   Content,
   Text
 } from 'native-base';
+import {
+  StackActions,
+  NavigationActions
+} from 'react-navigation';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import styles from './styles';
 
@@ -35,7 +39,6 @@ const slides = [
   }
 ]
 
-
 // Thanks for your amazing stackoverflow answer, martinarroyo.
 // Source: https://stackoverflow.com/a/40729761
 class OnboardingScreen extends React.Component {
@@ -61,7 +64,12 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   handleNavigation () {
-    this.props.navigation.navigate('NativeBase');
+    const resetAction = StackActions.reset({
+      index: 0,
+      key: null,
+      actions: [NavigationActions.navigate({ routeName: 'NativeBase' })],
+    });
+    this.props.navigation.dispatch(resetAction);
     return ;
   }
   render () {
