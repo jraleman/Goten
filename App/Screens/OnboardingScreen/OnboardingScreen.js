@@ -1,4 +1,5 @@
 import React from 'react';
+import { AsyncStorage } from 'react-native';
 import {
   Container,
   Content,
@@ -34,10 +35,29 @@ const slides = [
   }
 ]
 
+
+// Thanks for your amazing stackoverflow answer, martinarroyo.
+// Source: https://stackoverflow.com/a/40729761
 class OnboardingScreen extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.state = {
+      firstLaunch: null
+    };
+    return ;
+  }
+  componentDidMount () {
+    AsyncStorage.getItem("alreadyLaunched")
+    .then(value => {
+      if (value == null) {
+        AsyncStorage.setItem('alreadyLaunched', JSON.stringify(true));
+        this.setState({ firstLaunch: true });
+      }
+      else {
+        this.setState({ firstLaunch: false });
+        // ...you can also add your error handling code here :)
+      }
+    });
     return ;
   }
   handleNavigation () {
@@ -45,14 +65,32 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   render () {
-    return (
-      <Container style={ styles.container }>
-        <AppIntroSlider
-          slides={ slides }
-          onDone={ () => this.handleNavigation() }
-        />
-      </Container>
-    );
+    if (this.state.firstLaunch == null) {
+      // This is the 'tricky' part:
+      // The query to AsyncStorage is not finished, but we have to present
+      // something to the user.
+      // Null will just render nothing, so you can also put a placeholder of
+      // some sort, but effectively the interval between the first mount and
+      // AsyncStorage retrieving your data won't be noticeable to the user.
+      return (null);
+    }
+    else if (this.state.firstLaunch == true) {
+      return (
+        <Container style={ styles.container }>
+          <AppIntroSlider
+            slides={ slides }
+            onDone={ () => this.handleNavigation() }
+          />
+        </Container>
+      );
+    }
+    else if (this.state.firstLaunch == false) {
+      return (
+        <Container>
+          { this.handleNavigation() }
+        </Container>
+      );
+    }
   }
 }
 
