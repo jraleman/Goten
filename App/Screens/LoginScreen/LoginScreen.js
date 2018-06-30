@@ -4,8 +4,8 @@ import {
   View
 } from 'react-native-animatable';
 import styles from './styles';
-
 import AnimatedTextInput from '../../Components/AnimatedTextInput';
+import AnimatedButton from '../../Components/AnimatedButton';
 
 class LoginScreen extends React.Component {
   constructor (props) {
@@ -16,15 +16,15 @@ class LoginScreen extends React.Component {
     };
     return;
   }
-  hideForm = async () => {
-    if (this.buttonRef && this.formRef && this.linkRef) {
-      await Promise.all([
-        this.buttonRef.zoomOut(200),
-        this.formRef.fadeOut(300),
-        this.linkRef.fadeOut(300)
-      ])
-    }
-  }
+  // hideForm = async () => {
+  //   if (this.buttonRef && this.formRef && this.linkRef) {
+  //     await Promise.all([
+  //       this.buttonRef.zoomOut(200),
+  //       this.formRef.fadeOut(300),
+  //       this.linkRef.fadeOut(300)
+  //     ])
+  //   }
+  // }
   render () {
     //const { email, password } = this.state
     //const { isLoading, onSignupLinkPress, onLoginPress } = this.props
@@ -59,6 +59,7 @@ class LoginScreen extends React.Component {
             returnKeyType={'done'}
             withRef={ true }
           />
+          <AnimatedButton />
         </View>
       </View>
     );

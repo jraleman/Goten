@@ -8,5 +8,13 @@ export default StyleSheet.create({
     alignSelf: 'stretch',
     justifyContent: 'center',
     borderColor: 'rgba(0, 0, 0, 0.1)'
+  },
+  spinner: {
+  height: 26
+  },
+  text: {
+    textAlign: 'center',
+    fontWeight: '400',
+    color: 'white'
   }
 });

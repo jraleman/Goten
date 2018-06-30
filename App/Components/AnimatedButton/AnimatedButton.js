@@ -5,7 +5,7 @@ import {
   Text,
 } from 'react-native';
 import { View } from 'react-native-animatable';
-import TouchableView from './TouchableView';
+// import TouchableView from './TouchableView';
 import styles from './styles';
 
 class AnimatedButton extends React.Component {
@@ -21,7 +21,7 @@ class AnimatedButton extends React.Component {
           style={ styles.button }
         >
           <Text>{ "Button" }</Text>
-        </TouchableView>
+        </TouchableOpacity>
       </View>
     );
   }
