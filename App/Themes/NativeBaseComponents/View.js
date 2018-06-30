@@ -1,9 +1,9 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
   const viewTheme = {
     ".padder": {
-      padding: variables.contentPadding
+      padding: variable.contentPadding
     }
   };
 

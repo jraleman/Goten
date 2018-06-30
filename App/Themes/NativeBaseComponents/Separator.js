@@ -1,15 +1,15 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
 	const theme = {
 		'.group': {
 			height: 50,
-			paddingVertical: variables.listItemPadding - 8,
-			paddingTop: variables.listItemPadding + 12,
+			paddingVertical: variable.listItemPadding - 8,
+			paddingTop: variable.listItemPadding + 12,
 			'.bordered': {
 				height: 50,
-				paddingVertical: variables.listItemPadding - 8,
-				paddingTop: variables.listItemPadding + 12,
+				paddingVertical: variable.listItemPadding - 8,
+				paddingTop: variable.listItemPadding + 12,
 			},
 		},
 		'.bordered': {
@@ -20,14 +20,14 @@ export default (variables = variable) => {
 				borderBottomWidth: 0,
 			},
 			height: 35,
-			paddingTop: variables.listItemPadding + 2,
-			paddingBottom: variables.listItemPadding,
-			borderBottomWidth: variables.borderWidth,
-			borderTopWidth: variables.borderWidth,
-			borderColor: variables.listBorderColor,
+			paddingTop: variable.listItemPadding + 2,
+			paddingBottom: variable.listItemPadding,
+			borderBottomWidth: variable.borderWidth,
+			borderTopWidth: variable.borderWidth,
+			borderColor: variable.listBorderColor,
 		},
 		'NativeBase.Text': {
-			fontSize: variables.tabBarTextSize - 2,
+			fontSize: variable.tabBarTextSize - 2,
 			color: '#777',
 		},
 		'.noTopBorder': {
@@ -40,7 +40,7 @@ export default (variables = variable) => {
 		backgroundColor: '#F0EFF5',
 		flex: 1,
 		justifyContent: 'center',
-		paddingLeft: variables.listItemPadding + 5,
+		paddingLeft: variable.listItemPadding + 5,
 	};
 
 	return theme;

@@ -1,17 +1,17 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
-  const platform = variables.platform;
+export default (variable = variables) => {
+  const platform = variable.platform;
 
   const toastTheme = {
     ".danger": {
-      backgroundColor: variables.brandDanger
+      backgroundColor: variable.brandDanger
     },
     ".warning": {
-      backgroundColor: variables.brandWarning
+      backgroundColor: variable.brandWarning
     },
     ".success": {
-      backgroundColor: variables.brandSuccess
+      backgroundColor: variable.brandSuccess
     },
     backgroundColor: "rgba(0,0,0,0.8)",
     borderRadius: platform === "ios" ? 5 : 0,

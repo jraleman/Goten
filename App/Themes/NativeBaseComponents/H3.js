@@ -1,10 +1,10 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
   const h3Theme = {
-    color: variables.textColor,
-    fontSize: variables.fontSizeH3,
-    lineHeight: variables.lineHeightH3
+    color: variable.textColor,
+    fontSize: variable.fontSizeH3,
+    lineHeight: variable.lineHeightH3
   };
 
   return h3Theme;

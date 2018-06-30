@@ -1,9 +1,9 @@
 import { Platform, Dimensions } from "react-native";
 
-import variable from './../variable';
+import variables from './../variables';
 
 const deviceHeight = Dimensions.get("window").height;
-export default (variables = variable) => {
+export default (variable = variables) => {
   const theme = {
     flex: 1,
     height: Platform.OS === "ios" ? deviceHeight : deviceHeight - 20

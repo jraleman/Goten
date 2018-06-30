@@ -1,10 +1,10 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
 	const subtitleTheme = {
-		fontSize: variables.subTitleFontSize,
-		fontFamily: variables.titleFontfamily,
-		color: variables.subtitleColor,
+		fontSize: variable.subTitleFontSize,
+		fontFamily: variable.titleFontfamily,
+		color: variable.subtitleColor,
 		textAlign: 'center',
 	};
 

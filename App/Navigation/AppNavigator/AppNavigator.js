@@ -6,6 +6,8 @@ import TestScreen from '../../Screens/TestScreen';
 import LoginScreen from '../../Screens/LoginScreen';
 import CategoriesScreen from '../../Screens/CategoriesScreen';
 import NativeBaseScreen from '../../Screens/NativeBaseScreen';
+import ColorsScreen from '../../Screens/ColorsScreen';
+import OnboardingScreen from '../../Screens/OnboardingScreen';
 
 // 'float'  -> Stays at the top and animates as screens are changed.
 // 'screen' -> Each screen has a header attached to it,
@@ -13,15 +15,19 @@ import NativeBaseScreen from '../../Screens/NativeBaseScreen';
 // const mode = (Platform.OS === 'android' ? 'screen' : 'float');
 const mode = 'none';
 
-export default StackNavigator(
+const AppNavigator = StackNavigator(
   {
     'Login': { screen: LoginScreen },
     'Test': { screen: TestScreen },
     'Categories': { screen: CategoriesScreen },
-    'NativeBase': { screen: NativeBaseScreen }
+    'NativeBase': { screen: NativeBaseScreen },
+    'Colors': { screen: ColorsScreen },
+    'Onboarding': { screen: OnboardingScreen }
   },
   {
-    initialRouteName: 'NativeBase',
+    initialRouteName: 'Onboarding',
     headerMode: mode
   }
 );
+
+export default AppNavigator;

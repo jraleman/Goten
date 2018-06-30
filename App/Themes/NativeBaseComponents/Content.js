@@ -1,9 +1,9 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
+export default (variable = variables) => {
   const contentTheme = {
     ".padder": {
-      padding: variables.contentPadding
+      padding: variable.contentPadding
     },
     flex: 1,
     backgroundColor: "transparent",

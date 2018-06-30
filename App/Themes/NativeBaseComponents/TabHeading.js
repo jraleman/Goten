@@ -1,11 +1,11 @@
-import variable from './../variable';
+import variables from './../variables';
 
-export default (variables = variable) => {
-  const platform = variables.platform;
+export default (variable = variables) => {
+  const platform = variable.platform;
 
   const tabHeadingTheme = {
     flexDirection: "row",
-    backgroundColor: variables.tabDefaultBg,
+    backgroundColor: variable.tabDefaultBg,
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
@@ -15,20 +15,20 @@ export default (variables = variable) => {
       minWidth: platform === "android" ? undefined : 60
     },
     "NativeBase.Text": {
-      color: variables.topTabBarTextColor,
+      color: variable.topTabBarTextColor,
       marginHorizontal: 7
     },
     "NativeBase.Icon": {
-      color: variables.topTabBarTextColor,
+      color: variable.topTabBarTextColor,
       fontSize: platform === "ios" ? 26 : undefined
     },
     ".active": {
       "NativeBase.Text": {
-        color: variables.topTabBarActiveTextColor,
+        color: variable.topTabBarActiveTextColor,
         fontWeight: "600"
       },
       "NativeBase.Icon": {
-        color: variables.topTabBarActiveTextColor
+        color: variable.topTabBarActiveTextColor
       }
     }
   };
