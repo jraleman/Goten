@@ -67,7 +67,7 @@ class OnboardingScreen extends React.Component {
     const resetAction = StackActions.reset({
       index: 0,
       key: null,
-      actions: [NavigationActions.navigate({ routeName: 'NativeBase' })],
+      actions: [NavigationActions.navigate({ routeName: 'Login' })],
     });
     this.props.navigation.dispatch(resetAction);
     return ;
@@ -94,9 +94,7 @@ class OnboardingScreen extends React.Component {
     }
     else if (this.state.firstLaunch == false) {
       return (
-        <Container>
-          { this.handleNavigation() }
-        </Container>
+        <Container>{ this.handleNavigation() }</Container>
       );
     }
   }
