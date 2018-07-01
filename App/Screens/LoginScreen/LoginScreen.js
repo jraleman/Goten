@@ -5,6 +5,7 @@ import {
   Text
 } from 'native-base'
 import styles from './styles';
+import WallpaperContainer from '../../Containers/WallpaperContainer';
 
 class LoginScreen extends React.Component {
   constructor (props) {
@@ -18,8 +19,11 @@ class LoginScreen extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-        <Content>
-        </Content>
+        <WallpaperContainer>
+          <Content>
+            <Text>{ "LoginScreen" }</Text>
+          </Content>
+        </WallpaperContainer>
       </Container>
     );
   }

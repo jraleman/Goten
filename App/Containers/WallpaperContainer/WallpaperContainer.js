@@ -1,9 +1,8 @@
 import React from 'react';
-import {
-  Container,
-  Image
-} from 'native-base';
+import { Container } from 'native-base';
+import { Image } from 'react-native';
 import styles from './styles';
+import { Images } from '../../Themes';
 
 class WallpaperContainer extends React.Component {
   constructor (props) {
@@ -13,9 +12,11 @@ class WallpaperContainer extends React.Component {
   }
   render () {
     return (
-      <Container style={ styles.container }>
-        <Content>
-        </Content>
+      <Container>
+        <Image
+          source={ Images.loginBg }
+          style={ styles.wallpaper }
+        />
       </Container>
     );
   }
