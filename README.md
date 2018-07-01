@@ -27,5 +27,5 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 
 - [React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
 - [Network Indicator](https://medium.com/dailyjs/offline-notice-in-react-native-28a8d01e8cd0)
-- [Login Screen](https://github.com/mmazzarolo/react-native-login-animation-example)
+- [Login Screen](https://github.com/dwicao/react-native-login-screen)
 - [Color API Tutorial](https://www.youtube.com/watch?v=d2Mp66FFBgU)
