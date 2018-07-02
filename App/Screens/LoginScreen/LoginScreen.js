@@ -6,6 +6,7 @@ import {
 } from 'native-base'
 import styles from './styles';
 import WallpaperContainer from '../../Containers/WallpaperContainer';
+import { Images } from '../../Themes';
 
 class LoginScreen extends React.Component {
   constructor (props) {
@@ -19,9 +20,9 @@ class LoginScreen extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-        <WallpaperContainer>
+        <WallpaperContainer img={ Images.loginBg }>
           <Content>
-            <Text>{ "LoginScreen" }</Text>
+            <Text style={{color: 'white'}}>{ "LoginScreen" }</Text>
           </Content>
         </WallpaperContainer>
       </Container>
