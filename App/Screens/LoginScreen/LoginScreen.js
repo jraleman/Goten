@@ -20,7 +20,10 @@ class LoginScreen extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-        <WallpaperContainer img={ Images.loginBg }>
+        <WallpaperContainer
+          img={ Images.loginBg }
+          overlay={ "#ED1727" }
+        >
           <Content>
             <Text style={{color: 'white'}}>{ "LoginScreen" }</Text>
           </Content>
