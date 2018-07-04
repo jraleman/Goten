@@ -29,4 +29,8 @@ export default StyleSheet.create({
     zIndex: 99,
     backgroundColor: '#F035E0',
   },
+  text: {
+    color: 'white',
+    backgroundColor: 'transparent',
+  },
 });

@@ -23,6 +23,7 @@ class AnimatedButton extends React.Component {
       isLoading: false
     };
     this._color = this.props.color;
+    this._title = this.props.title;
     this.buttonAnimated = new Animated.Value(0);
     this.growAnimated = new Animated.Value(0);
     return ;
@@ -78,7 +79,7 @@ class AnimatedButton extends React.Component {
             { this.state.isLoading ? (
               <Spinner />
             ) : (
-              <Text>{ "Press here!" }</Text>
+              <Text style={ styles.text }>{ this._title }</Text>
             )}
           </TouchableOpacity>
           <Animated.View
