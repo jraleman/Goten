@@ -1,8 +1,10 @@
 import React from 'react';
 import {
-  Text,
-  View
-} from 'react-native';
+  Container,
+  Item,
+  Input,
+  Label
+} from 'native-base'
 import styles from './styles';
 
 class EmailInput extends React.Component {
@@ -13,9 +15,12 @@ class EmailInput extends React.Component {
   }
   render () {
     return (
-      <View style={ styles.container }>
-        <Text>{ "Dummy EmailInput" }</Text>
-      </View>
+      <Container style={ styles.container }>
+        <Item floatingLabel={ true }>
+          <Label>{ "Email" }</Label>
+          <Input />
+        </Item>
+      </Container>
     );
   }
 }
