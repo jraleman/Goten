@@ -20,8 +20,15 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 - [x] Show network connectivity status
 - [x] Add an Onboarding screen
 - [ ] Integrate the login system
+- [ ] Drawer navigator
 - [x] NativeBase components screen (for themes)
-- [ ] Refactor code :/
+- [ ] Styling!
+- [ ] Housekeeping / Refactor code :/
+
+## Improvements
+
+- [ ] Change logo width depending on landscape/portrait orientation
+- [ ] Fetch from API via http (not secure) in iOS
 
 ## Resources
 
