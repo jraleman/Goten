@@ -1,11 +1,11 @@
 import React from 'react';
 import {
   Animated,
-  Easing
+  Easing,
+  TouchableOpacity
 } from 'react-native'
 import {
   Container,
-  Button,
   Text
 } from 'native-base';
 import styles from './styles';
@@ -16,6 +16,7 @@ class AnimatedButton extends React.Component {
     this.state = {
       isLoading: false
     };
+    this._color = this.props.color;
     this.buttonAnimated = new Animated.Value(0);
     this.growAnimated = new Animated.Value(0);
     return ;
@@ -51,12 +52,23 @@ class AnimatedButton extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-        <Button onPress={ () => this.onPressHandler }>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            { backgroundColor: this._color }
+          ]}
+          onPress={ () => this.onPressHandler }
+        >
           <Text>{ "Press here!" }</Text>
-        </Button>
+        </TouchableOpacity>
       </Container>
     );
   }
 }
+
+// <View style={[
+//   styles.overlay,
+//   {backgroundColor: this._overlay}
+// ]}/>
 
 export default AnimatedButton;
