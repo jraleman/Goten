@@ -1,5 +1,6 @@
 const Images = {
-  loginBg: require("./Source/loginBg.jpg")
+  loginBackground: require("./Source/login-background.jpg"),
+  logoLandscape: require("./Source/logo-landscape.png")
 }
 
 export default Images;
