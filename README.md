@@ -27,6 +27,7 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 
 ## Improvements
 
+- [ ] Move OnboardingScreen state.firstLaunch, outside the render function
 - [ ] Change logo width depending on landscape/portrait orientation
 - [ ] Fetch from API via http (not secure) in iOS
 
