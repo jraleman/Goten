@@ -6,9 +6,15 @@ import {
 } from 'react-native'
 import {
   Container,
-  Text
+  Text,
+  Spinner
 } from 'native-base';
 import styles from './styles';
+
+import { Dimensions } from 'react-native'
+const DEVICE_WIDTH = Dimensions.width;
+const DEVICE_HEIGHT = Dimensions.height;
+const MARGIN = 40;
 
 class AnimatedButton extends React.Component {
   constructor (props) {
@@ -22,7 +28,7 @@ class AnimatedButton extends React.Component {
     return ;
   }
   onPressHandler () {
-    if (this.state.isloading == false) {
+    if (this.state.isLoading == false) {
       this.setState({ isLoading: true });
       Animated.timing(this.buttonAnimated, {
         toValue: 1,
@@ -50,25 +56,41 @@ class AnimatedButton extends React.Component {
     return ;
   }
   render () {
+    const changeWidth = this.buttonAnimated.interpolate({
+      inputRange: [0, 1],
+      outputRange: [DEVICE_WIDTH - MARGIN, MARGIN],
+    });
+    const changeScale = this.growAnimated.interpolate({
+      inputRange: [0, 1],
+      outputRange: [1, MARGIN],
+    });
     return (
       <Container style={ styles.container }>
-        <TouchableOpacity
-          style={[
-            styles.button,
-            { backgroundColor: this._color }
-          ]}
-          onPress={ () => this.onPressHandler }
-        >
-          <Text>{ "Press here!" }</Text>
-        </TouchableOpacity>
+        <Animated.View style={{ width: changeWidth }}>
+          <TouchableOpacity
+            style={[
+              styles.button,
+              { backgroundColor: this._color }
+            ]}
+            onPress={ () => this.onPressHandler }
+            activeOpacity={ 0.75 }
+          >
+            { this.state.isLoading ? (
+              <Spinner />
+            ) : (
+              <Text>{ "Press here!" }</Text>
+            )}
+          </TouchableOpacity>
+          <Animated.View
+            style={[
+              styles.circle,
+              {transform: [{scale: changeScale}]}
+            ]}
+          />
+        </Animated.View>
       </Container>
     );
   }
 }
-
-// <View style={[
-//   styles.overlay,
-//   {backgroundColor: this._overlay}
-// ]}/>
 
 export default AnimatedButton;

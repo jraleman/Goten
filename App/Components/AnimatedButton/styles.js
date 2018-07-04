@@ -17,5 +17,16 @@ export default StyleSheet.create({
     height: MARGIN,
     borderRadius: 2.5,
     zIndex: 100,
-  }
+  },
+  circle: {
+    height: MARGIN,
+    width: MARGIN,
+    marginTop: -MARGIN,
+    borderWidth: 1,
+    borderColor: '#F035E0',
+    borderRadius: 100,
+    alignSelf: 'center',
+    zIndex: 99,
+    backgroundColor: '#F035E0',
+  },
 });
