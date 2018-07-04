@@ -20,6 +20,7 @@ class WallpaperContainer extends React.Component {
       <Container>
         <ImageBackground
           source={ this._img }
+          resizeMode={ "cover" }
           style={ styles.wallpaper }
         >
           <View style={[
