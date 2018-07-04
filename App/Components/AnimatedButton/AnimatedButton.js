@@ -2,13 +2,11 @@ import React from 'react';
 import {
   Animated,
   Easing,
-  TouchableOpacity
-} from 'react-native'
-import {
-  Container,
+  TouchableOpacity,
   Text,
-  Spinner
-} from 'native-base';
+  View
+} from 'react-native'
+import { Spinner } from 'native-base';
 import styles from './styles';
 
 import { Dimensions } from 'react-native'
@@ -28,7 +26,7 @@ class AnimatedButton extends React.Component {
     this.growAnimated = new Animated.Value(0);
     return ;
   }
-  onPressHandler () {
+  onPressHandler = () => {
     if (this.state.isLoading == false) {
       this.setState({ isLoading: true });
       Animated.timing(this.buttonAnimated, {
@@ -40,7 +38,7 @@ class AnimatedButton extends React.Component {
         this.onGrow();
       }, 2000);
       setTimeout(() => {
-        Actions.secondScreen();
+        // Actions.secondScreen();
         this.setState({ isLoading: false });
         this.buttonAnimated.setValue(0);
         this.growAnimated.setValue(0);
@@ -66,17 +64,17 @@ class AnimatedButton extends React.Component {
       outputRange: [1, MARGIN],
     });
     return (
-      <Container style={ styles.container }>
+      <View style={ styles.container }>
         <Animated.View style={{ width: changeWidth }}>
           <TouchableOpacity
             style={[
               styles.button,
               { backgroundColor: this._color }
             ]}
-            onPress={ () => this.onPressHandler }
+            onPress={ this.onPressHandler }
             activeOpacity={ 0.75 }
           >
-            { this.state.isLoading ? (
+            { this.state.isLoading == true ? (
               <Spinner />
             ) : (
               <Text style={ styles.text }>{ this._title }</Text>
@@ -89,7 +87,7 @@ class AnimatedButton extends React.Component {
             ]}
           />
         </Animated.View>
-      </Container>
+      </View>
     );
   }
 }
