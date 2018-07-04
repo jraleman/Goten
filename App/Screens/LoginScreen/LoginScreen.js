@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from 'react-native';
 import {
   Container,
   Content,
@@ -25,6 +26,10 @@ class LoginScreen extends React.Component {
           overlay={ "#ED1727" }
         >
           <Content>
+            <Image
+              style={ styles.logo }
+              source={ Images.logoLandscape }
+            />
             <Text style={{color: 'white'}}>{ "LoginScreen" }</Text>
           </Content>
         </WallpaperContainer>
