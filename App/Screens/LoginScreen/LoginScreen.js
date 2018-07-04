@@ -1,5 +1,8 @@
 import React from 'react';
-import { Image } from 'react-native';
+import {
+  Image,
+  KeyboardAvoidingView
+} from 'react-native';
 import {
   Container,
   Content,
@@ -14,7 +17,9 @@ class LoginScreen extends React.Component {
     super(props);
     this.state = {
       email: null,
-      password: null
+      password: null,
+      hidePassword: true,
+      pressButton: false
     };
     return;
   }
@@ -30,9 +35,12 @@ class LoginScreen extends React.Component {
             resizeMode={ "contain" }
             source={ Images.logoLandscape }
           />
-          <Content>
-
-          </Content>
+          <KeyboardAvoidingView
+            behavior="padding"
+            style={styles.container}
+          >
+            <Text>{ "Avoid View" }</Text>
+          </KeyboardAvoidingView>
         </WallpaperContainer>
       </Container>
     );
