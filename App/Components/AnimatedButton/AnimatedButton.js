@@ -28,7 +28,24 @@ class AnimatedButton extends React.Component {
         duration: 200,
         easing: Easing.linear
       }).start();
+      setTimeout (() => {
+        this.onGrow();
+      }, 2000);
+      setTimeout(() => {
+        Actions.secondScreen();
+        this.setState({ isLoading: false });
+        this.buttonAnimated.setValue(0);
+        this.growAnimated.setValue(0);
+      }, 2300)
     }
+    return ;
+  }
+  onGrow () {
+    Animated.timing(this.growAnimated, {
+      toValue: 1,
+      duration: 200,
+      easing: Easing.linear
+    }).start();
     return ;
   }
   render () {
