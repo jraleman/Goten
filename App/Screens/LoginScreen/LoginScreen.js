@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Keyboard,
   Image,
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
@@ -28,10 +29,6 @@ class LoginScreen extends React.Component {
     };
     return;
   }
-  dismissKeyboard () {
-    alert('keyboard will hide')
-    return ;
-  }
   render () {
     return (
       <Container style={ styles.container }>
@@ -40,7 +37,7 @@ class LoginScreen extends React.Component {
           overlay={ '#ED1727' }
         >
           <TouchableWithoutFeedback
-            onPress={ this.dismissKeyboard }
+            onPress={ Keyboard.dismiss }
             accessible={ false }
           >
             <View style={{ flex: 1 }}>
