@@ -12,11 +12,18 @@ import styles from './styles';
 class PasswordInput extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isHidden: false
+    };
     return ;
   }
-  hidePasswordHandler () {
-    alert('sup!')
+  hidePasswordHandler = () => {
+    if (this.state.isHidden == false) {
+      this.setState({ isHidden: true });
+    }
+    else if (this.state.isHidden == true) {
+      this.setState({ isHidden: false });
+    }
     return ;
   }
   render () {
@@ -27,6 +34,7 @@ class PasswordInput extends React.Component {
             keyboardType={ 'default' }
             placeholder={ "Password" }
             placeholderTextColor={ 'white' }
+            secureTextEntry={ this.state.isHidden }
           />
           <Button
             transparent={ true }
