@@ -1,7 +1,9 @@
 import React from 'react';
 import {
   Image,
-  KeyboardAvoidingView
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  View
 } from 'react-native';
 import {
   Container,
@@ -26,29 +28,40 @@ class LoginScreen extends React.Component {
     };
     return;
   }
+  dismissKeyboard () {
+    alert('keyboard will hide')
+    return ;
+  }
   render () {
     return (
       <Container style={ styles.container }>
         <WallpaperContainer
           img={ Images.loginBackground }
-          overlay={ "#ED1727" }
+          overlay={ '#ED1727' }
         >
-          <Image
-            style={ styles.logo }
-            resizeMode={ "contain" }
-            source={ Images.logoLandscape }
-          />
-          <KeyboardAvoidingView
-            behavior="padding"
-            style={styles.container}
+          <TouchableWithoutFeedback
+            onPress={ this.dismissKeyboard }
+            accessible={ false }
           >
-            <EmailInput />
-            <PasswordInput />
-            <AnimatedButton
-              title={ "Login" }
-              color={ "#ED1727" }
-            />
-          </KeyboardAvoidingView>
+            <View style={{ flex: 1 }}>
+              <Image
+                style={ styles.logo }
+                resizeMode={ "contain" }
+                source={ Images.logoLandscape }
+              />
+              <KeyboardAvoidingView
+                behavior="padding"
+                style={styles.container}
+              >
+                <EmailInput />
+                <PasswordInput />
+                <AnimatedButton
+                  title={ "Login" }
+                  color={ '#ED1727' }
+                />
+              </KeyboardAvoidingView>
+            </View>
+          </TouchableWithoutFeedback>
         </WallpaperContainer>
       </Container>
     );
