@@ -6,7 +6,12 @@ import {
   Text,
   View
 } from 'react-native'
-import { Spinner } from 'native-base';
+import {
+  Container,
+  Button,
+  Spinner,
+  Icon
+} from 'native-base';
 import styles from './styles';
 
 import { Dimensions } from 'react-native'
@@ -64,30 +69,36 @@ class AnimatedButton extends React.Component {
       outputRange: [1, MARGIN],
     });
     return (
-      <View style={ styles.container }>
+      <Container style={ styles.container }>
         <Animated.View style={{ width: changeWidth }}>
-          <TouchableOpacity
+          <Button
             style={[
               styles.button,
               { backgroundColor: this._color }
             ]}
+            block={ true }
             onPress={ this.onPressHandler }
-            activeOpacity={ 0.75 }
           >
             { this.state.isLoading == true ? (
               <Spinner />
             ) : (
-              <Text style={ styles.text }>{ this._title }</Text>
+              <Text style={ styles.text }>
+                <Icon
+                  active={ true }
+                  name={ 'log-in' }
+                />
+                { this._title }
+              </Text>
             )}
-          </TouchableOpacity>
+          </Button>
           <Animated.View
             style={[
               styles.circle,
-              {transform: [{scale: changeScale}]}
+              { transform: [{ scale: changeScale }]}
             ]}
           />
         </Animated.View>
-      </View>
+      </Container>
     );
   }
 }

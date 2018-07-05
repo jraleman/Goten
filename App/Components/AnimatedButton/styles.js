@@ -32,5 +32,7 @@ export default StyleSheet.create({
   text: {
     color: 'white',
     backgroundColor: 'transparent',
+    paddingLeft: 100,
+    paddingRight: 100
   },
 });
