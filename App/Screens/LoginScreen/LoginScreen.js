@@ -10,6 +10,9 @@ import {
 } from 'native-base'
 import styles from './styles';
 import WallpaperContainer from '../../Containers/WallpaperContainer';
+import AnimatedButton from '../../Components/AnimatedButton';
+import EmailInput from '../../Components/EmailInput';
+import PasswordInput from '../../Components/PasswordInput';
 import { Images } from '../../Themes';
 
 class LoginScreen extends React.Component {
@@ -39,7 +42,12 @@ class LoginScreen extends React.Component {
             behavior="padding"
             style={styles.container}
           >
-            <Text>{ "Avoid View" }</Text>
+            <EmailInput />
+            <PasswordInput />
+            <AnimatedButton
+              title={ "Login" }
+              color={ "#ED1727" }
+            />
           </KeyboardAvoidingView>
         </WallpaperContainer>
       </Container>
