@@ -23,8 +23,11 @@ class PasswordInput extends React.Component {
     return (
       <Container style={ styles.container }>
         <Item inlineLabel={ true }>
-          <Label style={ styles.label }>{ "Password" }</Label>
-          <Input keyboardType={ 'default' }/>
+          <Input
+            keyboardType={ 'default' }
+            placeholder={ "Password" }
+            placeholderTextColor={ 'white' }
+          />
           <Button
             transparent={ true }
             onPress={ this.hidePasswordHandler }
@@ -32,7 +35,7 @@ class PasswordInput extends React.Component {
             <Icon
               active={ true }
               name={ 'eye' }
-              style={{color: '#384850'}}
+              style={ styles.icon }
             />
           </Button>
         </Item>

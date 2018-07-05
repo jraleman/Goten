@@ -6,5 +6,8 @@ export default StyleSheet.create({
   },
   label: {
     color: 'white'
+  },
+  icon: {
+    color: 'white'
   }
 });

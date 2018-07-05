@@ -16,9 +16,12 @@ class EmailInput extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-        <Item floatingLabel={ true }>
-          <Label>{ "Email" }</Label>
-          <Input />
+        <Item>
+          <Input
+            placeholder={ "Email" }
+            placeholderTextColor={ 'white' }
+            keyboardType={ 'email-address' }
+          />
         </Item>
       </Container>
     );
