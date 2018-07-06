@@ -29,6 +29,10 @@ class LoginScreen extends React.Component {
     };
     return;
   }
+  onSubmitHandler () {
+    alert('Login is not yet implemented :)');
+    return;
+  }
   render () {
     return (
       <Container style={ styles.container }>
@@ -55,6 +59,7 @@ class LoginScreen extends React.Component {
                 <AnimatedButton
                   title={ "Login" }
                   color={ '#ED1727' }
+                  onPress={ this.onSubmitHandler }
                 />
               </KeyboardAvoidingView>
             </View>
