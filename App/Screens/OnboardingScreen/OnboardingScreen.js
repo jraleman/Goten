@@ -9,35 +9,45 @@ import {
   StackActions,
   NavigationActions
 } from 'react-navigation';
+import '../../Config';
+import I18n from 'react-native-i18n';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import styles from './styles';
 
 const slides = [
   {
-    key: 'somethun',
-    title: 'Title 1',
-    text: 'Description.\nSay something cool',
+    key: 'slideOne',
+    title: I18n.t('onboardingScreen.slideOne.title'),
+    text: I18n.t('onboardingScreen.slideOne.text'),
     // image: require('./assets/1.jpg'),
     // imageStyle: styles.image,
-    backgroundColor: '#59b2ab',
+    backgroundColor: '#333',
   },
   {
-    key: 'somethun-dos',
-    title: 'Title 2',
-    text: 'Other cool stuff',
+    key: 'slideTwo',
+    title: I18n.t('onboardingScreen.slideTwo.title'),
+    text: I18n.t('onboardingScreen.slideTwo.text'),
     // image: require('./assets/2.jpg'),
     // imageStyle: styles.image,
-    backgroundColor: '#febe29',
+    backgroundColor: '#444',
   },
   {
-    key: 'somethun1',
-    title: 'Rocket guy',
-    text: 'I\'m already out of descriptions\n\nLorem ipsum bla bla bla',
+    key: 'slideThree',
+    title: I18n.t('onboardingScreen.slideThree.title'),
+    text: I18n.t('onboardingScreen.slideThree.text'),
     // image: require('./assets/3.jpg'),
     // imageStyle: styles.image,
-    backgroundColor: '#22bcb5',
+    backgroundColor: '#555',
+  },
+  {
+    key: 'slideFour',
+    title: I18n.t('onboardingScreen.slideFour.title'),
+    text: I18n.t('onboardingScreen.slideFour.text'),
+    // image: require('./assets/3.jpg'),
+    // imageStyle: styles.image,
+    backgroundColor: '#666',
   }
-]
+];
 
 // Thanks for your amazing stackoverflow answer, martinarroyo.
 // Source: https://stackoverflow.com/a/40729761
@@ -82,7 +92,7 @@ class OnboardingScreen extends React.Component {
       // AsyncStorage retrieving your data won't be noticeable to the user.
       return (null);
     }
-    else if (this.state.firstLaunch == true) {
+    else if (this.state.firstLaunch == false) {
       return (
         <Container style={ styles.container }>
           <AppIntroSlider
@@ -92,7 +102,7 @@ class OnboardingScreen extends React.Component {
         </Container>
       );
     }
-    else if (this.state.firstLaunch == false) {
+    else if (this.state.firstLaunch == true) {
       return (
         <Container>{ this.handleNavigation() }</Container>
       );

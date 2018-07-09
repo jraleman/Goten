@@ -3,7 +3,7 @@ import I18n from 'react-native-i18n';
 // English is going to be the fallback language.
 I18n.fallbacks = true;
 I18n.translations = {
-  en: require("./languages/en.json");
+  en: require("./languages/en.json")
 };
 // We just care about the language code, ignoring the localization :o
 // i.e.    [en]-US and [en]-UK
