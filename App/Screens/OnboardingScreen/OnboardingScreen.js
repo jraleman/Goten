@@ -73,6 +73,11 @@ class OnboardingScreen extends React.Component {
     });
     return ;
   }
+  componentDidUpdate () {
+    if (this.state.firstLaunch == false) {
+      this.handleNavigation();
+    }
+  }
   handleNavigation () {
     const resetAction = StackActions.reset({
       index: 0,
@@ -92,7 +97,7 @@ class OnboardingScreen extends React.Component {
       // AsyncStorage retrieving your data won't be noticeable to the user.
       return (null);
     }
-    else if (this.state.firstLaunch == false) {
+    else if (this.state.firstLaunch == true) {
       return (
         <Container style={ styles.container }>
           <AppIntroSlider
@@ -100,11 +105,6 @@ class OnboardingScreen extends React.Component {
             onDone={ () => this.handleNavigation() }
           />
         </Container>
-      );
-    }
-    else if (this.state.firstLaunch == true) {
-      return (
-        <Container>{ this.handleNavigation() }</Container>
       );
     }
   }
