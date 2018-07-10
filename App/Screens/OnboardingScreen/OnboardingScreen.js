@@ -74,7 +74,7 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   componentDidUpdate () {
-    if (this.state.firstLaunch == false) {
+    if (this.state.firstLaunch == true) {
       this.handleNavigation();
     }
   }
@@ -82,22 +82,13 @@ class OnboardingScreen extends React.Component {
     const resetAction = StackActions.reset({
       index: 0,
       key: null,
-      actions: [NavigationActions.navigate({ routeName: 'Login' })],
+      actions: [NavigationActions.navigate({ routeName: 'NativeBase' })],
     });
     this.props.navigation.dispatch(resetAction);
     return ;
   }
   render () {
-    if (this.state.firstLaunch == null) {
-      // This is the 'tricky' part:
-      // The query to AsyncStorage is not finished, but we have to present
-      // something to the user.
-      // Null will just render nothing, so you can also put a placeholder of
-      // some sort, but effectively the interval between the first mount and
-      // AsyncStorage retrieving your data won't be noticeable to the user.
-      return (null);
-    }
-    else if (this.state.firstLaunch == true) {
+    if (this.state.firstLaunch == false) {
       return (
         <Container style={ styles.container }>
           <AppIntroSlider
@@ -106,6 +97,15 @@ class OnboardingScreen extends React.Component {
           />
         </Container>
       );
+    }
+    else {
+      // This is the 'tricky' part:
+      // The query to AsyncStorage is not finished, but we have to present
+      // something to the user.
+      // Null will just render nothing, so you can also put a placeholder of
+      // some sort, but effectively the interval between the first mount and
+      // AsyncStorage retrieving your data won't be noticeable to the user.
+      return (null);
     }
   }
 }
