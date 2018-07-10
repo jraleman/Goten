@@ -13,13 +13,14 @@ import '../../Config';
 import I18n from 'react-native-i18n';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import styles from './styles';
+import { Images } from '../../Themes';
 
 const slides = [
   {
     key: 'slideOne',
     title: I18n.t('onboardingScreen.slideOne.title'),
     text: I18n.t('onboardingScreen.slideOne.text'),
-    // image: require('./assets/1.jpg'),
+    image: Images.onboardingSlideOne,
     // imageStyle: styles.image,
     backgroundColor: '#333',
   },
@@ -27,7 +28,7 @@ const slides = [
     key: 'slideTwo',
     title: I18n.t('onboardingScreen.slideTwo.title'),
     text: I18n.t('onboardingScreen.slideTwo.text'),
-    // image: require('./assets/2.jpg'),
+    image: Images.onboardingSlideTwo,
     // imageStyle: styles.image,
     backgroundColor: '#444',
   },
@@ -35,7 +36,7 @@ const slides = [
     key: 'slideThree',
     title: I18n.t('onboardingScreen.slideThree.title'),
     text: I18n.t('onboardingScreen.slideThree.text'),
-    // image: require('./assets/3.jpg'),
+    image: Images.onboardingSlideThree,
     // imageStyle: styles.image,
     backgroundColor: '#555',
   },
@@ -43,7 +44,7 @@ const slides = [
     key: 'slideFour',
     title: I18n.t('onboardingScreen.slideFour.title'),
     text: I18n.t('onboardingScreen.slideFour.text'),
-    // image: require('./assets/3.jpg'),
+    image: Images.onboardingSlideFour,
     // imageStyle: styles.image,
     backgroundColor: '#666',
   }
