@@ -32,6 +32,10 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 - [ ] Change logo width depending on landscape/portrait orientation
 - [ ] Fetch from API via http (not secure) in iOS
 
+## Attribution
+
+- [Onboarding Icons made by Freepik](http://www.freepik.com)
+
 ## Resources
 
 - [React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
