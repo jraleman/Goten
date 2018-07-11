@@ -9,35 +9,46 @@ import {
   StackActions,
   NavigationActions
 } from 'react-navigation';
+import '../../Config';
+import I18n from 'react-native-i18n';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import styles from './styles';
+import { Images } from '../../Themes';
 
 const slides = [
   {
-    key: 'somethun',
-    title: 'Title 1',
-    text: 'Description.\nSay something cool',
-    // image: require('./assets/1.jpg'),
-    // imageStyle: styles.image,
-    backgroundColor: '#59b2ab',
+    key: 'slideOne',
+    title: I18n.t('onboardingScreen.slideOne.title'),
+    text: I18n.t('onboardingScreen.slideOne.text'),
+    image: Images.onboardingSlideOne,
+    imageStyle: styles.image,
+    backgroundColor: '#333333',
   },
   {
-    key: 'somethun-dos',
-    title: 'Title 2',
-    text: 'Other cool stuff',
-    // image: require('./assets/2.jpg'),
-    // imageStyle: styles.image,
-    backgroundColor: '#febe29',
+    key: 'slideTwo',
+    title: I18n.t('onboardingScreen.slideTwo.title'),
+    text: I18n.t('onboardingScreen.slideTwo.text'),
+    image: Images.onboardingSlideTwo,
+    imageStyle: styles.image,
+    backgroundColor: '#393939',
   },
   {
-    key: 'somethun1',
-    title: 'Rocket guy',
-    text: 'I\'m already out of descriptions\n\nLorem ipsum bla bla bla',
-    // image: require('./assets/3.jpg'),
-    // imageStyle: styles.image,
-    backgroundColor: '#22bcb5',
+    key: 'slideThree',
+    title: I18n.t('onboardingScreen.slideThree.title'),
+    text: I18n.t('onboardingScreen.slideThree.text'),
+    image: Images.onboardingSlideThree,
+    imageStyle: styles.image,
+    backgroundColor: '#444444',
+  },
+  {
+    key: 'slideFour',
+    title: I18n.t('onboardingScreen.slideFour.title'),
+    text: I18n.t('onboardingScreen.slideFour.text'),
+    image: Images.onboardingSlideFour,
+    imageStyle: styles.image,
+    backgroundColor: '#494949',
   }
-]
+];
 
 // Thanks for your amazing stackoverflow answer, martinarroyo.
 // Source: https://stackoverflow.com/a/40729761
@@ -63,26 +74,22 @@ class OnboardingScreen extends React.Component {
     });
     return ;
   }
+  componentDidUpdate () {
+    if (this.state.firstLaunch == true) {
+      this.handleNavigation();
+    }
+  }
   handleNavigation () {
     const resetAction = StackActions.reset({
       index: 0,
       key: null,
-      actions: [NavigationActions.navigate({ routeName: 'Login' })],
+      actions: [NavigationActions.navigate({ routeName: 'NativeBase' })],
     });
     this.props.navigation.dispatch(resetAction);
     return ;
   }
   render () {
-    if (this.state.firstLaunch == null) {
-      // This is the 'tricky' part:
-      // The query to AsyncStorage is not finished, but we have to present
-      // something to the user.
-      // Null will just render nothing, so you can also put a placeholder of
-      // some sort, but effectively the interval between the first mount and
-      // AsyncStorage retrieving your data won't be noticeable to the user.
-      return (null);
-    }
-    else if (this.state.firstLaunch == true) {
+    if (this.state.firstLaunch == false) {
       return (
         <Container style={ styles.container }>
           <AppIntroSlider
@@ -92,10 +99,14 @@ class OnboardingScreen extends React.Component {
         </Container>
       );
     }
-    else if (this.state.firstLaunch == false) {
-      return (
-        <Container>{ this.handleNavigation() }</Container>
-      );
+    else {
+      // This is the 'tricky' part:
+      // The query to AsyncStorage is not finished, but we have to present
+      // something to the user.
+      // Null will just render nothing, so you can also put a placeholder of
+      // some sort, but effectively the interval between the first mount and
+      // AsyncStorage retrieving your data won't be noticeable to the user.
+      return (null);
     }
   }
 }

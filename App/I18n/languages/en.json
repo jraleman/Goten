@@ -1,0 +1,20 @@
+{
+  "onboardingScreen": {
+    "slideOne": {
+      "title": "Dream",
+      "text": "Where ideas are born"
+    },
+    "slideTwo": {
+      "title": "Design",
+      "text": "And let's design those ideas"
+    },
+    "slideThree": {
+      "title": "Develop",
+      "text": "Because it's time to make them real"
+    },
+    "slideFour": {
+      "title": "Deliver",
+      "text": "To the real world!"
+    }
+  }
+}

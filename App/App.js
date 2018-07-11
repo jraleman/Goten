@@ -3,14 +3,15 @@ import { AsyncStorage } from 'react-native';
 import { Provider } from 'react-redux';
 import store from './Redux';
 import RootContainer from './Containers/RootContainer';
-import OnboardingScreen from './Screens/OnboardingScreen';
+// Import config file
+import './Config';
 
 class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
   }
-  render() {
+  render () {
     return (
       <Provider store={ store }>
         <RootContainer />

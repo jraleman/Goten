@@ -19,6 +19,7 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 - [x] Implement Redux Axios Middleware
 - [x] Show network connectivity status
 - [x] Add an Onboarding screen
+- [x] Add i18n support
 - [ ] Integrate the login system
 - [ ] Drawer navigator
 - [x] NativeBase components screen (for themes)
@@ -27,9 +28,13 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 
 ## Improvements
 
-- [ ] Move OnboardingScreen state.firstLaunch, outside the render function
+- [x] Move OnboardingScreen state.firstLaunch, outside the render function
 - [ ] Change logo width depending on landscape/portrait orientation
 - [ ] Fetch from API via http (not secure) in iOS
+
+## Attribution
+
+- [Onboarding Icons made by Freepik](http://www.freepik.com)
 
 ## Resources
 
