@@ -19,6 +19,7 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 - [x] Implement Redux Axios Middleware
 - [x] Show network connectivity status
 - [x] Add an Onboarding screen
+- [ ] Update OnboardingScreen using `react-native-app-intro`
 - [x] Add i18n support
 - [ ] Integrate the login system
 - [ ] Drawer navigator
