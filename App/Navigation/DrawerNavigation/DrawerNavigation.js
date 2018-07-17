@@ -1,5 +1,5 @@
 import { DrawerNavigator } from 'react-navigation';
-// import DrawerNavigatorContainer from '../../Containers/DrawerNavigatorContainer';
+import DrawerNavigationContainer from '../../Containers/DrawerNavigationContainer';
 import CategoriesScreen from '../../Screens/CategoriesScreen';
 import ColorsScreen from '../../Screens/ColorsScreen';
 import NativeBaseScreen from '../../Screens/NativeBaseScreen';
@@ -13,6 +13,8 @@ const DrawerNavigation = DrawerNavigator({
   },
   {
     initialRouteName: 'Native Base',
-    // contentComponent: props => (<DrawerNavigatorContainer { ...props } />)
+    contentComponent: props => <DrawerNavigationContainer { ...props } />
   }
 );
+
+export default DrawerNavigation;

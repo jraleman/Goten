@@ -24,3 +24,5 @@ class DrawerNavigationContainer extends React.Component {
     );
   }
 }
+
+export default DrawerNavigationContainer;
