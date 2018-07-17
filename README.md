@@ -22,6 +22,7 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 - [x] Add i18n support
 - [ ] Integrate the login system
 - [ ] Drawer navigator
+- [ ] Include [push notifications](https://github.com/zo0r/react-native-push-notification)
 - [x] NativeBase components screen (for themes)
 - [ ] Styling!
 - [ ] Housekeeping / Refactor code :/
