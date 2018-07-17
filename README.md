@@ -12,20 +12,34 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 
 ## Goals
 
-- [x] Redux implementation
 - [x] Rename App `ScarletRocks` -> `ScarletDog`
-- [x] Replace `Navigator` -> `StackNavigator`
-- [x] Redux Persist integration
-- [x] Implement Redux Axios Middleware
-- [x] Show network connectivity status
-- [x] Add an Onboarding screen
-- [x] Add i18n support
-- [ ] Integrate the login system
-- [ ] Drawer navigator
-- [ ] Include [push notifications](https://github.com/zo0r/react-native-push-notification)
-- [x] NativeBase components screen (for themes)
-- [ ] Styling!
-- [ ] Housekeeping / Refactor code :/
+- [x] Redux
+  - [x] Implementation
+  - [x] Redux Axios Middleware
+  - [x] Redux Persist
+- [x] Navigation
+  - [x] StackNavigator
+    - [x] Replace `Navigator` -> `StackNavigator`
+  - [ ] DrawerNavigator
+- [ ] Notifications
+  - [x] Show network connectivity status
+    - [ ] Use a [toast component](https://github.com/remobile/react-native-toast)
+  - [ ] Include [push notifications](https://github.com/zo0r/react-native-push-notification)
+- [ ] Screens
+  - [x] Add an Onboarding screen
+  - [ ] Integrate the login system
+  - [ ] Profile screen
+  - [x] NativeBase components screen (for themes)
+- [ ] Languages
+  - [x] Add i18n support
+  - [ ] Integrate to multiple screens
+  - [ ] English
+  - [ ] Spanish
+  - [ ] German
+- [ ] Housekeeping
+  - [ ] Styling!
+  - [ ] Refactor code
+  - [ ] On going app support
 
 ## Improvements
 
