@@ -17,6 +17,12 @@ import AnimatedButton from '../../Components/AnimatedButton';
 import EmailInput from '../../Components/EmailInput';
 import PasswordInput from '../../Components/PasswordInput';
 import { Images } from '../../Themes';
+import { connect } from 'react-redux';
+import {
+  StackActions,
+  NavigationActions
+} from 'react-navigation';
+import '../../Config';
 
 class LoginScreen extends React.Component {
   constructor (props) {
@@ -29,9 +35,25 @@ class LoginScreen extends React.Component {
     };
     return;
   }
-  onSubmitHandler () {
-    alert('Login is not yet implemented :)');
-    return;
+  handleNavigation = () => {
+    const resetAction = StackActions.reset({
+      index: 0,
+      key: null,
+      actions: [NavigationActions.navigate({ routeName: 'NativeBase' })],
+    });
+    this.props.navigation.dispatch(resetAction);
+    return ;
+  }
+  onSubmitHandler = () => {
+    // this.props.navigation.navigate('NativeBase');
+    // const resetAction = StackActions.reset({
+    //   index: 0,
+    //   key: null,
+    //   actions: [NavigationActions.navigate({ routeName: 'NativeBase' })],
+    // });
+    // this.props.navigation.dispatch(resetAction);
+    this.handleNavigation();
+    return ;
   }
   render () {
     return (
