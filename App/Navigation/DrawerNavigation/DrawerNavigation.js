@@ -1,3 +1,4 @@
+import React from 'react';
 import { DrawerNavigator } from 'react-navigation';
 import DrawerNavigationContainer from '../../Containers/DrawerNavigationContainer';
 import CategoriesScreen from '../../Screens/CategoriesScreen';
