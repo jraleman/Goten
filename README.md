@@ -21,6 +21,8 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
   - [x] StackNavigator
     - [x] Replace `Navigator` -> `StackNavigator`
   - [ ] DrawerNavigator
+    - [x] Navigation flow
+    - [ ] Finish container (menu)
   - [ ] PathNavigator
 - [ ] Notifications
   - [x] Show network connectivity status
@@ -34,7 +36,6 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
     - [ ] Sign up integration
     - [ ] Data validation
   - [ ] [Profile screen](https://github.com/nattatorn-dev/react-native-user-profile)
-  - [x] NativeBase components screen (for themes)
   - [ ] Settings screen
   - [ ] Messages screen
   - [ ] Calendar screen
@@ -46,6 +47,9 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
   - [ ] Spanish
   - [ ] German
 - [ ] [Realm DB](https://www.youtube.com/watch?v=2sI64vaHF98)
+- [x] Themes
+  - [x] NativeBase components screen
+  - [x] Integrate NB's `variables.js`
 - [ ] Housekeeping
   - [ ] Styling!
   - [ ] Refactor code
