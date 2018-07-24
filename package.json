@@ -1,5 +1,5 @@
 {
-  "name": "ScarletRocks",
+  "name": "ScarletDog",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
     "react-native": "0.55.4",
     "react-native-animatable": "^1.3.0",
     "react-native-app-intro-slider": "^0.2.4",
+    "react-native-create-bridge": "^2.0.1",
     "react-native-deprecated-custom-components": "^0.1.2",
     "react-native-i18n": "^2.0.12",
     "react-native-vector-icons": "^4.6.0",
