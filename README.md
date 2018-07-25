@@ -5,7 +5,6 @@
 React Native boilerplate (or sample app), with basic redux, native-base and
 login integration.
 
-
 ## Setup
 
 Follow the steps from the react-native
@@ -14,8 +13,8 @@ Follow the steps from the react-native
 Clone the repository:
 
 ```
-git clone https://github.com/jraleman/scarlet.dog.git scarletdog
-cd scarletdog
+git clone https://github.com/jraleman/scarlet.dog.git scarletdog/
+cd scarletdog/
 ```
 
 Install all the dependencies needed:
@@ -36,6 +35,7 @@ You can also do it manually:
 
 ```
 open ios/ScarletDog.xcodeproj/
+npm start &
 ```
 
 and click the build/run icon. :)
@@ -53,11 +53,141 @@ react-native run-android
 You can also run it manually:
 
 ```
-npm start &
 cd android && ./gradlew installDebug
+npm start &
 ```
 
 <!-- **[Having issues? Click here for help!](resources/assets/md/debug-android.md)** -->
+
+## Project Structure
+
+The idea of having a good project structure is to have a cross platform project,
+to maximize code reuse, keep the configurations out of the code, and minimize
+the component state.
+
+This is the main idea:
+
+```
+App/
+├── App.js
+├── Bridge/
+│   └── QuickbloxBridgeView/
+│       ├── index.js
+│       └── QuickbloxBridgeView.js
+├── Components/
+│   ├── AnimatedButton/
+│   │   ├── AnimatedButton.js
+│   │   ├── index.js
+│   │   └── styles.js
+│   ├── EmailInput/
+│   │   ├── EmailInput.js
+│   │   ├── index.js
+│   │   └── styles.js
+│   ├── NetworkIndicator/
+│   │   ├── index.js
+│   │   ├── NetworkIndicator.js
+│   │   └── styles.js
+│   ├── PasswordInput/
+│   │   ├── index.js
+│   │   ├── PasswordInput.js
+│   │   └── styles.js
+│   └── ScarletHeader/
+│       ├── index.js
+│       ├── ScarletHeader.js
+│       └── styles.js
+├── Config/
+│   ├── AppConfig.js
+│   └── index.js
+├── Containers/
+│   ├── ColorsContainer/
+│   │   ├── ColorsContainer.js
+│   │   ├── index.js
+│   │   └── styles.js
+│   ├── DrawerNavigationContainer/
+│   │   ├── DrawerNavigationContainer.js
+│   │   ├── index.js
+│   │   └── styles.js
+│   ├── NativeBaseContainers/
+│   │   ├── BadgesContainer.js
+|   |  ...
+│   │   └── styles.js
+│   ├── RootContainer/
+│   │   ├── index.js
+│   │   ├── RootContainer.js
+│   │   └── styles.js
+│   └── WallpaperContainer/
+│       ├── index.js
+│       ├── styles.js
+│       └── WallpaperContainer.js
+├── I18n/
+│   ├── I18n.js
+│   ├── index.js
+│   └── languages/
+│       ├── de.json
+│       ├── en.json
+│       └── es.json
+├── index.js
+├── Navigation/
+│   ├── AppNavigator/
+│   │   ├── AppNavigator.js
+│   │   ├── index.js
+│   │   └── styles.js
+│   └── DrawerNavigation/
+│       ├── DrawerNavigation.js
+│       └── index.js
+├── Redux/
+│   ├── index.js
+│   ├── Middleware/
+│   │   └── fetchMiddleware.js
+│   └── Modules/
+│       ├── Bookmarks/
+│       │   ├── actions.js
+│       │   └── reducer.js
+│       ├── Categories/
+│       │   ├── actions.js
+│       │   └── reducer.js
+│       └── Colors/
+│           ├── actions.js
+│           └── reducer.js
+├── Screens/
+│   ├── CategoriesScreen/
+│   │   ├── CategoriesScreen.js
+│   │   ├── index.js
+│   │   └── styles.js
+│   ├── ColorsScreen/
+│   │   ├── ColorsScreen.js
+│   │   ├── index.js
+│   │   └── styles.js
+│   ├── LoginScreen/
+│   │   ├── index.js
+│   │   ├── LoginScreen.js
+│   │   └── styles.js
+│   ├── NativeBaseScreen/
+│   │   ├── index.js
+│   │   ├── NativeBaseScreen.js
+│   │   └── styles.js
+│   ├── OnboardingScreen/
+│   │   ├── index.js
+│   │   ├── OnboardingScreen.js
+│   │   └── styles.js
+│   └── TestScreen/
+│       ├── index.js
+│       ├── styles.js
+│       └── TestScreen.js
+└── Themes/
+    ├── Images/
+    │   ├── index.js
+    │   └── Source/
+    │       ├── login-background.jpg
+    |      ...
+    │       └── slide-two.png
+    ├── index.js
+    ├── NativeBaseComponents/
+    │   ├── Badge.js
+    │  ...
+    │   └── View.js
+    └── variables.js
+```
 
 ### Redux
 
