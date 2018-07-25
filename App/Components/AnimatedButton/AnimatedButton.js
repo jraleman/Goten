@@ -27,6 +27,7 @@ class AnimatedButton extends React.Component {
     };
     this._color = this.props.color;
     this._title = this.props.title;
+    this._onPress = this.props.onPress;
     this.buttonAnimated = new Animated.Value(0);
     this.growAnimated = new Animated.Value(0);
     return ;
@@ -44,6 +45,7 @@ class AnimatedButton extends React.Component {
       }, 2000);
       setTimeout(() => {
         // Actions.secondScreen();
+        this._onPress();
         this.setState({ isLoading: false });
         this.buttonAnimated.setValue(0);
         this.growAnimated.setValue(0);

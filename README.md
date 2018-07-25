@@ -12,19 +12,48 @@ Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 
 ## Goals
 
-- [x] Redux implementation
 - [x] Rename App `ScarletRocks` -> `ScarletDog`
-- [x] Replace `Navigator` -> `StackNavigator`
-- [x] Redux Persist integration
-- [x] Implement Redux Axios Middleware
-- [x] Show network connectivity status
-- [x] Add an Onboarding screen
-- [x] Add i18n support
-- [ ] Integrate the login system
-- [ ] Drawer navigator
-- [x] NativeBase components screen (for themes)
-- [ ] Styling!
-- [ ] Housekeeping / Refactor code :/
+- [x] Redux
+  - [x] Implementation via redux-thunk
+  - [x] Redux Axios Middleware
+  - [x] Redux Persist
+- [x] Navigation
+  - [x] StackNavigator
+    - [x] Replace `Navigator` -> `StackNavigator`
+  - [ ] DrawerNavigator
+    - [x] Navigation flow
+    - [ ] Finish container (menu)
+  - [ ] PathNavigator
+- [ ] Notifications
+  - [x] Show network connectivity status
+    - [ ] Use a [toast component](https://github.com/remobile/react-native-toast)
+  - [ ] Include [push notifications too](https://github.com/zo0r/react-native-push-notification)
+- [ ] Screens
+  - [x] Onboarding screen
+  - [ ] Integrate the login system
+    - [ ] Firebase demo app (test login)
+    - [ ] Forgot password
+    - [ ] Sign up integration
+    - [ ] Data validation
+  - [ ] [Profile screen](https://github.com/nattatorn-dev/react-native-user-profile)
+  - [ ] Settings screen
+  - [ ] Messages screen
+  - [ ] Calendar screen
+  - [ ] Error screen
+- [ ] Languages
+  - [x] Add i18n support
+  - [ ] Integrate to multiple screen
+  - [x] English
+  - [ ] Spanish
+  - [ ] German
+- [ ] [Realm DB](https://www.youtube.com/watch?v=2sI64vaHF98)
+- [x] Themes
+  - [x] NativeBase components screen
+  - [x] Integrate NB's `variables.js`
+- [ ] Housekeeping
+  - [ ] Styling!
+  - [ ] Refactor code
+  - [ ] Ongoing app support
 
 ## Improvements
 

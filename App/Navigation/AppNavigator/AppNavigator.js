@@ -9,6 +9,8 @@ import NativeBaseScreen from '../../Screens/NativeBaseScreen';
 import ColorsScreen from '../../Screens/ColorsScreen';
 import OnboardingScreen from '../../Screens/OnboardingScreen';
 
+import DrawerNavigation from '../DrawerNavigation';
+
 // 'float'  -> Stays at the top and animates as screens are changed.
 // 'screen' -> Each screen has a header attached to it,
 //             and the header fades in and out together with the screen.
@@ -22,10 +24,11 @@ const AppNavigator = StackNavigator(
     'Categories': { screen: CategoriesScreen },
     'NativeBase': { screen: NativeBaseScreen },
     'Colors': { screen: ColorsScreen },
-    'Onboarding': { screen: OnboardingScreen }
+    'Onboarding': { screen: OnboardingScreen },
+    'DrawerNavigation': { screen: DrawerNavigation }
   },
   {
-    initialRouteName: 'Onboarding',
+    initialRouteName: 'Login',
     headerMode: mode
   }
 );
