@@ -5,6 +5,60 @@
 React Native boilerplate (or sample app), with basic redux, native-base and
 login integration.
 
+
+## Setup
+
+Follow the steps from the react-native
+[getting started documentation page](https://facebook.github.io/react-native/docs/getting-started.html)
+
+Clone the repository:
+
+```
+git clone https://github.com/jraleman/scarlet.dog.git scarletdog
+cd scarletdog
+```
+
+Install all the dependencies needed:
+
+```
+npm install
+```
+
+### iOS
+
+To run the iOS version:
+
+```
+react-native run-ios
+```
+
+You can also do it manually:
+
+```
+open ios/ScarletDog.xcodeproj/
+```
+
+and click the build/run icon. :)
+
+<!-- **[Having issues? Click here for help!](resources/assets/md/debug-ios.md)** -->
+
+### Android
+
+To run the Android version:
+
+```
+react-native run-android
+```
+
+You can also run it manually:
+
+```
+npm start &
+cd android && ./gradlew installDebug
+```
+
+<!-- **[Having issues? Click here for help!](resources/assets/md/debug-android.md)** -->
+
 ### Redux
 
 ![redux-graph](resources/images/redux.gif)
