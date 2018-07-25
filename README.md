@@ -200,6 +200,47 @@ directories in more detail.
 
 Work in progress. :)
 
+## Style Guide
+
+### Code
+
+We follow the [semistandard](https://github.com/Flet/semistandard) code
+style guide, based from [standard](https://github.com/standard/standard).
+
+#### Setup
+
+To install it, run:
+
+```
+npm install semistandard -g
+```
+
+or
+
+```
+npm run lint-install
+```
+
+#### Use
+
+To use it, just run the following command:
+
+```
+npm run lint
+```
+
+This will print out the errors and/or warnings that your code might have.
+
+#### Log
+
+Run the following:
+
+```
+npm run lint-log
+```
+
+If you wish to save this into a log file.
+
 ### Redux
 
 ![redux-graph](resources/images/redux.gif)
