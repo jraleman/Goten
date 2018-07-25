@@ -189,6 +189,17 @@ App/
     └── variables.js
 ```
 
+### Project Structure Walkthrough
+
+This is just a basic walkthrough to the project structure, walking through the
+directories in more detail.
+
+```
+...
+```
+
+Work in progress. :)
+
 ### Redux
 
 ![redux-graph](resources/images/redux.gif)
