@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "node ./node_modules/semistandard/bin/cmd.js --verbose | node ./node_modules/snazzy/bin/cmd.js || true",
+    "lint-log": "npm run lint > lint.log ; open lint.log || true",
+    "lint-linux-log": "npm run lint > lint.log ; open lint.log || true"
   },
   "dependencies": {
     "axios": "^0.18.0",
