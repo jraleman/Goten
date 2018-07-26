@@ -328,3 +328,9 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 - [Login Screen](https://github.com/dwicao/react-native-login-screen)
 - [Wallpaper used for Login Screen](https://hdwallsource.com/img/2014/5/abstract-wallpaper-26633-27347-hd-wallpapers.jpg)
 - [Color API Tutorial](https://www.youtube.com/watch?v=d2Mp66FFBgU)
+
+## License
+
+This project is under the MIT License. Meaning that you can use, copy, modify,
+merge, publish, distribute, sub-license, and/or sell copies of the final
+products. See the [LICENSE](LICENSE) file for more details.
