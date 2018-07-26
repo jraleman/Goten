@@ -254,6 +254,18 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 ![#f3bd71](http://via.placeholder.com/150/f3bd71/000000?text=f3bd71)
 ![#92bced](http://via.placeholder.com/150/92bced/000000?text=92bced)
 
+### Look & Feel
+
+- [NativeBase](https://nativebase.io/)
+
+#### Font
+
+- ...list
+
+#### Icons
+
+- ...icons
+
 ## Goals
 
 - [x] Rename App `ScarletRocks` -> `ScarletDog`
