@@ -24,15 +24,15 @@
     "redux": "^4.0.0",
     "redux-axios-middleware": "^4.0.0",
     "redux-persist": "4.10.2",
-    "redux-thunk": "^2.3.0",
-    "semistandard": "^12.0.1",
-    "snazzy": "^7.1.1"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-jest": "23.0.1",
     "babel-preset-react-native": "4.0.0",
     "jest": "23.1.0",
-    "react-test-renderer": "16.3.1"
+    "react-test-renderer": "16.3.1",
+    "semistandard": "^12.0.1",
+    "snazzy": "^7.1.1"
   },
   "jest": {
     "preset": "react-native"
