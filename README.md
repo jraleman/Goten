@@ -198,7 +198,10 @@ directories in more detail.
 ...
 ```
 
-Work in progress. :)
+### Redux
+
+![redux-graph](resources/images/redux.gif)
+Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 
 ## Style Guide
 
@@ -229,10 +232,27 @@ npm install --global semistandard
 
 And then just run the lint from your end. Checkout `package.json` scripts! ;)
 
-### Redux
+### Colors
 
-![redux-graph](resources/images/redux.gif)
-Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
+#### Palette
+
+![#777777](http://via.placeholder.com/150/777777/fffffff?text=777777)
+![#888888](http://via.placeholder.com/150/888888/fffffff?text=888888)
+![#999999](http://via.placeholder.com/150/999999/fffffff?text=999999)
+![#AAAAAA](http://via.placeholder.com/150/AAAAAA/fffffff?text=aaaaaa)
+![#BBBBBB](http://via.placeholder.com/150/BBBBBB/0000000?text=bbbbbb)
+
+#### Dark / Light
+
+![#121212](http://via.placeholder.com/150/121212/ffffff?text=121212)
+![#f9f9f9](http://via.placeholder.com/150/f9f9f9/000000?text=f9f9f9)
+
+#### Success / Error / Warning / Info
+
+![#b8e986](http://via.placeholder.com/150/b8e986/000000?text=b8e986)
+![#d9534f](http://via.placeholder.com/150/d9534f/ffffff?text=d9534f)
+![#f3bd71](http://via.placeholder.com/150/f3bd71/000000?text=f3bd71)
+![#92bced](http://via.placeholder.com/150/92bced/000000?text=92bced)
 
 ## Goals
 
