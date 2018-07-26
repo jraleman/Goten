@@ -204,42 +204,30 @@ Work in progress. :)
 
 ### Code
 
-We follow the [semistandard](https://github.com/Flet/semistandard) code
-style guide, based from [standard](https://github.com/standard/standard).
+This project follows the [semistandard](https://github.com/Flet/semistandard),
+based from [standard](https://github.com/standard/standard. This is because I
+love the C programming language, and semicolons are good for your health. :)
 
-#### Setup
+#### Lint
 
-To install it, run:
+After running `npm install`, you can run the following scripts (depending on
+your platform), to check if the code follows the `semistandard` coding
+style guide.
 
-```
-npm install semistandard -g
-```
+| Mac OS X           | Linux                    | Description                 |
+| :----------------- | :----------------------- | :-------------------------- |
+| `npm run lint`     | `npm run lint`           | Checks `src/` code style    |
+| `npm run lint-log` | `npm run lint-log-linux` | Saves and open the log file |
 
-or
-
-```
-npm run lint-install
-```
-
-#### Use
-
-To use it, just run the following command:
+If you have any problem running the lint from the project, try installing the
+following packages globally, like this:
 
 ```
-npm run lint
+npm install --global snazzy
+npm install --global semistandard
 ```
 
-This will print out the errors and/or warnings that your code might have.
-
-#### Log
-
-Run the following:
-
-```
-npm run lint-log
-```
-
-If you wish to save this into a log file.
+And then just run the lint from your end. Checkout `package.json` scripts! ;)
 
 ### Redux
 
