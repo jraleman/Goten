@@ -399,6 +399,9 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 
 ...
 
+If you need help on how to
+get started, please follow [this guideline](CONTRIBUTING.md).
+
 ## License
 
 This project is under the MIT License. Meaning that you can use, copy, modify,
