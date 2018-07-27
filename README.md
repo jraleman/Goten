@@ -191,24 +191,82 @@ App/
 
 ### Project Structure Walkthrough
 
-This is just a basic walkthrough to the project structure, walking through the
-directories in more detail.
+Basic walkthrough of the project structure.
+Describe the functionality of each directory.
 
-```
+#### Components
+
 ...
-```
 
-### Redux
+#### Containers
+
+...
+
+- `App.js` ⇢ main application, where Redux store is created and configured
+- `RootContainer.js` ⇢ main view, contains the status bar and navigation component
+
+#### Config
+
+Initialize and configure things here.
+
+- `AppConfig.js` ⇢ simple React Native configuration here
+- `ReduxPersist.js` ⇢ configures Redux Persist
+
+#### Fixtures
+
+Contains json files that mimic API responses for quicker development.
+
+#### I18n
+
+An abbreviation for the word "internationalization". The term "i18n" is derived
+from its spelling as the letter "i" plus 18 letters plus the letter "n".
+Languages are defined by json files under `./App/I18n/languages`.
+
+[Click here to see more](https://github.com/AlexanderZaytsev/react-native-i18n)
+
+#### Navigation
+
+Primary and other navigation components reside here.
+
+- `AppNavigation/` ⇢ loads in the initial screen and creates the
+menu(s) in a StackNavigation
+- `DrawerNavigation/` ⇢ ...
+
+#### Redux
+
+...
 
 ![redux-graph](resources/images/redux.gif)
 Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
+
+...
+
+#### Services
+
+Contains the API service and other important utilities for the application.
+
+- `Api.js` ⇢ main API service, giving an interface to communicate with the back end
+- `Fixtures/` ⇢ mocks the API service (offline mode), making it faster to develop early on
+
+#### Screens
+
+...
+
+#### Themes
+
+Styling themes used throughout the app styles, acting like a *global config*
+style file.
+
+- `Images/` ⇢ app-wide styles
+- `NativeBaseComponents/` ⇢
+- `variables.js` ⇢ defined colors and metrics (size measurements) of the app
 
 ## Style Guide
 
 ### Code
 
 This project follows the [semistandard](https://github.com/Flet/semistandard),
-based from [standard](https://github.com/standard/standard. This is because I
+based from [standard](https://github.com/standard/standard. Because I
 love the C programming language, and semicolons are good for your health. :)
 
 #### Lint
