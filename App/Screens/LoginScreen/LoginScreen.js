@@ -17,6 +17,12 @@ import AnimatedButton from '../../Components/AnimatedButton';
 import EmailInput from '../../Components/EmailInput';
 import PasswordInput from '../../Components/PasswordInput';
 import { Images } from '../../Themes';
+import { connect } from 'react-redux';
+import {
+  StackActions,
+  NavigationActions
+} from 'react-navigation';
+import '../../Config';
 
 class LoginScreen extends React.Component {
   constructor (props) {
@@ -28,6 +34,27 @@ class LoginScreen extends React.Component {
       pressButton: false
     };
     return;
+  }
+  handleNavigation = () => {
+    // const resetAction = StackActions.reset({
+    //   index: 0,
+    //   key: null,
+    //   actions: [NavigationActions.navigate({ routeName: 'DrawerNavigation' })],
+    // });
+    // this.props.navigation.dispatch(resetAction);
+    this.props.navigation.navigate('DrawerNavigation');
+    return ;
+  }
+  onSubmitHandler = () => {
+    // this.props.navigation.navigate('NativeBase');
+    // const resetAction = StackActions.reset({
+    //   index: 0,
+    //   key: null,
+    //   actions: [NavigationActions.navigate({ routeName: 'NativeBase' })],
+    // });
+    // this.props.navigation.dispatch(resetAction);
+    this.handleNavigation();
+    return ;
   }
   render () {
     return (
@@ -55,6 +82,7 @@ class LoginScreen extends React.Component {
                 <AnimatedButton
                   title={ "Login" }
                   color={ '#ED1727' }
+                  onPress={ this.onSubmitHandler }
                 />
               </KeyboardAvoidingView>
             </View>
