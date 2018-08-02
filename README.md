@@ -387,20 +387,17 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 - [Wallpaper used for Login Screen](https://hdwallsource.com/img/2014/5/abstract-wallpaper-26633-27347-hd-wallpapers.jpg)
 - [Color API Tutorial](https://www.youtube.com/watch?v=d2Mp66FFBgU)
 
-## Support Us!
-
-...
-
-### Donate
-
-...
-
-### Contribute
-
-...
+## Contribute
 
 If you need help on how to
 get started, please follow [this guideline](CONTRIBUTING.md).
+
+#### Donate
+
+If you like what you see, or if this project help you reduce time to develop
+your own projects, feel free to buy us a pint ;)
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](#)
 
 ## License
 
