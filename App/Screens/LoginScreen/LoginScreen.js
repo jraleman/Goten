@@ -46,7 +46,8 @@ import { Images } from '../../Themes';
 import WallpaperContainer from '../../Containers/WallpaperContainer';
 
 // ~~ Constants ~~
-const OPACITY_WALLPAPER = 0.45;
+const WALLPAPER_OPACITY = 0.45;
+const WALLPAPER_BLUR = 2.5
 
 // ~~ React Component ~~
 class LoginScreen extends React.Component {
@@ -73,7 +74,8 @@ class LoginScreen extends React.Component {
           <WallpaperContainer
             image={ Images.loginBackground }
             overlay={ '#e4e4a1' }
-            opacity={ OPACITY_WALLPAPER }
+            opacity={ WALLPAPER_OPACITY }
+            blur={ WALLPAPER_BLUR }
           >
             <Form style={ styles.form }>
               <Item floatingLabel={ true }>

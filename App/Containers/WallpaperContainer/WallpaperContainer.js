@@ -10,6 +10,7 @@ class WallpaperContainer extends React.Component {
   constructor (props) {
     super(props);
     this._image = this.props.image;
+    this._blur = this.props.blur;
     this._opacity = this.props.opacity;
     this._overlay = this.props.overlay;
     this._children = this.props.children;
@@ -21,6 +22,7 @@ class WallpaperContainer extends React.Component {
       <React.Fragment>
         <Container>
           <ImageBackground
+            blurRadius={ this._blur }
             source={ this._image }
             style={ styles.wallpaper }
             resizeMode={ "cover" }
