@@ -57,30 +57,43 @@ class LoginScreen extends React.Component {
     super(props);
     this.state = {
       email: null,
-      password: null
+      password: null,
+      loading: false
     };
     return;
   }
   componentWillMount () {
-  this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow);
-  this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
+    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow);
+    this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
+    return ;
   }
   componentWillUnmount () {
     this.keyboardDidShowListener.remove();
     this.keyboardDidHideListener.remove();
+    return ;
   }
   _keyboardDidShow () {
     // alert('Keyboard Shown');
+    return ;
   }
   _keyboardDidHide () {
     // alert('Keyboard Hidden');
+    return ;
   }
   _handleNavigation () {
     this.props.navigation.navigate('DrawerNavigation');
     return ;
   }
-  _onSubmitHandler () {
+  _onLoginHandler = () => {
     this._handleNavigation();
+    return ;
+  }
+  _onSignupHandler = () => {
+    alert('SignupHandler')
+    return ;
+  }
+  _onForgotPassHandler = () => {
+    alert('ForgotPassHandler')
     return ;
   }
   render () {
@@ -119,11 +132,28 @@ class LoginScreen extends React.Component {
                 block={ true }
                 light={ true }
                 style={ styles.button }
-                onPress={ () => this._onSubmitHandler }
+                onPress={ this._onLoginHandler }
               >
                 <Text>{ "Login" }</Text>
               </Button>
             </Form>
+            <View style={ styles.forgotPassword }>
+              <Button
+                onPress={ this._onForgotPassHandler }
+                transparent={ true }
+                dark={ true }
+              >
+                <Text>{ "Forgot password?" }</Text>
+              </Button>
+            </View>
+            <View style={ styles.signup }>
+              <Button
+                onPress={ this._onSignupHandler }
+                info={ true }
+              >
+                <Text>{ "Tap here to Sign up!" }</Text>
+              </Button>
+            </View>
           </WallpaperContainer>
         </Container>
       </React.Fragment>

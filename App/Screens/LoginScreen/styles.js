@@ -15,6 +15,22 @@ export default StyleSheet.create({
     alignSelf: 'center'
   },
   button: {
-    marginBottom: 15
+    marginBottom: 15,
+    width: '90%',
+    alignSelf: 'center'
+  },
+  forgotPassword: {
+    alignSelf: 'center',
+    bottom: '5%',
+    position: 'relative',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  signup: {
+    alignSelf: 'center',
+    bottom: '5%',
+    position: 'relative',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
