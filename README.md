@@ -256,7 +256,7 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 - [React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
 - [Network Indicator](https://medium.com/dailyjs/offline-notice-in-react-native-28a8d01e8cd0)
 - [Login Screen](https://github.com/dwicao/react-native-login-screen)
-- [Wallpaper used for Login Screen](https://hdwallsource.com/img/2014/5/abstract-wallpaper-26633-27347-hd-wallpapers.jpg)
+- [LoginScreen Wallapepr Background](https://flic.kr/p/25w2ewc)
 - [Color API Tutorial](https://www.youtube.com/watch?v=d2Mp66FFBgU)
 
 ## Support Us!

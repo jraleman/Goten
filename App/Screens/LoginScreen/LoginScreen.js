@@ -11,6 +11,10 @@ import {
   Button
 } from 'native-base'
 import styles from './styles';
+import { Images } from '../../Themes';
+
+// ~~ Local Dependencies ~~
+import WallpaperContainer from '../../Containers/WallpaperContainer';
 
 class LoginScreen extends React.Component {
   constructor (props) {
@@ -31,12 +35,19 @@ class LoginScreen extends React.Component {
   }
   render () {
     return (
-      <Container style={ styles.container }>
-        <Text>{ "LoginScreen" }</Text>
-        <Button onPress={ () => this.onSubmitHandler() }>
-          <Text>{ "Press here to login" }</Text>
-        </Button>
-      </Container>
+      <React.Fragment>
+        <Container style={ styles.container }>
+          <WallpaperContainer
+            img={ Images.loginBackground }
+            overlay={ '#e4e4a1' }
+          >
+            <Text>{ "LoginScreen" }</Text>
+            <Button onPress={ () => this.onSubmitHandler() }>
+              <Text>{ "Press here to login" }</Text>
+            </Button>
+          </WallpaperContainer>
+        </Container>
+      </React.Fragment>
     );
   }
 }
