@@ -13,7 +13,10 @@
 
 // ~~ Basic Stuff ~~
 import React from 'react';
-import { AsyncStorage } from 'react-native';
+import {
+  AsyncStorage,
+  StatusBar
+} from 'react-native';
 import {
   Container,
   Content,
@@ -101,8 +104,8 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   componentDidUpdate () {
-    if (this.state.firstLaunch == true) {
-    // if (this.state.firstLaunch == false) {
+    // if (this.state.firstLaunch == true) {
+    if (this.state.firstLaunch == false) {
       this.handleNavigation();
     }
   }
@@ -116,15 +119,22 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   render () {
-    if (this.state.firstLaunch == false) {
-    // if (this.state.firstLaunch == true) {
+    // if (this.state.firstLaunch == false) {
+    if (this.state.firstLaunch == true) {
       return (
-        <Container style={ styles.container }>
-          <AppIntroSlider
-            slides={ slides }
-            onDone={ () => this.handleNavigation() }
+        <React.Fragment>
+          <StatusBar
+            translucent={ true }
+            barStyle={ "light-content" }
+            hidden={ true }
           />
-        </Container>
+          <Container style={ styles.container }>
+            <AppIntroSlider
+              slides={ slides }
+              onDone={ () => this.handleNavigation() }
+            />
+          </Container>
+        </React.Fragment>
       );
     }
     else {
