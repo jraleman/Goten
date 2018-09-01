@@ -28,7 +28,7 @@ const AppNavigator = StackNavigator(
     'DrawerNavigation': { screen: DrawerNavigation }
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Onboarding',
     headerMode: mode
   }
 );

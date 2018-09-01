@@ -1,5 +1,22 @@
+#!/usr/bin/env node
+
+/*
+** OnboardingScreen
+** ---------------------------------------------------------------------------|
+** Author: jraleman
+** Date: Fri, Aug 31 2018
+** Dependencies: react-native-app-intro-slider
+**
+** Thanks for your amazing stackoverflow answer, martinarroyo.
+** Source: https://stackoverflow.com/a/40729761
+*/
+
+// ~~ Basic Stuff ~~
 import React from 'react';
-import { AsyncStorage } from 'react-native';
+import {
+  AsyncStorage,
+  StatusBar
+} from 'react-native';
 import {
   Container,
   Content,
@@ -9,49 +26,61 @@ import {
   StackActions,
   NavigationActions
 } from 'react-navigation';
+
+// ~~ Configuration ~~
 import '../../Config';
-import I18n from 'react-native-i18n';
-import AppIntroSlider from 'react-native-app-intro-slider';
 import styles from './styles';
 import { Images } from '../../Themes';
+import I18n from 'react-native-i18n';
 
+// ~~ Dependencies ~~
+import AppIntroSlider from 'react-native-app-intro-slider';
+
+// ~~ Constants ~~
 const slides = [
   {
     key: 'slideOne',
     title: I18n.t('onboardingScreen.slideOne.title'),
+    titleStyle: styles.titleStyle,
     text: I18n.t('onboardingScreen.slideOne.text'),
+    textStyle: styles.textStyle,
     image: Images.onboardingSlideOne,
-    imageStyle: styles.image,
-    backgroundColor: '#333333',
+    imageStyle: styles.imageStyle,
+    backgroundColor: '#121212'
   },
   {
     key: 'slideTwo',
     title: I18n.t('onboardingScreen.slideTwo.title'),
+    titleStyle: styles.titleStyle,
     text: I18n.t('onboardingScreen.slideTwo.text'),
+    textStyle: styles.textStyle,
     image: Images.onboardingSlideTwo,
-    imageStyle: styles.image,
-    backgroundColor: '#393939',
+    imageStyle: styles.imageStyle,
+    backgroundColor: '#343434'
   },
   {
     key: 'slideThree',
     title: I18n.t('onboardingScreen.slideThree.title'),
+    titleStyle: styles.titleStyle,
     text: I18n.t('onboardingScreen.slideThree.text'),
+    textStyle: styles.textStyle,
     image: Images.onboardingSlideThree,
-    imageStyle: styles.image,
-    backgroundColor: '#444444',
+    imageStyle: styles.imageStyle,
+    backgroundColor: '#565656'
   },
   {
     key: 'slideFour',
     title: I18n.t('onboardingScreen.slideFour.title'),
+    titleStyle: styles.titleStyle,
     text: I18n.t('onboardingScreen.slideFour.text'),
+    textStyle: styles.textStyle,
     image: Images.onboardingSlideFour,
-    imageStyle: styles.image,
-    backgroundColor: '#494949',
+    imageStyle: styles.imageStyle,
+    backgroundColor: '#787878'
   }
 ];
 
-// Thanks for your amazing stackoverflow answer, martinarroyo.
-// Source: https://stackoverflow.com/a/40729761
+// ~~ React Component ~~
 class OnboardingScreen extends React.Component {
   constructor (props) {
     super(props);
@@ -75,6 +104,7 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   componentDidUpdate () {
+    // if (this.state.firstLaunch == true) {
     if (this.state.firstLaunch == false) {
       this.handleNavigation();
     }
@@ -83,20 +113,28 @@ class OnboardingScreen extends React.Component {
     const resetAction = StackActions.reset({
       index: 0,
       key: null,
-      actions: [NavigationActions.navigate({ routeName: 'NativeBase' })],
+      actions: [NavigationActions.navigate({ routeName: 'Login' })],
     });
     this.props.navigation.dispatch(resetAction);
     return ;
   }
   render () {
+    // if (this.state.firstLaunch == false) {
     if (this.state.firstLaunch == true) {
       return (
-        <Container style={ styles.container }>
-          <AppIntroSlider
-            slides={ slides }
-            onDone={ () => this.handleNavigation() }
+        <React.Fragment>
+          <StatusBar
+            translucent={ true }
+            barStyle={ "light-content" }
+            hidden={ true }
           />
-        </Container>
+          <Container style={ styles.container }>
+            <AppIntroSlider
+              slides={ slides }
+              onDone={ () => this.handleNavigation() }
+            />
+          </Container>
+        </React.Fragment>
       );
     }
     else {
