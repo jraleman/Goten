@@ -1,4 +1,4 @@
-package com.scarletdog;
+package com.basico;
 
 import android.app.Application;
 

@@ -75,7 +75,7 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   componentDidUpdate () {
-    if (this.state.firstLaunch == true) {
+    if (this.state.firstLaunch == false) {
       this.handleNavigation();
     }
   }
@@ -89,7 +89,7 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   render () {
-    if (this.state.firstLaunch == false) {
+    if (this.state.firstLaunch == true) {
       return (
         <Container style={ styles.container }>
           <AppIntroSlider
