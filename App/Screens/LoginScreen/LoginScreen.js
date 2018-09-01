@@ -2,92 +2,40 @@ import React from 'react';
 import {
   Keyboard,
   Image,
-  KeyboardAvoidingView,
-  TouchableWithoutFeedback,
   View
 } from 'react-native';
 import {
   Container,
   Content,
-  Text
+  Text,
+  Button
 } from 'native-base'
 import styles from './styles';
-import WallpaperContainer from '../../Containers/WallpaperContainer';
-import AnimatedButton from '../../Components/AnimatedButton';
-import EmailInput from '../../Components/EmailInput';
-import PasswordInput from '../../Components/PasswordInput';
-import { Images } from '../../Themes';
-import { connect } from 'react-redux';
-import {
-  StackActions,
-  NavigationActions
-} from 'react-navigation';
-import '../../Config';
 
 class LoginScreen extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
       email: null,
-      password: null,
-      hidePassword: true,
-      pressButton: false
+      password: null
     };
     return;
   }
-  handleNavigation = () => {
-    // const resetAction = StackActions.reset({
-    //   index: 0,
-    //   key: null,
-    //   actions: [NavigationActions.navigate({ routeName: 'DrawerNavigation' })],
-    // });
-    // this.props.navigation.dispatch(resetAction);
+  handleNavigation () {
     this.props.navigation.navigate('DrawerNavigation');
     return ;
   }
-  onSubmitHandler = () => {
-    // this.props.navigation.navigate('NativeBase');
-    // const resetAction = StackActions.reset({
-    //   index: 0,
-    //   key: null,
-    //   actions: [NavigationActions.navigate({ routeName: 'NativeBase' })],
-    // });
-    // this.props.navigation.dispatch(resetAction);
+  onSubmitHandler () {
     this.handleNavigation();
     return ;
   }
   render () {
     return (
       <Container style={ styles.container }>
-        <WallpaperContainer
-          img={ Images.loginBackground }
-          overlay={ '#ED1727' }
-        >
-          <TouchableWithoutFeedback
-            onPress={ Keyboard.dismiss }
-            accessible={ false }
-          >
-            <View style={{ flex: 1 }}>
-              <Image
-                style={ styles.logo }
-                resizeMode={ "contain" }
-                source={ Images.logoLandscape }
-              />
-              <KeyboardAvoidingView
-                behavior="padding"
-                style={styles.container}
-              >
-                <EmailInput />
-                <PasswordInput />
-                <AnimatedButton
-                  title={ "Login" }
-                  color={ '#ED1727' }
-                  onPress={ this.onSubmitHandler }
-                />
-              </KeyboardAvoidingView>
-            </View>
-          </TouchableWithoutFeedback>
-        </WallpaperContainer>
+        <Text>{ "LoginScreen" }</Text>
+        <Button onPress={ () => this.onSubmitHandler() }>
+          <Text>{ "Press here to login" }</Text>
+        </Button>
       </Container>
     );
   }
