@@ -13,7 +13,8 @@ import React from 'react';
 import {
   Keyboard,
   Image,
-  View
+  View,
+  TouchableWithoutFeedback
 } from 'react-native';
 import {
   Container,
@@ -60,12 +61,26 @@ class LoginScreen extends React.Component {
     };
     return;
   }
-  handleNavigation () {
+  componentWillMount () {
+  this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow);
+  this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
+  }
+  componentWillUnmount () {
+    this.keyboardDidShowListener.remove();
+    this.keyboardDidHideListener.remove();
+  }
+  _keyboardDidShow () {
+    // alert('Keyboard Shown');
+  }
+  _keyboardDidHide () {
+    // alert('Keyboard Hidden');
+  }
+  _handleNavigation () {
     this.props.navigation.navigate('DrawerNavigation');
     return ;
   }
-  onSubmitHandler () {
-    this.handleNavigation();
+  _onSubmitHandler () {
+    this._handleNavigation();
     return ;
   }
   render () {
@@ -78,23 +93,33 @@ class LoginScreen extends React.Component {
             opacity={ WALLPAPER_OPACITY }
             blur={ WALLPAPER_BLUR }
           >
-            <Image 
-              source={ Images.logoBlack }
-              styles={ styles.logo }
-            />
+            <TouchableWithoutFeedback
+              onPress={ Keyboard.dismiss }
+              accessible={ false }
+            >
+              <Image
+                source={ Images.logoBlack }
+                style={ styles.logo }
+                resizeMode={ 'contain' }
+              />
+            </TouchableWithoutFeedback>
             <Form style={ styles.form }>
               <Item floatingLabel={ true }>
                 <Label>{ "Email" }</Label>
                 <Input />
               </Item>
-              <Item floatingLabel={ true }>
+              <Item
+                floatingLabel={ true }
+                last={ true }
+              >
                 <Label>{ "Password" }</Label>
-                <Input />
+                <Input onSubmitEditing={ Keyboard.dismiss } />
               </Item>
               <Button
                 block={ true }
                 light={ true }
                 style={ styles.button }
+                onPress={ () => this._onSubmitHandler }
               >
                 <Text>{ "Login" }</Text>
               </Button>

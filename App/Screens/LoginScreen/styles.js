@@ -11,7 +11,8 @@ export default StyleSheet.create({
     alignItems: 'stretch'
   },
   logo: {
-    flex: 1
+    flex: 0.35,
+    alignSelf: 'center'
   },
   button: {
     marginBottom: 15
