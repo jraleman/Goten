@@ -33,9 +33,6 @@ import I18n from 'react-native-i18n';
 // ~~ Dependencies ~~
 import AppIntroSlider from 'react-native-app-intro-slider';
 
-// ~~ Local Dependencies ~~
-import WallpaperContainer from '../../Containers/WallpaperContainer';
-
 // ~~ Constants ~~
 const slides = [
   {
@@ -45,7 +42,8 @@ const slides = [
     text: I18n.t('onboardingScreen.slideOne.text'),
     textStyle: styles.textStyle,
     image: Images.onboardingSlideOne,
-    imageStyle: styles.imageStyle
+    imageStyle: styles.imageStyle,
+    backgroundColor: '#121212'
   },
   {
     key: 'slideTwo',
@@ -54,7 +52,8 @@ const slides = [
     text: I18n.t('onboardingScreen.slideTwo.text'),
     textStyle: styles.textStyle,
     image: Images.onboardingSlideTwo,
-    imageStyle: styles.imageStyle
+    imageStyle: styles.imageStyle,
+    backgroundColor: '#343434'
   },
   {
     key: 'slideThree',
@@ -63,7 +62,8 @@ const slides = [
     text: I18n.t('onboardingScreen.slideThree.text'),
     textStyle: styles.textStyle,
     image: Images.onboardingSlideThree,
-    imageStyle: styles.imageStyle
+    imageStyle: styles.imageStyle,
+    backgroundColor: '#565656'
   },
   {
     key: 'slideFour',
@@ -72,7 +72,8 @@ const slides = [
     text: I18n.t('onboardingScreen.slideFour.text'),
     textStyle: styles.textStyle,
     image: Images.onboardingSlideFour,
-    imageStyle: styles.imageStyle
+    imageStyle: styles.imageStyle,
+    backgroundColor: '#787878'
   }
 ];
 
@@ -119,15 +120,10 @@ class OnboardingScreen extends React.Component {
     // if (this.state.firstLaunch == true) {
       return (
         <Container style={ styles.container }>
-          <WallpaperContainer
-            img={ Images.loginBackground }
-            overlay={ '#e4e4a1' }
-          >
-            <AppIntroSlider
-              slides={ slides }
-              onDone={ () => this.handleNavigation() }
-            />
-          </WallpaperContainer>
+          <AppIntroSlider
+            slides={ slides }
+            onDone={ () => this.handleNavigation() }
+          />
         </Container>
       );
     }
