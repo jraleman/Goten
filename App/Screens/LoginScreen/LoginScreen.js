@@ -14,7 +14,9 @@ import {
   Keyboard,
   Image,
   View,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  TextInput,
+  AppRegistry,
 } from 'react-native';
 import {
   Container,
@@ -58,8 +60,11 @@ class LoginScreen extends React.Component {
     this.state = {
       email: null,
       password: null,
-      loading: false
+      loading: false,
+      visible: false
     };
+    this.inputs = {};
+    // this._focusNextField = this._focusNextField.bind(this);
     return;
   }
   componentWillMount () {
@@ -72,12 +77,14 @@ class LoginScreen extends React.Component {
     this.keyboardDidHideListener.remove();
     return ;
   }
-  _keyboardDidShow () {
-    // alert('Keyboard Shown');
+  _keyboardDidShow = () => {
+    this.setState({ visible: false });
+    alert('show')
     return ;
   }
-  _keyboardDidHide () {
-    // alert('Keyboard Hidden');
+  _keyboardDidHide = () => {
+    this.setState({ visible: true });
+    alert('hide')
     return ;
   }
   _handleNavigation () {
@@ -94,6 +101,10 @@ class LoginScreen extends React.Component {
   }
   _onForgotPassHandler = () => {
     alert('ForgotPassHandler')
+    return ;
+  }
+  _focusNextField = (id) => {
+    this.inputs[id].focus();
     return ;
   }
   render () {
@@ -119,14 +130,22 @@ class LoginScreen extends React.Component {
             <Form style={ styles.form }>
               <Item floatingLabel={ true }>
                 <Label>{ "Email" }</Label>
-                <Input />
+                <TextInput
+                  keyboardType={ 'email-address' }
+                  returnKeyType={ 'next' }
+                  onSubmitEditing={ () => { this._focusNextField('passRef'); }}
+                  ref={ input => { this.inputs['emailRef'] = input; }}
+                />
               </Item>
               <Item
                 floatingLabel={ true }
                 last={ true }
               >
                 <Label>{ "Password" }</Label>
-                <Input onSubmitEditing={ Keyboard.dismiss } />
+                <TextInput
+                  onSubmitEditing={ Keyboard.dismiss }
+                  ref={ input => { this.inputs['passRef'] = input; }}
+                />
               </Item>
               <Button
                 block={ true }
@@ -137,23 +156,28 @@ class LoginScreen extends React.Component {
                 <Text>{ "Login" }</Text>
               </Button>
             </Form>
-            <View style={ styles.forgotPassword }>
-              <Button
-                onPress={ this._onForgotPassHandler }
-                transparent={ true }
-                dark={ true }
-              >
-                <Text>{ "Forgot password?" }</Text>
-              </Button>
-            </View>
-            <View style={ styles.signup }>
-              <Button
-                onPress={ this._onSignupHandler }
-                info={ true }
-              >
-                <Text>{ "Tap here to Sign up!" }</Text>
-              </Button>
-            </View>
+            { this.state.visible == false ? (
+              <React.Fragment>
+                <View style={ styles.forgotPassword }>
+                  <Button
+                    onPress={ this._onForgotPassHandler }
+                    transparent={ true }
+                    dark={ true }
+                  >
+                    <Text>{ "Forgot password?" }</Text>
+                  </Button>
+                </View>
+                <View style={ styles.signup }>
+                  <Button
+                    onPress={ this._onSignupHandler }
+                    info={ true }
+                  >
+                    <Text>{ "Tap here to Sign up!" }</Text>
+                  </Button>
+                </View>
+              </React.Fragment>
+              ) : (null)
+            }
           </WallpaperContainer>
         </Container>
       </React.Fragment>
