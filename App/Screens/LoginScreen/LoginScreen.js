@@ -1,3 +1,14 @@
+#!/usr/bin/env node
+
+/*
+** LoginScreen
+** ---------------------------------------------------------------------------|
+** Author: jraleman
+** Date: Sat, Sep 01 2018
+** Dependencies: I18n
+*/
+
+// ~~ Basic Stuff ~~
 import React from 'react';
 import {
   Keyboard,
@@ -10,12 +21,22 @@ import {
   Text,
   Button
 } from 'native-base'
-import styles from './styles';
-import { Images } from '../../Themes';
+
+// ~~ Configuration ~~
+import '../../Config';
+
+// ~~ Dependencies ~~
+import I18n from 'react-native-i18n';
 
 // ~~ Local Dependencies ~~
+import styles from './styles';
+import { Images } from '../../Themes';
 import WallpaperContainer from '../../Containers/WallpaperContainer';
 
+// ~~ Constants ~~
+const OPACITY_WALLPAPER = 0.45;
+
+// ~~ React Component ~~
 class LoginScreen extends React.Component {
   constructor (props) {
     super(props);
@@ -38,8 +59,9 @@ class LoginScreen extends React.Component {
       <React.Fragment>
         <Container style={ styles.container }>
           <WallpaperContainer
-            img={ Images.loginBackground }
+            image={ Images.loginBackground }
             overlay={ '#e4e4a1' }
+            opacity={ OPACITY_WALLPAPER }
           >
             <Text>{ "LoginScreen" }</Text>
             <Button onPress={ () => this.onSubmitHandler() }>

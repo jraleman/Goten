@@ -9,7 +9,8 @@ import styles from './styles';
 class WallpaperContainer extends React.Component {
   constructor (props) {
     super(props);
-    this._img = this.props.img;
+    this._image = this.props.image;
+    this._opacity = this.props.opacity;
     this._overlay = this.props.overlay;
     this._children = this.props.children;
     this.state = {};
@@ -17,19 +18,23 @@ class WallpaperContainer extends React.Component {
   }
   render () {
     return (
-      <Container>
-        <ImageBackground
-          source={ this._img }
-          resizeMode={ "cover" }
-          style={ styles.wallpaper }
-        >
-          <View style={[
-            styles.overlay,
-            {backgroundColor: this._overlay}
-          ]}/>
-          { this._children }
-        </ImageBackground>
-      </Container>
+      <React.Fragment>
+        <Container>
+          <ImageBackground
+            source={ this._image }
+            style={ styles.wallpaper }
+            resizeMode={ "cover" }
+          >
+            <View style={[
+              styles.overlay, {
+                backgroundColor: this._overlay,
+                opacity: this._opacity
+              }
+            ]}/>
+            { this._children }
+          </ImageBackground>
+        </Container>
+      </React.Fragment>
     );
   }
 }
