@@ -10,6 +10,9 @@ export default StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'stretch'
   },
+  logo: {
+    flex: 1
+  },
   button: {
     marginBottom: 15
   }
