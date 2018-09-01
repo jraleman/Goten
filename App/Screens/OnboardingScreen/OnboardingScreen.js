@@ -1,6 +1,17 @@
+#!/usr/bin/env node
 
+/*
+** OnboardingScreen
+** ---------------------------------------------------------------------------|
+** Author: jraleman
+** Date: Fri, Aug 31 2018
+** Dependencies: react-native-app-intro-slider
+**
+** Thanks for your amazing stackoverflow answer, martinarroyo.
+** Source: https://stackoverflow.com/a/40729761
+*/
 
-// Base Dependencies
+// ~~ Basic Stuff ~~
 import React from 'react';
 import { AsyncStorage } from 'react-native';
 import {
@@ -12,49 +23,60 @@ import {
   StackActions,
   NavigationActions
 } from 'react-navigation';
-import I18n from 'react-native-i18n';
 
-// Screen Dependencies
+// ~~ Configuration ~~
 import '../../Config';
-import AppIntroSlider from 'react-native-app-intro-slider';
 import styles from './styles';
 import { Images } from '../../Themes';
+import I18n from 'react-native-i18n';
+
+// ~~ Dependencies ~~
+import AppIntroSlider from 'react-native-app-intro-slider';
+
+// ~~ Local Dependencies ~~
 import WallpaperContainer from '../../Containers/WallpaperContainer';
 
-// Constants
+// ~~ Constants ~~
 const slides = [
   {
     key: 'slideOne',
     title: I18n.t('onboardingScreen.slideOne.title'),
+    titleStyle: styles.titleStyle,
     text: I18n.t('onboardingScreen.slideOne.text'),
+    textStyle: styles.textStyle,
     image: Images.onboardingSlideOne,
-    imageStyle: styles.image
+    imageStyle: styles.imageStyle
   },
   {
     key: 'slideTwo',
     title: I18n.t('onboardingScreen.slideTwo.title'),
+    titleStyle: styles.titleStyle,
     text: I18n.t('onboardingScreen.slideTwo.text'),
+    textStyle: styles.textStyle,
     image: Images.onboardingSlideTwo,
-    imageStyle: styles.image
+    imageStyle: styles.imageStyle
   },
   {
     key: 'slideThree',
     title: I18n.t('onboardingScreen.slideThree.title'),
+    titleStyle: styles.titleStyle,
     text: I18n.t('onboardingScreen.slideThree.text'),
+    textStyle: styles.textStyle,
     image: Images.onboardingSlideThree,
-    imageStyle: styles.image
+    imageStyle: styles.imageStyle
   },
   {
     key: 'slideFour',
     title: I18n.t('onboardingScreen.slideFour.title'),
+    titleStyle: styles.titleStyle,
     text: I18n.t('onboardingScreen.slideFour.text'),
+    textStyle: styles.textStyle,
     image: Images.onboardingSlideFour,
-    imageStyle: styles.image
+    imageStyle: styles.imageStyle
   }
 ];
 
-// Thanks for your amazing stackoverflow answer, martinarroyo.
-// Source: https://stackoverflow.com/a/40729761
+// ~~ React Component ~~
 class OnboardingScreen extends React.Component {
   constructor (props) {
     super(props);
