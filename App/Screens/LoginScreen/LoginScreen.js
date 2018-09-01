@@ -17,10 +17,22 @@ import {
 } from 'react-native';
 import {
   Container,
+  Header,
+  Title,
   Content,
+  Button,
+  Icon,
+  Body,
+  Left,
+  Right,
+  Item,
+  Input,
+  Form,
+  H2,
+  Label,
   Text,
-  Button
-} from 'native-base'
+  Textarea
+} from "native-base";
 
 // ~~ Configuration ~~
 import '../../Config';
@@ -63,10 +75,23 @@ class LoginScreen extends React.Component {
             overlay={ '#e4e4a1' }
             opacity={ OPACITY_WALLPAPER }
           >
-            <Text>{ "LoginScreen" }</Text>
-            <Button onPress={ () => this.onSubmitHandler() }>
-              <Text>{ "Press here to login" }</Text>
-            </Button>
+            <Form style={ styles.form }>
+              <Item floatingLabel={ true }>
+                <Label>{ "Email" }</Label>
+                <Input />
+              </Item>
+              <Item floatingLabel={ true }>
+                <Label>{ "Password" }</Label>
+                <Input />
+              </Item>
+              <Button
+                block={ true }
+                light={ true }
+                style={ styles.button }
+              >
+                <Text>{ "Login" }</Text>
+              </Button>
+            </Form>
           </WallpaperContainer>
         </Container>
       </React.Fragment>
