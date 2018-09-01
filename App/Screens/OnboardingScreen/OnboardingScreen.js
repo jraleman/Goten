@@ -1,3 +1,6 @@
+
+
+// Base Dependencies
 import React from 'react';
 import { AsyncStorage } from 'react-native';
 import {
@@ -9,44 +12,44 @@ import {
   StackActions,
   NavigationActions
 } from 'react-navigation';
-import '../../Config';
 import I18n from 'react-native-i18n';
+
+// Screen Dependencies
+import '../../Config';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import styles from './styles';
 import { Images } from '../../Themes';
+import WallpaperContainer from '../../Containers/WallpaperContainer';
 
+// Constants
 const slides = [
   {
     key: 'slideOne',
     title: I18n.t('onboardingScreen.slideOne.title'),
     text: I18n.t('onboardingScreen.slideOne.text'),
     image: Images.onboardingSlideOne,
-    imageStyle: styles.image,
-    backgroundColor: '#333333',
+    imageStyle: styles.image
   },
   {
     key: 'slideTwo',
     title: I18n.t('onboardingScreen.slideTwo.title'),
     text: I18n.t('onboardingScreen.slideTwo.text'),
     image: Images.onboardingSlideTwo,
-    imageStyle: styles.image,
-    backgroundColor: '#393939',
+    imageStyle: styles.image
   },
   {
     key: 'slideThree',
     title: I18n.t('onboardingScreen.slideThree.title'),
     text: I18n.t('onboardingScreen.slideThree.text'),
     image: Images.onboardingSlideThree,
-    imageStyle: styles.image,
-    backgroundColor: '#444444',
+    imageStyle: styles.image
   },
   {
     key: 'slideFour',
     title: I18n.t('onboardingScreen.slideFour.title'),
     text: I18n.t('onboardingScreen.slideFour.text'),
     image: Images.onboardingSlideFour,
-    imageStyle: styles.image,
-    backgroundColor: '#494949',
+    imageStyle: styles.image
   }
 ];
 
@@ -75,7 +78,8 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   componentDidUpdate () {
-    if (this.state.firstLaunch == false) {
+    if (this.state.firstLaunch == true) {
+    // if (this.state.firstLaunch == false) {
       this.handleNavigation();
     }
   }
@@ -83,19 +87,25 @@ class OnboardingScreen extends React.Component {
     const resetAction = StackActions.reset({
       index: 0,
       key: null,
-      actions: [NavigationActions.navigate({ routeName: 'NativeBase' })],
+      actions: [NavigationActions.navigate({ routeName: 'Login' })],
     });
     this.props.navigation.dispatch(resetAction);
     return ;
   }
   render () {
-    if (this.state.firstLaunch == true) {
+    if (this.state.firstLaunch == false) {
+    // if (this.state.firstLaunch == true) {
       return (
         <Container style={ styles.container }>
-          <AppIntroSlider
-            slides={ slides }
-            onDone={ () => this.handleNavigation() }
-          />
+          <WallpaperContainer
+            img={ Images.loginBackground }
+            overlay={ '#e4e4a1' }
+          >
+            <AppIntroSlider
+              slides={ slides }
+              onDone={ () => this.handleNavigation() }
+            />
+          </WallpaperContainer>
         </Container>
       );
     }
