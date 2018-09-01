@@ -1,11 +1,10 @@
-package com.scarletdog;
+package com.basico;
 
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
-import com.ScarletDog.QuickbloxBridge.QuickbloxBridgePackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -27,8 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new RNI18nPackage(),
-            new VectorIconsPackage(),
-            new QuickbloxBridge()
+            new VectorIconsPackage()
       );
     }
 

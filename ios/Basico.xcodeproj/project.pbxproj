@@ -11,7 +11,7 @@
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* ScarletDogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ScarletDogTests.m */; };
+		00E356F31AD99517003FC87E /* BasicoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BasicoTests.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -32,28 +32,25 @@
 		2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */; };
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
-		2DCD954D1E0B4F2C00145EB5 /* ScarletDogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ScarletDogTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* BasicoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BasicoTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		DA0B68296D8B4B1A96D55A13 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DC4FA8F84F4C4CB5279430 /* libRNVectorIcons.a */; };
-		576ED904549143FDAF0A8D67 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79869519E7744533BF5C0C43 /* Entypo.ttf */; };
-		2D41F0B2791A40C880A00821 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9E89849E44246DE951015B7 /* EvilIcons.ttf */; };
-		DCBDF75C066A48C7A06DD668 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCBED996859142288ABF14B5 /* FontAwesome.ttf */; };
-		F5471CF573284F8DB0CD2CEE /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 058B45F9FEC84A09A6E9592B /* Foundation.ttf */; };
-		E6FD7E6793B94ECEA719FEEA /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 818DF5467E124E379BC9E1CF /* Ionicons.ttf */; };
-		7E17B5C41F674BC7B58531C1 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50CAA22806244913A7637A5B /* MaterialCommunityIcons.ttf */; };
-		D6E2840BAE9746B0AEDC390B /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 389674FABCE04D03B035EA79 /* MaterialIcons.ttf */; };
-		D2C9AB0631D849CD8F7035EB /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288D055D7A404819A3F72C15 /* Octicons.ttf */; };
-		05F7CC0A291646E2992DEED1 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B00486DD98C4DAD9F64E597 /* Roboto_medium.ttf */; };
-		BD94AAC20A574843BB85F78F /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B591B441423240A0923E0732 /* Roboto.ttf */; };
-		34D9B95370F44FDEA12F24E6 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 873D7265736E4C029E18791A /* rubicon-icon-font.ttf */; };
-		E76AA5BFCFE54D42A6E7E6A2 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 091DB532D9054BA9893CEA9F /* SimpleLineIcons.ttf */; };
-		DFD2AD026B7644C8953B7DF6 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4512534432A9408F96CF1C64 /* Zocial.ttf */; };
-		62EDC8B996354BA9A6A51DD6 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B9FAF2DAC544A196FF10C7 /* Feather.ttf */; };
-		6120FBC407384F1FAD5353BE /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7FBCED4FB34858861092C2 /* libRNI18n.a */; };
-		300A7676EC204A1EBD25F821 /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B87680B1B846FE8D350DDE /* libRNI18n-tvOS.a */; };
+		9A47CBB80D004F839467EE61 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C138C173B07646178CA3DB34 /* libRNVectorIcons.a */; };
+		B2D5DE9F3C5F45ECAF86EE92 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8559AF04C4A43E8A45EE616 /* Entypo.ttf */; };
+		D981FAA6D16347A49ECD110B /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 024B3102026C46639B42B302 /* EvilIcons.ttf */; };
+		7E86550EF4CF417793944167 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 460619330CCB41F689E7B3C9 /* Feather.ttf */; };
+		004104DADAF84B12AFCE4FDD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 172997C4E02943848C4F4B56 /* FontAwesome.ttf */; };
+		CF5CA8B21B5C410C8D10619A /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DEBA82D699D4ECD8ECA0F3F /* Foundation.ttf */; };
+		0E64C9913C1143BDB59D59CC /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10DB9F5A563F48C68B84EE20 /* Ionicons.ttf */; };
+		F4012FB707004EF496A3DA1F /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4810C9D51EDF405BB36D7493 /* MaterialCommunityIcons.ttf */; };
+		981D6DFA90FA43C582E5B0BB /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE63A248854B67955B28FC /* MaterialIcons.ttf */; };
+		A97A484514834FE6B08452FF /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E8295FB1404459A9F22DCB4 /* Octicons.ttf */; };
+		F2EF8E6296CF41AAAFB421B7 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A703B25485F49648338F908 /* SimpleLineIcons.ttf */; };
+		51936654B1754EA0B5611E49 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 562A3D368D734502A165EEC8 /* Zocial.ttf */; };
+		C7A16187F0224CB2B79359A2 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA86A07C4D944475813F7C74 /* libRNI18n.a */; };
+		4987F00705F04DBD9210AFBC /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4236383F97944B9DBD64E485 /* libRNI18n-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +94,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ScarletDog;
+			remoteInfo = Basico;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -125,7 +122,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "ScarletDog-tvOS";
+			remoteInfo = "Basico-tvOS";
 		};
 		2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -339,45 +336,42 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* ScarletDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScarletDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* BasicoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* ScarletDogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScarletDogTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* BasicoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicoTests.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* ScarletDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScarletDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ScarletDog/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ScarletDog/AppDelegate.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Basico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basico.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Basico/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Basico/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ScarletDog/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ScarletDog/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ScarletDog/main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Basico/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Basico/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Basico/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* ScarletDog-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScarletDog-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* ScarletDog-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScarletDog-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* Basico-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basico-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Basico-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basico-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		96FCC33A1AED4B9685637988 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; name = "RNVectorIcons.xcodeproj"; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		94DC4FA8F84F4C4CB5279430 /* libRNVectorIcons.a */ = {isa = PBXFileReference; name = "libRNVectorIcons.a"; path = "libRNVectorIcons.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		79869519E7744533BF5C0C43 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B9E89849E44246DE951015B7 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FCBED996859142288ABF14B5 /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		058B45F9FEC84A09A6E9592B /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		818DF5467E124E379BC9E1CF /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		50CAA22806244913A7637A5B /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		389674FABCE04D03B035EA79 /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		288D055D7A404819A3F72C15 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2B00486DD98C4DAD9F64E597 /* Roboto_medium.ttf */ = {isa = PBXFileReference; name = "Roboto_medium.ttf"; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B591B441423240A0923E0732 /* Roboto.ttf */ = {isa = PBXFileReference; name = "Roboto.ttf"; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		873D7265736E4C029E18791A /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		091DB532D9054BA9893CEA9F /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4512534432A9408F96CF1C64 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		53B9FAF2DAC544A196FF10C7 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		141A93D93EBC4B60ACF5D0F5 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; name = "RNI18n.xcodeproj"; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		FE7FBCED4FB34858861092C2 /* libRNI18n.a */ = {isa = PBXFileReference; name = "libRNI18n.a"; path = "libRNI18n.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		17B87680B1B846FE8D350DDE /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; name = "libRNI18n-tvOS.a"; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		894786D3985F41D0AC56C8A8 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; name = "RNVectorIcons.xcodeproj"; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C138C173B07646178CA3DB34 /* libRNVectorIcons.a */ = {isa = PBXFileReference; name = "libRNVectorIcons.a"; path = "libRNVectorIcons.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		D8559AF04C4A43E8A45EE616 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		024B3102026C46639B42B302 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		460619330CCB41F689E7B3C9 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		172997C4E02943848C4F4B56 /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5DEBA82D699D4ECD8ECA0F3F /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		10DB9F5A563F48C68B84EE20 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4810C9D51EDF405BB36D7493 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3BEE63A248854B67955B28FC /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6E8295FB1404459A9F22DCB4 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2A703B25485F49648338F908 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		562A3D368D734502A165EEC8 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2E23B46B5DF846F9A807080A /* RNI18n.xcodeproj */ = {isa = PBXFileReference; name = "RNI18n.xcodeproj"; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		AA86A07C4D944475813F7C74 /* libRNI18n.a */ = {isa = PBXFileReference; name = "libRNI18n.a"; path = "libRNI18n.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		4236383F97944B9DBD64E485 /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; name = "libRNI18n-tvOS.a"; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,8 +400,8 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				DA0B68296D8B4B1A96D55A13 /* libRNVectorIcons.a in Frameworks */,
-				6120FBC407384F1FAD5353BE /* libRNI18n.a in Frameworks */,
+				9A47CBB80D004F839467EE61 /* libRNVectorIcons.a in Frameworks */,
+				C7A16187F0224CB2B79359A2 /* libRNI18n.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +417,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
-				300A7676EC204A1EBD25F821 /* libRNI18n-tvOS.a in Frameworks */,
+				4987F00705F04DBD9210AFBC /* libRNI18n-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,13 +474,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* ScarletDogTests */ = {
+		00E356EF1AD99517003FC87E /* BasicoTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* ScarletDogTests.m */,
+				00E356F21AD99517003FC87E /* BasicoTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = ScarletDogTests;
+			path = BasicoTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -517,7 +511,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* ScarletDog */ = {
+		13B07FAE1A68108700A75B9A /* Basico */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -528,7 +522,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = ScarletDog;
+			name = Basico;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -595,8 +589,8 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				96FCC33A1AED4B9685637988 /* RNVectorIcons.xcodeproj */,
-				141A93D93EBC4B60ACF5D0F5 /* RNI18n.xcodeproj */,
+				894786D3985F41D0AC56C8A8 /* RNVectorIcons.xcodeproj */,
+				2E23B46B5DF846F9A807080A /* RNI18n.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -613,12 +607,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* ScarletDog */,
+				13B07FAE1A68108700A75B9A /* Basico */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* ScarletDogTests */,
+				00E356EF1AD99517003FC87E /* BasicoTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				69EE07679EC34B7E9B877C02 /* Resources */,
+				7403AB8D617446DD97C913DD /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -628,10 +622,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* ScarletDog.app */,
-				00E356EE1AD99517003FC87E /* ScarletDogTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* ScarletDog-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* ScarletDog-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Basico.app */,
+				00E356EE1AD99517003FC87E /* BasicoTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Basico-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Basico-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -645,23 +639,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		69EE07679EC34B7E9B877C02 /* Resources */ = {
+		7403AB8D617446DD97C913DD /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				79869519E7744533BF5C0C43 /* Entypo.ttf */,
-				B9E89849E44246DE951015B7 /* EvilIcons.ttf */,
-				FCBED996859142288ABF14B5 /* FontAwesome.ttf */,
-				058B45F9FEC84A09A6E9592B /* Foundation.ttf */,
-				818DF5467E124E379BC9E1CF /* Ionicons.ttf */,
-				50CAA22806244913A7637A5B /* MaterialCommunityIcons.ttf */,
-				389674FABCE04D03B035EA79 /* MaterialIcons.ttf */,
-				288D055D7A404819A3F72C15 /* Octicons.ttf */,
-				2B00486DD98C4DAD9F64E597 /* Roboto_medium.ttf */,
-				B591B441423240A0923E0732 /* Roboto.ttf */,
-				873D7265736E4C029E18791A /* rubicon-icon-font.ttf */,
-				091DB532D9054BA9893CEA9F /* SimpleLineIcons.ttf */,
-				4512534432A9408F96CF1C64 /* Zocial.ttf */,
-				53B9FAF2DAC544A196FF10C7 /* Feather.ttf */,
+				D8559AF04C4A43E8A45EE616 /* Entypo.ttf */,
+				024B3102026C46639B42B302 /* EvilIcons.ttf */,
+				460619330CCB41F689E7B3C9 /* Feather.ttf */,
+				172997C4E02943848C4F4B56 /* FontAwesome.ttf */,
+				5DEBA82D699D4ECD8ECA0F3F /* Foundation.ttf */,
+				10DB9F5A563F48C68B84EE20 /* Ionicons.ttf */,
+				4810C9D51EDF405BB36D7493 /* MaterialCommunityIcons.ttf */,
+				3BEE63A248854B67955B28FC /* MaterialIcons.ttf */,
+				6E8295FB1404459A9F22DCB4 /* Octicons.ttf */,
+				2A703B25485F49648338F908 /* SimpleLineIcons.ttf */,
+				562A3D368D734502A165EEC8 /* Zocial.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -670,9 +661,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ScarletDogTests */ = {
+		00E356ED1AD99517003FC87E /* BasicoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ScarletDogTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BasicoTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -683,14 +674,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = ScarletDogTests;
-			productName = ScarletDogTests;
-			productReference = 00E356EE1AD99517003FC87E /* ScarletDogTests.xctest */;
+			name = BasicoTests;
+			productName = BasicoTests;
+			productReference = 00E356EE1AD99517003FC87E /* BasicoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* ScarletDog */ = {
+		13B07F861A680F5B00A75B9A /* Basico */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ScarletDog" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Basico" */;
 			buildPhases = (
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -701,14 +692,14 @@
 			);
 			dependencies = (
 			);
-			name = ScarletDog;
+			name = Basico;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* ScarletDog.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Basico.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* ScarletDog-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* Basico-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ScarletDog-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Basico-tvOS" */;
 			buildPhases = (
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -719,14 +710,14 @@
 			);
 			dependencies = (
 			);
-			name = "ScarletDog-tvOS";
-			productName = "ScarletDog-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* ScarletDog-tvOS.app */;
+			name = "Basico-tvOS";
+			productName = "Basico-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Basico-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* ScarletDog-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* Basico-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ScarletDog-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Basico-tvOSTests" */;
 			buildPhases = (
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
@@ -737,9 +728,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "ScarletDog-tvOSTests";
-			productName = "ScarletDog-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* ScarletDog-tvOSTests.xctest */;
+			name = "Basico-tvOSTests";
+			productName = "Basico-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Basico-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -766,7 +757,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ScarletDog" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Basico" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -829,10 +820,10 @@
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* ScarletDog */,
-				00E356ED1AD99517003FC87E /* ScarletDogTests */,
-				2D02E47A1E0B4A5D006451C7 /* ScarletDog-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* ScarletDog-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* Basico */,
+				00E356ED1AD99517003FC87E /* BasicoTests */,
+				2D02E47A1E0B4A5D006451C7 /* Basico-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Basico-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1113,20 +1104,17 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				576ED904549143FDAF0A8D67 /* Entypo.ttf in Resources */,
-				2D41F0B2791A40C880A00821 /* EvilIcons.ttf in Resources */,
-				DCBDF75C066A48C7A06DD668 /* FontAwesome.ttf in Resources */,
-				F5471CF573284F8DB0CD2CEE /* Foundation.ttf in Resources */,
-				E6FD7E6793B94ECEA719FEEA /* Ionicons.ttf in Resources */,
-				7E17B5C41F674BC7B58531C1 /* MaterialCommunityIcons.ttf in Resources */,
-				D6E2840BAE9746B0AEDC390B /* MaterialIcons.ttf in Resources */,
-				D2C9AB0631D849CD8F7035EB /* Octicons.ttf in Resources */,
-				05F7CC0A291646E2992DEED1 /* Roboto_medium.ttf in Resources */,
-				BD94AAC20A574843BB85F78F /* Roboto.ttf in Resources */,
-				34D9B95370F44FDEA12F24E6 /* rubicon-icon-font.ttf in Resources */,
-				E76AA5BFCFE54D42A6E7E6A2 /* SimpleLineIcons.ttf in Resources */,
-				DFD2AD026B7644C8953B7DF6 /* Zocial.ttf in Resources */,
-				62EDC8B996354BA9A6A51DD6 /* Feather.ttf in Resources */,
+				B2D5DE9F3C5F45ECAF86EE92 /* Entypo.ttf in Resources */,
+				D981FAA6D16347A49ECD110B /* EvilIcons.ttf in Resources */,
+				7E86550EF4CF417793944167 /* Feather.ttf in Resources */,
+				004104DADAF84B12AFCE4FDD /* FontAwesome.ttf in Resources */,
+				CF5CA8B21B5C410C8D10619A /* Foundation.ttf in Resources */,
+				0E64C9913C1143BDB59D59CC /* Ionicons.ttf in Resources */,
+				F4012FB707004EF496A3DA1F /* MaterialCommunityIcons.ttf in Resources */,
+				981D6DFA90FA43C582E5B0BB /* MaterialIcons.ttf in Resources */,
+				A97A484514834FE6B08452FF /* Octicons.ttf in Resources */,
+				F2EF8E6296CF41AAAFB421B7 /* SimpleLineIcons.ttf in Resources */,
+				51936654B1754EA0B5611E49 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1183,7 +1171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* ScarletDogTests.m in Sources */,
+				00E356F31AD99517003FC87E /* BasicoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1209,7 +1197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* ScarletDogTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* BasicoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1218,12 +1206,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ScarletDog */;
+			target = 13B07F861A680F5B00A75B9A /* Basico */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* ScarletDog-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* Basico-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1235,7 +1223,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = ScarletDog;
+			path = Basico;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1249,15 +1237,15 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ScarletDogTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = BasicoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScarletDog.app/ScarletDog";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basico.app/Basico";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1277,15 +1265,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = ScarletDogTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = BasicoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScarletDog.app/ScarletDog";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basico.app/Basico";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1306,14 +1294,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = ScarletDog/Info.plist;
+				INFOPLIST_FILE = Basico/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_NAME = ScarletDog;
+				PRODUCT_NAME = Basico;
 				VERSIONING_SYSTEM = "apple-generic";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1328,14 +1316,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = ScarletDog/Info.plist;
+				INFOPLIST_FILE = Basico/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_NAME = ScarletDog;
+				PRODUCT_NAME = Basico;
 				VERSIONING_SYSTEM = "apple-generic";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1357,13 +1345,13 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "ScarletDog-tvOS/Info.plist";
+				INFOPLIST_FILE = "Basico-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ScarletDog-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Basico-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1394,13 +1382,13 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "ScarletDog-tvOS/Info.plist";
+				INFOPLIST_FILE = "Basico-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ScarletDog-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Basico-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1430,16 +1418,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "ScarletDog-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Basico-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ScarletDog-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Basico-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScarletDog-tvOS.app/ScarletDog-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basico-tvOS.app/Basico-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1466,16 +1454,16 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "ScarletDog-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Basico-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ScarletDog-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Basico-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScarletDog-tvOS.app/ScarletDog-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basico-tvOS.app/Basico-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1525,7 +1513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1560,7 +1548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1570,7 +1558,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ScarletDogTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BasicoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1579,7 +1567,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ScarletDog" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Basico" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1588,7 +1576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ScarletDog-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Basico-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1597,7 +1585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ScarletDog-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Basico-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1606,7 +1594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ScarletDog" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Basico" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
