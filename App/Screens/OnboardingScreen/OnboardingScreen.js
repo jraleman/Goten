@@ -106,9 +106,9 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   componentDidUpdate () {
-    if (this.state.firstLaunch == true) {
-    // if (this.state.firstLaunch == false) {
-      this.handleNavigation();
+    // if (this.state.firstLaunch == true) {
+    if (this.state.firstLaunch == false) {
+      this._handleNavigation();
     }
   }
   _renderDoneButton = () => {
@@ -131,8 +131,8 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   render () {
-    if (this.state.firstLaunch == false) {
-    // if (this.state.firstLaunch == true) {
+    // if (this.state.firstLaunch == false) {
+    if (this.state.firstLaunch == true) {
       return (
         <React.Fragment>
           <StatusBar
