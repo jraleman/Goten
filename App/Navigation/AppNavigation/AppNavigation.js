@@ -17,7 +17,7 @@ import DrawerNavigation from '../DrawerNavigation';
 // const mode = (Platform.OS === 'android' ? 'screen' : 'float');
 const mode = 'none';
 
-const AppNavigator = StackNavigator(
+const AppNavigation = StackNavigator(
   {
     'Login': { screen: LoginScreen },
     'Test': { screen: TestScreen },
@@ -33,4 +33,4 @@ const AppNavigator = StackNavigator(
   }
 );
 
-export default AppNavigator;
+export default AppNavigation;

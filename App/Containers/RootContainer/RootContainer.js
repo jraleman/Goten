@@ -3,7 +3,7 @@ import {
   StyleProvider,
   Container
 } from 'native-base';
-import AppNavigator from '../../Navigation/AppNavigator';
+import AppNavigation from '../../Navigation/AppNavigation';
 import NetworkIndicator from '../../Components/NetworkIndicator';
 import styles from './styles';
 import variables from '../../Themes/variables';
@@ -15,7 +15,7 @@ class RootContainer extends React.Component {
       <StyleProvider style={ getTheme(variables) }>
         <Container style={ styles.container }>
           <NetworkIndicator />
-          <AppNavigator />
+          <AppNavigation />
         </Container>
       </StyleProvider>
     );
