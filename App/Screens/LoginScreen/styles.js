@@ -11,8 +11,18 @@ export default StyleSheet.create({
     alignItems: 'stretch'
   },
   logo: {
-    flex: 0.35,
-    alignSelf: 'center'
+    flex: 0.42,
+    alignSelf: 'center',
+    top: '10%'
+  },
+  input: {
+    flex: 0.21,
+    alignSelf: 'flex-end',
+    fontWeight: '900',
+  },
+  label: {
+    fontWeight: '900',
+    color: '#222'
   },
   button: {
     marginBottom: 15,

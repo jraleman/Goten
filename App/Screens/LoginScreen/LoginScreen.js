@@ -82,6 +82,7 @@ class LoginScreen extends React.Component {
   componentWillUnmount () {
     this.keyboardDidShowListener.remove();
     this.keyboardDidHideListener.remove();
+    // Keyboard.dismiss;
     return ;
   }
   _keyboardDidShow = () => {
@@ -142,32 +143,39 @@ class LoginScreen extends React.Component {
             </TouchableWithoutFeedback>
             <Form style={ styles.form }>
               <Item floatingLabel={ true }>
-                <Label>{ "Email" }</Label>
+                <Label style={ styles.label }>{ "Email" }</Label>
                 <TextInput
                   keyboardType={ 'email-address' }
                   returnKeyType={ 'next' }
                   onSubmitEditing={ () => { this._focusNextField('passRef'); }}
                   ref={ input => { this.inputs['emailRef'] = input; }}
+                  style={ styles.input }
                 />
               </Item>
               <Item
                 floatingLabel={ true }
                 last={ true }
               >
-                <Label>{ "Password" }</Label>
+                <Label style={ styles.label }>{ "Password" }</Label>
                 <TextInput
                   onSubmitEditing={ Keyboard.dismiss }
                   ref={ input => { this.inputs['passRef'] = input; }}
+                  style={ styles.input }
                 />
               </Item>
-              <Button
-                block={ true }
-                light={ true }
-                style={ styles.button }
-                onPress={ this._onLoginHandler }
-              >
-                <Text>{ "Login" }</Text>
-              </Button>
+              { this.state.visible ? (
+                <React.Fragment>
+                  <Button
+                    block={ true }
+                    dark={ true }
+                    style={ styles.button }
+                    onPress={ this._onLoginHandler }
+                  >
+                    <Text>{ "Login" }</Text>
+                  </Button>
+                </React.Fragment>
+                ) : (null)
+              }
             </Form>
             { this.state.visible ? (
               <Animated.View style={[
@@ -178,13 +186,15 @@ class LoginScreen extends React.Component {
                 <Button
                   onPress={ this._onForgotPassHandler }
                   transparent={ true }
+                  style={ styles.button }
                   dark={ true }
                 >
                   <Text>{ "Forgot password?" }</Text>
                 </Button>
                 <Button
                   onPress={ this._onSignupHandler }
-                  info={ true }
+                  style={ styles.button }
+                  light={ true }
                 >
                   <Text>{ "Tap here to Sign up!" }</Text>
                 </Button>
