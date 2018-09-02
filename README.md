@@ -264,18 +264,15 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 
 ## Support Us!
 
-...
-
-### Donate
-
-...
-
-### Contribute
-
-...
-
 If you need help on how to
 get started, please follow [this guideline](CONTRIBUTING.md).
+
+#### Donate
+
+If you like what you see, or if this project help you reduce time to develop
+your own projects, feel free to buy us a pint ;)
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](#)
 
 ## License
 
