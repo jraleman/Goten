@@ -13,7 +13,6 @@ class WallpaperContainer extends React.Component {
     this._blur = this.props.blur;
     this._opacity = this.props.opacity;
     this._overlay = this.props.overlay;
-    this._children = this.props.children;
     this.state = {};
     return ;
   }
@@ -33,7 +32,7 @@ class WallpaperContainer extends React.Component {
                 opacity: this._opacity
               }
             ]}/>
-            { this._children }
+            { this.props.children }
           </ImageBackground>
         </Container>
       </React.Fragment>
