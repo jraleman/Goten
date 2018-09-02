@@ -76,7 +76,7 @@ const slides = [
     textStyle: styles.textStyle,
     image: Images.onboardingSlideFour,
     imageStyle: styles.imageStyle,
-    backgroundColor: '#787878'
+    backgroundColor: '#f9f9f9'
   }
 ];
 
