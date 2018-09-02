@@ -28,6 +28,17 @@ const styles = StyleSheet.create({
   textStyleLast: {
     color: '#111111',
     marginBottom: 20,
+  },
+  btnCircle: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'rgba(0, 0, 0, .75)',
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  btnIcon: {
+    color: '#e4e4a1'
   }
 });
 

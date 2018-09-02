@@ -21,7 +21,8 @@ import {
 import {
   Container,
   Content,
-  Text
+  Text,
+  Icon
 } from 'native-base';
 import {
   StackActions,
@@ -110,7 +111,17 @@ class OnboardingScreen extends React.Component {
       this.handleNavigation();
     }
   }
-  handleNavigation () {
+  _renderDoneButton = () => {
+    return (
+      <View style={ styles.btnCircle }>
+        <Icon
+          style={ styles.btnIcon }
+          name={ 'paw' }
+        />
+      </View>
+    );
+  }
+  _handleNavigation = () => {
     const resetAction = StackActions.reset({
       index: 0,
       key: null,
@@ -119,18 +130,6 @@ class OnboardingScreen extends React.Component {
     this.props.navigation.dispatch(resetAction);
     return ;
   }
-  _renderDoneButton = () => {
-   return (
-     <View style={styles.buttonCircle}>
-       <Ionicons
-         name="md-checkmark"
-         color="rgba(255, 255, 255, .9)"
-         size={24}
-         style={{ backgroundColor: 'transparent' }}
-       />
-     </View>
-   );
- }
   render () {
     if (this.state.firstLaunch == false) {
     // if (this.state.firstLaunch == true) {
@@ -144,8 +143,8 @@ class OnboardingScreen extends React.Component {
           <Container style={ styles.container }>
             <AppIntroSlider
               slides={ slides }
-              onDone={ () => this.handleNavigation() }
-              renderDoneButton={this._renderDoneButton}
+              onDone={ this._handleNavigation }
+              renderDoneButton={ this._renderDoneButton }
             />
           </Container>
         </React.Fragment>
