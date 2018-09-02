@@ -5,7 +5,8 @@ const Images = {
   onboardingSlideFour: require("./Source/slide-four.png"),
   loginBackground: require("./Source/login-background.jpg"),
   logoWhite: require("./Source/logo-white.png"),
-  logoBlack: require("./Source/logo-black.png")
+  logoBlack: require("./Source/logo-black.png"),
+  drawerNavigationCover: require("./Source/drawer-navigation-cover.jpg")
 }
 
 export default Images;
