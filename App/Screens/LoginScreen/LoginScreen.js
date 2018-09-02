@@ -18,6 +18,7 @@ import {
   TouchableWithoutFeedback,
   TextInput,
   AppRegistry,
+  StatusBar
 } from 'react-native';
 import {
   Container,
@@ -124,6 +125,10 @@ class LoginScreen extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <StatusBar
+          barStyle={ 'light-content' }
+          backgroundColor={ '#121212' }
+        />
         <Container style={ styles.container }>
           <WallpaperContainer
             image={ Images.loginBackground }
