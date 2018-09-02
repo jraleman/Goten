@@ -12,7 +12,7 @@ import {
   Title
 } from 'native-base';
 import styles from './styles';
-import ScarletHeader from '../../Components/ScarletHeader';
+import BasicoHeader from '../../Components/BasicoHeader';
 import {
   BadgesContainer,
   ButtonsContainer,
@@ -30,6 +30,7 @@ import {
   NavigationActions
 } from 'react-navigation';
 import '../../Config';
+import { DrawerNavigator } from "react-navigation";
 
 class NativeBaseScreen extends React.Component {
   constructor (props) {
@@ -40,9 +41,9 @@ class NativeBaseScreen extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-        <ScarletHeader
+        <BasicoHeader
           title={ "NativeBase" }
-          onPress={ () => this.props.navigation.navigate('DrawerOpen') }
+          onPress={ () => this.props.navigation.openDrawer() }
           icon={ "menu" }
         />
         <Content style={ styles.content }>

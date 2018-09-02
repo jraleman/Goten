@@ -4,6 +4,7 @@ import {
   Platform,
   Dimensions,
   Image,
+  StatusBar
 } from 'react-native';
 import {
   List,
@@ -37,21 +38,16 @@ class DrawerNavigationContainer extends React.Component {
     return ;
   }
   componentWillMount () {
-    // var avatarPicture = "https://dev.vemidoc.com/" + global.config.userData.profilepic;
-    // var avatarPicture =
-    // this.setState({
-    //   avatar: avatarPicture
-    // });
     return ;
   }
   render() {
     return (
       <Container style={{ bottom: 0 }}>
+        <StatusBar barStyle={ 'dark-content' } />
         <Content
           bounces={ false }
           style={ styles.content }
         >
-
           <List
             style={{ height: 550 }}
             dataArray={ this.props.items }
@@ -99,32 +95,39 @@ const NavigationHeader = props => {
 
 const NavigationRow = props => {
   // alert(JSON.stringify(props.item, null, 4));
-  // quick hax (because i luv C)
   let iconName;
   if (props.item.routeName === 'Search Doctors') {
     iconName = 'search';
-  } else if (props.item.routeName === 'Notifications') {
+  }
+  else if (props.item.routeName === 'Notifications') {
     iconName = 'notifications';
-  } else if (props.item.routeName === 'Appointments') {
+  }
+  else if (props.item.routeName === 'Appointments') {
     iconName = 'calendar';
-  } else if (props.item.routeName === 'Call Log') {
+  }
+  else if (props.item.routeName === 'Call Log') {
     iconName = 'call';
-  } else if (props.item.routeName === 'Settings') {
+  }
+  else if (props.item.routeName === 'Settings') {
     iconName = 'settings';
   }
 
   // badges
   let badgeCount;
   if (props.item.routeName === 'Search Doctors') {
-    //badgeCount = 0;
-  } else if (props.item.routeName === 'Notifications') {
+    badgeCount = null;
+  }
+  else if (props.item.routeName === 'Notifications') {
     badgeCount = 42;
-  } else if (props.item.routeName === 'Appointments') {
-    //badgeCount = 0;
-  } else if (props.item.routeName === 'Call Log') {
+  }
+  else if (props.item.routeName === 'Appointments') {
+    badgeCount = null;
+  }
+  else if (props.item.routeName === 'Call Log') {
     badgeCount = 3;
-  } else if (props.item.routeName === 'Settings') {
-    //badgeCount = 0;
+  }
+  else if (props.item.routeName === 'Settings') {
+    badgeCount = null;
   }
 
   return (

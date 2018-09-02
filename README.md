@@ -138,8 +138,7 @@ style file.
 ### Code
 
 This project follows the [semistandard](https://github.com/Flet/semistandard),
-based from [standard](https://github.com/standard/standard. Because I
-love the C programming language, and semicolons are good for your health. :)
+based from [standard](https://github.com/standard/standard).
 
 #### Lint
 
@@ -164,6 +163,8 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 
 ### Colors
 
+See `./App/Themes/variables.js`
+
 #### Color Palette
 
 ![#e4e4a1](http://via.placeholder.com/150/e4e4a1/000000?text=e4e4a1)
@@ -178,12 +179,12 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 ![#b6b6b6](http://via.placeholder.com/150/B6B6B6/000000?text=b6b6b6)
 ![#f9f9f9](http://via.placeholder.com/150/BBBBBB/000000?text=f9f9f9)
 
-#### Success / Error / Warning / Info
+#### Info / Success / Warning / Error
 
-![#7a9c45](http://via.placeholder.com/150/7a9c45/ffffff?text=7a9c45)
-![#d9534f](http://via.placeholder.com/150/d9534f/ffffff?text=d9534f)
-![#9c6745](http://via.placeholder.com/150/9c6745/ffffff?text=9c6745)
 ![#457a9c](http://via.placeholder.com/150/457a9c/ffffff?text=457a9c)
+![#7a9c45](http://via.placeholder.com/150/7a9c45/ffffff?text=7a9c45)
+![#9c6745](http://via.placeholder.com/150/9c6745/ffffff?text=9c6745)
+![#d9534f](http://via.placeholder.com/150/d9534f/ffffff?text=d9534f)
 
 ### Look & Feel
 
@@ -199,15 +200,7 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 
 ## Goals
 
-- [x] Redux
-  - [x] Implementation via redux-thunk
-  - [x] Redux Axios Middleware
-  - [x] Redux Persist
-- [x] Navigation
-  - [x] StackNavigator
-    - [x] Replace `Navigator` -> `StackNavigator`
   - [ ] DrawerNavigator
-    - [x] Navigation flow
     - [ ] Finish container (menu)
   - [ ] PathNavigator
 - [ ] Notifications
@@ -243,7 +236,6 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 
 ## Known Issues
 
-- [x] Move OnboardingScreen state.firstLaunch, outside the render function
 - [ ] Change logo width depending on landscape/portrait orientation
 - [ ] Fetch from API via http (not secure) in iOS
 

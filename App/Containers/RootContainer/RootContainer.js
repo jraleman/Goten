@@ -1,5 +1,8 @@
 import React from 'react';
-import { StyleProvider, Container } from 'native-base';
+import {
+  StyleProvider,
+  Container
+} from 'native-base';
 import AppNavigator from '../../Navigation/AppNavigator';
 import NetworkIndicator from '../../Components/NetworkIndicator';
 import styles from './styles';
