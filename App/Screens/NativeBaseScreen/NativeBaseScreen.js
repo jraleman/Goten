@@ -12,7 +12,7 @@ import {
   Title
 } from 'native-base';
 import styles from './styles';
-import ScarletHeader from '../../Components/ScarletHeader';
+import BasicoHeader from '../../Components/BasicoHeader';
 import {
   BadgesContainer,
   ButtonsContainer,
@@ -40,7 +40,7 @@ class NativeBaseScreen extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-        <ScarletHeader
+        <BasicoHeader
           title={ "NativeBase" }
           onPress={ () => this.props.navigation.navigate('DrawerOpen') }
           icon={ "menu" }
