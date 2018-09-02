@@ -253,6 +253,7 @@ See `./App/Themes/variables.js`
 
 - [LIBRARY 3 AM](https://www.1001fonts.com/library-3-am-font.html)
 - [LoginScreen Wallpaper Background](https://flic.kr/p/25w2ewc)
+- [DrawerNavigationContainer Cover Background](https://flic.kr/p/owtdUV)
 
 ## Support Us!
 
