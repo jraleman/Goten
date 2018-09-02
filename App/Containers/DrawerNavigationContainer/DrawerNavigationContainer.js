@@ -4,7 +4,8 @@ import {
   Platform,
   Dimensions,
   Image,
-  StatusBar
+  StatusBar,
+  ImageBackground,
 } from 'react-native';
 import {
   List,
@@ -26,6 +27,8 @@ import {
 } from 'native-base';
 import styles from './styles';
 
+import { Images } from '../../Themes';
+
 class DrawerNavigationContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -42,24 +45,31 @@ class DrawerNavigationContainer extends React.Component {
   }
   render() {
     return (
-      <Container style={{ bottom: 0 }}>
+      <React.Fragment>
         <StatusBar barStyle={ 'dark-content' } />
-        <Content
-          bounces={ false }
-          style={ styles.content }
-        >
-          <List
-            style={{ height: 550 }}
-            dataArray={ this.props.items }
-            renderRow={ (item) =>
-              <NavigationRow
-                item={ item }
-                nav={ this.props.navigation }
-              />
-            }
-          />
-        </Content>
-      </Container>
+        <Container style={{ bottom: 0 }}>
+          <Content
+            bounces={ false }
+            style={ styles.content }
+          >
+            <NavigationHeader
+              headerText={ "User" }
+              onPress={ () => alert('Hello') }
+              backgroundImg={ Images.drawerNavigationCover }
+            />
+            <List
+              style={{ height: 550 }}
+              dataArray={ this.props.items }
+              renderRow={ (item) =>
+                <NavigationRow
+                  item={ item }
+                  nav={ this.props.navigation }
+                />
+              }
+            />
+          </Content>
+        </Container>
+      </React.Fragment>
     );
   }
 };
@@ -75,23 +85,44 @@ class DrawerNavigationContainer extends React.Component {
 
 */
 
+// ~~ Constants ~~
+const BACKGROUND_OPACITY = 0.25;
+const BACKGROUND_BLUR = 2.25
+const BACKGROUND_OVERLAY = '#e4e4a1';
+
+
 const NavigationHeader = props => {
   return (
     <View style={ styles.container }>
-      <Image
-        source={ props.backgroundImg }
-        style={ styles.drawerCover }
-      />
+
+    <ImageBackground
+      blurRadius={ BACKGROUND_BLUR }
+      source={ props.backgroundImg }
+      style={ styles.wallpaper }
+      resizeMode={ "cover" }
+    >
+      <View style={[
+        styles.overlay, {
+          backgroundColor: BACKGROUND_OVERLAY,
+          opacity: BACKGROUND_OPACITY
+        }
+      ]}/>
       <TouchableOpacity
         onPress={ props.onPress }
         style={ styles.drawer }
       >
-        <Thumbnail source={{ uri: props.avatar }}/>
+        <Thumbnail source={{ uri: props.avatarImg }}/>
         <H2 style={ styles.drawerText }>{ props.headerText }</H2>
       </TouchableOpacity>
+    </ImageBackground>
+
     </View>
   );
 }
+
+
+
+
 
 const NavigationRow = props => {
   // alert(JSON.stringify(props.item, null, 4));
