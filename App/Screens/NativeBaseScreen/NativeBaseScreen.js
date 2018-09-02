@@ -30,6 +30,7 @@ import {
   NavigationActions
 } from 'react-navigation';
 import '../../Config';
+import { DrawerNavigator } from "react-navigation";
 
 class NativeBaseScreen extends React.Component {
   constructor (props) {
@@ -42,7 +43,7 @@ class NativeBaseScreen extends React.Component {
       <Container style={ styles.container }>
         <BasicoHeader
           title={ "NativeBase" }
-          onPress={ () => this.props.navigation.navigate('DrawerOpen') }
+          onPress={ () => this.props.navigation.openDrawer() }
           icon={ "menu" }
         />
         <Content style={ styles.content }>
