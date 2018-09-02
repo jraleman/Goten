@@ -19,14 +19,7 @@ export default StyleSheet.create({
     width: '90%',
     alignSelf: 'center'
   },
-  forgotPassword: {
-    alignSelf: 'center',
-    bottom: '5%',
-    position: 'relative',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  signup: {
+  animatedView: {
     alignSelf: 'center',
     bottom: '5%',
     position: 'relative',

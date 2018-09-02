@@ -11,6 +11,7 @@
 // ~~ Basic Stuff ~~
 import React from 'react';
 import {
+  Animated,
   Keyboard,
   Image,
   View,
@@ -61,15 +62,21 @@ class LoginScreen extends React.Component {
       email: null,
       password: null,
       loading: false,
-      visible: true
+      visible: true,
+      fadeValue: new Animated.Value(1)
     };
     this.inputs = {};
-    // this._focusNextField = this._focusNextField.bind(this);
     return;
   }
   componentWillMount () {
-    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow);
-    this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
+    this.keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      this._keyboardDidShow
+    );
+    this.keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      this._keyboardDidHide
+    );
     return ;
   }
   componentWillUnmount () {
@@ -78,15 +85,12 @@ class LoginScreen extends React.Component {
     return ;
   }
   _keyboardDidShow = () => {
+    this._fadeAnimation();
     this.setState({ visible: false });
-    // alert(this.state.visible);
-    // this.forceUpdate();
     return ;
   }
   _keyboardDidHide = () => {
     this.setState({ visible: true });
-    // alert(this.state.visible);
-    // this.forceUpdate();
     return ;
   }
   _handleNavigation () {
@@ -107,6 +111,13 @@ class LoginScreen extends React.Component {
   }
   _focusNextField = (id) => {
     this.inputs[id].focus();
+    return ;
+  }
+  _fadeAnimation () {
+    Animated.timing(this.state.fadeValue, {
+      toValue: 0,
+      duration: 300
+    }).start();
     return ;
   }
   render () {
@@ -159,25 +170,25 @@ class LoginScreen extends React.Component {
               </Button>
             </Form>
             { this.state.visible ? (
-              <React.Fragment>
-                <View style={ styles.forgotPassword }>
-                  <Button
-                    onPress={ this._onForgotPassHandler }
-                    transparent={ true }
-                    dark={ true }
-                  >
-                    <Text>{ "Forgot password?" }</Text>
-                  </Button>
-                </View>
-                <View style={ styles.signup }>
-                  <Button
-                    onPress={ this._onSignupHandler }
-                    info={ true }
-                  >
-                    <Text>{ "Tap here to Sign up!" }</Text>
-                  </Button>
-                </View>
-              </React.Fragment>
+              <Animated.View style={[
+                  styles.animatedView,
+                  { opacity: this.state.fadeValue }
+                ]}
+              >
+                <Button
+                  onPress={ this._onForgotPassHandler }
+                  transparent={ true }
+                  dark={ true }
+                >
+                  <Text>{ "Forgot password?" }</Text>
+                </Button>
+                <Button
+                  onPress={ this._onSignupHandler }
+                  info={ true }
+                >
+                  <Text>{ "Tap here to Sign up!" }</Text>
+                </Button>
+              </Animated.View>
               ) : (null)
             }
           </WallpaperContainer>
