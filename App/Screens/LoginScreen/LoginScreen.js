@@ -61,7 +61,7 @@ class LoginScreen extends React.Component {
       email: null,
       password: null,
       loading: false,
-      visible: false
+      visible: true
     };
     this.inputs = {};
     // this._focusNextField = this._focusNextField.bind(this);
@@ -79,12 +79,14 @@ class LoginScreen extends React.Component {
   }
   _keyboardDidShow = () => {
     this.setState({ visible: false });
-    alert('show')
+    // alert(this.state.visible);
+    // this.forceUpdate();
     return ;
   }
   _keyboardDidHide = () => {
     this.setState({ visible: true });
-    alert('hide')
+    // alert(this.state.visible);
+    // this.forceUpdate();
     return ;
   }
   _handleNavigation () {
@@ -156,7 +158,7 @@ class LoginScreen extends React.Component {
                 <Text>{ "Login" }</Text>
               </Button>
             </Form>
-            { this.state.visible == false ? (
+            { this.state.visible ? (
               <React.Fragment>
                 <View style={ styles.forgotPassword }>
                   <Button
