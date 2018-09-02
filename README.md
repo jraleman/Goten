@@ -164,20 +164,26 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 
 ### Colors
 
-#### Palette
+#### Color Palette
+
+![#e4e4a1](http://via.placeholder.com/150/e4e4a1/000000?text=e4e4a1)
+![#eaeab4](http://via.placeholder.com/150/eaeab4/000000?text=eaeab4)
+![#efefc8](http://via.placeholder.com/150/efefc8/000000?text=efefc8)
+![#f5f5dc](http://via.placeholder.com/150/f5f5dc/000000?text=f5f5dc)
+![#fbfbf0](http://via.placeholder.com/150/fbfbf0/000000?text=fbfbf0)
 
 ![#121212](http://via.placeholder.com/150/121212/ffffff?text=121212)
 ![#343434](http://via.placeholder.com/150/343434/ffffff?text=343434)
 ![#989898](http://via.placeholder.com/150/989898/ffffff?text=989898)
-![#b6b6b6](http://via.placeholder.com/150/B6B6B6/ffffff?text=b6b6b6)
+![#b6b6b6](http://via.placeholder.com/150/B6B6B6/000000?text=b6b6b6)
 ![#f9f9f9](http://via.placeholder.com/150/BBBBBB/000000?text=f9f9f9)
 
 #### Success / Error / Warning / Info
 
-![#b8e986](http://via.placeholder.com/150/b8e986/000000?text=b8e986)
+![#7a9c45](http://via.placeholder.com/150/7a9c45/ffffff?text=7a9c45)
 ![#d9534f](http://via.placeholder.com/150/d9534f/ffffff?text=d9534f)
-![#f3bd71](http://via.placeholder.com/150/f3bd71/000000?text=f3bd71)
-![#92bced](http://via.placeholder.com/150/92bced/000000?text=92bced)
+![#9c6745](http://via.placeholder.com/150/9c6745/ffffff?text=9c6745)
+![#457a9c](http://via.placeholder.com/150/457a9c/ffffff?text=457a9c)
 
 ### Look & Feel
 
@@ -245,15 +251,18 @@ And then just run the lint from your end. Checkout `package.json` scripts! ;)
 
 - [Onboarding Icons made by Freepik](http://www.freepik.com)
 
-## Resources
+## Sources
 
 - [React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
 - [Network Indicator](https://medium.com/dailyjs/offline-notice-in-react-native-28a8d01e8cd0)
-- [Login Screen](https://github.com/dwicao/react-native-login-screen)
-- [Wallpaper used for Login Screen](https://hdwallsource.com/img/2014/5/abstract-wallpaper-26633-27347-hd-wallpapers.jpg)
 - [Color API Tutorial](https://www.youtube.com/watch?v=d2Mp66FFBgU)
 
-## Contribute
+## Attributions
+
+- [LIBRARY 3 AM](https://www.1001fonts.com/library-3-am-font.html)
+- [LoginScreen Wallpaper Background](https://flic.kr/p/25w2ewc)
+
+## Support Us!
 
 If you need help on how to
 get started, please follow [this guideline](CONTRIBUTING.md).

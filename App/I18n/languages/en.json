@@ -1,20 +1,20 @@
 {
   "onboardingScreen": {
     "slideOne": {
-      "title": "Dream",
-      "text": "Where ideas are born"
+      "title": "Boilerplate Application",
+      "text": "This is a good way to start your project"
     },
     "slideTwo": {
-      "title": "Design",
-      "text": "And let's design those ideas"
+      "title": "Simple Ideas",
+      "text": "Let's design those ideas"
     },
     "slideThree": {
-      "title": "Develop",
-      "text": "Because it's time to make them real"
+      "title": "Code Organized",
+      "text": "Because you deserve the best..."
     },
     "slideFour": {
-      "title": "Deliver",
-      "text": "To the real world!"
+      "title": "A product by",
+      "text": "Tap the icon to continue!"
     }
   }
 }
