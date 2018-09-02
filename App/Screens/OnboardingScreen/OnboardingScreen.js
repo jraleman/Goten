@@ -15,7 +15,8 @@
 import React from 'react';
 import {
   AsyncStorage,
-  StatusBar
+  StatusBar,
+  View
 } from 'react-native';
 import {
   Container,
@@ -56,7 +57,7 @@ const slides = [
     textStyle: styles.textStyle,
     image: Images.onboardingSlideTwo,
     imageStyle: styles.imageStyle,
-    backgroundColor: '#343434'
+    backgroundColor: '#232323'
   },
   {
     key: 'slideThree',
@@ -66,14 +67,14 @@ const slides = [
     textStyle: styles.textStyle,
     image: Images.onboardingSlideThree,
     imageStyle: styles.imageStyle,
-    backgroundColor: '#565656'
+    backgroundColor: '#343436'
   },
   {
     key: 'slideFour',
     title: I18n.t('onboardingScreen.slideFour.title'),
-    titleStyle: styles.titleStyle,
+    titleStyle: styles.titleStyleLast,
     text: I18n.t('onboardingScreen.slideFour.text'),
-    textStyle: styles.textStyle,
+    textStyle: styles.textStyleLast,
     image: Images.onboardingSlideFour,
     imageStyle: styles.imageStyle,
     backgroundColor: '#f9f9f9'
@@ -104,8 +105,8 @@ class OnboardingScreen extends React.Component {
     return ;
   }
   componentDidUpdate () {
-    // if (this.state.firstLaunch == true) {
-    if (this.state.firstLaunch == false) {
+    if (this.state.firstLaunch == true) {
+    // if (this.state.firstLaunch == false) {
       this.handleNavigation();
     }
   }
@@ -118,9 +119,21 @@ class OnboardingScreen extends React.Component {
     this.props.navigation.dispatch(resetAction);
     return ;
   }
+  _renderDoneButton = () => {
+   return (
+     <View style={styles.buttonCircle}>
+       <Ionicons
+         name="md-checkmark"
+         color="rgba(255, 255, 255, .9)"
+         size={24}
+         style={{ backgroundColor: 'transparent' }}
+       />
+     </View>
+   );
+ }
   render () {
-    // if (this.state.firstLaunch == false) {
-    if (this.state.firstLaunch == true) {
+    if (this.state.firstLaunch == false) {
+    // if (this.state.firstLaunch == true) {
       return (
         <React.Fragment>
           <StatusBar
@@ -132,6 +145,7 @@ class OnboardingScreen extends React.Component {
             <AppIntroSlider
               slides={ slides }
               onDone={ () => this.handleNavigation() }
+              renderDoneButton={this._renderDoneButton}
             />
           </Container>
         </React.Fragment>

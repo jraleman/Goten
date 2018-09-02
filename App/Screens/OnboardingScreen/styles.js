@@ -7,17 +7,28 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   imageStyle: {
-    width: 220,
-    height: 220,
+    flex: 1,
+    maxWidth: 320,
+    // height: 'auto',
+    alignSelf: 'center',
+    resizeMode: 'contain'
+  },
+  titleStyle: {
+    fontSize: 36,
+    color: '#f9f9f9'
   },
   textStyle: {
     marginBottom: 20,
     color: '#f9f9f9'
   },
-  titleStyle: {
-    color: '#f9f9f9',
+  titleStyleLast: {
+    color: '#111111',
     fontSize: 36
   },
+  textStyleLast: {
+    color: '#111111',
+    marginBottom: 20,
+  }
 });
 
 export default styles;
