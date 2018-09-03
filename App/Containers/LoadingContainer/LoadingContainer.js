@@ -2,7 +2,8 @@ import React from 'react';
 import {
   Container,
   Content,
-  Text
+  Text,
+  Spinner
 } from 'native-base';
 import styles from './styles';
 
@@ -16,9 +17,7 @@ class LoadingContainer extends React.Component {
     return (
       <React.Fragment>
         <Container style={ styles.container }>
-          <Content>
-            <Text>{ "LoadingContainer" }</Text>
-          </Content>
+          <Spinner color={ '#121212' }/>
         </Container>
       </React.Fragment>
     );
