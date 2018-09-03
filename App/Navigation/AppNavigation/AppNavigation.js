@@ -5,6 +5,7 @@ import { StackNavigator } from 'react-navigation';
 import TestScreen from '../../Screens/TestScreen';
 import LoginScreen from '../../Screens/LoginScreen';
 import SignupScreen from '../../Screens/SignupScreen';
+import ForgotPasswordScreen from '../../Screens/ForgotPasswordScreen';
 import CategoriesScreen from '../../Screens/CategoriesScreen';
 import NativeBaseScreen from '../../Screens/NativeBaseScreen';
 import ColorsScreen from '../../Screens/ColorsScreen';
@@ -22,6 +23,7 @@ const AppNavigation = StackNavigator(
   {
     'Login': { screen: LoginScreen },
     'Signup': { screen: SignupScreen },
+    'ForgotPassword': { screen: ForgotPasswordScreen },
     'Test': { screen: TestScreen },
     'Categories': { screen: CategoriesScreen },
     'NativeBase': { screen: NativeBaseScreen },
