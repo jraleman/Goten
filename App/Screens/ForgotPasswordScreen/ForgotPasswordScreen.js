@@ -2,9 +2,25 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import {
   Container,
+  Header,
+  Title,
   Content,
-  Text
-} from 'native-base';
+  Button,
+  Icon,
+  Body,
+  Left,
+  Right,
+  Item,
+  Input,
+  Form,
+  H2,
+  Label,
+  Text,
+  Textarea,
+  ListItem,
+  CheckBox,
+  Radio
+} from "native-base";
 import styles from './styles';
 import BasicoHeader from '../../Components/BasicoHeader';
 
@@ -29,7 +45,21 @@ class ForgotPasswordScreen extends React.Component {
             icon={ "arrow-back" }
           />
           <Content padder={ true }>
-            <Text>{ "ForgotPasswordScreen" }</Text>
+          <Form style={{flex: 1}}>
+            <Item style={ styles.email }>
+              <Input placeholder={ "Email" }  />
+              <Icon
+                active={ true }
+                name={ 'mail' }
+              />
+            </Item>
+            <Button style={ styles.button }
+              block={ true }
+              style={{ margin: 15 }}
+            >
+              <Text>{ "Submit" }</Text>
+            </Button>
+          </Form>
           </Content>
         </Container>
       </React.Fragment>
