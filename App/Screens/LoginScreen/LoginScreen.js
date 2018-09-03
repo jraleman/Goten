@@ -38,6 +38,10 @@ import {
   Text,
   Textarea
 } from "native-base";
+import {
+  StackActions,
+  NavigationActions
+} from 'react-navigation';
 
 // ~~ Configuration ~~
 import '../../Config';
@@ -96,6 +100,12 @@ class LoginScreen extends React.Component {
     return ;
   }
   _handleNavigation () {
+    // const resetAction = StackActions.reset({
+    //   index: 0,
+    //   key: null,
+    //   actions: [NavigationActions.navigate({ routeName: 'DrawerNavigation' })],
+    // });
+    // this.props.navigation.dispatch(resetAction);
     this.props.navigation.navigate('DrawerNavigation');
     return ;
   }
@@ -104,7 +114,8 @@ class LoginScreen extends React.Component {
     return ;
   }
   _onSignupHandler = () => {
-    alert('SignupHandler')
+    // alert('SignupHandler')
+    this.props.navigation.navigate('Signup')
     return ;
   }
   _onForgotPassHandler = () => {
