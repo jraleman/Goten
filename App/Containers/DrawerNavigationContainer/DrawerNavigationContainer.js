@@ -4,7 +4,8 @@ import {
   Platform,
   Dimensions,
   Image,
-  StatusBar
+  StatusBar,
+  ImageBackground,
 } from 'react-native';
 import {
   List,
@@ -26,6 +27,8 @@ import {
 } from 'native-base';
 import styles from './styles';
 
+import { Images } from '../../Themes';
+
 class DrawerNavigationContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -42,24 +45,33 @@ class DrawerNavigationContainer extends React.Component {
   }
   render() {
     return (
-      <Container style={{ bottom: 0 }}>
+      <React.Fragment>
         <StatusBar barStyle={ 'dark-content' } />
-        <Content
-          bounces={ false }
-          style={ styles.content }
-        >
-          <List
-            style={{ height: 550 }}
-            dataArray={ this.props.items }
-            renderRow={ (item) =>
-              <NavigationRow
-                item={ item }
-                nav={ this.props.navigation }
-              />
-            }
-          />
-        </Content>
-      </Container>
+        <Container style={{ bottom: 0 }}>
+          <Content
+            bounces={ false }
+            style={ styles.content }
+          >
+            <NavigationHeader
+              headerText={ "Joe Doe" }
+              onPress={ () => alert('Hello') }
+              backgroundImg={ Images.drawerNavigationCover }
+              avatarImg={ Images.drawerNavigationAvatar }
+            />
+            <List
+              style={{ height: 550 }}
+              dataArray={ this.props.items }
+              renderRow={ (item) =>
+                <NavigationRow
+                  item={ item }
+                  nav={ this.props.navigation }
+                />
+              }
+            />
+            <NavigationFooter />
+          </Content>
+        </Container>
+      </React.Fragment>
     );
   }
 };
@@ -75,21 +87,42 @@ class DrawerNavigationContainer extends React.Component {
 
 */
 
+// ~~ Constants ~~
+const BACKGROUND_OPACITY = 0.35;
+const BACKGROUND_BLUR = 0.75
+const BACKGROUND_OVERLAY = '#121212';
+
 const NavigationHeader = props => {
   return (
-    <View style={ styles.container }>
-      <Image
-        source={ props.backgroundImg }
-        style={ styles.drawerCover }
-      />
-      <TouchableOpacity
-        onPress={ props.onPress }
-        style={ styles.drawer }
-      >
-        <Thumbnail source={{ uri: props.avatar }}/>
-        <H2 style={ styles.drawerText }>{ props.headerText }</H2>
-      </TouchableOpacity>
-    </View>
+    <React.Fragment>
+      <View style={ styles.container }>
+        <ImageBackground
+          blurRadius={ BACKGROUND_BLUR }
+          source={ props.backgroundImg }
+          style={ styles.wallpaper }
+          resizeMode={ "cover" }
+        >
+          <View style={[
+            styles.overlay, {
+              backgroundColor: BACKGROUND_OVERLAY,
+              opacity: BACKGROUND_OPACITY
+            }]}
+          />
+          <TouchableOpacity
+            onPress={ props.onPress }
+            style={ styles.drawer }
+          >
+            <Thumbnail
+              source={ props.avatarImg }
+              square={ true }
+              size={ 80 }
+              style={ styles.avatarImg }
+            />
+            <H2 style={ styles.drawerText }>{ props.headerText }</H2>
+          </TouchableOpacity>
+        </ImageBackground>
+      </View>
+    </React.Fragment>
   );
 }
 
@@ -161,6 +194,16 @@ const RowRight = props => {
         <Text style={ styles.badgeText }>{ props.badgeText }</Text>
       </Badge>
     </Right>
+  );
+}
+
+const NavigationFooter = props => {
+  return (
+    <React.Fragment>
+      <View style={ styles.footer }>
+        <Text>{ "NavigationFooter" }</Text>
+      </View>
+    </React.Fragment>
   );
 }
 

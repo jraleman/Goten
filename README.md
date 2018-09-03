@@ -252,7 +252,9 @@ See `./App/Themes/variables.js`
 ## Attributions
 
 - [LIBRARY 3 AM](https://www.1001fonts.com/library-3-am-font.html)
-- [LoginScreen Wallpaper Background](https://flic.kr/p/25w2ewc)
+- [loginBackground](https://flic.kr/p/25w2ewc)
+- [drawerNavigationBackground](https://flic.kr/p/owtdUV)
+- [drawerNavigationAvatar](https://www.iconfinder.com/icons/1509458/animal_cat_feline_halloween_kitten_icon)
 
 ## Support Us!
 
