@@ -34,17 +34,31 @@ export default StyleSheet.create({
     justifyContent:'center',
   },
   drawerText: {
-    marginLeft: Platform.OS === "ios" ? deviceWidth / 9 : deviceWidth / 12,
-    marginTop: Platform.OS === "ios" ? deviceHeight / 12 : deviceHeight / 13,
+    // marginLeft: Platform.OS === "ios" ? deviceWidth / 9 : deviceWidth / 12,
+    // marginTop: Platform.OS === "ios" ? deviceHeight / 12 : deviceHeight / 13,
     textAlign: 'center',
     alignSelf: 'center',
     // flex: 1,
-    fontSize: 24,
+    // fontSize: 24,
     color: '#f9f9f9',
+    // marginBottom: 0
+    marginTop: 12,
+    // position: 'absolute'
+    fontWeight: '500'
   },
   drawer: {
     position: "absolute",
     alignSelf: 'center',
+    // backgroundColor: '#e4e4a1',
+    // width: 100,
+    // height: 200,
+    opacity: 0.75,
+    flex: 1,
+    width: '75%',
+    marginTop: '2.5%',
+    alignItems: 'center',
+    flexDirection: 'column'
+    // height: '50%'
   },
   text: {
     fontWeight: Platform.OS === "ios" ? "500" : "400",
@@ -78,5 +92,18 @@ export default StyleSheet.create({
     flex: 1,
     width: null,
     height: null
+  },
+  avatarImg: {
+    backgroundColor: '#e4e4a1',
+    marginTop: '7.5%',
+    borderWidth: 2,
+    borderColor: '#f9f9f9',
+    // marginTop: 10
+
+  },
+  footer: {
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    alignSelf: 'center'
   }
 });

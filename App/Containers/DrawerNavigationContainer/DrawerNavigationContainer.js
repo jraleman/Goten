@@ -53,9 +53,10 @@ class DrawerNavigationContainer extends React.Component {
             style={ styles.content }
           >
             <NavigationHeader
-              headerText={ "User" }
+              headerText={ "Joe Doe" }
               onPress={ () => alert('Hello') }
               backgroundImg={ Images.drawerNavigationCover }
+              avatarImg={ Images.drawerNavigationAvatar }
             />
             <List
               style={{ height: 550 }}
@@ -67,6 +68,7 @@ class DrawerNavigationContainer extends React.Component {
                 />
               }
             />
+            <NavigationFooter />
           </Content>
         </Container>
       </React.Fragment>
@@ -86,43 +88,43 @@ class DrawerNavigationContainer extends React.Component {
 */
 
 // ~~ Constants ~~
-const BACKGROUND_OPACITY = 0.25;
-const BACKGROUND_BLUR = 2.25
-const BACKGROUND_OVERLAY = '#e4e4a1';
-
+const BACKGROUND_OPACITY = 0.35;
+const BACKGROUND_BLUR = 0.75
+const BACKGROUND_OVERLAY = '#121212';
 
 const NavigationHeader = props => {
   return (
-    <View style={ styles.container }>
-
-    <ImageBackground
-      blurRadius={ BACKGROUND_BLUR }
-      source={ props.backgroundImg }
-      style={ styles.wallpaper }
-      resizeMode={ "cover" }
-    >
-      <View style={[
-        styles.overlay, {
-          backgroundColor: BACKGROUND_OVERLAY,
-          opacity: BACKGROUND_OPACITY
-        }
-      ]}/>
-      <TouchableOpacity
-        onPress={ props.onPress }
-        style={ styles.drawer }
-      >
-        <Thumbnail source={{ uri: props.avatarImg }}/>
-        <H2 style={ styles.drawerText }>{ props.headerText }</H2>
-      </TouchableOpacity>
-    </ImageBackground>
-
-    </View>
+    <React.Fragment>
+      <View style={ styles.container }>
+        <ImageBackground
+          blurRadius={ BACKGROUND_BLUR }
+          source={ props.backgroundImg }
+          style={ styles.wallpaper }
+          resizeMode={ "cover" }
+        >
+          <View style={[
+            styles.overlay, {
+              backgroundColor: BACKGROUND_OVERLAY,
+              opacity: BACKGROUND_OPACITY
+            }]}
+          />
+          <TouchableOpacity
+            onPress={ props.onPress }
+            style={ styles.drawer }
+          >
+            <Thumbnail
+              source={ props.avatarImg }
+              square={ true }
+              size={ 80 }
+              style={ styles.avatarImg }
+            />
+            <H2 style={ styles.drawerText }>{ props.headerText }</H2>
+          </TouchableOpacity>
+        </ImageBackground>
+      </View>
+    </React.Fragment>
   );
 }
-
-
-
-
 
 const NavigationRow = props => {
   // alert(JSON.stringify(props.item, null, 4));
@@ -192,6 +194,16 @@ const RowRight = props => {
         <Text style={ styles.badgeText }>{ props.badgeText }</Text>
       </Badge>
     </Right>
+  );
+}
+
+const NavigationFooter = props => {
+  return (
+    <React.Fragment>
+      <View style={ styles.footer }>
+        <Text>{ "NavigationFooter" }</Text>
+      </View>
+    </React.Fragment>
   );
 }
 
