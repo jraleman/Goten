@@ -1,8 +1,15 @@
 import React from 'react';
 import {
   View,
-  Text
+  Text,
+  StatusBar
 } from 'react-native';
+import {
+  Container,
+  Content
+} from 'native-base';
+
+import BasicoHeader from '../../Components/BasicoHeader';
 import styles from './styles';
 
 class SignupScreen extends React.Component {
@@ -14,9 +21,18 @@ class SignupScreen extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <View style={ styles.container }>
-          <Text>{ "SignupScreen" }</Text>
-        </View>
+        <StatusBar
+          translucent={ true }
+          barStyle={ "light-content" }
+          hidden={ true }
+        />
+        <Container style={ styles.container }>
+          <BasicoHeader
+            title={ "Signup" }
+            onPress={ () => this.props.navigation.goBack() }
+            icon={ "arrow-back" }
+          />
+        </Container>
       </React.Fragment>
     );
   }
