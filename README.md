@@ -1,5 +1,7 @@
 # Basico
 
+[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
+
 ## About
 
 React Native boilerplate (or sample app), with basic redux, native-base and
