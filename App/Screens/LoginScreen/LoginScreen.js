@@ -36,12 +36,14 @@ import {
   H2,
   Label,
   Text,
-  Textarea
+  Textarea,
+  Spinner
 } from "native-base";
 import {
   StackActions,
   NavigationActions
 } from 'react-navigation';
+
 
 // ~~ Configuration ~~
 import '../../Config';
@@ -53,6 +55,7 @@ import I18n from 'react-native-i18n';
 import styles from './styles';
 import { Images } from '../../Themes';
 import WallpaperContainer from '../../Containers/WallpaperContainer';
+import LoadingContainer from '../../Containers/LoadingContainer';
 
 // ~~ Constants ~~
 const WALLPAPER_OPACITY = 0.25;
@@ -110,16 +113,18 @@ class LoginScreen extends React.Component {
     return ;
   }
   _onLoginHandler = () => {
-    this._handleNavigation();
+    this.setState({ loading: true });
+    // this._handleNavigation();
     return ;
   }
   _onSignupHandler = () => {
     // alert('SignupHandler')
-    this.props.navigation.navigate('Signup')
+    this.props.navigation.navigate('Signup');
     return ;
   }
   _onForgotPassHandler = () => {
-    alert('ForgotPassHandler')
+    // alert('ForgotPassHandler')
+    this.props.navigation.navigate('ForgotPassword');
     return ;
   }
   _focusNextField = (id) => {
@@ -218,6 +223,10 @@ class LoginScreen extends React.Component {
               ) : (null)
             }
           </WallpaperContainer>
+          { this.state.loading ? (
+            <LoadingContainer />
+            ) : (null)
+          }
         </Container>
       </React.Fragment>
     );
