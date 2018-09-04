@@ -1,11 +1,7 @@
 {
-  "globals": {
-    "describe": false,
-    "before": false,
-    "after": false,
-    "beforeEach": false,
-    "afterEach": false,
-    "it": false,
-    "assert": false
+  "rules": {
+    "brace-style": 2,
+    "semi": 0,
+    "react/jsx-curly-spacing": 0
   }
 }
