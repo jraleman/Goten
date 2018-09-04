@@ -2,6 +2,7 @@
   "rules": {
     "brace-style": 2,
     "semi": 0,
-    "react/jsx-curly-spacing": 0
+    "react/jsx-curly-spacing": 0,
+    "no-useless-return:": 0
   }
 }
