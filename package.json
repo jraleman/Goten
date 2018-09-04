@@ -10,10 +10,11 @@
     "lint-linux-log": "npm run lint > lint.log ; xdg-open lint.log || true"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.0.0",
+    "native-base": "^2.6.1",
     "react": "16.4.1",
     "react-native": "0.56.0",
-    "axios": "^0.18.0",
-    "native-base": "^2.6.1",
     "react-native-animatable": "^1.3.0",
     "react-native-app-intro": "^1.1.5",
     "react-native-app-intro-slider": "^0.2.4",
