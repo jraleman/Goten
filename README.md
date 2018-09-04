@@ -139,8 +139,18 @@ style file.
 
 ### Code
 
-This project follows the [semistandard](https://github.com/Flet/semistandard),
-based from [standard](https://github.com/standard/standard).
+This project follows the [standardx](https://github.com/standard/standardx
+), based on [standard](https://github.com/standard/standard).
+
+#### Rules
+
+We follow all the rules form `standard`, minus the following exceptions:
+
+- Every function should include one and only return statement
+(exceptions allowed), including `void` types.
+- ...
+
+Check out `.eslintrc` for more info.
 
 #### Lint
 
