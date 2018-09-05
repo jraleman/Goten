@@ -1,6 +1,7 @@
 {
+  "parser": "babel-eslint",
   "rules": {
-    "brace-style": 2,
+    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
     "semi": 0,
     "react/jsx-curly-spacing": 0,
     "no-useless-return:": 0
