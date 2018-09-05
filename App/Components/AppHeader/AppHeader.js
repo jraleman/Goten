@@ -10,7 +10,7 @@ import {
 } from 'native-base';
 import styles from './styles';
 
-class BasicoHeader extends React.Component {
+class AppHeader extends React.Component {
   constructor (props) {
     super(props);
     this._onPress = this.props.onPress;
@@ -40,4 +40,4 @@ class BasicoHeader extends React.Component {
   }
 }
 
-export default BasicoHeader;
+export default AppHeader;

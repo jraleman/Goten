@@ -11,7 +11,7 @@ import {
   Text
 } from 'native-base';
 import styles from './styles';
-import BasicoHeader from '../../Components/BasicoHeader';
+import AppHeader from '../../Components/AppHeader';
 
 class ForgotPasswordScreen extends React.Component {
   constructor (props) {
@@ -27,7 +27,7 @@ class ForgotPasswordScreen extends React.Component {
           hidden={ true }
         />
         <Container style={ styles.container }>
-          <BasicoHeader
+          <AppHeader
             title={ 'Forgot Password' }
             onPress={ () => this.props.navigation.goBack() }
             icon={ 'arrow-back' }
