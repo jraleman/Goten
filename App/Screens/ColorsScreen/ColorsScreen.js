@@ -3,8 +3,7 @@ import {
   Container,
   Content,
   Button,
-  Text,
-  H1
+  Text
 } from 'native-base';
 import { connect } from 'react-redux';
 import styles from './styles';

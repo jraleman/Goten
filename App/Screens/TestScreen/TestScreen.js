@@ -24,7 +24,7 @@ class TestScreen extends React.Component {
   }
   render () {
     return (
-      <Container>
+      <Container style={ styles.container }>
         <BasicoHeader
           title={ 'Test Screen' }
           onPress={ () => this.props.navigation.goBack() }

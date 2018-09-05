@@ -5,7 +5,6 @@
 ** ---------------------------------------------------------------------------|
 ** Author: jraleman
 ** Date: Sat, Sep 01 2018
-** Dependencies: I18n
 */
 
 // ~~ Basic Stuff ~~
@@ -14,41 +13,21 @@ import {
   Animated,
   Keyboard,
   Image,
-  View,
   TouchableWithoutFeedback,
   TextInput,
-  AppRegistry,
   StatusBar
 } from 'react-native';
 import {
   Container,
-  Header,
-  Title,
-  Content,
   Button,
-  Icon,
-  Body,
-  Left,
-  Right,
   Item,
-  Input,
   Form,
-  H2,
   Label,
-  Text,
-  Textarea,
-  Spinner
+  Text
 } from 'native-base';
-import {
-  StackActions,
-  NavigationActions
-} from 'react-navigation';
 
 // ~~ Configuration ~~
 import '../../Config';
-
-// ~~ Dependencies ~~
-import I18n from 'react-native-i18n';
 
 // ~~ Local Dependencies ~~
 import styles from './styles';
@@ -87,34 +66,25 @@ class LoginScreen extends React.Component {
   componentWillUnmount () {
     this.keyboardDidShowListener.remove();
     this.keyboardDidHideListener.remove();
-    // Keyboard.dismiss;
   }
   _keyboardDidShow = () => {
-    this._fadeAnimation();
+    // this._fadeAnimation();
     this.setState({ visible: false });
   }
   _keyboardDidHide = () => {
     this.setState({ visible: true });
   }
   _handleNavigation () {
-    // const resetAction = StackActions.reset({
-    //   index: 0,
-    //   key: null,
-    //   actions: [NavigationActions.navigate({ routeName: 'DrawerNavigation' })],
-    // });
-    // this.props.navigation.dispatch(resetAction);
     this.props.navigation.navigate('DrawerNavigation');
   }
   _onLoginHandler = () => {
     this.setState({ loading: true });
-    // this._handleNavigation();
+    this._handleNavigation();
   }
   _onSignupHandler = () => {
-    // alert('SignupHandler')
     this.props.navigation.navigate('Signup');
   }
   _onForgotPassHandler = () => {
-    // alert('ForgotPassHandler')
     this.props.navigation.navigate('ForgotPassword');
   }
   _focusNextField = (id) => {

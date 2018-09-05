@@ -1,12 +1,9 @@
 import React from 'react';
 import {
-  View,
   StatusBar
 } from 'react-native';
 import {
   Container,
-  Header,
-  Title,
   Content,
   Button,
   Icon,
@@ -17,9 +14,7 @@ import {
   Input,
   Form,
   H2,
-  Label,
   Text,
-  Textarea,
   ListItem,
   CheckBox,
   Radio
@@ -57,7 +52,7 @@ class SignupScreen extends React.Component {
               <ListItem
                 style={ styles.radioButton }
                 selected={this.state.radio1}
-                onPress={ () => alert('UserTwo') }
+                onPress={ () => window.alert('UserTwo') }
               >
                 <Left>
                   <Text>{ '' }</Text>
@@ -65,7 +60,7 @@ class SignupScreen extends React.Component {
                 <Right>
                   <Radio
                     selected={this.state.radio1}
-                    onPress={ () => alert('UserTwo') }
+                    onPress={ () => window.alert('UserTwo') }
                   />
                 </Right>
               </ListItem>
@@ -89,11 +84,11 @@ class SignupScreen extends React.Component {
               <ListItem
                 style={ styles.checkbox }
                 button
-                onPress={ () => alert('ToS') }
+                onPress={ () => window.alert('ToS') }
               >
                 <CheckBox
                   checked={this.state.checkbox1}
-                  onPress={ () => alert('ToS') }
+                  onPress={ () => window.alert('ToS') }
                 />
                 <Body>
                   <Text>{ 'I have read the terms of services' }</Text>
@@ -103,11 +98,11 @@ class SignupScreen extends React.Component {
               <ListItem
                 style={ styles.checkbox }
                 button
-                onPress={ () => alert('PP') }
+                onPress={ () => window.alert('PP') }
               >
                 <CheckBox
                   checked={this.state.checkbox1}
-                  onPress={ () => alert('PP') }
+                  onPress={ () => window.alert('PP') }
                 />
                 <Body>
                   <Text>{ 'I accept the privacy policy' }</Text>

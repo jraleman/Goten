@@ -2,24 +2,13 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import {
   Container,
-  Header,
-  Title,
   Content,
   Button,
   Icon,
-  Body,
-  Left,
-  Right,
   Item,
   Input,
   Form,
-  H2,
-  Label,
-  Text,
-  Textarea,
-  ListItem,
-  CheckBox,
-  Radio
+  Text
 } from 'native-base';
 import styles from './styles';
 import BasicoHeader from '../../Components/BasicoHeader';
@@ -52,9 +41,9 @@ class ForgotPasswordScreen extends React.Component {
                   name={ 'mail' }
                 />
               </Item>
-              <Button style={ styles.button }
-                block
-                style={{ margin: 15 }}
+              <Button
+                style={ styles.button }
+                block={ true }
               >
                 <Text>{ 'Submit' }</Text>
               </Button>
