@@ -1,5 +1,3 @@
-import React from 'react';
-import { Platform } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import TestScreen from '../../Screens/TestScreen';
