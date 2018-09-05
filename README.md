@@ -155,23 +155,26 @@ Check out `.eslintrc` for more info.
 #### Lint
 
 After running `npm install`, you can run the following scripts (depending on
-your platform), to check if the code follows the `semistandard` coding
+your platform), to check if the code follows our `standardx` coding
 style guide.
 
-| Mac OS X           | Linux                    | Description                 |
-| :----------------- | :----------------------- | :-------------------------- |
-| `npm run lint`     | `npm run lint`           | Checks `src/` code style    |
-| `npm run lint-log` | `npm run lint-log-linux` | Saves and open the log file |
+| Mac OS X           | Description                                            |
+| :----------------- | :----------------------------------------------------- |
+| `npm run lint`     | Checks `App/` code style.                              |
+| `npm run lint-log` | Saves and open the log file.                           |
+| `npm run lint-fix` | Fix the code style of the JavaScript files.            |
 
 If you have any problem running the lint from the project, try installing the
 following packages globally, like this:
 
 ```
 npm install --global snazzy
-npm install --global semistandard
+npm install --global standardx
+npm install --global babel-eslint
 ```
 
-And then just run the lint from your end. Checkout `package.json` scripts! ;)
+And then just run the lint from your end.
+Checkout `package.json` scripts! ;)
 
 ### Colors
 
