@@ -4,8 +4,6 @@ import {
   Content,
   H2,
   H3,
-  Header,
-  Title,
   Button,
   Icon,
   List,
@@ -174,7 +172,7 @@ class ListsContainer extends React.Component {
             renderLeftHiddenRow={data =>
               <Button
                 full
-                onPress={() => alert(data)}
+                onPress={() => window.alert(data)}
                 style={{
                   backgroundColor: '#CCC',
                   flex: 1,

@@ -1,9 +1,6 @@
 import React from 'react';
 import {
   TouchableOpacity,
-  Platform,
-  Dimensions,
-  Image,
   StatusBar,
   ImageBackground
 } from 'react-native';
@@ -12,7 +9,6 @@ import {
   ListItem,
   Text,
   View,
-  Row,
   Icon,
   Content,
   Container,
@@ -20,10 +16,7 @@ import {
   Right,
   Badge,
   Thumbnail,
-  H1,
-  H2,
-  H3,
-  H4
+  H2
 } from 'native-base';
 import styles from './styles';
 
@@ -53,7 +46,7 @@ class DrawerNavigationContainer extends React.Component {
           >
             <NavigationHeader
               headerText={ 'Joe Doe' }
-              onPress={ () => alert('Hello') }
+              onPress={ () => window.alert('Hello') }
               backgroundImg={ Images.drawerNavigationCover }
               avatarImg={ Images.drawerNavigationAvatar }
             />

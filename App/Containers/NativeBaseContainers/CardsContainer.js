@@ -1,18 +1,11 @@
 import React from 'react';
 import {
   H2,
-  Header,
-  Title,
   Content,
-  Button,
-  Icon,
   Card,
   CardItem,
   Text,
-  Body,
-  Left,
-  Right,
-  Thumbnail
+  Body
 } from 'native-base';
 import styles from './styles';
 

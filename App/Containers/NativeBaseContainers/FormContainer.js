@@ -1,14 +1,8 @@
 import React from 'react';
 import {
-  Container,
-  Header,
-  Title,
   Content,
   Button,
   Icon,
-  Body,
-  Left,
-  Right,
   Item,
   Input,
   Form,

@@ -15,7 +15,10 @@ class ColorsContainer extends React.Component {
     // alert(this._color);
     return (
       <Container style={ styles.container }>
-        <Content style={[ styles.content, { backgroundColor: this._color }]} />
+        <Content style={[
+          styles.content,
+          { backgroundColor: this._color }]}
+        />
       </Container>
     );
   }

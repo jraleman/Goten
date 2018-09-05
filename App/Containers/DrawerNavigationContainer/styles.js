@@ -1,16 +1,10 @@
 import {
   Platform,
   StyleSheet,
-  Dimensions,
-  PixelRatio
+  Dimensions
 } from 'react-native';
 
 const deviceHeight = Dimensions.get('window').height;
-const deviceWidth = Dimensions.get('window').width;
-const platform = Platform.OS;
-const platformStyle = 'material';
-const isIphoneX =
-  platform === 'ios' && deviceHeight === 812 && deviceWidth === 375;
 
 export default StyleSheet.create({
   content: {
@@ -34,31 +28,21 @@ export default StyleSheet.create({
     justifyContent: 'center'
   },
   drawerText: {
-    // marginLeft: Platform.OS === "ios" ? deviceWidth / 9 : deviceWidth / 12,
-    // marginTop: Platform.OS === "ios" ? deviceHeight / 12 : deviceHeight / 13,
     textAlign: 'center',
     alignSelf: 'center',
-    // flex: 1,
-    // fontSize: 24,
     color: '#f9f9f9',
-    // marginBottom: 0
     marginTop: 12,
-    // position: 'absolute'
     fontWeight: '500'
   },
   drawer: {
     position: 'absolute',
     alignSelf: 'center',
-    // backgroundColor: '#e4e4a1',
-    // width: 100,
-    // height: 200,
     opacity: 0.75,
     flex: 1,
     width: '75%',
     marginTop: '2.5%',
     alignItems: 'center',
     flexDirection: 'column'
-    // height: '50%'
   },
   text: {
     fontWeight: Platform.OS === 'ios' ? '500' : '400',
@@ -86,7 +70,6 @@ export default StyleSheet.create({
     right: 0,
     bottom: 0,
     left: 0
-    // opacity: 0.175
   },
   wallpaper: {
     flex: 1,
@@ -98,7 +81,6 @@ export default StyleSheet.create({
     marginTop: '7.5%',
     borderWidth: 2,
     borderColor: '#f9f9f9'
-    // marginTop: 10
 
   },
   footer: {

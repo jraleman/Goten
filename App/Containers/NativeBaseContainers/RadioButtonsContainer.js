@@ -1,17 +1,11 @@
 import React from 'react';
 import {
-  Container,
-  Header,
-  Title,
   Content,
-  Button,
-  Icon,
   ListItem,
   Radio,
   Text,
   Left,
   Right,
-  Body,
   H2
 } from 'native-base';
 import styles from './styles';

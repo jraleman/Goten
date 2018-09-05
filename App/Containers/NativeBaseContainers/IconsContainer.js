@@ -1,14 +1,7 @@
 import React from 'react';
 import {
-  Container,
-  Header,
-  Title,
   Content,
-  Button,
   Icon,
-  Body,
-  Left,
-  Right,
   Grid,
   Col,
   Row,

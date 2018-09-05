@@ -1,16 +1,9 @@
 import React from 'react';
 import {
-  Container,
-  Header,
-  Title,
   Content,
-  Button,
-  Icon,
   ListItem,
   CheckBox,
   Text,
-  Left,
-  Right,
   Body,
   H2
 } from 'native-base';

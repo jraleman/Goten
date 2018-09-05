@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   Container,
-  Content,
-  Text,
   Spinner
 } from 'native-base';
 import styles from './styles';
