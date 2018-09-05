@@ -9,10 +9,10 @@ const translate = (initialMsg) => {
     localMsg = I18n.t(initialMsg);
   }
   else if (missingTranslationRegex.test(localMsg)) {
-    alert(`I18n: tryranslation "${initialMsg}" does not exists`);
+    window.alert(`I18n: tryranslation "${initialMsg}" does not exists`);
   }
   else {
-    alert(`I18n: Give a string to translate instead of "${typeof initialMsg}"`);
+    window.alert(`I18n: Give a string to translate instead of "${typeof initialMsg}"`);
   }
   return (localMsg);
 };
