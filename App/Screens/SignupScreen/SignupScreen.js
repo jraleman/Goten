@@ -35,9 +35,9 @@ class SignupScreen extends React.Component {
     return (
       <React.Fragment>
         <StatusBar
-          translucent
+          translucent={ true }
           barStyle={ 'light-content' }
-          hidden
+          hidden={ true }
         />
         <Container style={ styles.container }>
           <BasicoHeader
@@ -45,13 +45,13 @@ class SignupScreen extends React.Component {
             onPress={ () => this.props.navigation.goBack() }
             icon={ 'arrow-back' }
           />
-          <Content padder>
+          <Content padder={ true }>
             <Form>
               <H2 style={ styles.mb15 }>{ 'Sign up' }</H2>
 
               <ListItem
                 style={ styles.radioButton }
-                selected={this.state.radio1}
+                selected={ this.state.radio1 }
                 onPress={ () => window.alert('UserTwo') }
               >
                 <Left>
@@ -59,7 +59,7 @@ class SignupScreen extends React.Component {
                 </Left>
                 <Right>
                   <Radio
-                    selected={this.state.radio1}
+                    selected={ this.state.radio1 }
                     onPress={ () => window.alert('UserTwo') }
                   />
                 </Right>
@@ -68,7 +68,7 @@ class SignupScreen extends React.Component {
               <Item>
                 <Input placeholder={ 'Email' } />
                 <Icon
-                  active
+                  active={ true }
                   name={ 'mail' }
                 />
               </Item>
@@ -76,18 +76,18 @@ class SignupScreen extends React.Component {
               <Item>
                 <Input placeholder={ 'Password' } />
                 <Icon
-                  active
+                  active={ true }
                   name={ 'lock' }
                 />
               </Item>
 
               <ListItem
                 style={ styles.checkbox }
-                button
+                button={ true }
                 onPress={ () => window.alert('ToS') }
               >
                 <CheckBox
-                  checked={this.state.checkbox1}
+                  checked={ this.state.checkbox1 }
                   onPress={ () => window.alert('ToS') }
                 />
                 <Body>
@@ -97,11 +97,11 @@ class SignupScreen extends React.Component {
 
               <ListItem
                 style={ styles.checkbox }
-                button
+                button={ true }
                 onPress={ () => window.alert('PP') }
               >
                 <CheckBox
-                  checked={this.state.checkbox1}
+                  checked={ this.state.checkbox1 }
                   onPress={ () => window.alert('PP') }
                 />
                 <Body>
@@ -110,8 +110,8 @@ class SignupScreen extends React.Component {
               </ListItem>
 
               <Button
-                block
-                style={{ margin: 15 }}
+                block={ true }
+                style={ { margin: 15 } }
               >
                 <Text>{ 'Submit' }</Text>
               </Button>

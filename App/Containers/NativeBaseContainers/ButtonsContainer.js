@@ -15,56 +15,56 @@ class ButtonsContainer extends React.Component {
   }
   render () {
     return (
-      <Content padder>
+      <Content padder={ true }>
         <H2 style={ styles.mb15 }>{ 'Buttons' }</H2>
         <Button
-          block
-          light
+          block={ true }
+          light={ true }
           style={ styles.mb15 }
         >
           <Text>{ 'Light' }</Text>
         </Button>
         <Button
-          block
-          info
+          block={ true }
+          info={ true }
           style={ styles.mb15 }
         >
           <Text>{ 'Info' }</Text>
         </Button>
         <Button
-          block
-          primary
+          block={ true }
+          primary={ true }
           style={ styles.mb15 }
         >
           <Text>{ 'Primary' }</Text>
         </Button>
         <Button
-          block
-          success
-          style={styles.mb15}
+          block={ true }
+          success={ true }
+          style={ styles.mb15 }
         >
           <Text>{ 'Success' }</Text>
         </Button>
         <Button
-          block
-          warning
+          block={ true }
+          warning={ true }
           style={ styles.mb15 }
         >
           <Text>{ 'Warning' }</Text>
         </Button>
         <Button
-          block
-          danger
+          block={ true }
+          danger={ true }
           style={ styles.mb15 }
         >
           <Text>{ 'Danger' }</Text>
         </Button>
         <Button
-          block
-          dark
+          block={ true }
+          dark={ true }
           style={ styles.mb15 }
         >
-          <Icon active name='paw' />
+          <Icon active={ true } name='paw' />
           <Text>{ 'Custom' }</Text>
         </Button>
       </Content>

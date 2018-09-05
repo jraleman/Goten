@@ -26,7 +26,7 @@ class ColorsScreen extends React.Component {
         />
         <Content style={ styles.content }>
           <Button
-            info
+            info={ true }
             style={ styles.button }
             onPress={ () => this.props.loadColor() }
           >

@@ -20,10 +20,10 @@ class CardsContainer extends React.Component {
   }
   render () {
     return (
-      <Content padder>
+      <Content padder={ true }>
         <H2 style={ styles.mb15 }>{ 'Cards' }</H2>
-        <Card style={styles.mb}>
-          <CardItem header>
+        <Card style={ styles.mb }>
+          <CardItem header={ true }>
             <Text>{ 'Scarlet Dog' }</Text>
           </CardItem>
           <CardItem>
@@ -41,7 +41,7 @@ class CardsContainer extends React.Component {
               <Text>{ bodyTxt3 }</Text>
             </Body>
           </CardItem>
-          <CardItem footer>
+          <CardItem footer={ true }>
             <Text>{ 'ScarletValley' }</Text>
           </CardItem>
         </Card>

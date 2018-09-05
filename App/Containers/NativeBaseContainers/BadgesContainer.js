@@ -15,43 +15,43 @@ class BadgesContainer extends React.Component {
   }
   render () {
     return (
-      <Content padder>
+      <Content padder={ true }>
         <H2 style={ styles.mb15 }>{ 'Badges' }</H2>
         <Badge style={ styles.mb }>
           <Text>{ '4' }</Text>
         </Badge>
         <Badge
-          primary
+          primary={ true }
           style={ styles.mb }
         >
           <Text>{ '8' }</Text>
         </Badge>
         <Badge
-          success
+          success={ true }
           style={ styles.mb }
         >
           <Text>{ '15' }</Text>
         </Badge>
         <Badge
-          info
+          info={ true }
           style={ styles.mb }
         >
           <Text>{ '16' }</Text>
         </Badge>
         <Badge
-          warning
+          warning={ true }
           style={ styles.mb }
         >
           <Text>{ '23' }</Text>
         </Badge>
         <Badge
-          danger
+          danger={ true }
           style={ styles.mb }
         >
           <Text>{ '42' }</Text>
         </Badge>
         <Badge
-          primary
+          primary={ true }
           style={ styles.mb }
         >
           <Icon

@@ -22,9 +22,9 @@ class ForgotPasswordScreen extends React.Component {
     return (
       <React.Fragment>
         <StatusBar
-          translucent
+          translucent={ true }
           barStyle={ 'light-content' }
-          hidden
+          hidden={ true }
         />
         <Container style={ styles.container }>
           <BasicoHeader
@@ -32,12 +32,12 @@ class ForgotPasswordScreen extends React.Component {
             onPress={ () => this.props.navigation.goBack() }
             icon={ 'arrow-back' }
           />
-          <Content padder>
-            <Form style={{ flex: 1 }}>
+          <Content padder={ true }>
+            <Form style={ { flex: 1 } }>
               <Item style={ styles.email }>
                 <Input placeholder={ 'Email' } />
                 <Icon
-                  active
+                  active={ true }
                   name={ 'mail' }
                 />
               </Item>

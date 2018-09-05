@@ -13,7 +13,7 @@ export default (variable = variables) => {
     'NativeBase.IconNB': {
       color: variable.brandDark
     }
-  }
+  };
   const lightCommon = {
     'NativeBase.Text': {
       color: variable.brandLight
@@ -24,7 +24,7 @@ export default (variable = variables) => {
     'NativeBase.IconNB': {
       color: variable.brandLight
     }
-  }
+  };
   const primaryCommon = {
     'NativeBase.Text': {
       color: variable.btnPrimaryBg
@@ -35,7 +35,7 @@ export default (variable = variables) => {
     'NativeBase.IconNB': {
       color: variable.btnPrimaryBg
     }
-  }
+  };
   const successCommon = {
     'NativeBase.Text': {
       color: variable.btnSuccessBg
@@ -46,7 +46,7 @@ export default (variable = variables) => {
     'NativeBase.IconNB': {
       color: variable.btnSuccessBg
     }
-  }
+  };
   const infoCommon = {
     'NativeBase.Text': {
       color: variable.btnInfoBg
@@ -57,7 +57,7 @@ export default (variable = variables) => {
     'NativeBase.IconNB': {
       color: variable.btnInfoBg
     }
-  }
+  };
   const warningCommon = {
     'NativeBase.Text': {
       color: variable.btnWarningBg
@@ -68,7 +68,7 @@ export default (variable = variables) => {
     'NativeBase.IconNB': {
       color: variable.btnWarningBg
     }
-  }
+  };
   const dangerCommon = {
     'NativeBase.Text': {
       color: variable.btnDangerBg
@@ -79,7 +79,7 @@ export default (variable = variables) => {
     'NativeBase.IconNB': {
       color: variable.btnDangerBg
     }
-  }
+  };
   const buttonTheme = {
     '.disabled': {
       backgroundColor: variable.btnDisabledBg

@@ -24,7 +24,7 @@ class BasicoHeader extends React.Component {
         <Header style={ styles.header }>
           <Left>
             <Button
-              transparent
+              transparent={ true }
               onPress={ this._onPress }
             >
               <Icon name={ this._icon } />

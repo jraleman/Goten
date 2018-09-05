@@ -20,28 +20,28 @@ class FormContainer extends React.Component {
   }
   render () {
     return (
-      <Content padder>
+      <Content padder={ true }>
         <Form>
           <H2 style={ styles.mb15 }>{ 'Forms' }</H2>
-          <Item floatingLabel>
+          <Item floatingLabel={ true }>
             <Label>{ 'Floating label' }</Label>
             <Input />
           </Item>
-          <Item floatingLabel>
+          <Item floatingLabel={ true }>
             <Label>{ 'Secure text entry' }</Label>
-            <Input secureTextEntry />
+            <Input secureTextEntry={ true } />
           </Item>
-          <Item fixedLabel>
+          <Item fixedLabel={ true }>
             <Label>{ 'Fixed label' }</Label>
             <Input />
           </Item>
-          <Item inlineLabel>
+          <Item inlineLabel={ true }>
             <Label>{ 'Inline label' }</Label>
             <Input />
           </Item>
           <Item>
             <Icon
-              active
+              active={ true }
               name={ 'home' }
             />
             <Input placeholder={ 'Icon Textbox' } />
@@ -49,24 +49,24 @@ class FormContainer extends React.Component {
           <Item>
             <Input placeholder={ 'Icon Alignment in Textbox' } />
             <Icon
-              active
+              active={ true }
               name={ 'swap' }
             />
           </Item>
-          <Item stackedLabel>
+          <Item stackedLabel={ true }>
             <Label>Username</Label>
             <Input />
           </Item>
-          <Content padder>
+          <Content padder={ true }>
             <Textarea
               rowSpan={ 5 }
-              bordered
+              bordered={ true }
               placeholder={ 'Textarea' }
             />
           </Content>
           <Button
-            block
-            style={{ margin: 15 }}
+            block={ true }
+            style={ { margin: 15 } }
           >
             <Text>{ 'Submit' }</Text>
           </Button>

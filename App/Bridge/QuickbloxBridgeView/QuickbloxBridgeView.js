@@ -3,8 +3,6 @@
 import React from 'react';
 import { requireNativeComponent } from 'react-native';
 
-const QuickbloxBridge = requireNativeComponent('QuickbloxBridge', QuickbloxBridgeView);
-
 class QuickbloxBridgeView extends React.Component {
   constructor (props) {
     super(props);
@@ -21,6 +19,8 @@ class QuickbloxBridgeView extends React.Component {
 
 QuickbloxBridgeView.propTypes = {
   exampleProp: React.PropTypes.string
-}
+};
+
+const QuickbloxBridge = requireNativeComponent('QuickbloxBridge', QuickbloxBridgeView);
 
 export default QuickbloxBridgeView;

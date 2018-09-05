@@ -25,12 +25,12 @@ class WallpaperContainer extends React.Component {
             style={ styles.wallpaper }
             resizeMode={ 'cover' }
           >
-            <View style={[
+            <View style={ [
               styles.overlay, {
                 backgroundColor: this._overlay,
                 opacity: this._opacity
               }
-            ]} />
+            ] } />
             { this.props.children }
           </ImageBackground>
         </Container>

@@ -147,4 +147,4 @@ export default {
   'deviceHeight': 1388,
   'isIphoneX': false,
   'inputGroupRoundedBorderRadius': 30
-}
+};

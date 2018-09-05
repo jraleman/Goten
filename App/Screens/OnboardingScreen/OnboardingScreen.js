@@ -130,9 +130,9 @@ class OnboardingScreen extends React.Component {
       return (
         <React.Fragment>
           <StatusBar
-            translucent
+            translucent={ true }
             barStyle={ 'light-content' }
-            hidden
+            hidden={ true }
           />
           <Container style={ styles.container }>
             <AppIntroSlider

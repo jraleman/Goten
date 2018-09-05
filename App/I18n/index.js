@@ -1,7 +1,7 @@
 import I18n from 'react-native-i18n';
 
 // Regular expresion to match missing translations.
-const missingTranslationRegex = /^\[missing ".*" translation\]$/
+const missingTranslationRegex = /^\[missing ".*" translation\]$/;
 // Wrapper to avoid exception wich leads in an app crash.
 const translate = (initialMsg) => {
   let localMsg = null;

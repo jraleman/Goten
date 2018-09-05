@@ -3,7 +3,6 @@ import { Platform } from 'react-native';
 
 export default (variable = variables) => {
   const platformStyle = variable.platformStyle;
-  const platform = variable.platform;
 
   const tabContainerTheme = {
     elevation: 3,

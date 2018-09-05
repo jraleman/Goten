@@ -7,7 +7,7 @@
 ** Date: Fri, Aug 31 2018
 */
 
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -48,6 +48,6 @@ const styles = StyleSheet.create({
   btnIcon: {
     color: '#e4e4a1'
   }
-})
+});
 
-export default styles
+export default styles;

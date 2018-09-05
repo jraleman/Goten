@@ -107,9 +107,9 @@ class ListsContainer extends React.Component {
   }
   render () {
     return (
-      <Content padder>
+      <Content padder={ true }>
         <H2 style={ styles.mb15 }>{ 'Lists' }</H2>
-        <Content padder>
+        <Content padder={ true }>
           <H3 style={ styles.mb15 }>{ 'Simple List' }</H3>
           <List
             dataArray={ listData }
@@ -126,40 +126,40 @@ class ListsContainer extends React.Component {
               </ListItem> }
           />
         </Content>
-        <Content padder>
+        <Content padder={ true }>
           <H3 style={ styles.mb15 }>{ 'Avatar List' }</H3>
           <List
             dataArray={ avatarData }
-            renderRow={data =>
+            renderRow={ data =>
               <ListItem
-                avatar
+                avatar={ true }
                 style={ styles.listItem }
               >
                 <Left>
-                  <Thumbnail small source={data.img} />
+                  <Thumbnail small={ true } source={ data.img } />
                 </Left>
                 <Body>
                   <Text>
                     {data.text}
                   </Text>
-                  <Text numberOfLines={1} note>
+                  <Text numberOfLines={ 1 } note={ true }>
                     {data.note}
                   </Text>
                 </Body>
                 <Right>
-                  <Text note>
+                  <Text note={ true }>
                     {data.time}
                   </Text>
                 </Right>
-              </ListItem>}
+              </ListItem> }
           />
         </Content>
-        <Content padder>
+        <Content padder={ true }>
           <H3 style={ styles.mb15 }>{ 'Swipable List' }</H3>
           <List
-            dataSource={this.ds.cloneWithRows(this.state.listViewData)}
-            renderRow={data =>
-              <ListItem style={{ paddingLeft: 20 }}>
+            dataSource={ this.ds.cloneWithRows(this.state.listViewData) }
+            renderRow={ data =>
+              <ListItem style={ { paddingLeft: 20 } }>
                 <Left>
                   <Text>
                     { data }
@@ -168,35 +168,35 @@ class ListsContainer extends React.Component {
                 <Right>
                   <Icon name='arrow-forward' />
                 </Right>
-              </ListItem>}
-            renderLeftHiddenRow={data =>
+              </ListItem> }
+            renderLeftHiddenRow={ data =>
               <Button
-                full
-                onPress={() => window.alert(data)}
-                style={{
+                full={ true }
+                onPress={ () => window.alert(data) }
+                style={ {
                   backgroundColor: '#CCC',
                   flex: 1,
                   alignItems: 'center',
                   justifyContent: 'center'
-                }}
+                } }
               >
-                <Icon active name='information-circle' />
-              </Button>}
-            renderRightHiddenRow={(data, secId, rowId, rowMap) =>
+                <Icon active={ true } name='information-circle' />
+              </Button> }
+            renderRightHiddenRow={ (data, secId, rowId, rowMap) =>
               <Button
-                full
-                danger
-                onPress={_ => this.deleteRow(secId, rowId, rowMap)}
-                style={{
+                full={ true }
+                danger={ true }
+                onPress={ _ => this.deleteRow(secId, rowId, rowMap) }
+                style={ {
                   flex: 1,
                   alignItems: 'center',
                   justifyContent: 'center'
-                }}
+                } }
               >
-                <Icon active name='trash' />
-              </Button>}
-            leftOpenValue={75}
-            rightOpenValue={-75}
+                <Icon active={ true } name='trash' />
+              </Button> }
+            leftOpenValue={ 75 }
+            rightOpenValue={ -75 }
           />
         </Content>
       </Content>

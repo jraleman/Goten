@@ -30,7 +30,7 @@ class DrawerNavigationContainer extends React.Component {
       routeName: null,
       badgeCount: 0,
       avatar: null
-    }
+    };
   }
   componentWillMount () {
 
@@ -39,7 +39,7 @@ class DrawerNavigationContainer extends React.Component {
     return (
       <React.Fragment>
         <StatusBar barStyle={ 'dark-content' } />
-        <Container style={{ bottom: 0 }}>
+        <Container style={ { bottom: 0 } }>
           <Content
             bounces={ false }
             style={ styles.content }
@@ -51,14 +51,13 @@ class DrawerNavigationContainer extends React.Component {
               avatarImg={ Images.drawerNavigationAvatar }
             />
             <List
-              style={{ height: 550 }}
+              style={ { height: 550 } }
               dataArray={ this.props.items }
               renderRow={ (item) =>
                 <NavigationRow
                   item={ item }
                   nav={ this.props.navigation }
-                />
-              }
+                /> }
             />
             <NavigationFooter />
           </Content>
@@ -81,7 +80,7 @@ class DrawerNavigationContainer extends React.Component {
 
 // ~~ Constants ~~
 const BACKGROUND_OPACITY = 0.35;
-const BACKGROUND_BLUR = 0.75
+const BACKGROUND_BLUR = 0.75;
 const BACKGROUND_OVERLAY = '#121212';
 
 const NavigationHeader = props => {
@@ -94,11 +93,11 @@ const NavigationHeader = props => {
           style={ styles.wallpaper }
           resizeMode={ 'cover' }
         >
-          <View style={[
+          <View style={ [
             styles.overlay, {
               backgroundColor: BACKGROUND_OVERLAY,
               opacity: BACKGROUND_OPACITY
-            }]}
+            }] }
           />
           <TouchableOpacity
             onPress={ props.onPress }
@@ -106,7 +105,7 @@ const NavigationHeader = props => {
           >
             <Thumbnail
               source={ props.avatarImg }
-              square
+              square={ true }
               size={ 80 }
               style={ styles.avatarImg }
             />
@@ -116,7 +115,7 @@ const NavigationHeader = props => {
       </View>
     </React.Fragment>
   );
-}
+};
 
 const NavigationRow = props => {
   // alert(JSON.stringify(props.item, null, 4));
@@ -161,33 +160,33 @@ const NavigationRow = props => {
         iconName={ iconName }
         routeName={ props.item.routeName }
       />
-      { badgeCount && <RowRight badgeText={`${badgeCount}`} /> }
+      { badgeCount && <RowRight badgeText={ `${badgeCount}` } /> }
     </ListItem>
   );
-}
+};
 
 const RowLeft = props => {
   return (
     <Left>
       <Icon
-        active
+        active={ true }
         name={ props.iconName }
-        style={{ color: '#777', fontSize: 26, width: 30 }}
+        style={ { color: '#777', fontSize: 26, width: 30 } }
       />
       <Text>{ props.routeName }</Text>
     </Left>
   );
-}
+};
 
 const RowRight = props => {
   return (
-    <Right style={{ flex: 1 }}>
+    <Right style={ { flex: 1 } }>
       <Badge style={ styles.badge }>
         <Text style={ styles.badgeText }>{ props.badgeText }</Text>
       </Badge>
     </Right>
   );
-}
+};
 
 const NavigationFooter = props => {
   return (
@@ -197,6 +196,6 @@ const NavigationFooter = props => {
       </View>
     </React.Fragment>
   );
-}
+};
 
 export default DrawerNavigationContainer;

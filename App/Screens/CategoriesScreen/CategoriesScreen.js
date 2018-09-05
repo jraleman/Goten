@@ -39,8 +39,8 @@ class CategoriesScreen extends React.Component {
           <Text style={ styles.toolbar }>{ 'Categories' }</Text>
           <ListView
             dataSource={ this.state.dataSource }
-            renderRow={ (rowData) => <Text>{ rowData.name }</Text>}
-            enableEmptySections
+            renderRow={ (rowData) => <Text>{ rowData.name }</Text> }
+            enableEmptySections={ true }
           />
         </Content>
       </Container>
@@ -53,6 +53,6 @@ const mapStateToProps = (state) => {
   return ({
     categories: state.categories.all
   });
-}
+};
 
 export default connect(mapStateToProps)(CategoriesScreen);

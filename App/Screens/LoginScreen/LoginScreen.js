@@ -37,7 +37,7 @@ import LoadingContainer from '../../Containers/LoadingContainer';
 
 // ~~ Constants ~~
 const WALLPAPER_OPACITY = 0.25;
-const WALLPAPER_BLUR = 2.25
+const WALLPAPER_BLUR = 2.25;
 const WALLPAPER_OVERLAY = '#e4e4a1';
 
 // ~~ React Component ~~
@@ -121,32 +121,32 @@ class LoginScreen extends React.Component {
               />
             </TouchableWithoutFeedback>
             <Form style={ styles.form }>
-              <Item floatingLabel>
+              <Item floatingLabel={ true }>
                 <Label style={ styles.label }>{ 'Email' }</Label>
                 <TextInput
                   keyboardType={ 'email-address' }
                   returnKeyType={ 'next' }
-                  onSubmitEditing={ () => { this._focusNextField('passRef'); }}
-                  ref={ input => { this.inputs['emailRef'] = input; }}
+                  onSubmitEditing={ () => { this._focusNextField('passRef'); } }
+                  ref={ input => { this.inputs['emailRef'] = input; } }
                   style={ styles.input }
                 />
               </Item>
               <Item
-                floatingLabel
-                last
+                floatingLabel={ true }
+                last={ true }
               >
                 <Label style={ styles.label }>{ 'Password' }</Label>
                 <TextInput
                   onSubmitEditing={ Keyboard.dismiss }
-                  ref={ input => { this.inputs['passRef'] = input; }}
+                  ref={ input => { this.inputs['passRef'] = input; } }
                   style={ styles.input }
                 />
               </Item>
               { this.state.visible ? (
                 <React.Fragment>
                   <Button
-                    block
-                    dark
+                    block={ true }
+                    dark={ true }
                     style={ styles.button }
                     onPress={ this._onLoginHandler }
                   >
@@ -157,23 +157,23 @@ class LoginScreen extends React.Component {
               }
             </Form>
             { this.state.visible ? (
-              <Animated.View style={[
+              <Animated.View style={ [
                 styles.animatedView,
                 { opacity: this.state.fadeValue }
-              ]}
+              ] }
               >
                 <Button
                   onPress={ this._onForgotPassHandler }
-                  transparent
+                  transparent={ true }
                   style={ styles.button }
-                  dark
+                  dark={ true }
                 >
                   <Text>{ 'Forgot password?' }</Text>
                 </Button>
                 <Button
                   onPress={ this._onSignupHandler }
                   style={ styles.button }
-                  light
+                  light={ true }
                 >
                   <Text>{ 'Tap here to Sign up!' }</Text>
                 </Button>

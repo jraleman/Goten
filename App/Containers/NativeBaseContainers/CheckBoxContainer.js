@@ -46,12 +46,12 @@ class CheckBoxContainer extends React.Component {
         <H2 style={ styles.mb15 }>{ 'CheckBox' }</H2>
         <ListItem
           style={ styles.checkbox }
-          button
-          onPress={() => this.toggleSwitch1()}
+          button={ true }
+          onPress={ () => this.toggleSwitch1() }
         >
           <CheckBox
-            checked={this.state.checkbox1}
-            onPress={() => this.toggleSwitch1()}
+            checked={ this.state.checkbox1 }
+            onPress={ () => this.toggleSwitch1() }
           />
           <Body>
             <Text>Lunch Break</Text>
@@ -59,13 +59,13 @@ class CheckBoxContainer extends React.Component {
         </ListItem>
         <ListItem
           style={ styles.checkbox }
-          button
-          onPress={() => this.toggleSwitch2()}
+          button={ true }
+          onPress={ () => this.toggleSwitch2() }
         >
           <CheckBox
             color='red'
-            checked={this.state.checkbox2}
-            onPress={() => this.toggleSwitch2()}
+            checked={ this.state.checkbox2 }
+            onPress={ () => this.toggleSwitch2() }
           />
           <Body>
             <Text>Daily Stand Up</Text>
@@ -73,13 +73,13 @@ class CheckBoxContainer extends React.Component {
         </ListItem>
         <ListItem
           style={ styles.checkbox }
-          button
-          onPress={() => this.toggleSwitch3()}
+          button={ true }
+          onPress={ () => this.toggleSwitch3() }
         >
           <CheckBox
             color='green'
-            checked={this.state.checkbox3}
-            onPress={() => this.toggleSwitch3()}
+            checked={ this.state.checkbox3 }
+            onPress={ () => this.toggleSwitch3() }
           />
           <Body>
             <Text>Finish list Screen</Text>
@@ -87,13 +87,13 @@ class CheckBoxContainer extends React.Component {
         </ListItem>
         <ListItem
           style={ styles.checkbox }
-          button
-          onPress={() => this.toggleSwitch4()}
+          button={ true }
+          onPress={ () => this.toggleSwitch4() }
         >
           <CheckBox
             color='#000'
-            checked={this.state.checkbox4}
-            onPress={() => this.toggleSwitch4()}
+            checked={ this.state.checkbox4 }
+            onPress={ () => this.toggleSwitch4() }
           />
           <Body>
             <Text>Discussion with Client</Text>
