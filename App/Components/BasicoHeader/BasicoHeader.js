@@ -1,9 +1,7 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
 import {
   Body,
   Button,
-  Container,
   Header,
   Icon,
   Left,

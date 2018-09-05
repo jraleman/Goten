@@ -34,7 +34,7 @@ class NetworkIndicator extends React.Component {
     );
   }
   render () {
-    if (this.state.isConnected == false) {
+    if (this.state.isConnected === false) {
       return (
         <View style={ styles.container }>
           <Text style={ styles.text }>{ 'No Internet Connection!' }</Text>
