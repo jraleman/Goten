@@ -19,7 +19,6 @@ class BasicoHeader extends React.Component {
     this._icon = this.props.icon;
     this._title = this.props.title;
     this.state = {};
-    return ;
   }
   render () {
     return (
@@ -27,7 +26,7 @@ class BasicoHeader extends React.Component {
         <Header style={ styles.header }>
           <Left>
             <Button
-              transparent={ true }
+              transparent
               onPress={ this._onPress }
             >
               <Icon name={ this._icon } />

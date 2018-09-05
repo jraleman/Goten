@@ -2,7 +2,7 @@ import variables from './../variables';
 
 export default (variable = variables) => {
   const viewTheme = {
-    ".padder": {
+    '.padder': {
       padding: variable.contentPadding
     }
   };

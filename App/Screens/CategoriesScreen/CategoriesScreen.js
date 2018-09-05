@@ -36,11 +36,11 @@ class CategoriesScreen extends React.Component {
     return (
       <Container style={ styles.container }>
         <Content>
-          <Text style={ styles.toolbar }>{ "Categories" }</Text>
+          <Text style={ styles.toolbar }>{ 'Categories' }</Text>
           <ListView
             dataSource={ this.state.dataSource }
             renderRow={ (rowData) => <Text>{ rowData.name }</Text>}
-            enableEmptySections={ true }
+            enableEmptySections
           />
         </Content>
       </Container>

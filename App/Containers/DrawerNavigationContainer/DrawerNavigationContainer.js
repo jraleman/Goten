@@ -5,7 +5,7 @@ import {
   Dimensions,
   Image,
   StatusBar,
-  ImageBackground,
+  ImageBackground
 } from 'react-native';
 import {
   List,
@@ -23,14 +23,14 @@ import {
   H1,
   H2,
   H3,
-  H4,
+  H4
 } from 'native-base';
 import styles from './styles';
 
 import { Images } from '../../Themes';
 
 class DrawerNavigationContainer extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       iconName: null,
@@ -38,12 +38,11 @@ class DrawerNavigationContainer extends React.Component {
       badgeCount: 0,
       avatar: null
     }
-    return ;
   }
   componentWillMount () {
-    return ;
+
   }
-  render() {
+  render () {
     return (
       <React.Fragment>
         <StatusBar barStyle={ 'dark-content' } />
@@ -53,7 +52,7 @@ class DrawerNavigationContainer extends React.Component {
             style={ styles.content }
           >
             <NavigationHeader
-              headerText={ "Joe Doe" }
+              headerText={ 'Joe Doe' }
               onPress={ () => alert('Hello') }
               backgroundImg={ Images.drawerNavigationCover }
               avatarImg={ Images.drawerNavigationAvatar }
@@ -100,7 +99,7 @@ const NavigationHeader = props => {
           blurRadius={ BACKGROUND_BLUR }
           source={ props.backgroundImg }
           style={ styles.wallpaper }
-          resizeMode={ "cover" }
+          resizeMode={ 'cover' }
         >
           <View style={[
             styles.overlay, {
@@ -114,7 +113,7 @@ const NavigationHeader = props => {
           >
             <Thumbnail
               source={ props.avatarImg }
-              square={ true }
+              square
               size={ 80 }
               style={ styles.avatarImg }
             />
@@ -178,9 +177,9 @@ const RowLeft = props => {
   return (
     <Left>
       <Icon
-        active={ true }
+        active
         name={ props.iconName }
-        style={{ color: "#777", fontSize: 26, width: 30 }}
+        style={{ color: '#777', fontSize: 26, width: 30 }}
       />
       <Text>{ props.routeName }</Text>
     </Left>
@@ -201,7 +200,7 @@ const NavigationFooter = props => {
   return (
     <React.Fragment>
       <View style={ styles.footer }>
-        <Text>{ "NavigationFooter" }</Text>
+        <Text>{ 'NavigationFooter' }</Text>
       </View>
     </React.Fragment>
   );

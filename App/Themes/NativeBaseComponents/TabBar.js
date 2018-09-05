@@ -2,52 +2,52 @@ import variables from './../variables';
 
 export default (variable = variables) => {
   const tabBarTheme = {
-    ".tabIcon": {
+    '.tabIcon': {
       height: undefined
     },
-    ".vertical": {
+    '.vertical': {
       height: 60
     },
-    "NativeBase.Button": {
-      ".transparent": {
-        "NativeBase.Text": {
+    'NativeBase.Button': {
+      '.transparent': {
+        'NativeBase.Text': {
           fontSize: variable.tabFontSize,
           color: variable.sTabBarActiveTextColor,
-          fontWeight: "400"
+          fontWeight: '400'
         },
-        "NativeBase.IconNB": {
+        'NativeBase.IconNB': {
           color: variable.sTabBarActiveTextColor
         }
       },
-      "NativeBase.IconNB": {
+      'NativeBase.IconNB': {
         color: variable.sTabBarActiveTextColor
       },
-      "NativeBase.Text": {
+      'NativeBase.Text': {
         fontSize: variable.tabFontSize,
         color: variable.sTabBarActiveTextColor,
-        fontWeight: "400"
+        fontWeight: '400'
       },
-      ".isTabActive": {
-        "NativeBase.Text": {
-          fontWeight: "900"
+      '.isTabActive': {
+        'NativeBase.Text': {
+          fontWeight: '900'
         }
       },
       flex: 1,
-      alignSelf: "stretch",
-      alignItems: "center",
-      justifyContent: "center",
+      alignSelf: 'stretch',
+      alignItems: 'center',
+      justifyContent: 'center',
       borderRadius: null,
-      borderBottomColor: "transparent",
+      borderBottomColor: 'transparent',
       backgroundColor: variable.tabBgColor
     },
     height: 45,
-    flexDirection: "row",
-    justifyContent: "space-around",
+    flexDirection: 'row',
+    justifyContent: 'space-around',
     borderWidth: 1,
     borderTopWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 0,
-    borderBottomColor: "#ccc",
+    borderBottomColor: '#ccc',
     backgroundColor: variable.tabBgColor
   };
 

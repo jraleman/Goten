@@ -6,7 +6,7 @@ export const UPDATE_BOOKMARK = 'bookmarks/update';
 
 // Create action creations...
 // Payloads of information that send data from your application to your store.
-export function loadBookmarks() {
+export function loadBookmarks () {
   return ({
     type: LOAD_BOOKMARKS,
     payload: [
@@ -17,24 +17,24 @@ export function loadBookmarks() {
         category: {
           id: 1,
           name: 'Games'
-        },
-      },
+        }
+      }
     ]
   });
 };
-export function addBookmark(bookmark) {
+export function addBookmark (bookmark) {
   return ({
     type: ADD_BOOKMARK,
     payload: bookmark
   });
 };
-export function removeBookmark(bookmark) {
+export function removeBookmark (bookmark) {
   return ({
     type: REMOVE_BOOKMARK,
     payload: bookmark
   });
 };
-export function updateBookmark(bookmark) {
+export function updateBookmark (bookmark) {
   return ({
     type: UPDATE_BOOKMARK,
     payload: bookmark

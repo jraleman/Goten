@@ -5,25 +5,25 @@ export default (variable = variables) => {
   const platform = variable.platform;
 
   const iconCommon = {
-    "NativeBase.Icon": {
+    'NativeBase.Icon': {
       color: variable.tabBarActiveTextColor
     }
   };
   const iconNBCommon = {
-    "NativeBase.IconNB": {
+    'NativeBase.IconNB': {
       color: variable.tabBarActiveTextColor
     }
   };
   const textCommon = {
-    "NativeBase.Text": {
+    'NativeBase.Text': {
       color: variable.tabBarActiveTextColor
     }
   };
   const footerTheme = {
-    "NativeBase.Left": {
-      "NativeBase.Button": {
-        ".transparent": {
-          backgroundColor: "transparent",
+    'NativeBase.Left': {
+      'NativeBase.Button': {
+        '.transparent': {
+          backgroundColor: 'transparent',
           borderColor: null,
           elevation: 0,
           shadowColor: null,
@@ -40,18 +40,18 @@ export default (variable = variables) => {
         ...textCommon
       },
       flex: 1,
-      alignSelf: "center",
-      alignItems: "flex-start"
+      alignSelf: 'center',
+      alignItems: 'flex-start'
     },
-    "NativeBase.Body": {
+    'NativeBase.Body': {
       flex: 1,
-      alignItems: "center",
-      alignSelf: "center",
-      flexDirection: "row",
-      "NativeBase.Button": {
-        alignSelf: "center",
-        ".transparent": {
-          backgroundColor: "transparent",
+      alignItems: 'center',
+      alignSelf: 'center',
+      flexDirection: 'row',
+      'NativeBase.Button': {
+        alignSelf: 'center',
+        '.transparent': {
+          backgroundColor: 'transparent',
           borderColor: null,
           elevation: 0,
           shadowColor: null,
@@ -62,7 +62,7 @@ export default (variable = variables) => {
           ...iconNBCommon,
           ...textCommon
         },
-        ".full": {
+        '.full': {
           height: variable.footerHeight,
           paddingBottom: variable.footerPaddingBottom,
           flex: 1
@@ -72,10 +72,10 @@ export default (variable = variables) => {
         ...textCommon
       }
     },
-    "NativeBase.Right": {
-      "NativeBase.Button": {
-        ".transparent": {
-          backgroundColor: "transparent",
+    'NativeBase.Right': {
+      'NativeBase.Button': {
+        '.transparent': {
+          backgroundColor: 'transparent',
           borderColor: null,
           elevation: 0,
           shadowColor: null,
@@ -92,19 +92,19 @@ export default (variable = variables) => {
         ...textCommon
       },
       flex: 1,
-      alignSelf: "center",
-      alignItems: "flex-end"
+      alignSelf: 'center',
+      alignItems: 'flex-end'
     },
     backgroundColor: variable.footerDefaultBg,
-    flexDirection: "row",
-    justifyContent: "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
     borderTopWidth:
-      platform === "ios" && platformStyle !== "material"
+      platform === 'ios' && platformStyle !== 'material'
         ? variable.borderWidth
         : undefined,
     borderColor:
-      platform === "ios" && platformStyle !== "material"
-        ? "#cbcbcb"
+      platform === 'ios' && platformStyle !== 'material'
+        ? '#cbcbcb'
         : undefined,
     height: variable.footerHeight,
     paddingBottom: variable.footerPaddingBottom,

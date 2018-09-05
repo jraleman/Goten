@@ -18,61 +18,60 @@ class ButtonsContainer extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
-    return ;
   }
   render () {
     return (
-      <Content padder={ true }>
-        <H2 style={ styles.mb15 }>{ "Buttons" }</H2>
+      <Content padder>
+        <H2 style={ styles.mb15 }>{ 'Buttons' }</H2>
         <Button
-          block={ true }
-          light={ true }
+          block
+          light
           style={ styles.mb15 }
         >
-          <Text>{ "Light" }</Text>
+          <Text>{ 'Light' }</Text>
         </Button>
         <Button
-          block={ true }
-          info={ true }
+          block
+          info
           style={ styles.mb15 }
         >
-          <Text>{ "Info" }</Text>
+          <Text>{ 'Info' }</Text>
         </Button>
         <Button
-          block={ true }
-          primary={ true }
+          block
+          primary
           style={ styles.mb15 }
         >
-          <Text>{ "Primary" }</Text>
+          <Text>{ 'Primary' }</Text>
         </Button>
         <Button
-          block={ true }
-          success={ true }
+          block
+          success
           style={styles.mb15}
         >
-          <Text>{ "Success" }</Text>
+          <Text>{ 'Success' }</Text>
         </Button>
         <Button
-          block={ true }
-          warning={ true }
+          block
+          warning
           style={ styles.mb15 }
         >
-          <Text>{ "Warning" }</Text>
+          <Text>{ 'Warning' }</Text>
         </Button>
         <Button
-          block={ true }
-          danger={ true }
+          block
+          danger
           style={ styles.mb15 }
         >
-          <Text>{ "Danger" }</Text>
+          <Text>{ 'Danger' }</Text>
         </Button>
         <Button
-          block={ true }
-          dark={ true }
+          block
+          dark
           style={ styles.mb15 }
         >
-          <Icon active name="paw" />
-          <Text>{ "Custom" }</Text>
+          <Icon active name='paw' />
+          <Text>{ 'Custom' }</Text>
         </Button>
       </Content>
     );

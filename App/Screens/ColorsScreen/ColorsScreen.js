@@ -16,25 +16,24 @@ class ColorsScreen extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
-    return ;
   }
   render () {
     return (
       <Container style={ styles.container }>
         <BasicoHeader
-          title={ "Colors" }
+          title={ 'Colors' }
           icon={ 'arrow-back' }
           onPress={ () => this.props.navigation.goBack() }
         />
         <Content style={ styles.content }>
           <Button
-            info={ true }
+            info
             style={ styles.button }
             onPress={ () => this.props.loadColor() }
           >
-            <Text>{ "Randomize Color" }</Text>
+            <Text>{ 'Randomize Color' }</Text>
           </Button>
-          <ColorsContainer color={ this.props.color }/>
+          <ColorsContainer color={ this.props.color } />
         </Content>
       </Container>
     );

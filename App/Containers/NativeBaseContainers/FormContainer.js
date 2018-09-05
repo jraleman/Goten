@@ -16,47 +16,46 @@ import {
   Label,
   Text,
   Textarea
-} from "native-base";
+} from 'native-base';
 import styles from './styles';
 
 class FormContainer extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
-    return ;
   }
   render () {
     return (
-      <Content padder={ true }>
+      <Content padder>
         <Form>
-          <H2 style={ styles.mb15 }>{ "Forms" }</H2>
-          <Item floatingLabel={ true }>
-            <Label>{ "Floating label" }</Label>
+          <H2 style={ styles.mb15 }>{ 'Forms' }</H2>
+          <Item floatingLabel>
+            <Label>{ 'Floating label' }</Label>
             <Input />
           </Item>
-          <Item floatingLabel={ true }>
-            <Label>{ "Secure text entry" }</Label>
-            <Input secureTextEntry={ true } />
+          <Item floatingLabel>
+            <Label>{ 'Secure text entry' }</Label>
+            <Input secureTextEntry />
           </Item>
-          <Item fixedLabel={ true }>
-            <Label>{ "Fixed label" }</Label>
+          <Item fixedLabel>
+            <Label>{ 'Fixed label' }</Label>
             <Input />
           </Item>
-          <Item inlineLabel={ true }>
-            <Label>{ "Inline label" }</Label>
+          <Item inlineLabel>
+            <Label>{ 'Inline label' }</Label>
             <Input />
           </Item>
           <Item>
             <Icon
-              active={ true }
+              active
               name={ 'home' }
             />
-            <Input placeholder={ "Icon Textbox" } />
+            <Input placeholder={ 'Icon Textbox' } />
           </Item>
           <Item>
-            <Input placeholder={ "Icon Alignment in Textbox" } />
+            <Input placeholder={ 'Icon Alignment in Textbox' } />
             <Icon
-              active={ true }
+              active
               name={ 'swap' }
             />
           </Item>
@@ -64,18 +63,18 @@ class FormContainer extends React.Component {
             <Label>Username</Label>
             <Input />
           </Item>
-          <Content padder={ true }>
+          <Content padder>
             <Textarea
               rowSpan={ 5 }
-              bordered={ true }
-              placeholder={ "Textarea" }
+              bordered
+              placeholder={ 'Textarea' }
             />
           </Content>
           <Button
-            block={ true }
+            block
             style={{ margin: 15 }}
           >
-            <Text>{ "Submit" }</Text>
+            <Text>{ 'Submit' }</Text>
           </Button>
         </Form>
       </Content>

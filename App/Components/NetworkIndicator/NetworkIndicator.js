@@ -12,7 +12,6 @@ class NetworkIndicator extends React.Component {
     this.state = {
       isConnected: true
     };
-    return ;
   }
   handleConnectivityChange = networkStatus => {
     if (networkStatus) {
@@ -21,27 +20,24 @@ class NetworkIndicator extends React.Component {
     else {
       this.setState({ isConnected: false });
     }
-    return ;
   }
   componentDidMount () {
     NetInfo.isConnected.addEventListener(
       'connectionChange',
       this.handleConnectivityChange
     );
-    return ;
   }
   componentWillUnmount () {
     NetInfo.isConnected.removeEventListener(
       'connectionChange',
       this.handleConnectivityChange
     );
-    return ;
   }
   render () {
     if (this.state.isConnected == false) {
       return (
         <View style={ styles.container }>
-          <Text style={ styles.text }>{ "No Internet Connection!" }</Text>
+          <Text style={ styles.text }>{ 'No Internet Connection!' }</Text>
         </View>
       );
     }

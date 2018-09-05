@@ -1,7 +1,7 @@
 import {
   applyMiddleware,
   combineReducers,
-  createStore,
+  createStore
 } from 'redux';
 import { AsyncStorage } from 'react-native';
 import {
@@ -34,9 +34,6 @@ import {
 } from './Modules/Bookmarks/actions';
 import { loadCategories } from './Modules/Categories/actions';
 
-
-
-
 // Merge all the reducers into a single global object that will be saved in
 // the store. This function will call each reducer with the key in the state
 // that corresponds to that reduce.
@@ -46,18 +43,11 @@ const reducers = combineReducers({
   colors
 });
 
-
-
-
-
 /*
 ** NEWSTORE
 */
 let newStore = createStore(colors, applyMiddleware(thunk));
-//let newStore = createStore(reducers, applyMiddleware(thunk));
-
-
-
+// let newStore = createStore(reducers, applyMiddleware(thunk));
 
 // Object that holds the application's state tree.
 // There should only be a single store in a Redux app,
@@ -91,7 +81,6 @@ store.dispatch(loadCategories());
 unsubscribe();
 
 // export default store;
-
 
 /*
 ** NEWSTORE

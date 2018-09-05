@@ -30,24 +30,23 @@ import {
   NavigationActions
 } from 'react-navigation';
 import '../../Config';
-import { DrawerNavigator } from "react-navigation";
+import { DrawerNavigator } from 'react-navigation';
 
 class NativeBaseScreen extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
-    return ;
   }
   render () {
     return (
       <Container style={ styles.container }>
         <BasicoHeader
-          title={ "NativeBase" }
+          title={ 'NativeBase' }
           onPress={ () => this.props.navigation.openDrawer() }
-          icon={ "menu" }
+          icon={ 'menu' }
         />
         <Content style={ styles.content }>
-          <H1>{ "Components" }</H1>
+          <H1>{ 'Components' }</H1>
           <BadgesContainer />
           <ButtonsContainer />
           <CardsContainer />

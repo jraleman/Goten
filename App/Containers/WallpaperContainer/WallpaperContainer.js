@@ -14,7 +14,6 @@ class WallpaperContainer extends React.Component {
     this._opacity = this.props.opacity;
     this._overlay = this.props.overlay;
     this.state = {};
-    return ;
   }
   render () {
     return (
@@ -24,14 +23,14 @@ class WallpaperContainer extends React.Component {
             blurRadius={ this._blur }
             source={ this._image }
             style={ styles.wallpaper }
-            resizeMode={ "cover" }
+            resizeMode={ 'cover' }
           >
             <View style={[
               styles.overlay, {
                 backgroundColor: this._overlay,
                 opacity: this._opacity
               }
-            ]}/>
+            ]} />
             { this.props.children }
           </ImageBackground>
         </Container>

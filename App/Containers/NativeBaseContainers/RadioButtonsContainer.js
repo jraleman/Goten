@@ -25,9 +25,8 @@ class RadioButtonsContainer extends React.Component {
       radio3: false,
       radio4: true
     };
-    return ;
   }
-  toggleRadio1() {
+  toggleRadio1 () {
     this.setState({
       radio1: true,
       radio2: false,
@@ -35,7 +34,7 @@ class RadioButtonsContainer extends React.Component {
       radio4: false
     });
   }
-  toggleRadio2() {
+  toggleRadio2 () {
     this.setState({
       radio1: false,
       radio2: true,
@@ -43,7 +42,7 @@ class RadioButtonsContainer extends React.Component {
       radio4: false
     });
   }
-  toggleRadio3() {
+  toggleRadio3 () {
     this.setState({
       radio1: false,
       radio2: false,
@@ -51,7 +50,7 @@ class RadioButtonsContainer extends React.Component {
       radio4: false
     });
   }
-  toggleRadio4() {
+  toggleRadio4 () {
     this.setState({
       radio1: false,
       radio2: false,
@@ -61,8 +60,8 @@ class RadioButtonsContainer extends React.Component {
   }
   render () {
     return (
-      <Content padder={ true }>
-        <H2 style={ styles.mb15 }>{ "Radio Buttons" }</H2>
+      <Content padder>
+        <H2 style={ styles.mb15 }>{ 'Radio Buttons' }</H2>
         <ListItem
           style={ styles.radioButton }
           selected={this.state.radio1}

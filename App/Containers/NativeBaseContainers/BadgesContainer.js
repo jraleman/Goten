@@ -12,56 +12,55 @@ class BadgesContainer extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
-    return ;
   }
   render () {
     return (
-      <Content padder={ true }>
-        <H2 style={ styles.mb15 }>{ "Badges" }</H2>
+      <Content padder>
+        <H2 style={ styles.mb15 }>{ 'Badges' }</H2>
         <Badge style={ styles.mb }>
-          <Text>{ "4" }</Text>
+          <Text>{ '4' }</Text>
         </Badge>
         <Badge
-          primary={ true }
+          primary
           style={ styles.mb }
         >
-          <Text>{ "8" }</Text>
+          <Text>{ '8' }</Text>
         </Badge>
         <Badge
-          success={ true }
+          success
           style={ styles.mb }
         >
-          <Text>{ "15" }</Text>
+          <Text>{ '15' }</Text>
         </Badge>
         <Badge
-          info={ true }
+          info
           style={ styles.mb }
         >
-          <Text>{ "16" }</Text>
+          <Text>{ '16' }</Text>
         </Badge>
         <Badge
-          warning={ true }
+          warning
           style={ styles.mb }
         >
-          <Text>{ "23" }</Text>
+          <Text>{ '23' }</Text>
         </Badge>
         <Badge
-          danger={ true }
+          danger
           style={ styles.mb }
         >
-          <Text>{ "42" }</Text>
+          <Text>{ '42' }</Text>
         </Badge>
         <Badge
-          primary={ true }
+          primary
           style={ styles.mb }
         >
           <Icon
-            name="star"
+            name='star'
             style={ styles.badgeIcon }
           />
         </Badge>
         <Badge style={ styles.badgeCustom }>
-          <Text>{ "1024" }</Text>
+          <Text>{ '1024' }</Text>
         </Badge>
       </Content>
     );

@@ -5,8 +5,8 @@ export default (variable = variables) => {
     fontSize: variable.DefaultFontSize - 1,
     fontFamily: variable.fontFamily,
     color: variable.textColor,
-    ".note": {
-      color: "#a7a7a7",
+    '.note': {
+      color: '#a7a7a7',
       fontSize: variable.noteFontSize
     }
   };

@@ -9,7 +9,6 @@ class QuickbloxBridgeView extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
-    return ;
   }
   render () {
     return (

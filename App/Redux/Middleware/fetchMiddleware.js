@@ -1,8 +1,7 @@
 // Return another function that will get executed between the dispatch of an
 // action and right before the action gets into the reducer:
-export default function fetchMiddleware({ dispatch, getState }) {
-  return (next => action => {
-
+export default function fetchMiddleware ({ dispatch, getState }) {
+  return next => action => {
     // We need to figure out if the current action contains a promise
     // property. If that's not the case, we need to ignore the action
     // and pass the action to the next middleware or the reducer
@@ -25,5 +24,5 @@ export default function fetchMiddleware({ dispatch, getState }) {
       .then(payload => next({ ...rest, payload, type: SUCCESS }))
       .catch(error => next({ ...rest, error, type: FAILURE }));
     return (actionPromise);
-  });
+  };
 }

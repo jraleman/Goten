@@ -2,11 +2,11 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    //alignContent: 'center'
+    flex: 1
+    // alignContent: 'center'
   },
   content: {
-    alignContent: 'center',
+    alignContent: 'center'
   },
   button: {
     marginBottom: 18,

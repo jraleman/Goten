@@ -5,7 +5,7 @@ export const LOAD_CATEGORIES_FAIL = 'categ/LOAD_CATEGORIES_F';
 
 // Create action creations...
 // Payloads of information that send data from your application to your store.
-export function loadCategories() {
+export function loadCategories () {
   return ({
     types: [
       LOAD_CATEGORIES,

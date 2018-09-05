@@ -23,7 +23,7 @@ import {
   ListItem,
   CheckBox,
   Radio
-} from "native-base";
+} from 'native-base';
 
 import BasicoHeader from '../../Components/BasicoHeader';
 import styles from './styles';
@@ -35,25 +35,24 @@ class SignupScreen extends React.Component {
       termsOfServiceFlag: false,
       privatePolicyFlag: false
     };
-    return ;
   }
   render () {
     return (
       <React.Fragment>
         <StatusBar
-          translucent={ true }
-          barStyle={ "light-content" }
-          hidden={ true }
+          translucent
+          barStyle={ 'light-content' }
+          hidden
         />
         <Container style={ styles.container }>
           <BasicoHeader
-            title={ "Signup" }
+            title={ 'Signup' }
             onPress={ () => this.props.navigation.goBack() }
-            icon={ "arrow-back" }
+            icon={ 'arrow-back' }
           />
-          <Content padder={ true }>
+          <Content padder>
             <Form>
-              <H2 style={ styles.mb15 }>{ "Sign up" }</H2>
+              <H2 style={ styles.mb15 }>{ 'Sign up' }</H2>
 
               <ListItem
                 style={ styles.radioButton }
@@ -61,7 +60,7 @@ class SignupScreen extends React.Component {
                 onPress={ () => alert('UserTwo') }
               >
                 <Left>
-                  <Text>{ "" }</Text>
+                  <Text>{ '' }</Text>
                 </Left>
                 <Right>
                   <Radio
@@ -72,24 +71,24 @@ class SignupScreen extends React.Component {
               </ListItem>
 
               <Item>
-                <Input placeholder={ "Email" } />
+                <Input placeholder={ 'Email' } />
                 <Icon
-                  active={ true }
+                  active
                   name={ 'mail' }
                 />
               </Item>
 
               <Item>
-                <Input placeholder={ "Password" } />
+                <Input placeholder={ 'Password' } />
                 <Icon
-                  active={ true }
+                  active
                   name={ 'lock' }
                 />
               </Item>
 
               <ListItem
                 style={ styles.checkbox }
-                button={ true }
+                button
                 onPress={ () => alert('ToS') }
               >
                 <CheckBox
@@ -97,13 +96,13 @@ class SignupScreen extends React.Component {
                   onPress={ () => alert('ToS') }
                 />
                 <Body>
-                  <Text>{ "I have read the terms of services" }</Text>
+                  <Text>{ 'I have read the terms of services' }</Text>
                 </Body>
               </ListItem>
 
               <ListItem
                 style={ styles.checkbox }
-                button={ true }
+                button
                 onPress={ () => alert('PP') }
               >
                 <CheckBox
@@ -111,15 +110,15 @@ class SignupScreen extends React.Component {
                   onPress={ () => alert('PP') }
                 />
                 <Body>
-                  <Text>{ "I accept the privacy policy" }</Text>
+                  <Text>{ 'I accept the privacy policy' }</Text>
                 </Body>
               </ListItem>
 
               <Button
-                block={ true }
+                block
                 style={{ margin: 15 }}
               >
-                <Text>{ "Submit" }</Text>
+                <Text>{ 'Submit' }</Text>
               </Button>
             </Form>
           </Content>
