@@ -5,7 +5,6 @@
 ** ---------------------------------------------------------------------------|
 ** Author: jraleman
 ** Date: Sat, Sep 01 2018
-** Dependencies: I18n
 */
 
 // ~~ Basic Stuff ~~
@@ -14,42 +13,21 @@ import {
   Animated,
   Keyboard,
   Image,
-  View,
   TouchableWithoutFeedback,
   TextInput,
-  AppRegistry,
   StatusBar
 } from 'react-native';
 import {
   Container,
-  Header,
-  Title,
-  Content,
   Button,
-  Icon,
-  Body,
-  Left,
-  Right,
   Item,
-  Input,
   Form,
-  H2,
   Label,
-  Text,
-  Textarea,
-  Spinner
-} from "native-base";
-import {
-  StackActions,
-  NavigationActions
-} from 'react-navigation';
-
+  Text
+} from 'native-base';
 
 // ~~ Configuration ~~
 import '../../Config';
-
-// ~~ Dependencies ~~
-import I18n from 'react-native-i18n';
 
 // ~~ Local Dependencies ~~
 import styles from './styles';
@@ -59,7 +37,7 @@ import LoadingContainer from '../../Containers/LoadingContainer';
 
 // ~~ Constants ~~
 const WALLPAPER_OPACITY = 0.25;
-const WALLPAPER_BLUR = 2.25
+const WALLPAPER_BLUR = 2.25;
 const WALLPAPER_OVERLAY = '#e4e4a1';
 
 // ~~ React Component ~~
@@ -74,7 +52,6 @@ class LoginScreen extends React.Component {
       fadeValue: new Animated.Value(1)
     };
     this.inputs = {};
-    return;
   }
   componentWillMount () {
     this.keyboardDidShowListener = Keyboard.addListener(
@@ -85,58 +62,39 @@ class LoginScreen extends React.Component {
       'keyboardDidHide',
       this._keyboardDidHide
     );
-    return ;
   }
   componentWillUnmount () {
     this.keyboardDidShowListener.remove();
     this.keyboardDidHideListener.remove();
-    // Keyboard.dismiss;
-    return ;
   }
   _keyboardDidShow = () => {
-    this._fadeAnimation();
+    // this._fadeAnimation();
     this.setState({ visible: false });
-    return ;
   }
   _keyboardDidHide = () => {
     this.setState({ visible: true });
-    return ;
   }
   _handleNavigation () {
-    // const resetAction = StackActions.reset({
-    //   index: 0,
-    //   key: null,
-    //   actions: [NavigationActions.navigate({ routeName: 'DrawerNavigation' })],
-    // });
-    // this.props.navigation.dispatch(resetAction);
     this.props.navigation.navigate('DrawerNavigation');
-    return ;
   }
   _onLoginHandler = () => {
     this.setState({ loading: true });
-    // this._handleNavigation();
-    return ;
+    this._handleNavigation();
   }
   _onSignupHandler = () => {
-    // alert('SignupHandler')
     this.props.navigation.navigate('Signup');
-    return ;
   }
   _onForgotPassHandler = () => {
-    // alert('ForgotPassHandler')
     this.props.navigation.navigate('ForgotPassword');
-    return ;
   }
   _focusNextField = (id) => {
     this.inputs[id].focus();
-    return ;
   }
   _fadeAnimation () {
     Animated.timing(this.state.fadeValue, {
       toValue: 0,
       duration: 300
     }).start();
-    return ;
   }
   render () {
     return (
@@ -164,12 +122,12 @@ class LoginScreen extends React.Component {
             </TouchableWithoutFeedback>
             <Form style={ styles.form }>
               <Item floatingLabel={ true }>
-                <Label style={ styles.label }>{ "Email" }</Label>
+                <Label style={ styles.label }>{ 'Email' }</Label>
                 <TextInput
                   keyboardType={ 'email-address' }
                   returnKeyType={ 'next' }
-                  onSubmitEditing={ () => { this._focusNextField('passRef'); }}
-                  ref={ input => { this.inputs['emailRef'] = input; }}
+                  onSubmitEditing={ () => { this._focusNextField('passRef'); } }
+                  ref={ input => { this.inputs['emailRef'] = input; } }
                   style={ styles.input }
                 />
               </Item>
@@ -177,10 +135,10 @@ class LoginScreen extends React.Component {
                 floatingLabel={ true }
                 last={ true }
               >
-                <Label style={ styles.label }>{ "Password" }</Label>
+                <Label style={ styles.label }>{ 'Password' }</Label>
                 <TextInput
                   onSubmitEditing={ Keyboard.dismiss }
-                  ref={ input => { this.inputs['passRef'] = input; }}
+                  ref={ input => { this.inputs['passRef'] = input; } }
                   style={ styles.input }
                 />
               </Item>
@@ -192,17 +150,17 @@ class LoginScreen extends React.Component {
                     style={ styles.button }
                     onPress={ this._onLoginHandler }
                   >
-                    <Text>{ "Login" }</Text>
+                    <Text>{ 'Login' }</Text>
                   </Button>
                 </React.Fragment>
-                ) : (null)
+              ) : (null)
               }
             </Form>
             { this.state.visible ? (
-              <Animated.View style={[
-                  styles.animatedView,
-                  { opacity: this.state.fadeValue }
-                ]}
+              <Animated.View style={ [
+                styles.animatedView,
+                { opacity: this.state.fadeValue }
+              ] }
               >
                 <Button
                   onPress={ this._onForgotPassHandler }
@@ -210,22 +168,22 @@ class LoginScreen extends React.Component {
                   style={ styles.button }
                   dark={ true }
                 >
-                  <Text>{ "Forgot password?" }</Text>
+                  <Text>{ 'Forgot password?' }</Text>
                 </Button>
                 <Button
                   onPress={ this._onSignupHandler }
                   style={ styles.button }
                   light={ true }
                 >
-                  <Text>{ "Tap here to Sign up!" }</Text>
+                  <Text>{ 'Tap here to Sign up!' }</Text>
                 </Button>
               </Animated.View>
-              ) : (null)
+            ) : (null)
             }
           </WallpaperContainer>
           { this.state.loading ? (
             <LoadingContainer />
-            ) : (null)
+          ) : (null)
           }
         </Container>
       </React.Fragment>

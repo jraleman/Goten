@@ -18,7 +18,7 @@ export default StyleSheet.create({
   input: {
     flex: 0.21,
     alignSelf: 'flex-end',
-    fontWeight: '900',
+    fontWeight: '900'
   },
   label: {
     fontWeight: '900',

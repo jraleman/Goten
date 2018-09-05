@@ -13,7 +13,7 @@ export default StyleSheet.create({
   },
   badgeIcon: {
     fontSize: 15,
-    color: "#fff",
+    color: '#fff',
     lineHeight: 20
   },
   checkbox: {

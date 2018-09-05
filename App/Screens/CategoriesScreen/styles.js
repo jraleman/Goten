@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 
 export default StyleSheet.create({
-  container:{
+  container: {
     flex: 1
   },
   toolbar: {
@@ -22,4 +22,4 @@ export default StyleSheet.create({
       }
     })
   }
-})
+});

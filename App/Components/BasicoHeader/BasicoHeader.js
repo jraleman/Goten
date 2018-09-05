@@ -1,9 +1,7 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
 import {
   Body,
   Button,
-  Container,
   Header,
   Icon,
   Left,
@@ -19,7 +17,6 @@ class BasicoHeader extends React.Component {
     this._icon = this.props.icon;
     this._title = this.props.title;
     this.state = {};
-    return ;
   }
   render () {
     return (

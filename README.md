@@ -1,5 +1,7 @@
 # Basico
 
+[![js-standardx-style](https://img.shields.io/badge/code%20style-standardx-brightgreen.svg?style=flat-square)](https://github.com/standard/standardx)
+
 ## About
 
 React Native boilerplate (or sample app), with basic redux, native-base and
@@ -137,29 +139,42 @@ style file.
 
 ### Code
 
-This project follows the [semistandard](https://github.com/Flet/semistandard),
-based from [standard](https://github.com/standard/standard).
+This project follows the [standardx](https://github.com/standard/standardx
+), based on [standard](https://github.com/standard/standard).
+
+#### Rules
+
+We follow all the rules form `standard`, minus the following exceptions:
+
+- Every function should include one and only return statement
+(exceptions allowed), including `void` types.
+- ...
+
+Check out `.eslintrc` for more info.
 
 #### Lint
 
 After running `npm install`, you can run the following scripts (depending on
-your platform), to check if the code follows the `semistandard` coding
+your platform), to check if the code follows our `standardx` coding
 style guide.
 
-| Mac OS X           | Linux                    | Description                 |
-| :----------------- | :----------------------- | :-------------------------- |
-| `npm run lint`     | `npm run lint`           | Checks `src/` code style    |
-| `npm run lint-log` | `npm run lint-log-linux` | Saves and open the log file |
+| Mac OS X           | Description                                            |
+| :----------------- | :----------------------------------------------------- |
+| `npm run lint`     | Checks `App/` code style.                              |
+| `npm run lint-log` | Saves and open the log file.                           |
+| `npm run lint-fix` | Fix the code style of the JavaScript files.            |
 
 If you have any problem running the lint from the project, try installing the
 following packages globally, like this:
 
 ```
 npm install --global snazzy
-npm install --global semistandard
+npm install --global standardx
+npm install --global babel-eslint
 ```
 
-And then just run the lint from your end. Checkout `package.json` scripts! ;)
+And then just run the lint from your end.
+Checkout `package.json` scripts! ;)
 
 ### Colors
 

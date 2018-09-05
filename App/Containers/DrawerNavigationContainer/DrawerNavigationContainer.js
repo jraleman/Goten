@@ -1,18 +1,14 @@
 import React from 'react';
 import {
   TouchableOpacity,
-  Platform,
-  Dimensions,
-  Image,
   StatusBar,
-  ImageBackground,
+  ImageBackground
 } from 'react-native';
 import {
   List,
   ListItem,
   Text,
   View,
-  Row,
   Icon,
   Content,
   Container,
@@ -20,53 +16,48 @@ import {
   Right,
   Badge,
   Thumbnail,
-  H1,
-  H2,
-  H3,
-  H4,
+  H2
 } from 'native-base';
 import styles from './styles';
 
 import { Images } from '../../Themes';
 
 class DrawerNavigationContainer extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       iconName: null,
       routeName: null,
       badgeCount: 0,
       avatar: null
-    }
-    return ;
+    };
   }
   componentWillMount () {
-    return ;
+
   }
-  render() {
+  render () {
     return (
       <React.Fragment>
         <StatusBar barStyle={ 'dark-content' } />
-        <Container style={{ bottom: 0 }}>
+        <Container style={ { bottom: 0 } }>
           <Content
             bounces={ false }
             style={ styles.content }
           >
             <NavigationHeader
-              headerText={ "Joe Doe" }
-              onPress={ () => alert('Hello') }
+              headerText={ 'Joe Doe' }
+              onPress={ () => window.alert('Hello') }
               backgroundImg={ Images.drawerNavigationCover }
               avatarImg={ Images.drawerNavigationAvatar }
             />
             <List
-              style={{ height: 550 }}
+              style={ { height: 550 } }
               dataArray={ this.props.items }
               renderRow={ (item) =>
                 <NavigationRow
                   item={ item }
                   nav={ this.props.navigation }
-                />
-              }
+                /> }
             />
             <NavigationFooter />
           </Content>
@@ -89,7 +80,7 @@ class DrawerNavigationContainer extends React.Component {
 
 // ~~ Constants ~~
 const BACKGROUND_OPACITY = 0.35;
-const BACKGROUND_BLUR = 0.75
+const BACKGROUND_BLUR = 0.75;
 const BACKGROUND_OVERLAY = '#121212';
 
 const NavigationHeader = props => {
@@ -100,13 +91,13 @@ const NavigationHeader = props => {
           blurRadius={ BACKGROUND_BLUR }
           source={ props.backgroundImg }
           style={ styles.wallpaper }
-          resizeMode={ "cover" }
+          resizeMode={ 'cover' }
         >
-          <View style={[
+          <View style={ [
             styles.overlay, {
               backgroundColor: BACKGROUND_OVERLAY,
               opacity: BACKGROUND_OPACITY
-            }]}
+            }] }
           />
           <TouchableOpacity
             onPress={ props.onPress }
@@ -124,7 +115,7 @@ const NavigationHeader = props => {
       </View>
     </React.Fragment>
   );
-}
+};
 
 const NavigationRow = props => {
   // alert(JSON.stringify(props.item, null, 4));
@@ -169,10 +160,10 @@ const NavigationRow = props => {
         iconName={ iconName }
         routeName={ props.item.routeName }
       />
-      { badgeCount && <RowRight badgeText={`${badgeCount}`} /> }
+      { badgeCount && <RowRight badgeText={ `${badgeCount}` } /> }
     </ListItem>
   );
-}
+};
 
 const RowLeft = props => {
   return (
@@ -180,31 +171,31 @@ const RowLeft = props => {
       <Icon
         active={ true }
         name={ props.iconName }
-        style={{ color: "#777", fontSize: 26, width: 30 }}
+        style={ { color: '#777', fontSize: 26, width: 30 } }
       />
       <Text>{ props.routeName }</Text>
     </Left>
   );
-}
+};
 
 const RowRight = props => {
   return (
-    <Right style={{ flex: 1 }}>
+    <Right style={ { flex: 1 } }>
       <Badge style={ styles.badge }>
         <Text style={ styles.badgeText }>{ props.badgeText }</Text>
       </Badge>
     </Right>
   );
-}
+};
 
 const NavigationFooter = props => {
   return (
     <React.Fragment>
       <View style={ styles.footer }>
-        <Text>{ "NavigationFooter" }</Text>
+        <Text>{ 'NavigationFooter' }</Text>
       </View>
     </React.Fragment>
   );
-}
+};
 
 export default DrawerNavigationContainer;

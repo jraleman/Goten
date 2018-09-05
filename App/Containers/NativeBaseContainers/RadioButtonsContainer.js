@@ -1,17 +1,11 @@
 import React from 'react';
 import {
-  Container,
-  Header,
-  Title,
   Content,
-  Button,
-  Icon,
   ListItem,
   Radio,
   Text,
   Left,
   Right,
-  Body,
   H2
 } from 'native-base';
 import styles from './styles';
@@ -25,9 +19,8 @@ class RadioButtonsContainer extends React.Component {
       radio3: false,
       radio4: true
     };
-    return ;
   }
-  toggleRadio1() {
+  toggleRadio1 () {
     this.setState({
       radio1: true,
       radio2: false,
@@ -35,7 +28,7 @@ class RadioButtonsContainer extends React.Component {
       radio4: false
     });
   }
-  toggleRadio2() {
+  toggleRadio2 () {
     this.setState({
       radio1: false,
       radio2: true,
@@ -43,7 +36,7 @@ class RadioButtonsContainer extends React.Component {
       radio4: false
     });
   }
-  toggleRadio3() {
+  toggleRadio3 () {
     this.setState({
       radio1: false,
       radio2: false,
@@ -51,7 +44,7 @@ class RadioButtonsContainer extends React.Component {
       radio4: false
     });
   }
-  toggleRadio4() {
+  toggleRadio4 () {
     this.setState({
       radio1: false,
       radio2: false,
@@ -62,64 +55,64 @@ class RadioButtonsContainer extends React.Component {
   render () {
     return (
       <Content padder={ true }>
-        <H2 style={ styles.mb15 }>{ "Radio Buttons" }</H2>
+        <H2 style={ styles.mb15 }>{ 'Radio Buttons' }</H2>
         <ListItem
           style={ styles.radioButton }
-          selected={this.state.radio1}
-          onPress={() => this.toggleRadio1()}
+          selected={ this.state.radio1 }
+          onPress={ () => this.toggleRadio1() }
         >
           <Left>
             <Text>Lunch Break</Text>
           </Left>
           <Right>
             <Radio
-              selected={this.state.radio1}
-              onPress={() => this.toggleRadio1()}
+              selected={ this.state.radio1 }
+              onPress={ () => this.toggleRadio1() }
             />
           </Right>
         </ListItem>
         <ListItem
           style={ styles.radioButton }
-          selected={this.state.radio2}
-          onPress={() => this.toggleRadio2()}
+          selected={ this.state.radio2 }
+          onPress={ () => this.toggleRadio2() }
         >
           <Left>
             <Text>Daily Stand Up</Text>
           </Left>
           <Right>
             <Radio
-              selected={this.state.radio2}
-              onPress={() => this.toggleRadio2()}
+              selected={ this.state.radio2 }
+              onPress={ () => this.toggleRadio2() }
             />
           </Right>
         </ListItem>
         <ListItem
           style={ styles.radioButton }
-          selected={this.state.radio3}
-          onPress={() => this.toggleRadio3()}
+          selected={ this.state.radio3 }
+          onPress={ () => this.toggleRadio3() }
         >
           <Left>
             <Text>Finish List Screen</Text>
           </Left>
           <Right>
             <Radio
-              selected={this.state.radio3}
-              onPress={() => this.toggleRadio3()}
+              selected={ this.state.radio3 }
+              onPress={ () => this.toggleRadio3() }
             />
           </Right>
         </ListItem>
         <ListItem
           style={ styles.radioButton }
-          selected={this.state.radio4}
-          onPress={() => this.toggleRadio4()}
+          selected={ this.state.radio4 }
+          onPress={ () => this.toggleRadio4() }
         >
           <Left>
             <Text>Discussion with Client</Text>
           </Left>
           <Right>
             <Radio
-              selected={this.state.radio4}
-              onPress={() => this.toggleRadio4()}
+              selected={ this.state.radio4 }
+              onPress={ () => this.toggleRadio4() }
             />
           </Right>
         </ListItem>

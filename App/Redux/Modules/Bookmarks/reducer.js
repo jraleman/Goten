@@ -12,12 +12,12 @@ const initialState = {
 };
 
 // Reducer function, return the new state for the current action.
-export default function reducer(state = initialState, action) {
+export default function reducer (state = initialState, action) {
   switch (action.type) {
     case LOAD_BOOKMARKS:
       return ({
         ...state,
-        bookmarks: [...action.payload],
+        bookmarks: [...action.payload]
       });
     // Get the payload of the action and include it in the new array.
     case ADD_BOOKMARK:

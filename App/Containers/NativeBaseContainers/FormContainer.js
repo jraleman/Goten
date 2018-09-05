@@ -1,14 +1,8 @@
 import React from 'react';
 import {
-  Container,
-  Header,
-  Title,
   Content,
   Button,
   Icon,
-  Body,
-  Left,
-  Right,
   Item,
   Input,
   Form,
@@ -16,34 +10,33 @@ import {
   Label,
   Text,
   Textarea
-} from "native-base";
+} from 'native-base';
 import styles from './styles';
 
 class FormContainer extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
-    return ;
   }
   render () {
     return (
       <Content padder={ true }>
         <Form>
-          <H2 style={ styles.mb15 }>{ "Forms" }</H2>
+          <H2 style={ styles.mb15 }>{ 'Forms' }</H2>
           <Item floatingLabel={ true }>
-            <Label>{ "Floating label" }</Label>
+            <Label>{ 'Floating label' }</Label>
             <Input />
           </Item>
           <Item floatingLabel={ true }>
-            <Label>{ "Secure text entry" }</Label>
+            <Label>{ 'Secure text entry' }</Label>
             <Input secureTextEntry={ true } />
           </Item>
           <Item fixedLabel={ true }>
-            <Label>{ "Fixed label" }</Label>
+            <Label>{ 'Fixed label' }</Label>
             <Input />
           </Item>
           <Item inlineLabel={ true }>
-            <Label>{ "Inline label" }</Label>
+            <Label>{ 'Inline label' }</Label>
             <Input />
           </Item>
           <Item>
@@ -51,16 +44,16 @@ class FormContainer extends React.Component {
               active={ true }
               name={ 'home' }
             />
-            <Input placeholder={ "Icon Textbox" } />
+            <Input placeholder={ 'Icon Textbox' } />
           </Item>
           <Item>
-            <Input placeholder={ "Icon Alignment in Textbox" } />
+            <Input placeholder={ 'Icon Alignment in Textbox' } />
             <Icon
               active={ true }
               name={ 'swap' }
             />
           </Item>
-          <Item stackedLabel>
+          <Item stackedLabel={ true }>
             <Label>Username</Label>
             <Input />
           </Item>
@@ -68,14 +61,14 @@ class FormContainer extends React.Component {
             <Textarea
               rowSpan={ 5 }
               bordered={ true }
-              placeholder={ "Textarea" }
+              placeholder={ 'Textarea' }
             />
           </Content>
           <Button
             block={ true }
-            style={{ margin: 15 }}
+            style={ { margin: 15 } }
           >
-            <Text>{ "Submit" }</Text>
+            <Text>{ 'Submit' }</Text>
           </Button>
         </Form>
       </Content>

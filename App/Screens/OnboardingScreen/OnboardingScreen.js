@@ -5,13 +5,12 @@
 ** ---------------------------------------------------------------------------|
 ** Author: jraleman
 ** Date: Fri, Aug 31 2018
-** Dependencies: react-native-app-intro-slider
 **
 ** Thanks for your amazing stackoverflow answer, martinarroyo.
 ** Source: https://stackoverflow.com/a/40729761
 */
 
-// ~~ Basic Stuff ~~
+// ~~ React Stuff ~~
 import React from 'react';
 import {
   AsyncStorage,
@@ -20,8 +19,6 @@ import {
 } from 'react-native';
 import {
   Container,
-  Content,
-  Text,
   Icon
 } from 'native-base';
 import {
@@ -31,12 +28,14 @@ import {
 
 // ~~ Configuration ~~
 import '../../Config';
-import styles from './styles';
-import { Images } from '../../Themes';
-import I18n from 'react-native-i18n';
 
 // ~~ Dependencies ~~
 import AppIntroSlider from 'react-native-app-intro-slider';
+import I18n from 'react-native-i18n';
+
+// ~~ Local Dependencies ~~
+import styles from './styles';
+import { Images } from '../../Themes';
 
 // ~~ Constants ~~
 const slides = [
@@ -89,25 +88,22 @@ class OnboardingScreen extends React.Component {
     this.state = {
       firstLaunch: null
     };
-    return ;
   }
   componentDidMount () {
-    AsyncStorage.getItem("alreadyLaunched")
-    .then(value => {
-      if (value == null) {
-        AsyncStorage.setItem('alreadyLaunched', JSON.stringify(true));
-        this.setState({ firstLaunch: true });
-      }
-      else {
-        this.setState({ firstLaunch: false });
+    AsyncStorage.getItem('alreadyLaunched')
+      .then(value => {
+        if (value == null) {
+          AsyncStorage.setItem('alreadyLaunched', JSON.stringify(true));
+          this.setState({ firstLaunch: true });
+        }
+        else {
+          this.setState({ firstLaunch: false });
         // ...you can also add your error handling code here :)
-      }
-    });
-    return ;
+        }
+      });
   }
   componentDidUpdate () {
-    // if (this.state.firstLaunch == true) {
-    if (this.state.firstLaunch == false) {
+    if (this.state.firstLaunch === false) {
       this._handleNavigation();
     }
   }
@@ -125,19 +121,17 @@ class OnboardingScreen extends React.Component {
     const resetAction = StackActions.reset({
       index: 0,
       key: null,
-      actions: [NavigationActions.navigate({ routeName: 'Login' })],
+      actions: [NavigationActions.navigate({ routeName: 'Login' })]
     });
     this.props.navigation.dispatch(resetAction);
-    return ;
   }
   render () {
-    // if (this.state.firstLaunch == false) {
-    if (this.state.firstLaunch == true) {
+    if (this.state.firstLaunch === true) {
       return (
         <React.Fragment>
           <StatusBar
             translucent={ true }
-            barStyle={ "light-content" }
+            barStyle={ 'light-content' }
             hidden={ true }
           />
           <Container style={ styles.container }>

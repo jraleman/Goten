@@ -4,8 +4,6 @@ import {
   Content,
   H2,
   H3,
-  Header,
-  Title,
   Button,
   Icon,
   List,
@@ -19,62 +17,62 @@ import {
 import styles from './styles';
 
 const listData = [
-  "Simon Mignolet",
-  "Nathaniel Clyne",
-  "Dejan Lovren",
-  "Mama Sakho",
-  "Alberto Moreno",
-  "Emre Can",
-  "Joe Allen",
-  "Phil Coutinho"
+  'Simon Mignolet',
+  'Nathaniel Clyne',
+  'Dejan Lovren',
+  'Mama Sakho',
+  'Alberto Moreno',
+  'Emre Can',
+  'Joe Allen',
+  'Phil Coutinho'
 ];
 const avatarData = [
   {
     img: { uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' },
-    text: "Kumar Pratik",
-    note: "Its time to build a difference . .",
-    time: "3:43 pm"
+    text: 'Kumar Pratik',
+    note: 'Its time to build a difference . .',
+    time: '3:43 pm'
   },
   {
     img: { uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' },
-    text: "Kumar Sanket",
-    note: "One needs courage to be happy and smiling all time . . ",
-    time: "1:12 pm"
+    text: 'Kumar Sanket',
+    note: 'One needs courage to be happy and smiling all time . . ',
+    time: '1:12 pm'
   },
   {
     img: { uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' },
-    text: "Megha",
-    note: "Live a life style that matchs your vision",
-    time: "10:03 am"
+    text: 'Megha',
+    note: 'Live a life style that matchs your vision',
+    time: '10:03 am'
   },
   {
     img: { uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' },
-    text: "Atul Ranjan",
-    note: "Failure is temporary, giving up makes it permanent",
-    time: "5:47 am"
+    text: 'Atul Ranjan',
+    note: 'Failure is temporary, giving up makes it permanent',
+    time: '5:47 am'
   },
   {
     img: { uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' },
-    text: "Saurabh Sahu",
-    note: "The biggest risk is a missed opportunity !!",
-    time: "11:11 pm"
+    text: 'Saurabh Sahu',
+    note: 'The biggest risk is a missed opportunity !!',
+    time: '11:11 pm'
   },
   {
     img: { uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' },
-    text: "Varun Sahu",
-    note: "Wish I had a Time machine . .",
-    time: "8:54 pm"
+    text: 'Varun Sahu',
+    note: 'Wish I had a Time machine . .',
+    time: '8:54 pm'
   }
 ];
 const swipeData = [
-  "Simon Mignolet",
-  "Nathaniel Clyne",
-  "Dejan Lovren",
-  "Mama Sakho",
-  "Alberto Moreno",
-  "Emre Can",
-  "Joe Allen",
-  "Phil Coutinho"
+  'Simon Mignolet',
+  'Nathaniel Clyne',
+  'Dejan Lovren',
+  'Mama Sakho',
+  'Alberto Moreno',
+  'Emre Can',
+  'Joe Allen',
+  'Phil Coutinho'
 ];
 
 class ListsContainer extends React.Component {
@@ -85,9 +83,8 @@ class ListsContainer extends React.Component {
       basic: true,
       listViewData: swipeData
     };
-    return ;
   }
-  deleteRow(secId, rowId, rowMap) {
+  deleteRow (secId, rowId, rowMap) {
     rowMap[`${secId}${rowId}`].props.closeRow();
     const newData = [...this.state.listViewData];
     newData.splice(rowId, 1);
@@ -103,7 +100,7 @@ class ListsContainer extends React.Component {
           </Text>
         </Left>
         <Right>
-          <Icon name="arrow-forward" />
+          <Icon name='arrow-forward' />
         </Right>
       </ListItem>
     );
@@ -111,9 +108,9 @@ class ListsContainer extends React.Component {
   render () {
     return (
       <Content padder={ true }>
-        <H2 style={ styles.mb15 }>{ "Lists" }</H2>
+        <H2 style={ styles.mb15 }>{ 'Lists' }</H2>
         <Content padder={ true }>
-          <H3 style={ styles.mb15 }>{ "Simple List" }</H3>
+          <H3 style={ styles.mb15 }>{ 'Simple List' }</H3>
           <List
             dataArray={ listData }
             renderRow={ data =>
@@ -124,82 +121,82 @@ class ListsContainer extends React.Component {
                   </Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" />
+                  <Icon name='arrow-forward' />
                 </Right>
               </ListItem> }
           />
         </Content>
         <Content padder={ true }>
-          <H3 style={ styles.mb15 }>{ "Avatar List" }</H3>
+          <H3 style={ styles.mb15 }>{ 'Avatar List' }</H3>
           <List
             dataArray={ avatarData }
-            renderRow={data =>
+            renderRow={ data =>
               <ListItem
                 avatar={ true }
                 style={ styles.listItem }
               >
                 <Left>
-                  <Thumbnail small source={data.img} />
+                  <Thumbnail small={ true } source={ data.img } />
                 </Left>
                 <Body>
                   <Text>
                     {data.text}
                   </Text>
-                  <Text numberOfLines={1} note>
+                  <Text numberOfLines={ 1 } note={ true }>
                     {data.note}
                   </Text>
                 </Body>
                 <Right>
-                  <Text note>
+                  <Text note={ true }>
                     {data.time}
                   </Text>
                 </Right>
-              </ListItem>}
+              </ListItem> }
           />
         </Content>
         <Content padder={ true }>
-          <H3 style={ styles.mb15 }>{ "Swipable List" }</H3>
+          <H3 style={ styles.mb15 }>{ 'Swipable List' }</H3>
           <List
-            dataSource={this.ds.cloneWithRows(this.state.listViewData)}
-            renderRow={data =>
-              <ListItem style={{ paddingLeft: 20 }}>
+            dataSource={ this.ds.cloneWithRows(this.state.listViewData) }
+            renderRow={ data =>
+              <ListItem style={ { paddingLeft: 20 } }>
                 <Left>
                   <Text>
                     { data }
                   </Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" />
+                  <Icon name='arrow-forward' />
                 </Right>
-              </ListItem>}
-            renderLeftHiddenRow={data =>
+              </ListItem> }
+            renderLeftHiddenRow={ data =>
               <Button
-                full
-                onPress={() => alert(data)}
-                style={{
-                  backgroundColor: "#CCC",
+                full={ true }
+                onPress={ () => window.alert(data) }
+                style={ {
+                  backgroundColor: '#CCC',
                   flex: 1,
-                  alignItems: "center",
-                  justifyContent: "center"
-                }}
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                } }
               >
-                <Icon active name="information-circle" />
-              </Button>}
-            renderRightHiddenRow={(data, secId, rowId, rowMap) =>
+                <Icon active={ true } name='information-circle' />
+              </Button> }
+            renderRightHiddenRow={ (data, secId, rowId, rowMap) =>
               <Button
-                full
-                danger
-                onPress={_ => this.deleteRow(secId, rowId, rowMap)}
-                style={{
+                full={ true }
+                danger={ true }
+                onPress={ _ => this.deleteRow(secId, rowId, rowMap) }
+                style={ {
                   flex: 1,
-                  alignItems: "center",
-                  justifyContent: "center"
-                }}
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                } }
               >
-                <Icon active name="trash" />
-              </Button>}
-            leftOpenValue={75}
-            rightOpenValue={-75}
+                <Icon active={ true } name='trash' />
+              </Button> }
+            leftOpenValue={ 75 }
+            rightOpenValue={ -75 }
           />
         </Content>
       </Content>

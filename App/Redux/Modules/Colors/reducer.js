@@ -16,7 +16,7 @@ const colorReducer = (state = defaultState, action) => {
       ...state
     });
   }
-}
+};
 
 export default colorReducer;
 

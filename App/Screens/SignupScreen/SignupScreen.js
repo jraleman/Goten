@@ -1,12 +1,9 @@
 import React from 'react';
 import {
-  View,
   StatusBar
 } from 'react-native';
 import {
   Container,
-  Header,
-  Title,
   Content,
   Button,
   Icon,
@@ -17,13 +14,11 @@ import {
   Input,
   Form,
   H2,
-  Label,
   Text,
-  Textarea,
   ListItem,
   CheckBox,
   Radio
-} from "native-base";
+} from 'native-base';
 
 import BasicoHeader from '../../Components/BasicoHeader';
 import styles from './styles';
@@ -35,44 +30,43 @@ class SignupScreen extends React.Component {
       termsOfServiceFlag: false,
       privatePolicyFlag: false
     };
-    return ;
   }
   render () {
     return (
       <React.Fragment>
         <StatusBar
           translucent={ true }
-          barStyle={ "light-content" }
+          barStyle={ 'light-content' }
           hidden={ true }
         />
         <Container style={ styles.container }>
           <BasicoHeader
-            title={ "Signup" }
+            title={ 'Signup' }
             onPress={ () => this.props.navigation.goBack() }
-            icon={ "arrow-back" }
+            icon={ 'arrow-back' }
           />
           <Content padder={ true }>
             <Form>
-              <H2 style={ styles.mb15 }>{ "Sign up" }</H2>
+              <H2 style={ styles.mb15 }>{ 'Sign up' }</H2>
 
               <ListItem
                 style={ styles.radioButton }
-                selected={this.state.radio1}
-                onPress={ () => alert('UserTwo') }
+                selected={ this.state.radio1 }
+                onPress={ () => window.alert('UserTwo') }
               >
                 <Left>
-                  <Text>{ "" }</Text>
+                  <Text>{ '' }</Text>
                 </Left>
                 <Right>
                   <Radio
-                    selected={this.state.radio1}
-                    onPress={ () => alert('UserTwo') }
+                    selected={ this.state.radio1 }
+                    onPress={ () => window.alert('UserTwo') }
                   />
                 </Right>
               </ListItem>
 
               <Item>
-                <Input placeholder={ "Email" } />
+                <Input placeholder={ 'Email' } />
                 <Icon
                   active={ true }
                   name={ 'mail' }
@@ -80,7 +74,7 @@ class SignupScreen extends React.Component {
               </Item>
 
               <Item>
-                <Input placeholder={ "Password" } />
+                <Input placeholder={ 'Password' } />
                 <Icon
                   active={ true }
                   name={ 'lock' }
@@ -90,36 +84,36 @@ class SignupScreen extends React.Component {
               <ListItem
                 style={ styles.checkbox }
                 button={ true }
-                onPress={ () => alert('ToS') }
+                onPress={ () => window.alert('ToS') }
               >
                 <CheckBox
-                  checked={this.state.checkbox1}
-                  onPress={ () => alert('ToS') }
+                  checked={ this.state.checkbox1 }
+                  onPress={ () => window.alert('ToS') }
                 />
                 <Body>
-                  <Text>{ "I have read the terms of services" }</Text>
+                  <Text>{ 'I have read the terms of services' }</Text>
                 </Body>
               </ListItem>
 
               <ListItem
                 style={ styles.checkbox }
                 button={ true }
-                onPress={ () => alert('PP') }
+                onPress={ () => window.alert('PP') }
               >
                 <CheckBox
-                  checked={this.state.checkbox1}
-                  onPress={ () => alert('PP') }
+                  checked={ this.state.checkbox1 }
+                  onPress={ () => window.alert('PP') }
                 />
                 <Body>
-                  <Text>{ "I accept the privacy policy" }</Text>
+                  <Text>{ 'I accept the privacy policy' }</Text>
                 </Body>
               </ListItem>
 
               <Button
                 block={ true }
-                style={{ margin: 15 }}
+                style={ { margin: 15 } }
               >
-                <Text>{ "Submit" }</Text>
+                <Text>{ 'Submit' }</Text>
               </Button>
             </Form>
           </Content>

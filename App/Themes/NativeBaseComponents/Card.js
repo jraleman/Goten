@@ -2,7 +2,7 @@ import variables from './../variables';
 
 export default (variable = variables) => {
   const cardTheme = {
-    ".transparent": {
+    '.transparent': {
       shadowColor: null,
       shadowOffset: null,
       shadowOpacity: null,
@@ -15,9 +15,9 @@ export default (variable = variables) => {
     borderWidth: variable.borderWidth,
     borderRadius: 2,
     borderColor: variable.cardBorderColor,
-    flexWrap: "nowrap",
+    flexWrap: 'nowrap',
     backgroundColor: variable.cardDefaultBg,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 1.5,

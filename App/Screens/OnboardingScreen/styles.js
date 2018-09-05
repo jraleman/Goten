@@ -1,15 +1,23 @@
+#!/usr/bin/env node
+
+/*
+** OnboardingScreen/styles
+** ---------------------------------------------------------------------------|
+** Author: jraleman
+** Date: Fri, Aug 31 2018
+*/
+
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: "space-between"
+    justifyContent: 'space-between'
   },
   imageStyle: {
     flex: 1,
     maxWidth: 320,
-    // height: 'auto',
     alignSelf: 'center',
     resizeMode: 'contain'
   },
@@ -27,7 +35,7 @@ const styles = StyleSheet.create({
   },
   textStyleLast: {
     color: '#111111',
-    marginBottom: 20,
+    marginBottom: 20
   },
   btnCircle: {
     width: 40,
@@ -35,7 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, .75)',
     borderRadius: 20,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   btnIcon: {
     color: '#e4e4a1'

@@ -7,7 +7,7 @@ const initialState = {
 };
 
 // Returns the new state for the current action.
-export default function reducer(state = initialState, action) {
+export default function reducer (state = initialState, action) {
   switch (action.type) {
     case LOAD_CATEGORIES_SUCCESS:
       return ({

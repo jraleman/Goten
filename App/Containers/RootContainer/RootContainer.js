@@ -10,7 +10,7 @@ import variables from '../../Themes/variables';
 import getTheme from '../../Themes/NativeBaseComponents';
 
 class RootContainer extends React.Component {
-  render() {
+  render () {
     return (
       <StyleProvider style={ getTheme(variables) }>
         <Container style={ styles.container }>

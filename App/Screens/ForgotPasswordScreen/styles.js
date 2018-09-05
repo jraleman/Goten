@@ -7,12 +7,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#f9f9f9'
   },
   email: {
-    flex: 1,
-      // marginTop: 100
+    flex: 1
   },
   button: {
     flex: 1,
-    // marginTop: 100
+    margin: 15
   }
 });
 

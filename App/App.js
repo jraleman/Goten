@@ -1,11 +1,24 @@
+#!/usr/bin/env node
+
+/*
+** App
+** ---------------------------------------------------------------------------|
+** Author: jraleman
+** Date: Fri, Aug 31 2018
+*/
+
+// ~~ React Stuff ~~
 import React from 'react';
-import { AsyncStorage } from 'react-native';
+
+// ~~ Dependencies ~~
 import { Provider } from 'react-redux';
+
+// ~~ Local Dependencies ~~
+import './Config';
 import store from './Redux';
 import RootContainer from './Containers/RootContainer';
-// Import config file
-import './Config';
 
+// ~~ React Component ~~
 class App extends React.Component {
   constructor (props) {
     super(props);

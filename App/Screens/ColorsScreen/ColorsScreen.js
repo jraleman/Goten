@@ -3,8 +3,7 @@ import {
   Container,
   Content,
   Button,
-  Text,
-  H1
+  Text
 } from 'native-base';
 import { connect } from 'react-redux';
 import styles from './styles';
@@ -16,13 +15,12 @@ class ColorsScreen extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
-    return ;
   }
   render () {
     return (
       <Container style={ styles.container }>
         <BasicoHeader
-          title={ "Colors" }
+          title={ 'Colors' }
           icon={ 'arrow-back' }
           onPress={ () => this.props.navigation.goBack() }
         />
@@ -32,9 +30,9 @@ class ColorsScreen extends React.Component {
             style={ styles.button }
             onPress={ () => this.props.loadColor() }
           >
-            <Text>{ "Randomize Color" }</Text>
+            <Text>{ 'Randomize Color' }</Text>
           </Button>
-          <ColorsContainer color={ this.props.color }/>
+          <ColorsContainer color={ this.props.color } />
         </Content>
       </Container>
     );
