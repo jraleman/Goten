@@ -42,5 +42,10 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "standardx": {
+    "ignore": [
+      "App/Themes/variables.js"
+    ]
   }
 }
