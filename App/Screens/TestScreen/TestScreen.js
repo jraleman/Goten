@@ -8,7 +8,7 @@ import {
   Text
 } from 'native-base';
 import styles from './styles';
-import BasicoHeader from '../../Components/BasicoHeader';
+import AppHeader from '../../Components/AppHeader';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -25,7 +25,7 @@ class TestScreen extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-        <BasicoHeader
+        <AppHeader
           title={ 'Test Screen' }
           onPress={ () => this.props.navigation.goBack() }
           icon={ 'arrow-back' }

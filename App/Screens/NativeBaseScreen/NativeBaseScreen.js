@@ -5,7 +5,7 @@ import {
   H1
 } from 'native-base';
 import styles from './styles';
-import BasicoHeader from '../../Components/BasicoHeader';
+import AppHeader from '../../Components/AppHeader';
 import {
   BadgesContainer,
   ButtonsContainer,
@@ -28,7 +28,7 @@ class NativeBaseScreen extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-        <BasicoHeader
+        <AppHeader
           title={ 'NativeBase' }
           onPress={ () => this.props.navigation.openDrawer() }
           icon={ 'menu' }

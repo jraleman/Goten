@@ -20,7 +20,7 @@ import {
   Radio
 } from 'native-base';
 
-import BasicoHeader from '../../Components/BasicoHeader';
+import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
 
 class SignupScreen extends React.Component {
@@ -40,7 +40,7 @@ class SignupScreen extends React.Component {
           hidden={ true }
         />
         <Container style={ styles.container }>
-          <BasicoHeader
+          <AppHeader
             title={ 'Signup' }
             onPress={ () => this.props.navigation.goBack() }
             icon={ 'arrow-back' }

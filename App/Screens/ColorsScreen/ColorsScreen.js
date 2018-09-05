@@ -8,7 +8,7 @@ import {
 import { connect } from 'react-redux';
 import styles from './styles';
 import * as actionCreators from '../../Redux/Modules/Colors/actions';
-import BasicoHeader from '../../Components/BasicoHeader';
+import AppHeader from '../../Components/AppHeader';
 import ColorsContainer from '../../Containers/ColorsContainer';
 
 class ColorsScreen extends React.Component {
@@ -19,7 +19,7 @@ class ColorsScreen extends React.Component {
   render () {
     return (
       <Container style={ styles.container }>
-        <BasicoHeader
+        <AppHeader
           title={ 'Colors' }
           icon={ 'arrow-back' }
           onPress={ () => this.props.navigation.goBack() }
