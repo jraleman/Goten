@@ -25,6 +25,17 @@ Install all the dependencies needed:
 npm install
 ```
 
+### Link
+
+If you wish to integrate this boilerplate into your project, make sure to
+link the following packages:
+
+- `react-native-i18n`
+- `react-native-push-notification`
+- `react-native-vector-icons`
+
+[Click here](https://facebook.github.io/react-native/docs/linking-libraries-ios.html) to learn more about `react-native link`.
+
 ### iOS
 
 To run the iOS version:
