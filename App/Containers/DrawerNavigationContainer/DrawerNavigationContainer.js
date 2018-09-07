@@ -1,3 +1,11 @@
+#!/usr/bin/env node
+
+/**
+ * OnboardingScreen/OnboardingScreen.js
+ * @author [Jose Ramon Aleman](https://github.com/jraleman)
+ */
+
+// ~~ Dependencies ~~
 import React from 'react';
 import {
   TouchableOpacity,
@@ -18,23 +26,34 @@ import {
   Thumbnail,
   H2
 } from 'native-base';
+// ~~ Local Dependencies ~~
 import styles from './styles';
-
 import { Images } from '../../Themes';
 
+// ~~ Constants ~~
+const BACKGROUND_OPACITY = 0.35;
+const BACKGROUND_BLUR = 0.75;
+const BACKGROUND_OVERLAY = '#121212';
+
+/**
+ * Container to render when DrawerNavigation is called.
+ * @class DrawerNavigationContainer
+ * @extends {React.Component}
+ */
 class DrawerNavigationContainer extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
       iconName: null,
       routeName: null,
-      badgeCount: 0,
       avatar: null
     };
+    return ;
   }
-  componentWillMount () {
-
-  }
+  /**
+   * Renders the component.
+   * @return {string} - RN markup for the component
+   */
   render () {
     return (
       <React.Fragment>
@@ -44,8 +63,8 @@ class DrawerNavigationContainer extends React.Component {
             bounces={ false }
             style={ styles.content }
           >
-            <NavigationHeader
-              headerText={ 'Joe Doe' }
+            <DrawerNavigationHeader
+              title={ 'Joe Doe' }
               onPress={ () => window.alert('Hello') }
               backgroundImg={ Images.drawerNavigationCover }
               avatarImg={ Images.drawerNavigationAvatar }
@@ -59,7 +78,7 @@ class DrawerNavigationContainer extends React.Component {
                   nav={ this.props.navigation }
                 /> }
             />
-            <NavigationFooter />
+            <DrawerNavigationFooter />
           </Content>
         </Container>
       </React.Fragment>
@@ -67,23 +86,11 @@ class DrawerNavigationContainer extends React.Component {
   }
 };
 
-/*
-
-<NavigationHeader
-  headerText={ "User" }
-  avatar={ this.state.avatar }
-  backgroundImg={ images.drawerCover }
-  onPress={ () => this.props.navigation.navigate('Profile') }
-/>
-
-*/
-
-// ~~ Constants ~~
-const BACKGROUND_OPACITY = 0.35;
-const BACKGROUND_BLUR = 0.75;
-const BACKGROUND_OVERLAY = '#121212';
-
-const NavigationHeader = props => {
+/**
+ * SubContainer to render the drawer navigation header.
+ * @const DrawerNavigationHeader
+ */
+const DrawerNavigationHeader = props => {
   return (
     <React.Fragment>
       <View style={ styles.container }>
@@ -109,7 +116,7 @@ const NavigationHeader = props => {
               size={ 80 }
               style={ styles.avatarImg }
             />
-            <H2 style={ styles.drawerText }>{ props.headerText }</H2>
+            <H2 style={ styles.title }>{ props.headerText }</H2>
           </TouchableOpacity>
         </ImageBackground>
       </View>
@@ -117,78 +124,34 @@ const NavigationHeader = props => {
   );
 };
 
-const NavigationRow = props => {
-  // alert(JSON.stringify(props.item, null, 4));
-  let iconName;
-  if (props.item.routeName === 'Search Doctors') {
-    iconName = 'search';
-  }
-  else if (props.item.routeName === 'Notifications') {
-    iconName = 'notifications';
-  }
-  else if (props.item.routeName === 'Appointments') {
-    iconName = 'calendar';
-  }
-  else if (props.item.routeName === 'Call Log') {
-    iconName = 'call';
-  }
-  else if (props.item.routeName === 'Settings') {
-    iconName = 'settings';
-  }
-
-  // badges
-  let badgeCount;
-  if (props.item.routeName === 'Search Doctors') {
-    badgeCount = null;
-  }
-  else if (props.item.routeName === 'Notifications') {
-    badgeCount = 42;
-  }
-  else if (props.item.routeName === 'Appointments') {
-    badgeCount = null;
-  }
-  else if (props.item.routeName === 'Call Log') {
-    badgeCount = 3;
-  }
-  else if (props.item.routeName === 'Settings') {
-    badgeCount = null;
-  }
-
+/**
+ * SubContainer to render the drawer navigation row.
+ * @const DrawerNavigationHeader
+ */
+const DrawerNavigationRow = props => {
   return (
-    <ListItem onPress={ () => props.nav.navigate(props.item.routeName) }>
-      <RowLeft
-        iconName={ iconName }
-        routeName={ props.item.routeName }
-      />
-      { badgeCount && <RowRight badgeText={ `${badgeCount}` } /> }
-    </ListItem>
+    <React.Fragment>
+      <ListItem onPress={ () => props.nav.navigate(props.item.routeName) }>
+        <Icon
+          active={ true }
+          name={ props.iconName }
+          style={{
+            color: '#777',
+            fontSize: 26,
+            width: 30
+          }}
+        />
+        <Text>{ props.routeName }</Text>
+      </ListItem>
+    </React.Fragment>
   );
 };
 
-const RowLeft = props => {
-  return (
-    <Left>
-      <Icon
-        active={ true }
-        name={ props.iconName }
-        style={ { color: '#777', fontSize: 26, width: 30 } }
-      />
-      <Text>{ props.routeName }</Text>
-    </Left>
-  );
-};
-
-const RowRight = props => {
-  return (
-    <Right style={ { flex: 1 } }>
-      <Badge style={ styles.badge }>
-        <Text style={ styles.badgeText }>{ props.badgeText }</Text>
-      </Badge>
-    </Right>
-  );
-};
-
-const NavigationFooter = props => {
+/**
+ * SubContainer to render the drawer navigation footer.
+ * @const DrawerNavigationHeader
+ */
+const DrawerNavigationFooter = props => {
   return (
     <React.Fragment>
       <View style={ styles.footer }>

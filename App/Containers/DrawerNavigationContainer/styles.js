@@ -1,3 +1,11 @@
+#!/usr/bin/env node
+
+/**
+ * OnboardingScreen/styles.js
+ * @author [Jose Ramon Aleman](https://github.com/jraleman)
+ */
+
+// ~~ Dependencies ~~
 import {
   Platform,
   StyleSheet,
@@ -6,7 +14,13 @@ import {
 
 const deviceHeight = Dimensions.get('window').height;
 
-export default StyleSheet.create({
+
+/**
+ * @type {styles}
+ * @const
+ */
+
+const styles = StyleSheet.create({
   content: {
     flex: 1,
     backgroundColor: '#fff',
@@ -89,3 +103,5 @@ export default StyleSheet.create({
     alignSelf: 'center'
   }
 });
+
+export default styles;
