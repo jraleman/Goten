@@ -40,7 +40,7 @@ const BACKGROUND_OVERLAY = '#121212';
 /**
  * Container to render when DrawerNavigation is called.
  * @class DrawerNavigationContainer
- * @extends {React.Component}
+ * @extends { React.Component }
  */
 class DrawerNavigationContainer extends React.Component {
   constructor (props) {
@@ -60,10 +60,10 @@ class DrawerNavigationContainer extends React.Component {
     return (
       <React.Fragment>
         <StatusBar barStyle={ 'dark-content' } />
-        <Container style={ { bottom: 0 } }>
+        <Container style={ styles.drawerContainer }>
           <Content
             bounces={ false }
-            style={ styles.content }
+            style={ styles.drawerContent }
           >
             <DrawerNavigationHeader
               avatarImg={ Images.drawerNavigationAvatar }
@@ -96,30 +96,32 @@ class DrawerNavigationContainer extends React.Component {
 function DrawerNavigationHeader (props) {
   return (
     <React.Fragment>
-      <View style={ styles.container }>
+      <View style={ styles.drawerHeaderContainer }>
         <ImageBackground
           blurRadius={ BACKGROUND_BLUR }
           resizeMode={ 'cover' }
           source={ props.backgroundImg }
-          style={ styles.wallpaper }
+          style={ styles.drawerHeaderWallpaper }
         >
           <View style={ [
-            styles.overlay, {
+            styles.drawerHeaderWallpaperOverlay, {
               backgroundColor: BACKGROUND_OVERLAY,
               opacity: BACKGROUND_OPACITY
             }] }
           />
           <TouchableOpacity
             onPress={ props.onPress }
-            style={ styles.drawer }
+            style={ styles.drawerHeaderContent }
           >
             <Thumbnail
               size={ 80 }
               source={ props.avatarImg }
               square={ true }
-              style={ styles.avatarImg }
+              style={ styles.drawerHeaderAvatar }
             />
-            <H2 style={ styles.headerText }>{ props.headerText }</H2>
+            <H2 style={ styles.drawerHeaderText }>
+              { props.headerText }
+            </H2>
           </TouchableOpacity>
         </ImageBackground>
       </View>
@@ -138,7 +140,7 @@ function DrawerNavigationRow (props) {
         <Icon
           active={ true }
           name={ props.item.iconName }
-          style={{ color: '#777', fontSize: 26, width: 30 }}
+          style={ styles.drawerRow }
         />
         <Text>{ props.item.routeName }</Text>
       </ListItem>
@@ -153,7 +155,7 @@ function DrawerNavigationRow (props) {
 function DrawerNavigationFooter (props) {
   return (
     <React.Fragment>
-      <View style={ styles.footer }>
+      <View style={ styles.drawerFooter }>
         <Text>{ 'NavigationFooter' }</Text>
       </View>
     </React.Fragment>
