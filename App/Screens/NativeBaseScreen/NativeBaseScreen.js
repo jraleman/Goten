@@ -16,7 +16,7 @@ import {
   ListsContainer,
   LoadersContainer,
   RadioButtonsContainer
-} from '../../Containers/NativeBaseContainers';
+} from '../../Containers/ThemeContainer';
 
 import '../../Config';
 
