@@ -14,7 +14,7 @@ import {
   FormContainer,
   IconsContainer,
   ListsContainer,
-  LoadersContainer,
+  SpinnersContainer,
   RadioButtonsContainer
 } from '../../Containers/ThemeContainer';
 
@@ -42,7 +42,7 @@ class ThemeScreen extends React.Component {
           <FormContainer />
           <IconsContainer />
           <ListsContainer />
-          <LoadersContainer />
+          <SpinnersContainer />
           <RadioButtonsContainer />
         </Content>
       </Container>
