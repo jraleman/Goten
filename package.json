@@ -7,7 +7,8 @@
     "test": "jest",
     "lint": "node ./node_modules/standardx/bin/cmd.js --verbose './App/**/*.js' | node ./node_modules/snazzy/bin/cmd.js || true",
     "lint-fix": "node ./node_modules/standardx/bin/cmd.js --parser babel-eslint --fix --verbose './App/**/*.js' | node ./node_modules/snazzy/bin/cmd.js || true",
-    "lint-log": "npm run lint > lint.log"
+    "lint-log": "npm run lint > lint.log",
+    "doc": "./node_modules/.bin/jsdoc --verbose -r ./App || true"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -37,6 +38,7 @@
     "babel-preset-react-native": "^5",
     "eslint": "^4.19.1",
     "jest": "23.5.0",
+    "jsdoc": "~3.5.5",
     "snazzy": "^8.0.0",
     "standardx": "^3.0.1"
   },

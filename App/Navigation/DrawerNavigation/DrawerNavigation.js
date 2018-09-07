@@ -3,13 +3,13 @@ import { DrawerNavigator } from 'react-navigation';
 import DrawerNavigationContainer from '../../Containers/DrawerNavigationContainer';
 import CategoriesScreen from '../../Screens/CategoriesScreen';
 import ColorsScreen from '../../Screens/ColorsScreen';
-import NativeBaseScreen from '../../Screens/NativeBaseScreen';
+import ThemeScreen from '../../Screens/ThemeScreen';
 import TestScreen from '../../Screens/TestScreen';
 
 const DrawerNavigation = DrawerNavigator({
   'Categories': { screen: CategoriesScreen },
   'Colors': { screen: ColorsScreen },
-  'Native Base': { screen: NativeBaseScreen },
+  'Native Base': { screen: ThemeScreen },
   'Test': { screen: TestScreen }
 },
 {

@@ -1,91 +1,77 @@
-import {
-  Platform,
-  StyleSheet,
-  Dimensions
-} from 'react-native';
+#!/usr/bin/env node
 
-const deviceHeight = Dimensions.get('window').height;
+/**
+ * OnboardingScreen/styles.js
+ * @author [Jose Ramon Aleman](https://github.com/jraleman)
+ */
 
-export default StyleSheet.create({
-  content: {
-    flex: 1,
+// ~~ Dependencies ~~
+import { StyleSheet } from 'react-native';
+
+/**
+ * @type {styles}
+ * @const
+ */
+
+const styles = StyleSheet.create({
+  drawerHeaderWallpaperOverlay: {
+    bottom: 0,
+    left: 0,
+    position: 'absolute',
+    right: 0,
+    top: 0
+  },
+  drawerContainer: {
+    bottom: 0
+  },
+  drawerContent: {
     backgroundColor: '#fff',
-    bottom: 4
+    bottom: 4,
+    flex: 1
   },
-  container: {
-    flex: 0.42,
+  drawerHeaderContainer: {
     alignItems: 'stretch',
+    flex: 0.42,
     justifyContent: 'center'
   },
-  drawerCover: {
-    flexGrow: 1,
-    alignSelf: 'stretch',
-    height: deviceHeight / 3.5,
-    width: null,
-    position: 'relative',
-    marginBottom: 10,
+  drawerHeaderContent: {
     alignItems: 'center',
-    justifyContent: 'center'
+    alignSelf: 'center',
+    flex: 1,
+    flexDirection: 'column',
+    marginTop: '2.5%',
+    opacity: 0.75,
+    position: 'absolute',
+    width: '75%'
   },
-  drawerText: {
-    textAlign: 'center',
+  drawerHeaderWallpaper: {
+    flex: 1,
+    height: null,
+    width: null
+  },
+  drawerHeaderAvatar: {
+    backgroundColor: '#e4e4a1',
+    borderColor: '#f9f9f9',
+    borderWidth: 2,
+    marginTop: '7.5%'
+  },
+  drawerHeaderText: {
     alignSelf: 'center',
     color: '#f9f9f9',
+    fontWeight: '500',
     marginTop: 12,
-    fontWeight: '500'
-  },
-  drawer: {
-    position: 'absolute',
-    alignSelf: 'center',
-    opacity: 0.75,
-    flex: 1,
-    width: '75%',
-    marginTop: '2.5%',
-    alignItems: 'center',
-    flexDirection: 'column'
-  },
-  text: {
-    fontWeight: Platform.OS === 'ios' ? '500' : '400',
-    fontSize: 16,
-    marginLeft: 20,
     textAlign: 'center'
   },
-  badge: {
-    borderRadius: 100,
-    height: 30,
-    width: 30,
-    backgroundColor: '#33657e'
-  },
-  badgeText: {
-    fontSize: Platform.OS === 'ios' ? 13 : 11,
-    fontWeight: '400',
-    textAlign: 'center',
+  drawerFooter: {
     alignItems: 'center',
-    paddingTop: 6,
-    marginTop: Platform.OS === 'android' ? -3 : undefined
+    alignSelf: 'center',
+    justifyContent: 'flex-end'
   },
-  overlay: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0
-  },
-  wallpaper: {
-    flex: 1,
-    width: null,
-    height: null
-  },
-  avatarImg: {
-    backgroundColor: '#e4e4a1',
-    marginTop: '7.5%',
-    borderWidth: 2,
-    borderColor: '#f9f9f9'
-
-  },
-  footer: {
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    alignSelf: 'center'
+  drawerRow: {
+    color: '#777',
+    fontSize: 26,
+    width: 30
   }
 });
+
+export default styles;

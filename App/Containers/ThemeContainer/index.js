@@ -5,7 +5,7 @@ import CheckBoxContainer from './CheckBoxContainer';
 import FormContainer from './FormContainer';
 import IconsContainer from './IconsContainer';
 import ListsContainer from './ListsContainer';
-import LoadersContainer from './LoadersContainer';
+import SpinnersContainer from './SpinnersContainer';
 import RadioButtonsContainer from './RadioButtonsContainer';
 
 export {
@@ -16,6 +16,6 @@ export {
   FormContainer,
   IconsContainer,
   ListsContainer,
-  LoadersContainer,
+  SpinnersContainer,
   RadioButtonsContainer
 };

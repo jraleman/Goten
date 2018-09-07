@@ -7,7 +7,7 @@ import AppNavigation from '../../Navigation/AppNavigation';
 import NetworkIndicator from '../../Components/NetworkIndicator';
 import styles from './styles';
 import variables from '../../Themes/variables';
-import getTheme from '../../Themes/NativeBaseComponents';
+import getTheme from '../../Themes/Components';
 
 class RootContainer extends React.Component {
   render () {

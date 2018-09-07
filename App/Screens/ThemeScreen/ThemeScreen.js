@@ -14,13 +14,13 @@ import {
   FormContainer,
   IconsContainer,
   ListsContainer,
-  LoadersContainer,
+  SpinnersContainer,
   RadioButtonsContainer
-} from '../../Containers/NativeBaseContainers';
+} from '../../Containers/ThemeContainer';
 
 import '../../Config';
 
-class NativeBaseScreen extends React.Component {
+class ThemeScreen extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
@@ -29,7 +29,7 @@ class NativeBaseScreen extends React.Component {
     return (
       <Container style={ styles.container }>
         <AppHeader
-          title={ 'NativeBase' }
+          title={ 'Theme' }
           onPress={ () => this.props.navigation.openDrawer() }
           icon={ 'menu' }
         />
@@ -42,7 +42,7 @@ class NativeBaseScreen extends React.Component {
           <FormContainer />
           <IconsContainer />
           <ListsContainer />
-          <LoadersContainer />
+          <SpinnersContainer />
           <RadioButtonsContainer />
         </Content>
       </Container>
@@ -50,4 +50,4 @@ class NativeBaseScreen extends React.Component {
   }
 }
 
-export default NativeBaseScreen;
+export default ThemeScreen;
