@@ -8,23 +8,20 @@
 // ~~ Dependencies ~~
 import React from 'react';
 import {
-  TouchableOpacity,
+  ImageBackground,
   StatusBar,
-  ImageBackground
+  TouchableOpacity
 } from 'react-native';
 import {
+  Container,
+  Content,
+  H2,
+  Icon,
   List,
   ListItem,
   Text,
-  View,
-  Icon,
-  Content,
-  Container,
-  Left,
-  Right,
-  Badge,
   Thumbnail,
-  H2
+  View
 } from 'native-base';
 // ~~ Local Dependencies ~~
 import styles from './styles';
@@ -44,11 +41,11 @@ class DrawerNavigationContainer extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
+      avatar: null,
       iconName: null,
-      routeName: null,
-      avatar: null
+      routeName: null
     };
-    return ;
+    return;
   }
   /**
    * Renders the component.
@@ -64,19 +61,20 @@ class DrawerNavigationContainer extends React.Component {
             style={ styles.content }
           >
             <DrawerNavigationHeader
-              title={ 'Joe Doe' }
-              onPress={ () => window.alert('Hello') }
-              backgroundImg={ Images.drawerNavigationCover }
               avatarImg={ Images.drawerNavigationAvatar }
+              backgroundImg={ Images.drawerNavigationCover }
+              headerText={ 'Joe Doe' }
+              onPress={ () => window.alert('Hello') }
             />
             <List
-              style={ { height: 550 } }
+              style={{ height: 550 }}
               dataArray={ this.props.items }
               renderRow={ (item) =>
-                <NavigationRow
+                <DrawerNavigationRow
                   item={ item }
                   nav={ this.props.navigation }
-                /> }
+                />
+              }
             />
             <DrawerNavigationFooter />
           </Content>
@@ -96,9 +94,9 @@ const DrawerNavigationHeader = props => {
       <View style={ styles.container }>
         <ImageBackground
           blurRadius={ BACKGROUND_BLUR }
+          resizeMode={ 'cover' }
           source={ props.backgroundImg }
           style={ styles.wallpaper }
-          resizeMode={ 'cover' }
         >
           <View style={ [
             styles.overlay, {
@@ -111,12 +109,12 @@ const DrawerNavigationHeader = props => {
             style={ styles.drawer }
           >
             <Thumbnail
+              size={ 80 }
               source={ props.avatarImg }
               square={ true }
-              size={ 80 }
               style={ styles.avatarImg }
             />
-            <H2 style={ styles.title }>{ props.headerText }</H2>
+            <H2 style={ styles.headerText }>{ props.headerText }</H2>
           </TouchableOpacity>
         </ImageBackground>
       </View>
@@ -126,7 +124,7 @@ const DrawerNavigationHeader = props => {
 
 /**
  * SubContainer to render the drawer navigation row.
- * @const DrawerNavigationHeader
+ * @const DrawerNavigationRow
  */
 const DrawerNavigationRow = props => {
   return (
@@ -134,14 +132,10 @@ const DrawerNavigationRow = props => {
       <ListItem onPress={ () => props.nav.navigate(props.item.routeName) }>
         <Icon
           active={ true }
-          name={ props.iconName }
-          style={{
-            color: '#777',
-            fontSize: 26,
-            width: 30
-          }}
+          name={ props.item.iconName }
+          style={{ color: '#777', fontSize: 26, width: 30 }}
         />
-        <Text>{ props.routeName }</Text>
+        <Text>{ props.item.routeName }</Text>
       </ListItem>
     </React.Fragment>
   );
@@ -149,7 +143,7 @@ const DrawerNavigationRow = props => {
 
 /**
  * SubContainer to render the drawer navigation footer.
- * @const DrawerNavigationHeader
+ * @const DrawerNavigationFooter
  */
 const DrawerNavigationFooter = props => {
   return (
