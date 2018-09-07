@@ -24,10 +24,11 @@ const AppNavigation = StackNavigator(
     'ForgotPassword': { screen: ForgotPasswordScreen },
     'Test': { screen: TestScreen },
     'Categories': { screen: CategoriesScreen },
-    'NativeBase': { screen: ThemeScreen },
+    'Theme': { screen: ThemeScreen },
     'Colors': { screen: ColorsScreen },
     'Onboarding': { screen: OnboardingScreen },
-    'DrawerNavigation': { screen: DrawerNavigation }
+    'MainDrawer': { screen: DrawerNavigation.Main },
+    'AltDrawer': { screen: DrawerNavigation.Alt }
   },
   {
     initialRouteName: 'Onboarding',
