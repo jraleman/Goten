@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 
 /**
+ *      |    o             |
+ * ,---.|---..,---.,---. --|--- ,---.
+ * ,---||   |||---'|       |    |   |
+ * `---^`---'``---'`    o  `---'`---'
+ *
  * OnboardingScreen/OnboardingScreen.js
  * @author [Jose Ramon Aleman](https://github.com/jraleman)
  */
@@ -49,7 +54,7 @@ class DrawerNavigationContainer extends React.Component {
   }
   /**
    * Renders the component.
-   * @return {string} - RN markup for the component
+   * @return { string } - RN markup for the component
    */
   render () {
     return (
