@@ -86,9 +86,9 @@ class DrawerNavigationContainer extends React.Component {
 
 /**
  * SubContainer to render the drawer navigation header.
- * @const DrawerNavigationHeader
+ * @function DrawerNavigationHeader
  */
-const DrawerNavigationHeader = props => {
+function DrawerNavigationHeader (props) {
   return (
     <React.Fragment>
       <View style={ styles.container }>
@@ -124,9 +124,9 @@ const DrawerNavigationHeader = props => {
 
 /**
  * SubContainer to render the drawer navigation row.
- * @const DrawerNavigationRow
+ * @function DrawerNavigationRow
  */
-const DrawerNavigationRow = props => {
+function DrawerNavigationRow (props) {
   return (
     <React.Fragment>
       <ListItem onPress={ () => props.nav.navigate(props.item.routeName) }>
@@ -143,9 +143,9 @@ const DrawerNavigationRow = props => {
 
 /**
  * SubContainer to render the drawer navigation footer.
- * @const DrawerNavigationFooter
+ * @function DrawerNavigationFooter
  */
-const DrawerNavigationFooter = props => {
+function DrawerNavigationFooter (props) {
   return (
     <React.Fragment>
       <View style={ styles.footer }>
