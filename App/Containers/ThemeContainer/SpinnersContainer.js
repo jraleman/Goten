@@ -6,7 +6,7 @@ import {
 } from 'native-base';
 import styles from './styles';
 
-class LoadersContainer extends React.Component {
+class SpinnersContainer extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
@@ -14,7 +14,7 @@ class LoadersContainer extends React.Component {
   render () {
     return (
       <Content>
-        <H2 style={ styles.mb15 }>{ 'Loaders (Spinners)' }</H2>
+        <H2 style={ styles.mb15 }>{ 'Spinners' }</H2>
         <Spinner />
         <Spinner color='red' />
         <Spinner color='green' />
@@ -24,4 +24,4 @@ class LoadersContainer extends React.Component {
   }
 }
 
-export default LoadersContainer;
+export default SpinnersContainer;
