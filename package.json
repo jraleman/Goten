@@ -7,7 +7,8 @@
     "test": "jest",
     "lint": "node ./node_modules/standardx/bin/cmd.js --verbose './App/**/*.js' | node ./node_modules/snazzy/bin/cmd.js || true",
     "lint-fix": "node ./node_modules/standardx/bin/cmd.js --parser babel-eslint --fix --verbose './App/**/*.js' | node ./node_modules/snazzy/bin/cmd.js || true",
-    "lint-log": "npm run lint > lint.log"
+    "lint-log": "npm run lint > lint.log",
+    "doc": "./node_modules/.bin/jsdoc --verbose -r ./App || true"
   },
   "dependencies": {
     "axios": "^0.18.0",
