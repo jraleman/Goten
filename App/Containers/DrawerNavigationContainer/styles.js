@@ -7,6 +7,8 @@
 
 // ~~ Dependencies ~~
 import { StyleSheet } from 'react-native';
+// ~~ Local Dependencies ~~
+import { Colors } from '../../Themes';
 
 /**
  * @type {styles}
@@ -25,7 +27,7 @@ const styles = StyleSheet.create({
     bottom: 0
   },
   drawerContent: {
-    backgroundColor: '#fff',
+    backgroundColor: Colors.light,
     bottom: 4,
     flex: 1
   },
@@ -50,14 +52,14 @@ const styles = StyleSheet.create({
     width: null
   },
   drawerHeaderAvatar: {
-    backgroundColor: '#e4e4a1',
-    borderColor: '#f9f9f9',
+    backgroundColor: Colors.background,
+    borderColor: Colors.light,
     borderWidth: 2,
     marginTop: '7.5%'
   },
   drawerHeaderText: {
     alignSelf: 'center',
-    color: '#f9f9f9',
+    color: Colors.light,
     fontWeight: '500',
     marginTop: 12,
     textAlign: 'center'
@@ -68,7 +70,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end'
   },
   drawerRow: {
-    color: '#777',
+    color: Colors.divisor,
     fontSize: 26,
     width: 30
   }
