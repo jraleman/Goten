@@ -1,3 +1,5 @@
-const login = {};
+const login = {
+  require('./json/loginOne')
+};
 
 export default login;
