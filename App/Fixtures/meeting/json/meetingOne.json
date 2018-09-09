@@ -1,0 +1,38 @@
+{
+  id: 420,
+  date: "2012-21-12 04:20:42",
+  participants: [
+    4242,
+    6969
+  ],
+  duration: 5463,
+  timeZone: "America/Los_Angeles",
+  description: "Quo est nemo voluptas nulla iste.",
+  chat: {
+    [
+      id: 4242,
+      timestap: "2012-21-12 04:20:42",
+      message "Et vel ex recusandae."
+    ],
+    [
+      id: 6969,
+      timestap: "2012-21-12 04:20:42",
+      message "Quo est nemo voluptas nulla iste."
+    ],
+    [
+      id: 4242,
+      timestap: "2012-21-12 04:20:42",
+      message "Velit aperiam nesciunt tenetur quo qui."
+    ],
+    [
+      id: 6969,
+      timestap: "2012-21-12 04:20:42",
+      message "Magni non dicta nemo accusamus necessitatibus accusantium."
+    ],
+    [
+      id: 6969,
+      timestap: "2012-21-12 04:20:42",
+      message "Aliquam ut dicta magni ut aspernatur nulla distinctio."
+    ]
+  }
+}
