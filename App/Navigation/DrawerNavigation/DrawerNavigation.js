@@ -14,7 +14,6 @@ import React from 'react';
 import { DrawerNavigator } from 'react-navigation';
 // ~~ Local Dependencies ~~
 import CalendarScreen from '../../Screens/CalendarScreen';
-import DrawerNavigation from '../DrawerNavigation';
 import DrawerNavigationContainer from '../../Containers/DrawerNavigationContainer';
 import ForgotPasswordScreen from '../../Screens/ForgotPasswordScreen';
 import LoginScreen from '../../Screens/LoginScreen';
@@ -50,7 +49,7 @@ const AltDrawerNav = DrawerNavigator(
     'Theme': { screen: ThemeScreen },
   },
   {
-    initialRouteName: 'Calendar',
+    initialRouteName: 'Test',
     contentComponent: props => <DrawerNavigationContainer { ...props } />
   }
 );
