@@ -4,9 +4,7 @@ import TestScreen from '../../Screens/TestScreen';
 import LoginScreen from '../../Screens/LoginScreen';
 import SignupScreen from '../../Screens/SignupScreen';
 import ForgotPasswordScreen from '../../Screens/ForgotPasswordScreen';
-import CategoriesScreen from '../../Screens/CategoriesScreen';
 import ThemeScreen from '../../Screens/ThemeScreen';
-import ColorsScreen from '../../Screens/ColorsScreen';
 import OnboardingScreen from '../../Screens/OnboardingScreen';
 
 import DrawerNavigation from '../DrawerNavigation';
@@ -23,9 +21,7 @@ const AppNavigation = StackNavigator(
     'Signup': { screen: SignupScreen },
     'ForgotPassword': { screen: ForgotPasswordScreen },
     'Test': { screen: TestScreen },
-    'Categories': { screen: CategoriesScreen },
     'Theme': { screen: ThemeScreen },
-    'Colors': { screen: ColorsScreen },
     'Onboarding': { screen: OnboardingScreen },
     'MainDrawer': { screen: DrawerNavigation.Main },
     'AltDrawer': { screen: DrawerNavigation.Alt }

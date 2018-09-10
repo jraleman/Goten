@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Colors } from '../../Themes';
 
 export default StyleSheet.create({
   container: {
@@ -22,7 +23,7 @@ export default StyleSheet.create({
   },
   label: {
     fontWeight: '900',
-    color: '#222'
+    color: Colors.dark
   },
   button: {
     marginBottom: 15,

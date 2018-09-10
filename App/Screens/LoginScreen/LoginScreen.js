@@ -75,7 +75,8 @@ class LoginScreen extends React.Component {
     this.setState({ visible: true });
   }
   _handleNavigation () {
-    this.props.navigation.navigate('DrawerNavigation');
+    this.props.navigation.navigate('MainDrawer');
+    // this.props.navigation.navigate('AltDrawer');
   }
   _onLoginHandler = () => {
     this.setState({ loading: true });

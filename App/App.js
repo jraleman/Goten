@@ -7,15 +7,10 @@
 ** Date: Fri, Aug 31 2018
 */
 
-// ~~ React Stuff ~~
-import React from 'react';
-
 // ~~ Dependencies ~~
-import { Provider } from 'react-redux';
-
+import React from 'react';
 // ~~ Local Dependencies ~~
 import './Config';
-import store from './Redux';
 import RootContainer from './Containers/RootContainer';
 
 // ~~ React Component ~~
