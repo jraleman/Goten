@@ -14,14 +14,10 @@ import React from 'react';
 import { DrawerNavigator } from 'react-navigation';
 // ~~ Local Dependencies ~~
 import DrawerNavigationContainer from '../../Containers/DrawerNavigationContainer';
-import CategoriesScreen from '../../Screens/CategoriesScreen';
-import ColorsScreen from '../../Screens/ColorsScreen';
 import TestScreen from '../../Screens/TestScreen';
 import ThemeScreen from '../../Screens/ThemeScreen';
 
 const MainDrawerNav = DrawerNavigator({
-  'Categories': { screen: CategoriesScreen },
-  'Colors': { screen: ColorsScreen },
   'Theme': { screen: ThemeScreen },
   'Test': { screen: TestScreen }
 }, {
@@ -30,10 +26,9 @@ const MainDrawerNav = DrawerNavigator({
 });
 
 const AltDrawerNav = DrawerNavigator({
-  'Colors': { screen: ColorsScreen },
   'Test': { screen: TestScreen }
 }, {
-  initialRouteName: 'Colors',
+  initialRouteName: 'Test',
   contentComponent: props => <DrawerNavigationContainer { ...props } />
 });
 
