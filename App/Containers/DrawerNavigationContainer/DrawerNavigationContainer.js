@@ -59,7 +59,6 @@ class DrawerNavigationContainer extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <StatusBar barStyle={ 'dark-content' } />
         <Container style={ styles.drawerContainer }>
           <Content
             bounces={ false }

@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
     bottom: 0
   },
   drawerContent: {
-    backgroundColor: Colors.light,
     bottom: 4,
     flex: 1
   },
