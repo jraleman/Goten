@@ -36,7 +36,7 @@ const MainDrawerNav = DrawerNavigator(
     'Video Call': { screen: VideoCallScreen }
   },
   {
-    initialRouteName: 'Search',
+    initialRouteName: 'Calendar',
     contentComponent: props => <DrawerNavigationContainer { ...props } />
   }
 );
