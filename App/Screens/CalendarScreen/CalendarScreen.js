@@ -15,11 +15,13 @@ import React from 'react';
 import {
   Container,
   Content,
-  Text,
+  View,
+  Text
 } from 'native-base';
-// import Calendar from 'react-native-calendars';
+import { Agenda } from 'react-native-calendars';
 // ~~ Local Dependencies ~~
 import styles from './styles';
+import AppHeader from '../../Components/AppHeader';
 
 /**
  * Container to render when DrawerNavigation is called.
@@ -29,7 +31,9 @@ import styles from './styles';
 class CalendarScreen extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.state = {
+      items: {}
+    };
     return;
   }
   /**
@@ -40,8 +44,13 @@ class CalendarScreen extends React.Component {
     return (
       <React.Fragment>
         <Container style={ styles.container }>
+          <AppHeader
+            title={ 'Calendar' }
+            onPress={ () => this.props.navigation.openDrawer() }
+            icon={ 'menu' }
+          />
           <Content style={ styles.content }>
-            <Text>{ "CalendarScreen" }</Text>
+            <Agenda />
           </Content>
         </Container>
       </React.Fragment>
