@@ -24,6 +24,7 @@
     "react-native-create-bridge": "^2.0.1",
     "react-native-deprecated-custom-components": "^0.1.2",
     "react-native-i18n": "^2.0.12",
+    "react-native-opentok": "^2.1.0",
     "react-native-push-notification": "^3.0.2",
     "react-native-search-filter": "^0.1.4",
     "react-native-vector-icons": "^4.6.0",
