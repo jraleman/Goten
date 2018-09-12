@@ -14,6 +14,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
+import {
+  Thumbnail
+} from 'native-base';
 
 // ~~ Local Dependencies ~~
 import styles from './styles';
@@ -198,6 +201,11 @@ class NotificationsScreen extends React.Component {
                   <View>
                     <Text>{notifications.user.name}</Text>
                     <Text>{notifications.user.title}</Text>
+                    <Thumbnail
+                      square={ false }
+                      small={ true }
+                      source={{ uri: notifications.user.avatar }}
+                    />
                     <Text style={styles.emailSubject}>{notifications.message}</Text>
                   </View>
                 </TouchableOpacity>
