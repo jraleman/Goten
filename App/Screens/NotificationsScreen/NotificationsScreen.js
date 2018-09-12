@@ -17,8 +17,8 @@ import SearchInput, { createFilter } from 'react-native-search-filter';
 import {
   Thumbnail
 } from 'native-base';
-
 // ~~ Local Dependencies ~~
+import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
 
 const KEYS_TO_FILTERS = ['user.name', 'user.title', 'subject'];
@@ -169,7 +169,6 @@ const notifications = [
   }
 ]
 
-
 /**
  * Container to render when DrawerNavigation is called.
  * @class DrawerNavigationContainer
@@ -189,6 +188,11 @@ class NotificationsScreen extends React.Component {
       const filteredNotifications = notifications.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
       return (
         <View style={ styles.container }>
+          <AppHeader
+            title={ 'Calendar' }
+            icon={ 'menu' }
+            onPress={ () => this.props.navigation.openDrawer() }
+          />
           <SearchInput
             onChangeText={ (term) => { this.searchUpdated(term) }}
             style={ styles.searchInput }
