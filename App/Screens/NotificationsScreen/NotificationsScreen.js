@@ -21,7 +21,7 @@ import {
 import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
 
-const KEYS_TO_FILTERS = ['user.name', 'user.title', 'subject'];
+const KEYS_TO_FILTERS = ['user.name', 'user.title', 'message'];
 const notifications = [
   {
     id: 0,
@@ -189,7 +189,7 @@ class NotificationsScreen extends React.Component {
       return (
         <View style={ styles.container }>
           <AppHeader
-            title={ 'Calendar' }
+            title={ 'Notifications' }
             icon={ 'menu' }
             onPress={ () => this.props.navigation.openDrawer() }
           />
