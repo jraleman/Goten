@@ -17,6 +17,7 @@ import CalendarScreen from '../../Screens/CalendarScreen';
 import DrawerNavigation from '../DrawerNavigation';
 import ForgotPasswordScreen from '../../Screens/ForgotPasswordScreen';
 import LoginScreen from '../../Screens/LoginScreen';
+import NotificationsScreen from '../../Screens/NotificationsScreen';
 import OnboardingScreen from '../../Screens/OnboardingScreen';
 import ProfileScreen from '../../Screens/ProfileScreen';
 import SearchScreen from '../../Screens/SearchScreen';
@@ -39,6 +40,7 @@ const AppNavigation = StackNavigator(
     ForgotPassword: { screen: ForgotPasswordScreen },
     Login: { screen: LoginScreen },
     MainDrawer: { screen: DrawerNavigation.Main },
+    NotificationsScreen: { screen: NotificationsScreen },
     Onboarding: { screen: OnboardingScreen },
     Profile: { screen: ProfileScreen },
     Search: { screen: SearchScreen },
