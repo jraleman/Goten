@@ -21,12 +21,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     justifyContent: 'flex-start'
   },
-  emailItem:{
+  notificationItem:{
     borderBottomWidth: 0.5,
     borderColor: 'rgba(0,0,0,0.3)',
     padding: 10
   },
-  emailSubject: {
+  notificationMessage: {
     color: 'rgba(0,0,0,0.5)'
   },
   searchInput:{

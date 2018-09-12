@@ -188,25 +188,31 @@ class NotificationsScreen extends React.Component {
     render() {
       const filteredNotifications = notifications.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
       return (
-        <View style={styles.container}>
+        <View style={ styles.container }>
           <SearchInput
-            onChangeText={(term) => { this.searchUpdated(term) }}
-            style={styles.searchInput}
-            placeholder="Type a message to search"
+            onChangeText={ (term) => { this.searchUpdated(term) }}
+            style={ styles.searchInput }
+            placeholder={ 'Search by name, title, message...' }
             />
           <ScrollView>
-            {filteredNotifications.map(notifications => {
+            { filteredNotifications.map(notifications => {
               return (
-                <TouchableOpacity onPress={()=>alert(notifications.user.name)} key={notifications.id} style={styles.emailItem}>
+                <TouchableOpacity
+                  onPress={ () => alert(notifications.user.name )}
+                  key={ notifications.id }
+                  style={ styles.notificationItem }
+                >
                   <View>
-                    <Text>{notifications.user.name}</Text>
-                    <Text>{notifications.user.title}</Text>
+                    <Text>{ notifications.user.name }</Text>
+                    <Text>{ notifications.user.title }</Text>
                     <Thumbnail
                       square={ false }
                       small={ true }
                       source={{ uri: notifications.user.avatar }}
                     />
-                    <Text style={styles.emailSubject}>{notifications.message}</Text>
+                    <Text style={ styles.notificationMessage }>
+                    { notifications.message }
+                    </Text>
                   </View>
                 </TouchableOpacity>
               )
