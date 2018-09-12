@@ -17,6 +17,7 @@ import CalendarScreen from '../../Screens/CalendarScreen';
 import DrawerNavigationContainer from '../../Containers/DrawerNavigationContainer';
 import ForgotPasswordScreen from '../../Screens/ForgotPasswordScreen';
 import LoginScreen from '../../Screens/LoginScreen';
+import NotificationsScreen from '../../Screens/NotificationsScreen';
 import OnboardingScreen from '../../Screens/OnboardingScreen';
 import ProfileScreen from '../../Screens/ProfileScreen';
 import SearchScreen from '../../Screens/SearchScreen';
@@ -33,10 +34,11 @@ const MainDrawerNav = DrawerNavigator(
     'Search': { screen: SearchScreen },
     'Test': { screen: TestScreen },
     'Theme': { screen: ThemeScreen },
-    'Video Call': { screen: VideoCallScreen }
+    'Video Call': { screen: VideoCallScreen },
+    'Notifications': { screen: NotificationsScreen }
   },
   {
-    initialRouteName: 'Search',
+    initialRouteName: 'Notifications',
     contentComponent: props => <DrawerNavigationContainer { ...props } />
   }
 );
@@ -47,6 +49,7 @@ const AltDrawerNav = DrawerNavigator(
     'Search': { screen: SearchScreen },
     'Test': { screen: TestScreen },
     'Theme': { screen: ThemeScreen },
+    'Notifications': { screen: NotificationsScreen }
   },
   {
     initialRouteName: 'Test',
