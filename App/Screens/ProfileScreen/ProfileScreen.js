@@ -18,6 +18,7 @@ import {
   Text,
 } from 'native-base';
 // ~~ Local Dependencies ~~
+import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
 
 /**
@@ -39,6 +40,11 @@ class ProfileScreen extends React.Component {
     return (
       <React.Fragment>
         <Container style={ styles.container }>
+          <AppHeader
+            title={ 'Profile' }
+            icon={ 'menu' }
+            onPress={ () => this.props.navigation.openDrawer() }
+          />
           <Content style={ styles.content }>
             <Text>{ "ProfileScreen" }</Text>
           </Content>
