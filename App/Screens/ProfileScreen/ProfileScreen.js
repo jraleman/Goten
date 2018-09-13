@@ -12,10 +12,21 @@
 
 // ~~ Dependencies ~~
 import React from 'react';
+import { BackHandler } from 'react-native';
 import {
+  Button,
   Container,
   Content,
+  Icon,
   Text,
+  H1,
+  H2,
+  Thumbnail,
+  Item,
+  Label,
+  Input,
+  Textarea,
+  View
 } from 'native-base';
 // ~~ Local Dependencies ~~
 import AppHeader from '../../Components/AppHeader';
@@ -31,6 +42,12 @@ class ProfileScreen extends React.Component {
     super(props);
     this.state = {};
     return;
+  }
+  componentDidMount () {
+    BackHandler.addEventListener('hardwareBackPress', () => {
+      this.props.navigation.goBack();
+      return (true);
+    });
   }
   /**
    * Renders the component.
