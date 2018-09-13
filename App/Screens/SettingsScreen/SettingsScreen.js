@@ -13,12 +13,29 @@
 // ~~ Dependencies ~~
 import React from 'react';
 import {
-  Container,
+  BackHandler,
+  FlatList
+} from 'react-native'
+import {
   Content,
+  Container,
+  Header,
+  Left,
+  Right,
+  Body,
+  Button,
   Text,
-} from 'native-base';
+  Title,
+  Icon,
+  Footer,
+  FooterTab,
+  List,
+  ListItem,
+} from 'native-base'
+import I18n from 'react-native-i18n';
 // ~~ Local Dependencies ~~
 import styles from './styles';
+
 
 /**
  * Container to render when DrawerNavigation is called.
@@ -30,6 +47,12 @@ class SettingsScreen extends React.Component {
     super(props);
     this.state = {};
     return;
+  }
+  componentDidMount () {
+    BackHandler.addEventListener('hardwareBackPress', () => {
+      this.props.navigation.goBack();
+      return true
+    });
   }
   /**
    * Renders the component.
