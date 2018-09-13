@@ -38,7 +38,7 @@ const MainDrawerNav = DrawerNavigator(
     'Notifications': { screen: NotificationsScreen }
   },
   {
-    initialRouteName: 'Notifications',
+    initialRouteName: 'Search',
     contentComponent: props => <DrawerNavigationContainer { ...props } />
   }
 );
