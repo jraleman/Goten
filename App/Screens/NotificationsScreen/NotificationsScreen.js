@@ -12,11 +12,9 @@
 
 // ~~ Dependencies ~~
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
-import {
-  Thumbnail
-} from 'native-base';
+import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text } from 'native-base';
 // ~~ Local Dependencies ~~
 import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
@@ -30,7 +28,8 @@ const notifications = [
       title: 'Principal',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/d/db/Mr._Principal_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619050624'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 1,
@@ -39,7 +38,8 @@ const notifications = [
       title: 'Nurse',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/8/85/Chiyo_Shuzenji_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619050710'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 2,
@@ -48,7 +48,8 @@ const notifications = [
       title: 'Heroics Teacher',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/0/0a/All_Might_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619041830'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 3,
@@ -57,7 +58,8 @@ const notifications = [
       title: 'Class 1-A Homeroom Teacher',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/3/32/Shota_Aizawa_Anime_Portrait.png/revision/latest/scale-to-width-down/135?cb=20180503194036'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 4,
@@ -66,16 +68,18 @@ const notifications = [
       title: 'English Teacher',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/8/89/Present_Mic_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619050949'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 5,
     user: {
       name: 'Cementoss',
       title: 'Modern Literature Teacher',
-      avagar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/3/32/Cementoss_Anime_Portrait.png/revision/latest/scale-to-width-down/135?cb=20180627202332'
+      avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/3/32/Cementoss_Anime_Portrait.png/revision/latest/scale-to-width-down/135?cb=20180627202332'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 6,
@@ -84,7 +88,8 @@ const notifications = [
       title: 'Mathematics Teacher',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/7/7c/Ectoplasm_Anime_Portrait.png/revision/latest?cb=20170505173841'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 7,
@@ -93,7 +98,8 @@ const notifications = [
       title: 'Class 1-A Student',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/7/7c/Tsuyu_Asui_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619043915'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 8,
@@ -102,7 +108,8 @@ const notifications = [
       title: 'Class 1-A Student',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/7/7d/Tenya_Iida_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619044125'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 9,
@@ -111,7 +118,8 @@ const notifications = [
       title: 'Class 1-A Student',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/7/78/Ochaco_Uraraka_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619044306'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 10,
@@ -120,7 +128,8 @@ const notifications = [
       title: 'Class 1-A Student',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/c/cd/Katsuki_Bakugo_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619050033'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 11,
@@ -129,7 +138,8 @@ const notifications = [
       title: 'Class 1-A Student',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/2/25/Izuku_Midoriya_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619050117'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 12,
@@ -138,7 +148,8 @@ const notifications = [
       title: 'Class 1-A Student',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/5/57/Shouto_Todoroki_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619045658'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 13,
@@ -147,7 +158,8 @@ const notifications = [
       title: 'Class 1-A Student',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/6/6c/Fumikage_Tokoyami_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619045620'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 14,
@@ -156,7 +168,8 @@ const notifications = [
       title: 'Class 1-A Student',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/d/d4/Eijirou_Kirishima_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619044805'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   },
   {
     id: 15,
@@ -165,7 +178,8 @@ const notifications = [
       title: 'Class 1-A Student',
       avatar: 'https://vignette.wikia.nocookie.net/bokunoheroacademia/images/b/b0/Denki_Kaminari_Portrait.png/revision/latest/scale-to-width-down/135?cb=20160619044711'
     },
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    time: "3:14pm"
   }
 ]
 
@@ -199,28 +213,38 @@ class NotificationsScreen extends React.Component {
             placeholder={ 'Search by name, title, message...' }
             />
           <ScrollView>
-            { filteredNotifications.map(notifications => {
-              return (
-                <TouchableOpacity
-                  onPress={ () => alert(notifications.user.name )}
-                  key={ notifications.id }
-                  style={ styles.notificationItem }
-                >
-                  <View>
-                    <Text>{ notifications.user.name }</Text>
-                    <Text>{ notifications.user.title }</Text>
-                    <Thumbnail
-                      square={ false }
-                      small={ true }
-                      source={{ uri: notifications.user.avatar }}
-                    />
-                    <Text style={ styles.notificationMessage }>
-                    { notifications.message }
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              )
-            })}
+            <List>
+              { filteredNotifications.map(notifications => {
+                return (
+                  <React.Fragment>
+                    <TouchableOpacity
+                      onPress={ () => alert(notifications.user.name )}
+                      key={ notifications.id }
+                    >
+                      <ListItem avatar>
+                        <Left>
+                          <Thumbnail source={{ uri: notifications.user.avatar }} />
+                        </Left>
+                        <Body>
+                          <Text>{ notifications.user.name }</Text>
+                          <Text note={ true }>
+                            { notifications.user.title }
+                          </Text>
+                          <Text note={ true }>
+                            { notifications.message }
+                          </Text>
+                        </Body>
+                        <Right>
+                          <Text note={ true }>
+                          { notifications.time }
+                          </Text>
+                        </Right>
+                      </ListItem>
+                    </TouchableOpacity>
+                  </React.Fragment>
+                );
+              })}
+            </List>
           </ScrollView>
         </View>
       );
