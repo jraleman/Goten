@@ -44,6 +44,8 @@ class ProfileScreen extends React.Component {
             title={ 'Profile' }
             icon={ 'menu' }
             onPress={ () => this.props.navigation.openDrawer() }
+            iconRight={ 'more' }
+            onPressRight={ () => window.alert('edit') }
           />
           <Content style={ styles.content }>
             <Text>{ "ProfileScreen" }</Text>
