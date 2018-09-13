@@ -20,7 +20,6 @@ import {
 import {
   Container,
   Content,
-  H2,
   Icon,
   List,
   ListItem,
@@ -65,9 +64,10 @@ class DrawerNavigationContainer extends React.Component {
             style={ styles.drawerContent }
           >
             <DrawerNavigationHeader
-              avatarImg={ Images.drawerNavigationAvatar }
+              avatarImg={{ uri: 'https://api.adorable.io/avatars/256/basico@adorable.io.png' }}
               backgroundImg={ Images.drawerNavigationCover }
-              headerText={ 'Joe Doe' }
+              headerTitle={ 'Joe Doe' }
+              headerSubtitle={ 'Teacher 111' }
               onPress={ () => window.alert('Hello') }
             />
             <List
@@ -118,9 +118,12 @@ function DrawerNavigationHeader (props) {
               square={ true }
               style={ styles.drawerHeaderAvatar }
             />
-            <H2 style={ styles.drawerHeaderText }>
-              { props.headerText }
-            </H2>
+            <Text style={ styles.drawerHeaderTitle }>
+              { props.headerTitle }
+            </Text>
+            <Text style={ styles.drawerHeaderSubtitle }>
+              { props.headerSubtitle }
+            </Text>
           </TouchableOpacity>
         </ImageBackground>
       </View>

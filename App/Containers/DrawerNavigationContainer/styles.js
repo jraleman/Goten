@@ -56,12 +56,20 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     marginTop: '7.5%'
   },
-  drawerHeaderText: {
+  drawerHeaderTitle: {
     alignSelf: 'center',
     color: Colors.light,
-    fontWeight: '500',
+    fontWeight: '700',
     marginTop: 12,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: 22
+  },
+  drawerHeaderSubtitle: {
+    alignSelf: 'center',
+    color: Colors.light,
+    fontWeight: '400',
+    textAlign: 'center',
+    fontSize: 12
   },
   drawerFooter: {
     alignItems: 'center',
