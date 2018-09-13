@@ -195,63 +195,62 @@ class NotificationsScreen extends React.Component {
         searchTerm: ''
       }
     }
-    searchUpdated(term) {
-      this.setState({ searchTerm: term })
-    }
-    render() {
-      const filteredNotifications = notifications.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
-      return (
-        <View style={ styles.container }>
-          <AppHeader
-            title={ 'Notifications' }
-            icon={ 'menu' }
-            onPress={ () => this.props.navigation.openDrawer() }
-          />
-          <SearchInput
-            onChangeText={ (term) => { this.searchUpdated(term) }}
-            style={ styles.searchInput }
-            placeholder={ 'Search by name, title, message...' }
-            />
-          <ScrollView>
-            <List>
-              { filteredNotifications.map(notifications => {
-                return (
-                  <React.Fragment>
+  searchUpdated(term) {
+    this.setState({ searchTerm: term })
+  }
+  render() {
+    const filteredNotifications = notifications.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
+    return (
+      <Container style={ styles.container }>
+        <AppHeader
+          title={ 'Notifications' }
+          icon={ 'menu' }
+          onPress={ () => this.props.navigation.openDrawer() }
+        />
+        <SearchInput
+          onChangeText={ (term) => { this.searchUpdated(term) }}
+          style={ styles.searchInput }
+          placeholder={ 'Search by name, title, message...' }
+        />
+        <Content>
+          <List>
+            { filteredNotifications.map(notifications => {
+              return (
+                <ListItem
+                  avatar={ true }
+                  key={ notifications.id }
+                >
+                  <Left>
                     <TouchableOpacity onPress={ () => alert(notifications.user.name )} >
-                      <ListItem
-                        avatar={ true }
-                        key={ notifications.id }
-                      >
-                          <Left>
-                            <Thumbnail source={{ uri: notifications.user.avatar }} />
-                          </Left>
-                          <Body>
-                            <Text>{ notifications.user.name }</Text>
-                            <Text note={ true }>
-                              { notifications.user.title }
-                            </Text>
-                            <Text
-                              note={ true }
-                              numberOfLines={ 2 }
-                            >
-                              { notifications.message }
-                            </Text>
-                          </Body>
-
-                        <Right>
-                          <Text note={ true }>
-                          { notifications.time }
-                          </Text>
-                        </Right>
-                      </ListItem>
+                      <Thumbnail source={{ uri: notifications.user.avatar }} />
                     </TouchableOpacity>
-                  </React.Fragment>
-                );
-              })}
-            </List>
-          </ScrollView>
-        </View>
-      );
+                  </Left>
+                  <Body>
+                    <TouchableOpacity onPress={ () => alert(notifications.message )} >
+                      <Text>{ notifications.user.name }</Text>
+                      <Text note={ true }>
+                        { notifications.user.title }
+                      </Text>
+                      <Text
+                        note={ true }
+                        numberOfLines={ 2 }
+                      >
+                        { notifications.message }
+                      </Text>
+                    </TouchableOpacity>
+                  </Body>
+                  <Right>
+                    <Text note={ true }>
+                      { notifications.time }
+                    </Text>
+                  </Right>
+                </ListItem>
+              );
+            })}
+          </List>
+        </Content>
+      </Container>
+    );
   }
 }
 
