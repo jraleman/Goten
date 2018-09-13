@@ -13,8 +13,10 @@ import styles from './styles';
 class AppHeader extends React.Component {
   constructor (props) {
     super(props);
-    this._onPress = this.props.onPress;
-    this._icon = this.props.icon;
+    this._onPressLeft = this.props.onPressLeft;
+    this._iconLeft = this.props.iconLeft;
+    this._onPressRight = this.props.onPressRight;
+    this._iconRight = this.props.iconRight;
     this._title = this.props.title;
     this.state = {};
   }
@@ -25,19 +27,34 @@ class AppHeader extends React.Component {
           <Left>
             <Button
               transparent={ true }
-              onPress={ this._onPress }
+              onPress={ this._onPressLeft }
             >
-              <Icon name={ this._icon } />
+              <Icon name={ this._iconLeft } />
             </Button>
           </Left>
           <Body>
             <Title>{ this._title }</Title>
           </Body>
-          <Right />
+          <Left>
+            <Button
+              transparent={ true }
+              onPress={ this._onPressRight }
+            >
+              <Icon name={ this._iconRight } />
+            </Button>
+          </Left>
         </Header>
       </React.Fragment>
     );
   }
 }
+
+AppHeader.propTypes = {
+  onPressLeft: PropTypes.func,
+  iconLeft = PropTypes.string,
+  onPressRight = PropTypes.func,
+  iconRight = PropTypes.string,
+  title = PropTypes.string,
+};
 
 export default AppHeader;
