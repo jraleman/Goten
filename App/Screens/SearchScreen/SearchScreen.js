@@ -18,6 +18,7 @@ import {
   Text,
 } from 'native-base';
 // ~~ Local Dependencies ~~
+import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
 
 /**
@@ -39,6 +40,11 @@ class SearchScreen extends React.Component {
     return (
       <React.Fragment>
         <Container style={ styles.container }>
+          <AppHeader
+            title={ 'Search' }
+            icon={ 'menu' }
+            onPress={ () => this.props.navigation.openDrawer() }
+          />
           <Content style={ styles.content }>
             <Text>{ "SearchScreen" }</Text>
           </Content>
