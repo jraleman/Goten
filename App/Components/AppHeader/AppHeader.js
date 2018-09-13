@@ -8,13 +8,14 @@ import {
   Right,
   Title
 } from 'native-base';
+import PropTypes from 'prop-types';
 import styles from './styles';
 
 class AppHeader extends React.Component {
   constructor (props) {
     super(props);
-    this._onPressLeft = this.props.onPressLeft;
-    this._iconLeft = this.props.iconLeft;
+    this._onPress = this.props.onPress;
+    this._icon = this.props.icon;
     this._onPressRight = this.props.onPressRight;
     this._iconRight = this.props.iconRight;
     this._title = this.props.title;
@@ -27,22 +28,22 @@ class AppHeader extends React.Component {
           <Left>
             <Button
               transparent={ true }
-              onPress={ this._onPressLeft }
+              onPress={ this._onPress }
             >
-              <Icon name={ this._iconLeft } />
+              <Icon name={ this._icon } />
             </Button>
           </Left>
           <Body>
             <Title>{ this._title }</Title>
           </Body>
-          <Left>
+          <Right>
             <Button
               transparent={ true }
               onPress={ this._onPressRight }
             >
               <Icon name={ this._iconRight } />
             </Button>
-          </Left>
+          </Right>
         </Header>
       </React.Fragment>
     );
@@ -50,11 +51,11 @@ class AppHeader extends React.Component {
 }
 
 AppHeader.propTypes = {
-  onPressLeft: PropTypes.func,
-  iconLeft = PropTypes.string,
-  onPressRight = PropTypes.func,
-  iconRight = PropTypes.string,
-  title = PropTypes.string,
+  onPress: PropTypes.func,
+  icon: PropTypes.string,
+  onPressRight: PropTypes.func,
+  iconRight: PropTypes.string,
+  title: PropTypes.string.isRequired
 };
 
 export default AppHeader;
