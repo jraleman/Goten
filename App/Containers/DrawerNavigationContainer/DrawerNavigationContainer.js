@@ -80,7 +80,7 @@ class DrawerNavigationContainer extends React.Component {
                 />
               }
             />
-            <DrawerNavigationFooter />
+            <DrawerNavigationFooter nav={ this.props.navigation } />
           </Content>
         </Container>
       </React.Fragment>
@@ -154,9 +154,11 @@ function DrawerNavigationRow (props) {
 function DrawerNavigationFooter (props) {
   return (
     <React.Fragment>
-      <View style={ styles.drawerFooter }>
-        <Text>{ 'NavigationFooter' }</Text>
-      </View>
+      <TouchableOpacity onPress={ () => props.nav.navigate('Settings') }>
+        <View style={ styles.drawerFooter }>
+          <Text>{ 'Settings' }</Text>
+        </View>
+      </TouchableOpacity>
     </React.Fragment>
   );
 };
