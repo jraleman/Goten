@@ -29,6 +29,7 @@
     "react-native-opentok": "^2.1.0",
     "react-native-push-notification": "^3.0.2",
     "react-native-search-filter": "^0.1.4",
+    "react-native-star-rating": "^1.1.0",
     "react-native-vector-icons": "^4.6.0",
     "react-navigation": "^2.3.1",
     "react-redux": "^5.0.7",
