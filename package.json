@@ -24,6 +24,7 @@
     "react-native-calendars": "^1.20.0",
     "react-native-create-bridge": "^2.0.1",
     "react-native-deprecated-custom-components": "^0.1.2",
+    "react-native-elements": "^0.19.1",
     "react-native-i18n": "^2.0.12",
     "react-native-opentok": "^2.1.0",
     "react-native-push-notification": "^3.0.2",
