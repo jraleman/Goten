@@ -217,23 +217,27 @@ class NotificationsScreen extends React.Component {
               { filteredNotifications.map(notifications => {
                 return (
                   <React.Fragment>
-                    <TouchableOpacity
-                      onPress={ () => alert(notifications.user.name )}
-                      key={ notifications.id }
-                    >
-                      <ListItem avatar>
-                        <Left>
-                          <Thumbnail source={{ uri: notifications.user.avatar }} />
-                        </Left>
-                        <Body>
-                          <Text>{ notifications.user.name }</Text>
-                          <Text note={ true }>
-                            { notifications.user.title }
-                          </Text>
-                          <Text note={ true }>
-                            { notifications.message }
-                          </Text>
-                        </Body>
+                    <TouchableOpacity onPress={ () => alert(notifications.user.name )} >
+                      <ListItem
+                        avatar={ true }
+                        key={ notifications.id }
+                      >
+                          <Left>
+                            <Thumbnail source={{ uri: notifications.user.avatar }} />
+                          </Left>
+                          <Body>
+                            <Text>{ notifications.user.name }</Text>
+                            <Text note={ true }>
+                              { notifications.user.title }
+                            </Text>
+                            <Text
+                              note={ true }
+                              numberOfLines={ 2 }
+                            >
+                              { notifications.message }
+                            </Text>
+                          </Body>
+
                         <Right>
                           <Text note={ true }>
                           { notifications.time }
