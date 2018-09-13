@@ -34,8 +34,37 @@ import {
 } from 'native-base'
 import I18n from 'react-native-i18n';
 // ~~ Local Dependencies ~~
+import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
 
+/*
+ TODO:
+ - entryTexy -> i18n display text
+ - text      -> tmp display text
+*/
+
+const settingsItems = [
+  {
+    key: 'aboutItem',
+    text: 'About',
+    icon: 'alert',
+  },
+  {
+    key: 'modifyPinItem',
+    text: 'Modify Pin',
+    icon: 'lock',
+  },
+  {
+    key: 'changePasswordItem',
+    text: 'Change Password',
+    icon: 'key',
+  },
+  {
+    key: 'logOutItem',
+    text: 'Log Out',
+    icon: 'log-out',
+  }
+];
 
 /**
  * Container to render when DrawerNavigation is called.
@@ -54,21 +83,62 @@ class SettingsScreen extends React.Component {
       return true
     });
   }
-  /**
-   * Renders the component.
-   * @return { string } - RN markup for the component
-   */
-  render () {
-    return (
-      <React.Fragment>
-        <Container style={ styles.container }>
-          <Content style={ styles.content }>
-            <Text>{ "SettingsScreen" }</Text>
+   handleAction = (key) => {
+      if (key === "aboutItem") {
+        this.props.navigation.navigate('About');
+      }
+      else if (key === "modifyPinItem") {
+        this.props.navigation.navigate('ModifyPin');
+      }
+      else if (key === "changePasswordItem") {
+        this.props.navigation.navigate('ChangePassword');;
+      }
+      else if (key === "logOutItem") {
+        this.props.navigation.navigate('Login');
+      }
+      else if (key === "developerItem") {
+        this.props.navigation.navigate('Developer');
+      }
+      return ;
+    }
+    settingItem = ({ item }) => {
+      return (
+        <ListItem
+          button={ true }
+          onPress={ () => { this.handleAction(item.key) }}
+        >
+          <Left>
+            <Icon name={ item.icon } />
+            <Text>{ item.text }</Text>
+          </Left>
+          <Right>
+            <Icon name={ "arrow-dropright" } />
+          </Right>
+        </ListItem>
+      );
+    }
+    /**
+     * Renders the component.
+     * @return { string } - RN markup for the component
+     */
+    render () {
+      return (
+        <Container>
+          <AppHeader
+            title={ 'Settings' }
+            icon={ 'menu' }
+            onPress={ () => this.props.navigation.openDrawer() }
+          />
+          <Content padder>
+            <FlatList
+              data={ settingsItems }
+              keyExtractor={ item => item.key }
+              renderItem={ this.settingItem }
+            />
           </Content>
         </Container>
-      </React.Fragment>
-    );
-  }
-};
+      )
+    }
+}
 
 export default SettingsScreen;
