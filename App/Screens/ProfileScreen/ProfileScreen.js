@@ -30,6 +30,7 @@ import {
   Textarea,
   View
 } from 'native-base';
+import StarRating from 'react-native-star-rating';
 // ~~ Local Dependencies ~~
 import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
@@ -76,11 +77,16 @@ class ProfileScreen extends React.Component {
               picture={{ uri: 'https://api.adorable.io/avatars/256/basico@adorable.io.png' }}
               lastLogin={ '2 hours ago...' }
             />
+            <StarRating
+              maxStars={ 5 }
+              rating={ 4.25 }
+              starSize={ 25 }
+            />
             <ProfileInfo
               email={ 'example@basico.app' }
               phone={ '+1 (322) 233-4354' }
               gender={ 'male' }
-              dateOfBirth={ 'January 30, 1993' }
+              dob={ 'January 30, 1993' }
             />
           </Content>
         </Container>
