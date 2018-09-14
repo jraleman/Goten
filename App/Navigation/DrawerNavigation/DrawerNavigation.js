@@ -30,7 +30,6 @@ import VideoCallScreen from '../../Screens/VideoCallScreen';
 const MainDrawerNav = DrawerNavigator(
   {
     'Calendar': { screen: CalendarScreen },
-    'Profile': { screen: ProfileScreen },
     'Search': { screen: SearchScreen },
     'Test': { screen: TestScreen },
     'Theme': { screen: ThemeScreen },
@@ -38,7 +37,7 @@ const MainDrawerNav = DrawerNavigator(
     'Notifications': { screen: NotificationsScreen }
   },
   {
-    initialRouteName: 'Profile',
+    initialRouteName: 'Calendar',
     contentComponent: props => <DrawerNavigationContainer { ...props } />
   }
 );
