@@ -79,15 +79,18 @@ class ProfileScreen extends React.Component {
             <ProfileAvatar
               userName={ "John Doe" }
               picture={{ uri: 'https://api.adorable.io/avatars/256/basico@adorable.io.png' }}
-              lastLogin={ '2 hours ago...' }
+              lastLogin={ '2 hours ago' }
             />
             <StarRating
               maxStars={ 5 }
               rating={ this.state.starCount }
               starSize={ 25 }
               activeOpacity={ 0.42 }
-              disabled={ false }
-              selectedStar={(rating) => this.onStarRatingPress(rating)}
+              disabled={ true }
+              selectedStar={ (rating) => this.onStarRatingPress(rating) }
+              containerStyle={{ justifyContent: 'center' }}
+              fullStarColor={ '#453325'}
+              halfStarColor={ '#678473'}
             />
             <ProfileInfo
               email={ 'example@basico.app' }
@@ -135,42 +138,19 @@ const BasicoTextArea = (props) => {
   );
 };
 
-const BasicoTransparentBtn = (props) => {
-  return (
-    <View>
-      <Button
-        info={ true }
-        transparent={ true }
-        iconRight={ true }
-        onPress={ props.onPress }
-        block={ true }
-        style={{ justifyContent: 'center', alignItems: 'center', width: '100%' }}
-      >
-        <Icon
-          name={ "create" }
-          type={ "Ionicons" }
-        />
-        <Text>{ 'Edit' }</Text>
-      </Button>
-    </View>
-  );
-};
-
-
 const ProfileAvatar = (props) => {
   return (
     <View style={{ alignSelf: 'center', alignItems: 'center' }}>
-      <Text style={{ marginTop: 6, marginBottom: 12 }}>
+      <H1 style={{ marginTop: 6, marginBottom: 12 }}>
         { props.userName }
-      </Text>
+      </H1>
       <Thumbnail
         large={ true }
         source={ props.picture }
         style={{ marginTop: 6, marginBottom: 12 }}
        />
       <Text style={{ marginTop: 6, marginBottom: 12 }}>
-        { /* "Last login: " + props.lastLogin */ }
-        { "Last login: 16 hours ago" }
+        { "Last login: " + props.lastLogin }
       </Text>
     </View>
   );
@@ -179,7 +159,7 @@ const ProfileAvatar = (props) => {
 const ProfileInfo = (props) => {
   return (
     <View style={{ marginTop: 36, marginBottom: 12 }}>
-      <H1>{ 'profile info' }</H1>
+
       <BasicoItemInput
         label={ 'Email' }
         data={ props.email }
