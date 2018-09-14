@@ -159,6 +159,11 @@ function DrawerNavigationFooter (props) {
     <React.Fragment>
       <TouchableOpacity onPress={ () => props.nav.navigate('Settings') }>
         <View style={ styles.drawerFooter }>
+          <Icon
+            active={ true }
+            name={ 'settings' }
+            style={{ marginRight: 12}}
+          />
           <Text>{ 'Settings' }</Text>
         </View>
       </TouchableOpacity>

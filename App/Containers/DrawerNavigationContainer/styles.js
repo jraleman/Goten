@@ -76,8 +76,11 @@ const styles = StyleSheet.create({
   drawerFooter: {
     alignItems: 'center',
     alignSelf: 'center',
+    flex: 1,
+    flexDirection: 'row'
+    // alignSelf: 'flex-start',
     // justifyContent: 'flex-end',
-    backgroundColor: '#212121'
+    // backgroundColor: '#212121'
   },
   drawerRow: {
     color: Colors.divisor,
