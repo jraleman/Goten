@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
-import Fonts from './Fonts'
-import Measurements from './Measurements'
-import Colors from './Colors'
+import Fonts from '../Fonts'
+import Measurements from '../Measurements'
+import Colors from '../Colors'
 
 const Styles = StyleSheet.create({
   screen: {
