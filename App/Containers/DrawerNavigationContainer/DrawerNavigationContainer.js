@@ -115,7 +115,7 @@ function DrawerNavigationHeader (props) {
             <Thumbnail
               size={ 80 }
               source={ props.avatarImg }
-              square={ true }
+              square={ false }
               style={ styles.drawerHeaderAvatar }
             />
             <Text style={ styles.drawerHeaderTitle }>

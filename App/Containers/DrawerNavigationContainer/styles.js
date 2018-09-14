@@ -48,7 +48,9 @@ const styles = StyleSheet.create({
   drawerHeaderWallpaper: {
     flex: 1,
     height: null,
-    width: null
+    width: null,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   drawerHeaderAvatar: {
     backgroundColor: Colors.background,
@@ -74,7 +76,8 @@ const styles = StyleSheet.create({
   drawerFooter: {
     alignItems: 'center',
     alignSelf: 'center',
-    justifyContent: 'flex-end'
+    // justifyContent: 'flex-end',
+    backgroundColor: '#212121'
   },
   drawerRow: {
     color: Colors.divisor,
