@@ -3,6 +3,9 @@
 // ~~ Dependencies ~~
 import React from 'react';
 import {
+    StatusBar
+} from 'react-native';
+import {
   Container,
   Content,
   View,
@@ -76,6 +79,11 @@ class CalendarScreen extends React.Component {
   render() {
     return (
       <React.Fragment>
+      <StatusBar
+        hidden={ false }
+        barStyle={ 'dark-content' }
+        showHideTransition={ true }
+      />
         <Container>
           <AppHeader
             title={ 'Calendar' }

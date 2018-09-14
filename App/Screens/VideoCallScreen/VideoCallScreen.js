@@ -22,6 +22,7 @@
 
 // ~~ Dependencies ~~
 import React from 'react';
+import { StatusBar } from 'react-native';
 import {
   Container,
   Content,
@@ -48,6 +49,11 @@ class VideoCallScreen extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <StatusBar
+          hidden={ false }
+          barStyle={ 'dark-content' }
+          showHideTransition={ true }
+        />
         <Container style={ styles.container }>
           <Content style={ styles.content }>
             <Text>{ "VideoCallScreen" }</Text>

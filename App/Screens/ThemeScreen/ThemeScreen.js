@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 import {
   Container,
   Content,
@@ -27,6 +28,12 @@ class ThemeScreen extends React.Component {
   }
   render () {
     return (
+      <React.Fragment>
+      <StatusBar
+        hidden={ false }
+        barStyle={ 'dark-content' }
+        showHideTransition={ true }
+      />
       <Container style={ styles.container }>
         <AppHeader
           title={ 'Theme' }
@@ -46,6 +53,7 @@ class ThemeScreen extends React.Component {
           <RadioButtonsContainer />
         </Content>
       </Container>
+      </React.Fragment>
     );
   }
 }

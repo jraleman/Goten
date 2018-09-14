@@ -3,6 +3,7 @@
 
 // ~~ Dependencies ~~
 import React from 'react';
+import { StatusBar } from 'react-native';
 import {
   Container,
   Content,
@@ -40,6 +41,11 @@ class SearchScreen extends React.Component {
   render () {
     return (
       <React.Fragment>
+      <StatusBar
+        hidden={ false }
+        barStyle={ 'dark-content' }
+        showHideTransition={ true }
+      />
         <Container style={ styles.container }>
           <AppHeader
             title={ 'Search' }
@@ -64,11 +70,11 @@ class SearchScreen extends React.Component {
                 selectedValue={this.state.selected}
                 onValueChange={this.onValueChange.bind(this)}
               >
-                <Picker.Item label="Wallet" value="key0" />
-                <Picker.Item label="ATM Card" value="key1" />
-                <Picker.Item label="Debit Card" value="key2" />
-                <Picker.Item label="Credit Card" value="key3" />
-                <Picker.Item label="Net Banking" value="key4" />
+                <Picker.Item label="Place1" value="key0" />
+                <Picker.Item label="Place2" value="key1" />
+                <Picker.Item label="Place3" value="key2" />
+                <Picker.Item label="Place4" value="key3" />
+                <Picker.Item label="Place5" value="key4" />
               </Picker>
             </Form>
           </Content>

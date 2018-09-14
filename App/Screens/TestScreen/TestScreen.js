@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  Platform
+  Platform,
+    StatusBar
 } from 'react-native';
 import {
   Container,
@@ -24,6 +25,12 @@ class TestScreen extends React.Component {
   }
   render () {
     return (
+      <React.Fragment>
+      <StatusBar
+        hidden={ false }
+        barStyle={ 'dark-content' }
+        showHideTransition={ true }
+      />
       <Container style={ styles.container }>
         <AppHeader
           title={ 'Test Screen' }
@@ -34,6 +41,7 @@ class TestScreen extends React.Component {
           <Text>{ instructions }</Text>
         </Content>
       </Container>
+      </React.Fragment>
     );
   }
 }

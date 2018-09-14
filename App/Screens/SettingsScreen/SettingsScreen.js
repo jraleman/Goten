@@ -4,7 +4,8 @@
 import React from 'react';
 import {
   BackHandler,
-  FlatList
+  FlatList,
+  StatusBar
 } from 'react-native'
 import {
   Content,
@@ -113,6 +114,12 @@ class SettingsScreen extends React.Component {
      */
     render () {
       return (
+        <React.Fragment>
+        <StatusBar
+          hidden={ false }
+          barStyle={ 'dark-content' }
+          showHideTransition={ true }
+        />
         <Container>
           <AppHeader
             title={ 'Settings' }
@@ -127,6 +134,7 @@ class SettingsScreen extends React.Component {
             />
           </Content>
         </Container>
+        </React.Fragment>
       )
     }
 }
