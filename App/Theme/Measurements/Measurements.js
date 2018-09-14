@@ -9,7 +9,7 @@ const {
   deviceHeight
 } = Dimensions.get('window');
 
-// Used via Metrics.baseMargin
+// Used via Measurments.baseMargin
 const Measurements = {
   marginHorizontal: 10,
   marginVertical: 10,

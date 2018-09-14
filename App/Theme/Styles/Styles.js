@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import Fonts from './Fonts'
-import Metrics from './Metrics'
+import Measurments from './Measurments'
 import Colors from './Colors'
 
 const Styles = StyleSheet.create({
@@ -18,25 +18,25 @@ const Styles = StyleSheet.create({
     },
     container: {
       flex: 1,
-      paddingTop: Metrics.baseMargin,
+      paddingTop: Measurments.baseMargin,
       backgroundColor: Colors.defaultTextColor
     },
     section: {
-      margin: Metrics.section,
-      padding: Metrics.baseMargin
+      margin: Measurments.section,
+      padding: Measurments.baseMargin
     },
     sectionText: {
       ...Fonts.style.normal,
-      paddingVertical: Metrics.doubleBaseMargin,
+      paddingVertical: Measurments.doubleBaseMargin,
       color: '#fff',
-      marginVertical: Metrics.smallMargin,
+      marginVertical: Measurments.smallMargin,
       textAlign: 'center'
     },
     subtitle: {
       color: '#fff',
-      padding: Metrics.smallMargin,
-      marginBottom: Metrics.smallMargin,
-      marginHorizontal: Metrics.smallMargin
+      padding: Measurments.smallMargin,
+      marginBottom: Measurments.smallMargin,
+      marginHorizontal: Measurments.smallMargin
     },
     titleText: {
       ...Fonts.style.h2,
@@ -45,18 +45,18 @@ const Styles = StyleSheet.create({
     }
   },
   darkLabelContainer: {
-    padding: Metrics.smallMargin,
-    paddingBottom: Metrics.doubleBaseMargin,
+    padding: Measurments.smallMargin,
+    paddingBottom: Measurments.doubleBaseMargin,
     borderBottomColor: Colors.segmentBorderColor,
     borderBottomWidth: 1,
-    marginBottom: Metrics.baseMargin
+    marginBottom: Measurments.baseMargin
   },
   darkLabel: {
     fontFamily: Fonts.type.bold,
     color: '#fff'
   },
   groupContainer: {
-    margin: Metrics.smallMargin,
+    margin: Measurments.smallMargin,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center'
@@ -65,9 +65,9 @@ const Styles = StyleSheet.create({
     ...Fonts.style.h4,
     color: Colors.textColor,
     backgroundColor: Colors.segmentActiveBackgroundColor,
-    padding: Metrics.smallMargin,
-    marginTop: Metrics.smallMargin,
-    marginHorizontal: Metrics.baseMargin,
+    padding: Measurments.smallMargin,
+    marginTop: Measurments.smallMargin,
+    marginHorizontal: Measurments.baseMargin,
     borderWidth: 1,
     borderColor: Colors.segmentBorderColor,
     alignItems: 'center',
