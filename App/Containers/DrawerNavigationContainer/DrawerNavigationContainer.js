@@ -19,7 +19,7 @@ import {
 } from 'native-base';
 // ~~ Local Dependencies ~~
 import styles from './styles';
-import { Images } from '../../Themes';
+import { Images } from '../../Theme';
 
 // ~~ Constants ~~
 const BACKGROUND_OPACITY = 0.35;
