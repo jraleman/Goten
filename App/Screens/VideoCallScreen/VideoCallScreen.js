@@ -1,14 +1,19 @@
 #!/usr/bin/env node
 
-/**
- *      |    o             |
- * ,---.|---..,---.,---. --|--- ,---.
- * ,---||   |||---'|       |    |   |
- * `---^`---'``---'`    o  `---'`---'
- *
- * VIdeoCallScreen/VIdeoCallScreen.js
- * @author [Jose Ramon Aleman](https://github.com/jraleman)
- */
+/***
+
+  I can get rich later, and I WILL GET MONEY ON MY JOURNEY !!!
+  Master plan!
+
+  0 - Make TripleByte Seattle Referal
+  1 - ReactBoy && Help Femi && Clean Github
+  2 - Flutter App Game && Applying for Good Jobs && Open Source Organization
+  3 - Get Job && Work part-time on gaming project
+  4 - Explore other projects
+  5 - Retire soon? Maybe too ambisiouse, but fuck it
+
+***/
+
 
 // ~~ Dependencies ~~
 import React from 'react';

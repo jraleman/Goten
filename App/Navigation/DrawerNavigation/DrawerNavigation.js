@@ -1,14 +1,5 @@
 #!/usr/bin/env node
 
-/**
- *      |    o             |
- * ,---.|---..,---.,---. --|--- ,---.
- * ,---||   |||---'|       |    |   |
- * `---^`---'``---'`    o  `---'`---'
- *
- * @author [Jose Ramon Aleman](https://github.com/jraleman)
- */
-
 // ~~ Dependencies ~~
 import React from 'react';
 import { DrawerNavigator } from 'react-navigation';
