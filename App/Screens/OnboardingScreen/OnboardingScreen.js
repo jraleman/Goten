@@ -35,7 +35,7 @@ import I18n from 'react-native-i18n';
 
 // ~~ Local Dependencies ~~
 import styles from './styles';
-import { Images } from '../../Themes';
+import { Images } from '../../Theme';
 
 // ~~ Constants ~~
 const slides = [

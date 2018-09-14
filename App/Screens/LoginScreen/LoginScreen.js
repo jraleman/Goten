@@ -31,7 +31,7 @@ import '../../Config';
 
 // ~~ Local Dependencies ~~
 import styles from './styles';
-import { Images } from '../../Themes';
+import { Images } from '../../Theme';
 import WallpaperContainer from '../../Containers/WallpaperContainer';
 import LoadingContainer from '../../Containers/LoadingContainer';
 
