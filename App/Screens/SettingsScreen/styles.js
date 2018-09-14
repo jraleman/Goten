@@ -8,7 +8,7 @@
 // ~~ Dependencies ~~
 import { StyleSheet } from 'react-native';
 // ~~ Local Dependencies ~~
-import { Colors } from '../../Themes';
+import { Colors } from '../../Theme';
 
 /**
  * @type {styles}
