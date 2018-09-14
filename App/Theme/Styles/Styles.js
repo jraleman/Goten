@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import Fonts from './Fonts'
-import Measurments from './Measurments'
+import Measurements from './Measurements'
 import Colors from './Colors'
 
 const Styles = StyleSheet.create({
@@ -18,25 +18,25 @@ const Styles = StyleSheet.create({
     },
     container: {
       flex: 1,
-      paddingTop: Measurments.baseMargin,
+      paddingTop: Measurements.baseMargin,
       backgroundColor: Colors.defaultTextColor
     },
     section: {
-      margin: Measurments.section,
-      padding: Measurments.baseMargin
+      margin: Measurements.section,
+      padding: Measurements.baseMargin
     },
     sectionText: {
       ...Fonts.style.normal,
-      paddingVertical: Measurments.doubleBaseMargin,
+      paddingVertical: Measurements.doubleBaseMargin,
       color: '#fff',
-      marginVertical: Measurments.smallMargin,
+      marginVertical: Measurements.smallMargin,
       textAlign: 'center'
     },
     subtitle: {
       color: '#fff',
-      padding: Measurments.smallMargin,
-      marginBottom: Measurments.smallMargin,
-      marginHorizontal: Measurments.smallMargin
+      padding: Measurements.smallMargin,
+      marginBottom: Measurements.smallMargin,
+      marginHorizontal: Measurements.smallMargin
     },
     titleText: {
       ...Fonts.style.h2,
@@ -45,18 +45,18 @@ const Styles = StyleSheet.create({
     }
   },
   darkLabelContainer: {
-    padding: Measurments.smallMargin,
-    paddingBottom: Measurments.doubleBaseMargin,
+    padding: Measurements.smallMargin,
+    paddingBottom: Measurements.doubleBaseMargin,
     borderBottomColor: Colors.segmentBorderColor,
     borderBottomWidth: 1,
-    marginBottom: Measurments.baseMargin
+    marginBottom: Measurements.baseMargin
   },
   darkLabel: {
     fontFamily: Fonts.type.bold,
     color: '#fff'
   },
   groupContainer: {
-    margin: Measurments.smallMargin,
+    margin: Measurements.smallMargin,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center'
@@ -65,9 +65,9 @@ const Styles = StyleSheet.create({
     ...Fonts.style.h4,
     color: Colors.textColor,
     backgroundColor: Colors.segmentActiveBackgroundColor,
-    padding: Measurments.smallMargin,
-    marginTop: Measurments.smallMargin,
-    marginHorizontal: Measurments.baseMargin,
+    padding: Measurements.smallMargin,
+    marginTop: Measurements.smallMargin,
+    marginHorizontal: Measurements.baseMargin,
     borderWidth: 1,
     borderColor: Colors.segmentBorderColor,
     alignItems: 'center',
