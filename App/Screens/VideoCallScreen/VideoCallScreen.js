@@ -30,7 +30,7 @@ import styles from './styles';
  * @class DrawerNavigationContainer
  * @extends { React.Component }
  */
-class VIdeoCallScreen extends React.Component {
+class VideoCallScreen extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
@@ -45,7 +45,7 @@ class VIdeoCallScreen extends React.Component {
       <React.Fragment>
         <Container style={ styles.container }>
           <Content style={ styles.content }>
-            <Text>{ "VIdeoCallScreen" }</Text>
+            <Text>{ "VideoCallScreen" }</Text>
           </Content>
         </Container>
       </React.Fragment>
@@ -53,4 +53,4 @@ class VIdeoCallScreen extends React.Component {
   }
 };
 
-export default VIdeoCallScreen;
+export default VideoCallScreen;
