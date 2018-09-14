@@ -126,8 +126,8 @@ class SettingsScreen extends React.Component {
         <Container>
           <AppHeader
             title={ 'Settings' }
-            icon={ 'menu' }
-            onPress={ () => this.props.navigation.openDrawer() }
+            icon={ 'arrow-back' }
+            onPress={ () => this.props.navigation.goBack() }
           />
           <Content padder>
             <FlatList

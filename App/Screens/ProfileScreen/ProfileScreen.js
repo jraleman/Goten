@@ -67,8 +67,8 @@ class ProfileScreen extends React.Component {
         <Container padder={ true }>
           <AppHeader
             title={ 'Profile' }
-            icon={ 'menu' }
-            onPress={ () => this.props.navigation.openDrawer() }
+            icon={ 'arrow-back' }
+            onPress={ () => this.props.navigation.goBack() }
             iconRight={ 'more' }
             onPressRight={ () => window.alert('edit') }
           />
