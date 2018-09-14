@@ -1,9 +1,8 @@
-import { StyleSheet } from 'react-native';
 import Fonts from '../Fonts'
 import Measurements from '../Measurements'
 import Colors from '../Colors'
 
-const Styles = StyleSheet.create({
+const Styles = {
   screen: {
     mainContainer: {
       flex: 1,
@@ -26,7 +25,7 @@ const Styles = StyleSheet.create({
       padding: Measurements.baseMargin
     },
     sectionText: {
-      ...Fonts.style.normal,
+      ...Fonts.Style.normal,
       paddingVertical: Measurements.doubleBaseMargin,
       color: '#fff',
       marginVertical: Measurements.smallMargin,
@@ -39,7 +38,7 @@ const Styles = StyleSheet.create({
       marginHorizontal: Measurements.smallMargin
     },
     titleText: {
-      ...Fonts.style.h2,
+      ...Fonts.Style.h2,
       fontSize: 14,
       color: Colors.textColor
     }
@@ -52,7 +51,7 @@ const Styles = StyleSheet.create({
     marginBottom: Measurements.baseMargin
   },
   darkLabel: {
-    fontFamily: Fonts.type.bold,
+    fontFamily: Fonts.Type.bold,
     color: '#fff'
   },
   groupContainer: {
@@ -62,7 +61,7 @@ const Styles = StyleSheet.create({
     alignItems: 'center'
   },
   sectionTitle: {
-    ...Fonts.style.h4,
+    ...Fonts.Style.h4,
     color: Colors.textColor,
     backgroundColor: Colors.segmentActiveBackgroundColor,
     padding: Measurements.smallMargin,
@@ -73,6 +72,6 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'center'
   }
-});
+};
 
 export default Styles;
