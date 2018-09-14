@@ -3,7 +3,7 @@ import Fonts from './Fonts'
 import Metrics from './Metrics'
 import Colors from './Colors'
 
-const ScreenStyles = StyleSheet.create({
+const Styles = StyleSheet.create({
   screen: {
     mainContainer: {
       flex: 1,
@@ -75,4 +75,4 @@ const ScreenStyles = StyleSheet.create({
   }
 });
 
-export default ScreenStyles;
+export default Styles;
