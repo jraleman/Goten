@@ -68,7 +68,7 @@ class DrawerNavigationContainer extends React.Component {
               backgroundImg={ Images.drawerNavigationCover }
               headerTitle={ 'Joe Doe' }
               headerSubtitle={ 'Teacher 111' }
-              onPress={ () => window.alert('Hello') }
+              onPress={ () => this.props.navigation.navigate('Profile') }
             />
             <List
               style={{ height: 550 }}
