@@ -59,7 +59,7 @@ class ProfileScreen extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Container style={ styles.container }>
+        <Container padder={ true }>
           <AppHeader
             title={ 'Profile' }
             icon={ 'menu' }
@@ -72,8 +72,7 @@ class ProfileScreen extends React.Component {
             style={ styles.content }
           >
             <ProfileAvatar
-              firstName={ "John" }
-              lastName={ "Doe" }
+              userName={ "John Doe" }
               picture={{ uri: 'https://api.adorable.io/avatars/256/basico@adorable.io.png' }}
               lastLogin={ '2 hours ago...' }
             />
@@ -105,13 +104,11 @@ const BasicoItemInput = (props) => {
       <Left>
         <Label>{ props.label }</Label>
       </Left>
-      <Right>
-        <Input
-          placeholder={ props.data }
-          disabled={ true }
-          underline={ false }
-        />
-      </Right>
+      <Input style={{ textAlign: 'right' }}
+        placeholder={ props.data }
+        disabled={ true }
+        underline={ false }
+      />
     </Item>
   );
 };
@@ -154,16 +151,16 @@ const BasicoTransparentBtn = (props) => {
 
 const ProfileAvatar = (props) => {
   return (
-    <View style={ styles.avatar }>
-      <Text style={ styles.mb10 }>
-        { props.firstName + props.lastName }
+    <View style={{ alignSelf: 'center', alignItems: 'center' }}>
+      <Text style={{ marginTop: 6, marginBottom: 12 }}>
+        { props.userName }
       </Text>
       <Thumbnail
         large={ true }
         source={ props.picture }
-        style={ styles.mb10 }
+        style={{ marginTop: 6, marginBottom: 12 }}
        />
-      <Text style={ styles.mb10 }>
+      <Text style={{ marginTop: 6, marginBottom: 12 }}>
         { /* "Last login: " + props.lastLogin */ }
         { "Last login: 16 hours ago" }
       </Text>
