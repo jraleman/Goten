@@ -1,15 +1,5 @@
 #!/usr/bin/env node
 
-/**
- *      |    o             |
- * ,---.|---..,---.,---. --|--- ,---.
- * ,---||   |||---'|       |    |   |
- * `---^`---'``---'`    o  `---'`---'
- *
- * NotificationsScreen/NotificationsScreen.js
- * @author [Jose Ramon Aleman](https://github.com/jraleman)
- */
-
 // ~~ Dependencies ~~
 import React from 'react';
 import { StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native';
