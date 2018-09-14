@@ -16,7 +16,8 @@ import {
   Container,
   Content,
   View,
-  Text
+  Text,
+  Icon
 } from 'native-base';
 import { Agenda } from 'react-native-calendars';
 // ~~ Local Dependencies ~~
@@ -97,6 +98,7 @@ class CalendarScreen extends React.Component {
             selected={'2017-05-16'}
             renderItem={this.renderItem.bind(this)}
             renderEmptyDate={this.renderEmptyDate.bind(this)}
+            renderKnob={() => {return (<Icon name={ 'arrow-dropdown' } style={{ color: 'blue' }} />);}}
             rowHasChanged={this.rowHasChanged.bind(this)}
           />
         </Container>
