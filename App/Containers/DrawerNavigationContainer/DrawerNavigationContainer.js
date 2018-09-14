@@ -20,7 +20,6 @@ import {
 import {
   Container,
   Content,
-  H2,
   Icon,
   List,
   ListItem,
@@ -59,17 +58,17 @@ class DrawerNavigationContainer extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <StatusBar barStyle={ 'dark-content' } />
         <Container style={ styles.drawerContainer }>
           <Content
             bounces={ false }
             style={ styles.drawerContent }
           >
             <DrawerNavigationHeader
-              avatarImg={ Images.drawerNavigationAvatar }
+              avatarImg={{ uri: 'https://api.adorable.io/avatars/256/basico@adorable.io.png' }}
               backgroundImg={ Images.drawerNavigationCover }
-              headerText={ 'Joe Doe' }
-              onPress={ () => window.alert('Hello') }
+              headerTitle={ 'Joe Doe' }
+              headerSubtitle={ 'Teacher 111' }
+              onPress={ () => this.props.navigation.navigate('Profile') }
             />
             <List
               style={{ height: 550 }}
@@ -81,7 +80,7 @@ class DrawerNavigationContainer extends React.Component {
                 />
               }
             />
-            <DrawerNavigationFooter />
+            <DrawerNavigationFooter nav={ this.props.navigation } />
           </Content>
         </Container>
       </React.Fragment>
@@ -116,12 +115,15 @@ function DrawerNavigationHeader (props) {
             <Thumbnail
               size={ 80 }
               source={ props.avatarImg }
-              square={ true }
+              square={ false }
               style={ styles.drawerHeaderAvatar }
             />
-            <H2 style={ styles.drawerHeaderText }>
-              { props.headerText }
-            </H2>
+            <Text style={ styles.drawerHeaderTitle }>
+              { props.headerTitle }
+            </Text>
+            <Text style={ styles.drawerHeaderSubtitle }>
+              { props.headerSubtitle }
+            </Text>
           </TouchableOpacity>
         </ImageBackground>
       </View>
@@ -155,9 +157,16 @@ function DrawerNavigationRow (props) {
 function DrawerNavigationFooter (props) {
   return (
     <React.Fragment>
-      <View style={ styles.drawerFooter }>
-        <Text>{ 'NavigationFooter' }</Text>
-      </View>
+      <TouchableOpacity onPress={ () => props.nav.navigate('Settings') }>
+        <View style={ styles.drawerFooter }>
+          <Icon
+            active={ true }
+            name={ 'settings' }
+            style={{ marginRight: 12}}
+          />
+          <Text>{ 'Settings' }</Text>
+        </View>
+      </TouchableOpacity>
     </React.Fragment>
   );
 };

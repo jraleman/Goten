@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
     bottom: 0
   },
   drawerContent: {
-    backgroundColor: Colors.light,
     bottom: 4,
     flex: 1
   },
@@ -49,7 +48,9 @@ const styles = StyleSheet.create({
   drawerHeaderWallpaper: {
     flex: 1,
     height: null,
-    width: null
+    width: null,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   drawerHeaderAvatar: {
     backgroundColor: Colors.background,
@@ -57,17 +58,29 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     marginTop: '7.5%'
   },
-  drawerHeaderText: {
+  drawerHeaderTitle: {
     alignSelf: 'center',
     color: Colors.light,
-    fontWeight: '500',
+    fontWeight: '700',
     marginTop: 12,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: 22
+  },
+  drawerHeaderSubtitle: {
+    alignSelf: 'center',
+    color: Colors.light,
+    fontWeight: '400',
+    textAlign: 'center',
+    fontSize: 12
   },
   drawerFooter: {
     alignItems: 'center',
     alignSelf: 'center',
-    justifyContent: 'flex-end'
+    flex: 1,
+    flexDirection: 'row'
+    // alignSelf: 'flex-start',
+    // justifyContent: 'flex-end',
+    // backgroundColor: '#212121'
   },
   drawerRow: {
     color: Colors.divisor,
