@@ -43,7 +43,9 @@ import styles from './styles';
 class ProfileScreen extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.state = {
+      starCount: 4.25
+    };
     return;
   }
   componentDidMount () {
@@ -51,6 +53,9 @@ class ProfileScreen extends React.Component {
       this.props.navigation.goBack();
       return (true);
     });
+  }
+  onStarRatingPress (rating) {
+    this.setState({ starCount: rating });
   }
   /**
    * Renders the component.
@@ -78,8 +83,11 @@ class ProfileScreen extends React.Component {
             />
             <StarRating
               maxStars={ 5 }
-              rating={ 4.25 }
+              rating={ this.state.starCount }
               starSize={ 25 }
+              activeOpacity={ 0.42 }
+              disabled={ false }
+              selectedStar={(rating) => this.onStarRatingPress(rating)}
             />
             <ProfileInfo
               email={ 'example@basico.app' }
