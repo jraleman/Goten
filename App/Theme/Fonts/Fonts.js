@@ -20,36 +20,36 @@ const Size = {
 
 const Style = {
   h1: {
-    fontFamily: type.base,
-    fontSize: size.h1
+    fontFamily: Type.base,
+    fontSize: Size.h1
   },
   h2: {
     fontWeight: 'bold',
-    fontSize: size.h2
+    fontSize: Size.h2
   },
   h3: {
-    fontFamily: type.emphasis,
-    fontSize: size.h3
+    fontFamily: Type.emphasis,
+    fontSize: Size.h3
   },
   h4: {
-    fontFamily: type.base,
-    fontSize: size.h4
+    fontFamily: Type.base,
+    fontSize: Size.h4
   },
   h5: {
-    fontFamily: type.base,
-    fontSize: size.h5
+    fontFamily: Type.base,
+    fontSize: Size.h5
   },
   h6: {
-    fontFamily: type.emphasis,
-    fontSize: size.h6
+    fontFamily: Type.emphasis,
+    fontSize: Size.h6
   },
   normal: {
-    fontFamily: type.base,
-    fontSize: size.regular
+    fontFamily: Type.base,
+    fontSize: Size.regular
   },
   description: {
-    fontFamily: type.base,
-    fontSize: size.medium
+    fontFamily: Type.base,
+    fontSize: Size.medium
   }
 }
 
