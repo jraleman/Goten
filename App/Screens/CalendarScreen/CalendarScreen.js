@@ -28,13 +28,13 @@ class CalendarScreen extends React.Component {
     this.state = {
       items: {}
     };
+    return ;
   }
-
-  loadItems(day) {
+  _loadItems = (day) => {
     setTimeout(() => {
       for (let i = -15; i < 85; i++) {
         const time = day.timestamp + i * 24 * 60 * 60 * 1000;
-        const strTime = this.timeToString(time);
+        const strTime = this._timeToString(time);
         if (!this.state.items[strTime]) {
           this.state.items[strTime] = [];
           const numItems = Math.floor(Math.random() * 5);
@@ -55,35 +55,52 @@ class CalendarScreen extends React.Component {
     }, 1000);
     // console.log(`Load Items for ${day.year}-${day.month}`);
   }
-
-  renderItem(item) {
+  _renderItem = (item) => {
     return (
-      <View style={[styles.item, {height: item.height}]}><Text>{item.name}</Text></View>
+      <React.Fragment>
+        <View style={[
+          styles.item,
+          { height: item.height }
+        ]}>
+          <Text>{ item.name }</Text>
+        </View>
+      </React.Fragment>
     );
   }
-
-  renderEmptyDate() {
+  _renderEmptyDate = () => {
     return (
-      <View style={styles.emptyDate}><Text>This is empty date!</Text></View>
+      <React.Fragment>
+        <View style={ styles.emptyDate }>
+          <Text>{ "This is empty date!" }</Text>
+        </View>
+      </React.Fragment>
     );
   }
-
-  rowHasChanged(r1, r2) {
-    return r1.name !== r2.name;
+  _rowHasChanged = (r1, r2) => {
+    return (r1.name !== r2.name);
   }
-
-  timeToString(time) {
+  _timeToString = (time) => {
     const date = new Date(time);
-    return date.toISOString().split('T')[0];
+    return (date.toISOString().split('T')[0]);
+  }
+  _renderKnob = () => {
+    return (
+      <React.Fragment>
+        <Icon
+          name={ 'arrow-dropdown' }
+          style={{ color: 'blue' }}
+        />
+      </React.Fragment>
+    );
   }
   render() {
     return (
       <React.Fragment>
-      <StatusBar
-        hidden={ false }
-        barStyle={ 'light-content' }
-        animated={ true }
-      />
+        <StatusBar
+          hidden={ false }
+          barStyle={ 'light-content' }
+          animated={ true }
+        />
         <Container>
           <AppHeader
             title={ 'Calendar' }
@@ -91,13 +108,13 @@ class CalendarScreen extends React.Component {
             onPress={ () => this.props.navigation.openDrawer() }
           />
           <Agenda
-            items={this.state.items}
-            loadItemsForMonth={this.loadItems.bind(this)}
-            selected={'2017-05-16'}
-            renderItem={this.renderItem.bind(this)}
-            renderEmptyDate={this.renderEmptyDate.bind(this)}
-            renderKnob={() => {return (<Icon name={ 'arrow-dropdown' } style={{ color: 'blue' }} />);}}
-            rowHasChanged={this.rowHasChanged.bind(this)}
+            items={ this.state.items }
+            loadItemsForMonth={ this._loadItems }
+            selected={ '2017-05-16' }
+            renderItem={ this._renderItem }
+            renderEmptyDate={ this._renderEmptyDate }
+            renderKnob={ this._renderKnob }
+            rowHasChanged={ this._rowHasChanged }
           />
         </Container>
       </React.Fragment>
