@@ -1,0 +1,17 @@
+{
+  selectedData: "2018-09-20"
+  minDateData: "2012-05-10";
+  maxDateData: "2020-05-30";
+  markedDatesData: {
+    '2018-10-11': {
+      selected: true,
+      marked: true
+    },
+    '2018-09-24': {
+      marked: true
+    },
+    '2018-09-29': {
+      disabled: true
+    }
+  }
+}
