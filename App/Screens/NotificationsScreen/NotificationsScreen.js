@@ -194,8 +194,8 @@ class NotificationsScreen extends React.Component {
       <React.Fragment>
       <StatusBar
         hidden={ false }
-        barStyle={ 'dark-content' }
-        showHideTransition={ true }
+        barStyle={ 'light-content' }
+        animated={ true }
       />
       <Container style={ styles.container }>
         <AppHeader
