@@ -3,7 +3,7 @@
 // ~~ Dependencies ~~
 import React from 'react';
 import {
-    StatusBar
+  StatusBar
 } from 'react-native';
 import {
   Container,
@@ -14,7 +14,10 @@ import {
 } from 'native-base';
 import { Agenda } from 'react-native-calendars';
 // ~~ Local Dependencies ~~
-import styles from './styles';
+import styles, {
+  calendarTheme,
+  agendaTheme
+} from './styles';
 import AppHeader from '../../Components/AppHeader';
 
 /*
@@ -58,23 +61,6 @@ const markedDatesData = {
     disabled: true
   }
 };
-const calendarTheme = {
-  arrowColor: 'white',
-  'stylesheet.calendar.header': {
-    week: {
-      marginTop: 5,
-      flexDirection: 'row',
-      justifyContent: 'space-between'
-    }
-  }
-}
-const themeData = {
-    ...calendarTheme,
-    agendaDayTextColor: 'yellow',
-    agendaDayNumColor: 'green',
-    agendaTodayColor: 'red',
-    agendaKnobColor: 'blue'
-};
 
 class CalendarScreen extends React.Component {
   constructor(props) {
@@ -89,13 +75,13 @@ class CalendarScreen extends React.Component {
       refreshControl: null,
       futureScrollRange: 20,
       pastScrollRange: 20,
-      markedDates: { markedDatesData },
-      theme: { themeData }
+      markedDates: { markedDatesData }
     }
     return ;
   };
   _loadItems = (day) => {
-    setTimeout(() => {
+    setTimeout( () => {
+      const newItems = {};
       for (let i = -15; i < 85; i++) {
         const time = day.timestamp + i * 24 * 60 * 60 * 1000;
         const strTime = this._timeToString(time);
@@ -110,38 +96,35 @@ class CalendarScreen extends React.Component {
           }
         }
       }
-      const newItems = {};
       Object.keys(this.state.items).forEach(key => {newItems[key] = this.state.items[key];});
-      this.setState({
-        items: newItems
-      });
+      this.setState({ items: newItems });
     }, 1000);
   }
   _rowHasChanged = (r1, r2) => {
-    var rowHasChanged = r1.name !== r2.name
+    const rowHasChanged = r1.name !== r2.name;
     return (rowHasChanged);
   }
   _timeToString = (time) => {
     const date = new Date(time);
-    var timeToString = date.toISOString().split('T')[0];
+    const timeToString = date.toISOString().split('T')[0];
     return (timeToString);
   }
   _onCalendarToggled = () => {
-    var action = window.alert(this.state.selected);
+    const action = window.alert(this.state.selected);
     return (action);
   }
   _onDayChange = (day) => {
-    var currentDay = day.dateString;
+    const currentDay = day.dateString;
     window.alert(JSON.stringify(currentDay));
     return (currentDay);
   }
   _onDayPress = (day) => {
-    var currentDay = day.dateString;
+    const currentDay = day.dateString;
     window.alert(JSON.stringify(currentDay));
     return (currentDay);
   }
   _onRefresh = () => {
-    var action = this._timeToString;
+    const action = this._timeToString;
     return (action);
   }
   _renderAgendaComponent = () => {
@@ -167,7 +150,10 @@ class CalendarScreen extends React.Component {
           rowHasChanged={ this._rowHasChanged }
           selected={ this.state.selected }
           markedDates={ this.state.markedDates }
-          theme={ this.state.theme }
+          theme={
+            { ...calendarTheme },
+            { agendaTheme }
+          }
         />
       </React.Fragment>
     );
@@ -196,10 +182,7 @@ class CalendarScreen extends React.Component {
   _renderKnob = () => {
     return (
       <React.Fragment>
-        <Icon
-          name={ 'arrow-dropdown' }
-          style={{ color: 'blue' }}
-        />
+        <Icon name={ 'arrow-dropdown' } />
       </React.Fragment>
     );
   }
