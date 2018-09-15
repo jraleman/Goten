@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 
-/**
- * CalendarScreen/styles.js
- * @author [Jose Ramon Aleman](https://github.com/jraleman)
- */
-
 // ~~ Dependencies ~~
 import { StyleSheet } from 'react-native';
 // ~~ Local Dependencies ~~

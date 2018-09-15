@@ -17,6 +17,17 @@ import { Agenda } from 'react-native-calendars';
 import styles from './styles';
 import AppHeader from '../../Components/AppHeader';
 
+/*
+  EventHandler calendar objects example
+    {
+      day: 1,     // day of month (1-31)
+      month: 1,   // month of year (1-12)
+      year: 2017, // year
+      timestamp,   // UTC timestamp representing 00:00 AM of this date
+      dateString: '2016-05-13' // date formatted as 'YYYY-MM-DD' string
+    }
+*/
+
 /**
  * Container to render when DrawerNavigation is called.
  * @class DrawerNavigationContainer
@@ -93,7 +104,11 @@ class CalendarScreen extends React.Component {
       </React.Fragment>
     );
   }
-  render() {
+  _navigationHandler = () => {
+    this.props.navigation.openDrawer();
+    return ;
+  }
+  render () {
     return (
       <React.Fragment>
         <StatusBar
@@ -105,7 +120,7 @@ class CalendarScreen extends React.Component {
           <AppHeader
             title={ 'Calendar' }
             icon={ 'menu' }
-            onPress={ () => this.props.navigation.openDrawer() }
+            onPress={ this._navigationHandler }
           />
           <Agenda
             items={ this.state.items }
