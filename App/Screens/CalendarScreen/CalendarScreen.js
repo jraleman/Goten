@@ -38,19 +38,59 @@ import AppHeader from '../../Components/AppHeader';
  * @class DrawerNavigationContainer
  * @extends { React.Component }
  */
+
+/*
+** API MOCKUP DATA
+*/
+
+const selectedData = new Date()
+const minDateData = '2012-05-10';
+const maxDateData = '2020-05-30';
+const markedDatesData = {
+  '2012-05-16': {
+    selected: true,
+    marked: true
+  },
+  '2012-05-17': {
+    marked: true
+  },
+  '2012-05-18': {
+    disabled: true
+  }
+};
+const calendarTheme = {
+  arrowColor: 'white',
+  'stylesheet.calendar.header': {
+    week: {
+      marginTop: 5,
+      flexDirection: 'row',
+      justifyContent: 'space-between'
+    }
+  }
+}
+const themeData = {
+    ...calendarTheme,
+    agendaDayTextColor: 'yellow',
+    agendaDayNumColor: 'green',
+    agendaTodayColor: 'red',
+    agendaKnobColor: 'blue'
+};
+
 class CalendarScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       items: {},
-      selected: '2017-05-16',
-      minDate: '2012-05-10',
-      maxDate: '2020-05-30',
+      selected: selectedData,
+      minDate: minDateData,
+      maxDate: maxDateData,
       hideKnob: false,
       refreshing: false,
       refreshControl: null,
       futureScrollRange: 20,
-      pastScrollRange: 20
+      pastScrollRange: 20,
+      markedDates: { markedDatesData },
+      theme: { themeData }
     }
     return ;
   };
@@ -83,33 +123,51 @@ class CalendarScreen extends React.Component {
   }
   _timeToString = (time) => {
     const date = new Date(time);
-    return (date.toISOString().split('T')[0]);
+    var timeToString = date.toISOString().split('T')[0];
+    return (timeToString);
   }
   _onCalendarToggled = () => {
-    var action = window.alert('lol');
+    var action = window.alert(this.state.selected);
+    return (action);
+  }
+  _onDayChange = (day) => {
+    var currentDay = day.dateString;
+    window.alert(JSON.stringify(currentDay));
+    return (currentDay);
+  }
+  _onDayPress = (day) => {
+    var currentDay = day.dateString;
+    window.alert(JSON.stringify(currentDay));
+    return (currentDay);
+  }
+  _onRefresh = () => {
+    var action = this._timeToString;
     return (action);
   }
   _renderAgendaComponent = () => {
     return (
       <React.Fragment>
         <Agenda
+          futureScrollRange={ this.state.futureScrollRange }
+          hideKnob={ this.state.hideKnob }
           items={ this.state.items }
           loadItemsForMonth={ this._loadItems }
-          renderItem={ this._renderItem }
+          maxDate={ this.state.maxDate }
+          minDate={ this.state.minDate }
+          onCalendarToggled={ this._onCalendarToggled }
+          onDayChange={ this._onDayChange }
+          onDayPress={ this._onDayPress }
+          onRefresh={ this._onRefresh }
+          pastScrollRange={ this.state.pastScrollRange }
+          refreshControl={ this.state.refreshControl }
+          refreshing={ this.state.refreshing }
           renderEmptyDate={ this._renderEmptyDate }
+          renderItem={ this._renderItem }
           renderKnob={ this._renderKnob }
           rowHasChanged={ this._rowHasChanged }
-          hideKnob={ this.state.hideKnob }
-          refreshing={ this.state.refreshing }
-          refreshControl={ this.state.refreshControl }
-          futureScrollRange={ this.state.futureScrollRange }
-          pastScrollRange={ this.state.pastScrollRange }
           selected={ this.state.selected }
-          minDate={ this.state.minDate }
-          maxDate={ this.state.maxDate }
-          onCalendarToggled={ this._onCalendarToggled }
-          onDayPress={ this._onCalendarToggled }
-          onDayChange={ this._onCalendarToggled }
+          markedDates={ this.state.markedDates }
+          theme={ this.state.theme }
         />
       </React.Fragment>
     );
