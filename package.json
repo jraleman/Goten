@@ -46,6 +46,7 @@
     "eslint": "^4.19.1",
     "jest": "23.5.0",
     "jsdoc": "~3.5.5",
+    "react-native-surrender": "^1.2.0",
     "snazzy": "^8.0.0",
     "standardx": "^3.0.1"
   },
