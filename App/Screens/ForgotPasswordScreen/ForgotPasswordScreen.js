@@ -17,15 +17,17 @@ class ForgotPasswordScreen extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
+    return ;
+  }
+  _onSubmitHandler = () => {
+    window.alert('Check your email to restore your password!');
+    this.props.navigation.goBack();
+    return ;
   }
   render () {
     return (
       <React.Fragment>
-        <StatusBar
-          translucent={ true }
-          barStyle={ 'light-content' }
-          hidden={ true }
-        />
+        <StatusBar hidden={ true } />
         <Container style={ styles.container }>
           <AppHeader
             title={ 'Forgot Password' }

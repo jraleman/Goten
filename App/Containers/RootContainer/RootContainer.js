@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 import {
   StyleProvider,
   Container
@@ -14,7 +15,8 @@ class RootContainer extends React.Component {
     return (
       <StyleProvider style={ getTheme(variables) }>
         <Container style={ styles.container }>
-          <NetworkIndicator />
+           { /* <NetworkIndicator /> */}
+           <StatusBar barStyle={ 'light-content' } />
           <AppNavigation />
         </Container>
       </StyleProvider>

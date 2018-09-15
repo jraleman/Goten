@@ -2,7 +2,7 @@
 
 // ~~ Dependencies ~~
 import React from 'react';
-import { StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text } from 'native-base';
 // ~~ Local Dependencies ~~
@@ -191,6 +191,12 @@ class NotificationsScreen extends React.Component {
   render() {
     const filteredNotifications = notifications.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
     return (
+      <React.Fragment>
+      <StatusBar
+        hidden={ false }
+        barStyle={ 'light-content' }
+        animated={ true }
+      />
       <Container style={ styles.container }>
         <AppHeader
           title={ 'Notifications' }
@@ -240,6 +246,7 @@ class NotificationsScreen extends React.Component {
           </List>
         </Content>
       </Container>
+      </React.Fragment>
     );
   }
 }

@@ -3,7 +3,7 @@
 
 // ~~ Dependencies ~~
 import React from 'react';
-import { BackHandler } from 'react-native';
+import { BackHandler, StatusBar } from 'react-native';
 import {
   Button,
   Container,
@@ -55,6 +55,11 @@ class ProfileScreen extends React.Component {
   render () {
     return (
       <React.Fragment>
+      <StatusBar
+        hidden={ false }
+        barStyle={ 'light-content' }
+        animated={ true }
+      />
         <Container padder={ true }>
           <AppHeader
             title={ 'Profile' }

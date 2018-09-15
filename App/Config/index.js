@@ -1,5 +1,3 @@
-// import { Text } from 'react-native';
-// import AppConfig from './AppConfig';
+import Config from './Config';
 
-// Allow font-scaling in app
-// Text.defaultProps.allowFontScaling = AppConfig.allowTextFontScaling;
+export default Config;

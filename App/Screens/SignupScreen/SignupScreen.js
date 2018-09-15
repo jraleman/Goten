@@ -34,11 +34,7 @@ class SignupScreen extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <StatusBar
-          translucent={ true }
-          barStyle={ 'light-content' }
-          hidden={ true }
-        />
+        <StatusBar hidden={ true } />
         <Container style={ styles.container }>
           <AppHeader
             title={ 'Signup' }
