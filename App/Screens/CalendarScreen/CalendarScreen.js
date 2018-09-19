@@ -79,8 +79,8 @@ class CalendarScreen extends React.Component {
     }
     return ;
   };
-  _loadItems = (day) => {
-    setTimeout( () => {
+  _generateRandomItems = (day) => {
+    setTimeout(() => {
       const newItems = {};
       for (let i = -15; i < 85; i++) {
         const time = day.timestamp + i * 24 * 60 * 60 * 1000;
@@ -100,6 +100,10 @@ class CalendarScreen extends React.Component {
       this.setState({ items: newItems });
     }, 1000);
     return;
+  }
+  _loadItems = (day) => {
+    this._generateRandomItems(day);
+    return ;
   }
   _rowHasChanged = (r1, r2) => {
     const rowHasChanged = r1.name !== r2.name;
