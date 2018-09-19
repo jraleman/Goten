@@ -10,6 +10,7 @@ import {
 } from 'native-base';
 // ~~ Local Dependencies ~~
 import styles from './styles';
+import AppHeader from '../../Components/AppHeader';
 
 /**
  * Container to render when DrawerNavigation is called.
@@ -35,8 +36,13 @@ class VideoCallScreen extends React.Component {
           animated={ true }
         />
         <Container style={ styles.container }>
+          <AppHeader
+            title={ 'Video' }
+            icon={ 'menu' }
+            onPress={ () => { this.props.navigation.openDrawer(); }}
+          />
           <Content style={ styles.content }>
-            <Text>{ "VideoCallScreen" }</Text>
+            <Text>{ "VideoScreen" }</Text>
           </Content>
         </Container>
       </React.Fragment>
