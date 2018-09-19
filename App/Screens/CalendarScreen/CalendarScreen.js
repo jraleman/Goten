@@ -99,6 +99,7 @@ class CalendarScreen extends React.Component {
       Object.keys(this.state.items).forEach(key => {newItems[key] = this.state.items[key];});
       this.setState({ items: newItems });
     }, 1000);
+    return;
   }
   _rowHasChanged = (r1, r2) => {
     const rowHasChanged = r1.name !== r2.name;
@@ -150,10 +151,10 @@ class CalendarScreen extends React.Component {
           rowHasChanged={ this._rowHasChanged }
           selected={ this.state.selected }
           markedDates={ this.state.markedDates }
-          theme={
-            { ...calendarTheme },
-            { agendaTheme }
-          }
+          theme={{
+            ...calendarTheme,
+            ...agendaTheme
+          }}
         />
       </React.Fragment>
     );

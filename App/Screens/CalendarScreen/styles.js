@@ -32,18 +32,10 @@ const calendarTheme = {
   textDayHeaderFontSize: 16
 };
 const agendaTheme = {
-  agendaDayTextColor: {
-    color: '#338234'
-  },
-  agendaDayNumColor: {
-    color: '#338234'
-  },
-  agendaTodayColor: {
-    color: '#338234'
-  },
-  agendaKnobColor: {
-    backgroundColor: '#338234'
-  }
+  agendaDayTextColor: '#338234',
+  agendaDayNumColor: '#338234',
+  agendaTodayColor: '#338234',
+  agendaKnobColor: '#338234'
 };
 const styles = StyleSheet.create({
   item: {
