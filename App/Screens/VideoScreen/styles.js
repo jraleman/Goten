@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * VideoCallScreen/styles.js
+ * VideoScreen/styles.js
  * @author [Jose Ramon Aleman](https://github.com/jraleman)
  */
 
@@ -19,8 +19,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-    content: {
+  content: {
     flex: 1
+  },
+  backgroundVideo: {
+    flex: 1,
+    backgroundColor: '#222'
+    // position: 'absolute',
+    // top: 0,
+    // left: 0,
+    // bottom: 0,
+    // right: 0,
   }
 });
 
