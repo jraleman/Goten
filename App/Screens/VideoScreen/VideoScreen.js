@@ -21,7 +21,7 @@ const videoSrc = require("../../Assets/Videos/HACKERMAN.mp4");
  * @class DrawerNavigationContainer
  * @extends { React.Component }
  */
-class VideoCallScreen extends React.Component {
+class VideoScreen extends React.Component {
   constructor (props) {
     super(props);
     this.state = {};
@@ -75,4 +75,4 @@ class VideoCallScreen extends React.Component {
   }
 };
 
-export default VideoCallScreen;
+export default VideoScreen;

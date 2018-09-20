@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * VideoCallScreen/styles.js
+ * VideoScreen/styles.js
  * @author [Jose Ramon Aleman](https://github.com/jraleman)
  */
 

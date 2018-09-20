@@ -16,7 +16,7 @@ import SettingsScreen from '../../Screens/SettingsScreen';
 import SignupScreen from '../../Screens/SignupScreen';
 import TestScreen from '../../Screens/TestScreen';
 import ThemeScreen from '../../Screens/ThemeScreen';
-import VideoCallScreen from '../../Screens/VideoCallScreen';
+import VideoScreen from '../../Screens/VideoScreen';
 import ChatScreen from '../../Screens/ChatScreen';
 import CameraScreen from '../../Screens/CameraScreen';
 
@@ -41,7 +41,7 @@ const AppNavigation = StackNavigator(
     Signup: { screen: SignupScreen },
     Test: { screen: TestScreen },
     Theme: { screen: ThemeScreen },
-    VideoCall: { screen: VideoCallScreen },
+    VideoCall: { screen: VideoScreen },
     Chat: { screen: ChatScreen },
     Camera: { screen : CameraScreen }
   },
