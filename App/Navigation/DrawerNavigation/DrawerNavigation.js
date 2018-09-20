@@ -39,7 +39,6 @@ const MainDrawerNav = DrawerNavigator(
 
 const AltDrawerNav = DrawerNavigator(
   {
-    'Profile': { screen: ProfileScreen },
     'Search': { screen: SearchScreen },
     'Test': { screen: TestScreen },
     'Theme': { screen: ThemeScreen },
