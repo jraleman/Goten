@@ -20,7 +20,7 @@ class ChatScreen extends React.Component {
         <Content>
           <Text>{ "ChatScreen" }</Text>
         </Content>
-      <Container>
+      </Container>
     );
   }
 }

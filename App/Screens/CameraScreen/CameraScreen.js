@@ -19,7 +19,7 @@ class CameraScreen extends React.Component {
         <Content>
           <Text>{ "CameraScreen" }</Text>
         </Content>
-      <Container>
+      </Container>
     );
   }
 }
