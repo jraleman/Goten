@@ -17,6 +17,8 @@ import SignupScreen from '../../Screens/SignupScreen';
 import TestScreen from '../../Screens/TestScreen';
 import ThemeScreen from '../../Screens/ThemeScreen';
 import VideoCallScreen from '../../Screens/VideoCallScreen';
+import ChatScreen from '../../Screens/ChatScreen';
+import CameraScreen from '../../Screens/CameraScreen';
 
 const MainDrawerNav = DrawerNavigator(
   {
@@ -25,7 +27,9 @@ const MainDrawerNav = DrawerNavigator(
     'Test': { screen: TestScreen },
     'Theme': { screen: ThemeScreen },
     'Video Call': { screen: VideoCallScreen },
-    'Notifications': { screen: NotificationsScreen }
+    'Notifications': { screen: NotificationsScreen },
+    'Chat': { screen: ChatScreen },
+    'Camera': { screen: CameraScreen }
   },
   {
     initialRouteName: 'Calendar',
