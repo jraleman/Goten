@@ -17,6 +17,8 @@ import SignupScreen from '../../Screens/SignupScreen';
 import TestScreen from '../../Screens/TestScreen';
 import ThemeScreen from '../../Screens/ThemeScreen';
 import VideoCallScreen from '../../Screens/VideoCallScreen';
+import ChatScreen from '../../Screens/ChatScreen';
+import CameraScreen from '../../Screens/CameraScreen';
 
 // 'float'  -> Stays at the top and animates as screens are changed.
 // 'screen' -> Each screen has a header attached to it,
@@ -39,7 +41,9 @@ const AppNavigation = StackNavigator(
     Signup: { screen: SignupScreen },
     Test: { screen: TestScreen },
     Theme: { screen: ThemeScreen },
-    VideoCall: { screen: VideoCallScreen }
+    VideoCall: { screen: VideoCallScreen },
+    Chat: { screen: ChatScreen },
+    Camera: { screen : CameraScreen }
   },
   {
     initialRouteName: 'Onboarding',
