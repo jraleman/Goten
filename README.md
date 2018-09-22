@@ -269,11 +269,13 @@ See `./App/Themes/variables.js`
 
 - [Onboarding Icons made by Freepik](http://www.freepik.com)
 
-## Sources
+## Sauce
 
 - [React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
 - [Network Indicator](https://medium.com/dailyjs/offline-notice-in-react-native-28a8d01e8cd0)
 - [Color API Tutorial](https://www.youtube.com/watch?v=d2Mp66FFBgU)
+- [Adding Redux to a Simple React App](https://www.youtube.com/watch?v=sX3KeP7v7Kg)
+- [#1 WTF is Redux? | React Native App | The Basics](https://www.youtube.com/watch?v=KcC8KZ_Ga2M)
 
 ## Attributions
 
