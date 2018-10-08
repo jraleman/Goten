@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   Container,
-  Content
+  Content,
+  Text
 } from 'native-base';
 import styles from './styles';
 
@@ -15,7 +16,7 @@ class ReduxScreen extends React.Component {
       <React.Fragment>
         <Container style={ styles.container }>
           <Content>
-            <Text>{ "ReduxScreen" }<Text/>
+            <Text>{ "ReduxScreen" }</Text>
           </Content>
         </Container>
       </React.Fragment>
