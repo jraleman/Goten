@@ -19,6 +19,7 @@ import ThemeScreen from '../../Screens/ThemeScreen';
 import VideoScreen from '../../Screens/VideoScreen';
 import ChatScreen from '../../Screens/ChatScreen';
 import CameraScreen from '../../Screens/CameraScreen';
+import ReduxScreen from '../../Screens/ReduxScreen';
 
 const MainDrawerNav = DrawerNavigator(
   {
@@ -27,7 +28,8 @@ const MainDrawerNav = DrawerNavigator(
     'Video': { screen: VideoScreen },
     'Notifications': { screen: NotificationsScreen },
     'Chat': { screen: ChatScreen },
-    'Camera': { screen: CameraScreen }
+    'Camera': { screen: CameraScreen },
+    'Redux': { screen: ReduxScreen }
   },
   {
     initialRouteName: 'Calendar',
