@@ -19,6 +19,7 @@ import ThemeScreen from '../../Screens/ThemeScreen';
 import VideoScreen from '../../Screens/VideoScreen';
 import ChatScreen from '../../Screens/ChatScreen';
 import CameraScreen from '../../Screens/CameraScreen';
+import ReduxScreen from '../../Screens/ReduxScreen';
 
 // 'float'  -> Stays at the top and animates as screens are changed.
 // 'screen' -> Each screen has a header attached to it,
@@ -43,7 +44,8 @@ const AppNavigation = StackNavigator(
     Theme: { screen: ThemeScreen },
     VideoCall: { screen: VideoScreen },
     Chat: { screen: ChatScreen },
-    Camera: { screen : CameraScreen }
+    Camera: { screen: CameraScreen },
+    Redux: { screen: ReduxScreen }
   },
   {
     initialRouteName: 'Onboarding',
