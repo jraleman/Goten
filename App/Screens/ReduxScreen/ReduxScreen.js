@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 import {
   Container,
   Content,
@@ -15,6 +16,11 @@ class ReduxScreen extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <StatusBar
+          hidden={ false }
+          barStyle={ 'dark-content' }
+          animated={ true }
+        />
         <Container style={ styles.container }>
           <AppHeader
             title={ 'Redux Example' }
