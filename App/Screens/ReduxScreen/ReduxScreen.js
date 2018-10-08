@@ -1,8 +1,10 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import {
+  Button,
   Container,
   Content,
+  Icon,
   Text
 } from 'native-base';
 import AppHeader from '../../Components/AppHeader';
@@ -11,6 +13,9 @@ import styles from './styles';
 class ReduxScreen extends React.Component {
   constructor (props) {
     super(props);
+    this.state = {
+      counter: 0
+    }
     return ;
   }
   render () {
@@ -28,7 +33,14 @@ class ReduxScreen extends React.Component {
             onPress={ () => this.props.navigation.goBack() }
           />
           <Content>
-            <Text>{ "ReduxScreen" }</Text>
+            <Button>
+              <Icon active={ true } name='paw' />
+              <Text>{ "Increase" }</Text>
+            </Button>
+            <Button>
+              <Icon active={ true } name='paw' />
+              <Text>{ "Decrease" }</Text>
+            </Button>
           </Content>
         </Container>
       </React.Fragment>
