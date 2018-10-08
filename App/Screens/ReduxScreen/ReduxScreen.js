@@ -4,6 +4,7 @@ import {
   Content,
   Text
 } from 'native-base';
+import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
 
 class ReduxScreen extends React.Component {
@@ -15,6 +16,11 @@ class ReduxScreen extends React.Component {
     return (
       <React.Fragment>
         <Container style={ styles.container }>
+          <AppHeader
+            title={ 'Redux Example' }
+            icon={ 'arrow-back' }
+            onPress={ () => this.props.navigation.goBack() }
+          />
           <Content>
             <Text>{ "ReduxScreen" }</Text>
           </Content>
