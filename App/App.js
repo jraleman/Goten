@@ -17,6 +17,7 @@ import RootContainer from './Containers/RootContainer';
 // -----------------
 
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 const initialStates = {
   counter : 0
@@ -26,7 +27,7 @@ const reducers = () => {
 
 }
 
-const store = createStore(reducers);
+const reduxStore = createStore(reducers);
 
 // ------------
 
@@ -39,7 +40,9 @@ class App extends React.Component {
   }
   render () {
     return (
-      <RootContainer />
+      <Provider store={ reduxStore }>
+        <RootContainer />
+      </Provider>
     );
   }
 }
