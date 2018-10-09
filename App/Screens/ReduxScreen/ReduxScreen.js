@@ -12,6 +12,12 @@ import {
 import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
 
+function mapStateProps(state) {
+  return ({
+    counter: state.counter
+  });
+}
+
 class ReduxScreen extends React.Component {
   constructor (props) {
     super(props);
