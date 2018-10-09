@@ -13,6 +13,24 @@ import React from 'react';
 import './Config';
 import RootContainer from './Containers/RootContainer';
 
+
+// -----------------
+
+import { createStore } from 'redux';
+
+const initialStates = {
+  counter : 0
+}
+
+const reducers = () => {
+
+}
+
+const store = createStore(reducers);
+
+// ------------
+
+
 // ~~ React Component ~~
 class App extends React.Component {
   constructor (props) {
