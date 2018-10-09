@@ -5,7 +5,9 @@ import {
   Container,
   Content,
   Icon,
-  Text
+  Text,
+  Label,
+  Input
 } from 'native-base';
 import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
@@ -41,6 +43,8 @@ class ReduxScreen extends React.Component {
             onPress={ () => this.props.navigation.goBack() }
           />
           <Content>
+            <Label>{ "Current counter" }</Label>
+            <Input placeholder={ String(this.state.counter) } dissable={ true }/>
             <Button onPress={ this._increaseCounter }>
               <Icon active={ true } name='paw' />
               <Text>{ "Increase" }</Text>
