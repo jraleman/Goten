@@ -1,5 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
+import { connect } from 'react-redux';
 import {
   Button,
   Container,
@@ -11,12 +12,6 @@ import {
 } from 'native-base';
 import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
-
-function mapStateProps(state) {
-  return ({
-    counter: state.counter
-  });
-}
 
 class ReduxScreen extends React.Component {
   constructor (props) {
@@ -50,7 +45,10 @@ class ReduxScreen extends React.Component {
           />
           <Content>
             <Label>{ "Current counter" }</Label>
-            <Input placeholder={ String(this.state.counter) } dissable={ true }/>
+            <Input
+              value={ String(this.props.counter) }
+              editable={ false }
+            />
             <Button onPress={ this._increaseCounter }>
               <Icon active={ true } name='paw' />
               <Text>{ "Increase" }</Text>
@@ -66,4 +64,11 @@ class ReduxScreen extends React.Component {
   }
 }
 
-export default ReduxScreen;
+
+function mapStateToProps(state) {
+  return ({
+    counter: state.counter
+  });
+}
+
+export default connect(mapStateToProps)(ReduxScreen);
