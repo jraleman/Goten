@@ -16,9 +16,9 @@ import styles from './styles';
 class ReduxScreen extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {
-      counter: 0
-    }
+    // this.state = {
+    //   count: 0
+    // }
     return ;
   }
   render () {
@@ -38,14 +38,14 @@ class ReduxScreen extends React.Component {
           <Content>
             <Label>{ "Current counter" }</Label>
             <Input
-              value={ String(this.props.counter) }
+              value={ String(this.props.count) }
               editable={ false }
             />
-            <Button onPress={ this.props.increaseCounter }>
+            <Button onPress={ this.props.increaseCount }>
               <Icon active={ true } name='paw' />
               <Text>{ "Increase" }</Text>
             </Button>
-            <Button onPress={ this.props.decreaseCounter }>
+            <Button onPress={ this.props.decreaseCount }>
               <Icon active={ true } name='paw' />
               <Text>{ "Decrease" }</Text>
             </Button>
@@ -59,14 +59,14 @@ class ReduxScreen extends React.Component {
 
 function mapStateToProps(state) {
   return ({
-    counter: state.counter
+    count: state.count
   });
 }
 
 function mapsDispatchToProps(dispatch) {
   return ({
-    increaseCounter: () => dispatch({ type: 'INCREASE_COUNT' }),
-    decreaseCounter: () => dispatch({ type: 'DECREASE_COUNT' })
+    increaseCount: () => dispatch({ type: 'INCREASE_COUNT' }),
+    decreaseCount: () => dispatch({ type: 'DECREASE_COUNT' })
   });
 }
 
