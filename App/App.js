@@ -19,8 +19,20 @@ import RootContainer from './Containers/RootContainer';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-const initialStates = { counter : 0 }
-const reducers = ((state = initialStates) => { return (state) });
+const initialStates = {
+  count : 0
+}
+const reducers = (state = initialStates, action) => {
+  switch (action.type) {
+    case 'INCREASE_COUNT':
+      state = { count: state.count + 1 }
+      break ;
+    case 'DECREASE_COUNT':
+      state = { count: state.count - 1 }
+      break ;
+  }
+  return (state)
+};
 const reduxStore = createStore(reducers);
 
 // ------------
