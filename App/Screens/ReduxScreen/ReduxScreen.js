@@ -21,14 +21,6 @@ class ReduxScreen extends React.Component {
     }
     return ;
   }
-  _increaseCounter = () => {
-    this.setState({ counter: this.state.counter + 1 });
-    return ;
-  }
-  _decreaseCounter = () => {
-    this.setState({ counter: this.state.counter - 1 });
-    return ;
-  }
   render () {
     return (
       <React.Fragment>
@@ -49,11 +41,11 @@ class ReduxScreen extends React.Component {
               value={ String(this.props.counter) }
               editable={ false }
             />
-            <Button onPress={ this._increaseCounter }>
+            <Button onPress={ this.props.increaseCounter }>
               <Icon active={ true } name='paw' />
               <Text>{ "Increase" }</Text>
             </Button>
-            <Button onPress={ this._decreaseCounter }>
+            <Button onPress={ this.props.decreaseCounter }>
               <Icon active={ true } name='paw' />
               <Text>{ "Decrease" }</Text>
             </Button>
@@ -68,6 +60,13 @@ class ReduxScreen extends React.Component {
 function mapStateToProps(state) {
   return ({
     counter: state.counter
+  });
+}
+
+function mapsDispatchToProps(dispatch) {
+  return ({
+    increaseCounter: () => dispatch({ type: 'INCREASE_COUNT' }),
+    decreaseCounter: () => dispatch({ type: 'DECREASE_COUNT' })
   });
 }
 
