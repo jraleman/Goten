@@ -124,6 +124,15 @@ menu(s) in a StackNavigation
 #### Redux
 
 ![redux-graph](resources/images/redux.gif)
+
+Summary:
+
+- Store -> Global states
+- Actions -> Type object of state
+- Dispatcher -> Modify states
+- Reducers -> Return a new state
+- Subscribers -> Listen for state changes
+
 Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
 
 #### Services
