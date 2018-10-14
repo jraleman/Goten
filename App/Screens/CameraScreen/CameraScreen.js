@@ -1,5 +1,10 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
+import {
+  Container,
+  Content,
+  Text
+} from 'native-base';
 import styles from './styles';
 import AppHeader from '../../Components/AppHeader';
 // Sauce
@@ -15,7 +20,11 @@ class CameraScreen extends React.Component {
     return (
       <Container style={ styles.container }>
         <StatusBar />
-        <AppHeader />
+        <AppHeader
+          title={ 'Camera' }
+          icon={ 'menu' }
+          onPress={ () => { this.props.navigation.openDrawer(); }}
+        />
         <Content>
           <Text>{ "CameraScreen" }</Text>
         </Content>
