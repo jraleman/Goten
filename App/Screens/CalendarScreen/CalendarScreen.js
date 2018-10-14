@@ -50,14 +50,14 @@ const selectedData = new Date()
 const minDateData = '2012-05-10';
 const maxDateData = '2020-05-30';
 const markedDatesData = {
-  '2012-05-16': {
+  '2018-10-18': {
     selected: true,
     marked: true
   },
-  '2012-05-17': {
+  '2018-10-19': {
     marked: true
   },
-  '2012-05-18': {
+  '2018-10-20': {
     disabled: true
   }
 };

@@ -11,18 +11,18 @@ import { Colors } from '../../Theme';
  */
 
 const calendarTheme = {
-  backgroundColor: '#ffffff',
-  calendarBackground: '#ffffff',
+  backgroundColor: Colors.background,
+  calendarBackground: Colors.background,
   textSectionTitleColor: '#b6c1cd',
-  selectedDayBackgroundColor: '#338234',
+  selectedDayBackgroundColor: Colors.primary,
   selectedDayTextColor: '#ffffff',
-  todayTextColor: '#338234',
+  todayTextColor: Colors.primary,
   dayTextColor: '#2d4150',
-  textDisabledColor: '#d9e1e8',
-  dotColor: '#338234',
+  textDisabledColor: Colors.disabled,
+  dotColor: Colors.primary,
   selectedDotColor: '#ffffff',
-  arrowColor: 'orange',
-  monthTextColor: 'blue',
+  arrowColor: Colors.primary,
+  monthTextColor: Colors.text,
   // textDayFontFamily: 'monospace',
   // textMonthFontFamily: 'monospace',
   // textDayHeaderFontFamily: 'monospace',
@@ -32,10 +32,10 @@ const calendarTheme = {
   textDayHeaderFontSize: 16
 };
 const agendaTheme = {
-  agendaDayTextColor: '#338234',
-  agendaDayNumColor: '#338234',
-  agendaTodayColor: '#338234',
-  agendaKnobColor: '#338234'
+  agendaDayTextColor: Colors.primary,
+  agendaDayNumColor: Colors.primary,
+  agendaTodayColor: Colors.primary,
+  agendaKnobColor: Colors.primary
 };
 const styles = StyleSheet.create({
   item: {
