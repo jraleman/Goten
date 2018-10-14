@@ -1,5 +1,10 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
+import {
+  Container,
+  Content,
+  Text
+} from 'native-base';
 
 import AppHeader from '../../Components/AppHeader';
 import styles from './styles';
@@ -16,7 +21,11 @@ class ChatScreen extends React.Component {
     return (
       <Container style={ styles.container }>
         <StatusBar />
-        <AppHeader />
+        <AppHeader
+          title={ 'Chat' }
+          icon={ 'menu' }
+          onPress={ () => { this.props.navigation.openDrawer(); }}
+        />
         <Content>
           <Text>{ "ChatScreen" }</Text>
         </Content>
