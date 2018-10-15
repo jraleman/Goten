@@ -20,7 +20,14 @@ const styles = StyleSheet.create({
     flex: 1
   },
   content: {
-    flex: 1
+    flex: 1,
+    backgroundColor: '#f9f9f9'
+  },
+  flatList: {
+    backgroundColor: '#f9f9f9'
+  },
+  listItem: {
+    backgroundColor: '#f9f9f9'
   }
 });
 

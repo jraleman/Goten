@@ -95,6 +95,7 @@ class SettingsScreen extends React.Component {
     settingItem = ({ item }) => {
       return (
         <ListItem
+          style={ styles.listItem }
           button={ true }
           onPress={ () => { this.handleAction(item.key) }}
         >
@@ -120,14 +121,18 @@ class SettingsScreen extends React.Component {
           barStyle={ 'light-content' }
           animated={ true }
         />
-        <Container>
+        <Container style={ styles.container }>
           <AppHeader
             title={ 'Settings' }
             icon={ 'arrow-back' }
             onPress={ () => this.props.navigation.goBack() }
           />
-          <Content padder>
+          <Content
+            style={ styles.content }
+            padder={ true }
+          >
             <FlatList
+              style={ styles.flatList }
               data={ settingsItems }
               keyExtractor={ item => item.key }
               renderItem={ this.settingItem }
