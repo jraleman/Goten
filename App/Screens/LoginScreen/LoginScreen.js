@@ -64,6 +64,7 @@ class LoginScreen extends React.Component {
     );
   }
   componentWillUnmount () {
+
     this.keyboardDidShowListener.remove();
     this.keyboardDidHideListener.remove();
   }
@@ -75,7 +76,12 @@ class LoginScreen extends React.Component {
     this.setState({ visible: true });
   }
   _handleNavigation () {
-    this.props.navigation.navigate('MainDrawer');
+    // hotfix!
+    var self = this;
+    window.setTimeout(function() {
+      self.setState({ loading: false });
+      self.props.navigation.navigate('MainDrawer');
+    }, 1500);
     // this.props.navigation.navigate('AltDrawer');
   }
   _onLoginHandler = () => {
@@ -92,6 +98,7 @@ class LoginScreen extends React.Component {
     this.inputs[id].focus();
   }
   _fadeAnimation () {
+    this.setState({ loading: true });
     Animated.timing(this.state.fadeValue, {
       toValue: 0,
       duration: 300
