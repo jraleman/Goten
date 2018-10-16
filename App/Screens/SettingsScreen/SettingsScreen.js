@@ -86,10 +86,12 @@ class SettingsScreen extends React.Component {
       }
       else if (key === "logOutItem") {
         this.props.navigation.navigate('Login');
+        return ; // REMOVE THIS LINE
       }
       else if (key === "developerItem") {
         this.props.navigation.navigate('Developer');
       }
+      window.alert('Work in Progress');  // REMOVE THIS LINE
       return ;
     }
     settingItem = ({ item }) => {
@@ -116,29 +118,29 @@ class SettingsScreen extends React.Component {
     render () {
       return (
         <React.Fragment>
-        <StatusBar
-          hidden={ false }
-          barStyle={ 'light-content' }
-          animated={ true }
-        />
-        <Container style={ styles.container }>
-          <AppHeader
-            title={ 'Settings' }
-            icon={ 'arrow-back' }
-            onPress={ () => this.props.navigation.goBack() }
+          <StatusBar
+            hidden={ false }
+            barStyle={ 'light-content' }
+            animated={ true }
           />
-          <Content
-            style={ styles.content }
-            padder={ true }
-          >
-            <FlatList
-              style={ styles.flatList }
-              data={ settingsItems }
-              keyExtractor={ item => item.key }
-              renderItem={ this.settingItem }
+          <Container style={ styles.container }>
+            <AppHeader
+              title={ 'Settings' }
+              icon={ 'arrow-back' }
+              onPress={ () => this.props.navigation.goBack() }
             />
-          </Content>
-        </Container>
+            <Content
+              style={ styles.content }
+              padder={ true }
+            >
+              <FlatList
+                style={ styles.flatList }
+                data={ settingsItems }
+                keyExtractor={ item => item.key }
+                renderItem={ this.settingItem }
+              />
+            </Content>
+          </Container>
         </React.Fragment>
       )
     }
