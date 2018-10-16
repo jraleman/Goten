@@ -70,7 +70,7 @@ class DrawerNavigationContainer extends React.Component {
                 />
               }
             />
-            <DrawerNavigationFooter nav={ this.props.navigation } />
+            { /* <DrawerNavigationFooter nav={ this.props.navigation } /> */ }
           </Content>
         </Container>
       </React.Fragment>

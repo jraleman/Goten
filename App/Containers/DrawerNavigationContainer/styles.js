@@ -6,9 +6,12 @@
  */
 
 // ~~ Dependencies ~~
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 // ~~ Local Dependencies ~~
 import { Colors } from '../../Theme';
+
+const deviceHeight = Dimensions.get("window").height;
+const deviceWidth = Dimensions.get("window").width;
 
 /**
  * @type {styles}
@@ -31,9 +34,11 @@ const styles = StyleSheet.create({
     flex: 1
   },
   drawerHeaderContainer: {
-    alignItems: 'stretch',
-    flex: 0.42,
-    justifyContent: 'center'
+    alignSelf: "stretch",
+    height: deviceHeight / 3.5,
+    width: null,
+    position: "relative",
+    marginBottom: 10
   },
   drawerHeaderContent: {
     alignItems: 'center',
