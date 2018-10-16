@@ -7,7 +7,6 @@ const Images = {
   logoWhite: require('./Source/logo-white.png'),
   logoBlack: require('./Source/logo-black.png'),
   drawerNavigationCover: require('./Source/drawer-navigation-cover.jpg'),
-  drawerNavigationAvatar: require('./Source/drawer-navigation-avatar.png')
 };
 
 export default Images;
