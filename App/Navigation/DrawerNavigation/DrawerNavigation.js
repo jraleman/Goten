@@ -29,7 +29,8 @@ const MainDrawerNav = DrawerNavigator(
     'Notifications': { screen: NotificationsScreen },
     'Chat': { screen: ChatScreen },
     'Camera': { screen: CameraScreen },
-    'Redux': { screen: ReduxScreen }
+    'Redux': { screen: ReduxScreen },
+    'Settings': { screen: SettingsScreen }
   },
   {
     initialRouteName: 'Calendar',
