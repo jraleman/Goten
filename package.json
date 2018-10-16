@@ -20,6 +20,7 @@
     "react-native": "0.57.1",
     "react-native-app-intro-slider": "^0.2.4",
     "react-native-calendars": "^1.20.0",
+    "react-native-elements": "^0.19.1",
     "react-native-i18n": "^2.0.12",
     "react-native-search-filter": "^0.1.4",
     "react-native-star-rating": "^1.1.0",
