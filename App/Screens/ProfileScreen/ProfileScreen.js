@@ -60,7 +60,10 @@ class ProfileScreen extends React.Component {
         barStyle={ 'light-content' }
         animated={ true }
       />
-        <Container padder={ true }>
+        <Container
+          style={ styles.container }
+          padder={ true }
+        >
           <AppHeader
             title={ 'Profile' }
             icon={ 'arrow-back' }
