@@ -23,15 +23,17 @@ import {
   Content,
   Text,
 } from 'native-base';
-import Video from 'react-native-video';
+// import Video from 'react-native-video';
 // ~~ Local Dependencies ~~
 import styles from './styles';
 import AppHeader from '../../Components/AppHeader';
 
+import VideoPlayer from 'react-native-true-sight'
+
 // import Icon from 'react-native-vector-icons/MaterialIcons';
 
 // Import video source file
-// const videoSrc = require("../../Assets/Videos/HACKERMAN.mp4");
+const videoSrc = 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
 
 /**
  * Container to render when DrawerNavigation is called.
@@ -86,6 +88,7 @@ class VideoScreen extends React.Component {
    * Renders the component.
    * @return { string } - RN markup for the component
    */
+
   render () {
     return (
       <React.Fragment>
@@ -100,9 +103,20 @@ class VideoScreen extends React.Component {
             icon={ 'menu' }
             onPress={ () => { this.props.navigation.openDrawer(); }}
           />
+          {/* VieoContainer */}
+          <View style={{ flex: 5, backgroundColor: '#000' }}>
+             <VideoPlayer source={ videoSrc } />
+          </View>
           <Content style={ styles.content }>
+
+
+
+
+            {/* Video Call Controls */}
             <View style={{
               flex: 1,
+              marginTop: 12,
+              marginBottom: 12,
               flexDirection: 'row',
               alignSelf: 'center'
             }}>
