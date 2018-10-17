@@ -20,13 +20,11 @@
     "react-native": "0.57.1",
     "react-native-app-intro-slider": "^0.2.4",
     "react-native-calendars": "^1.20.0",
-    "react-native-elements": "^0.19.1",
     "react-native-i18n": "^2.0.12",
     "react-native-search-filter": "^0.1.4",
     "react-native-star-rating": "^1.1.0",
     "react-native-true-sight": "^1.0.0-alpha4",
     "react-native-vector-icons": "^4.6.0",
-    "react-native-video": "^3.2.1",
     "react-navigation": "^2.3.1",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0"
@@ -39,8 +37,6 @@
     "jest": "23.6.0",
     "jsdoc": "~3.5.5",
     "metro-react-native-babel-preset": "0.48.1",
-    "react-native-git-upgrade": "^0.2.7",
-    "react-native-surrender": "^1.2.0",
     "react-test-renderer": "16.5.0",
     "snazzy": "^8.0.0",
     "standardx": "^3.0.1"
