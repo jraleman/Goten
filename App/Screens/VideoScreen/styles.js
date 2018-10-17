@@ -17,7 +17,8 @@ import { Colors } from '../../Theme';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: '#f9f9f9'
   },
   content: {
     flex: 1

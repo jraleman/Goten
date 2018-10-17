@@ -49,16 +49,22 @@ class VideoScreen extends React.Component {
     return;
   }
   toggleAudioMute = () => {
+    var toggle = this.state.audioMute ? false : true;
+    this.setState({ audioMute: toggle });
     window.alert('toggleAudioMute()');
     return ;
   }
 
   toggleVideoMute = () => {
+    var toggle = this.state.videoMute ? false : true;
+    this.setState({ videoMute: toggle });
     window.alert('toggleVideoMute()');
     return ;
   }
 
   toggleSpeaker = () => {
+    var toggle = this.state.speaker ? false : true;
+    this.setState({ speaker: toggle })
     window.alert('toggleSpeaker()');
     return ;
   }
