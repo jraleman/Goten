@@ -44,7 +44,8 @@ class VideoScreen extends React.Component {
     this.state = {
       speaker: false,
       audioMute: false,
-      videoMute: false
+      videoMute: false,
+      videoFrontCamera: true
     };
     return;
   }
@@ -66,6 +67,13 @@ class VideoScreen extends React.Component {
     var toggle = this.state.speaker ? false : true;
     this.setState({ speaker: toggle })
     window.alert('toggleSpeaker()');
+    return ;
+  }
+
+  switchVideoType = () => {
+    var toggle = this.state.videoFrontCamera ? false : true;
+    this.setState({ videoFrontCamera: toggle })
+    window.alert('frontCamera: ' + this.state.videoFrontCamera);
     return ;
   }
 
@@ -93,7 +101,11 @@ class VideoScreen extends React.Component {
             onPress={ () => { this.props.navigation.openDrawer(); }}
           />
           <Content style={ styles.content }>
-            <View style={{flex: 1, flexDirection: 'row'}}>
+            <View style={{
+              flex: 1,
+              flexDirection: 'row',
+              alignSelf: 'center'
+            }}>
               { this.state.audioMute ?
                 <Icon
                   raised
