@@ -110,16 +110,8 @@ class VideoScreen extends React.Component {
           <Content style={ styles.content }>
 
 
-
-
             {/* Video Call Controls */}
-            <View style={{
-              flex: 1,
-              marginTop: 12,
-              marginBottom: 12,
-              flexDirection: 'row',
-              alignSelf: 'center'
-            }}>
+            <View style={ styles.videoControl }>
               { this.state.audioMute ?
                 <Icon
                   raised
