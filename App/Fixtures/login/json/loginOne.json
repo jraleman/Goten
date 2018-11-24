@@ -1,0 +1,7 @@
+{
+  status: 1,
+  message: "Welcome back!"
+  user: {
+    id: 4242,
+    type: "premium"
+}

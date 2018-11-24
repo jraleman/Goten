@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
+    "no-useless-return": 0,
+    "react/jsx-boolean-value": [2, "always"],
+    "react/jsx-curly-spacing": [2, {"when": "always", "allowMultiline": false}],
+    "semi": [2, "always"]
+  }
+}

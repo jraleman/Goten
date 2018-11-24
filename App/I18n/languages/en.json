@@ -1,0 +1,20 @@
+{
+  "onboardingScreen": {
+    "slideOne": {
+      "title": "Boilerplate Application",
+      "text": "This is a good way to start your project"
+    },
+    "slideTwo": {
+      "title": "Simple Ideas",
+      "text": "Let's design those ideas"
+    },
+    "slideThree": {
+      "title": "Code Organized",
+      "text": "Because you deserve the best..."
+    },
+    "slideFour": {
+      "title": "A product by",
+      "text": "Tap the icon to continue!"
+    }
+  }
+}
