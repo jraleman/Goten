@@ -6,7 +6,7 @@ import {
 
 const statusBarHeight = (Platform.OS === 'ios') ? 20 : StatusBar.currentHeight;
 
-export default StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     backgroundColor: '#393939',
@@ -20,3 +20,5 @@ export default StyleSheet.create({
     color: '#fefefe'
   }
 });
+
+export default styles;

@@ -14,34 +14,29 @@ import styles from './styles';
 class AppHeader extends React.Component {
   constructor (props) {
     super(props);
-    this._onPress = this.props.onPress;
-    this._icon = this.props.icon;
-    this._onPressRight = this.props.onPressRight;
-    this._iconRight = this.props.iconRight;
-    this._title = this.props.title;
-    this.state = {};
   }
   render () {
+    const { onPress, icon, onPressRight, iconRight, title } = this.props;
     return (
       <React.Fragment>
         <Header style={ styles.header }>
           <Left>
             <Button
               transparent={ true }
-              onPress={ this._onPress }
+              onPress={ onPress }
             >
-              <Icon name={ this._icon } />
+              <Icon name={ icon } />
             </Button>
           </Left>
           <Body>
-            <Title>{ this._title }</Title>
+            <Title>{ title }</Title>
           </Body>
           <Right>
             <Button
               transparent={ true }
-              onPress={ this._onPressRight }
+              onPress={ onPressRight }
             >
-              <Icon name={ this._iconRight } />
+              <Icon name={ iconRight } />
             </Button>
           </Right>
         </Header>

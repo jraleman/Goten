@@ -1,25 +1,24 @@
-#!/usr/bin/env node
-
-// ~~ Dependencies ~~
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
-// ~~ Local Dependencies ~~
-import CalendarScreen from '../../Screens/CalendarScreen';
+
 import DrawerNavigation from '../DrawerNavigation';
-import ForgotPasswordScreen from '../../Screens/ForgotPasswordScreen';
-import LoginScreen from '../../Screens/LoginScreen';
-import NotificationsScreen from '../../Screens/NotificationsScreen';
-import OnboardingScreen from '../../Screens/OnboardingScreen';
-import ProfileScreen from '../../Screens/ProfileScreen';
-import SearchScreen from '../../Screens/SearchScreen';
-import SettingsScreen from '../../Screens/SettingsScreen';
-import SignupScreen from '../../Screens/SignupScreen';
-import TestScreen from '../../Screens/TestScreen';
-import ThemeScreen from '../../Screens/ThemeScreen';
-import VideoScreen from '../../Screens/VideoScreen';
-import ChatScreen from '../../Screens/ChatScreen';
-import CameraScreen from '../../Screens/CameraScreen';
-import ReduxScreen from '../../Screens/ReduxScreen';
+// import { DrawerNavMain, DrawerNavAlt } from '../DrawerNavigation';
+
+import Calendar from '../../Containers/Calendar';
+import Camera from '../../Containers/Camera';
+import Chat from '../../Containers/Chat';
+import ChangePassword from '../../Containers/Settings/ChangePassword';
+import ForgotPassword from '../../Containers/Login/ForgotPassword';
+import Login from '../../Containers/Login';
+import Notifications from '../../Containers/Notifications';
+import Onboard from '../../Containers/Onboard';
+import Profile from '../../Containers/Profile';
+import Search from '../../Containers/Search';
+import Settings from '../../Containers/Settings';
+import Signup from '../../Containers/Signup';
+import Test from '../../Containers/Settings/Test';
+import Theme from '../../Containers/Settings/Theme';
+import Video from '../../Containers/Video';
 
 // 'float'  -> Stays at the top and animates as screens are changed.
 // 'screen' -> Each screen has a header attached to it,
@@ -29,26 +28,26 @@ const mode = 'none';
 
 const AppNavigation = StackNavigator(
   {
-    AltDrawer: { screen: DrawerNavigation.Alt },
-    Calendar: { screen: CalendarScreen },
-    ForgotPassword: { screen: ForgotPasswordScreen },
-    Login: { screen: LoginScreen },
-    MainDrawer: { screen: DrawerNavigation.Main },
-    NotificationsScreen: { screen: NotificationsScreen },
-    Onboarding: { screen: OnboardingScreen },
-    Profile: { screen: ProfileScreen },
-    Search: { screen: SearchScreen },
-    Settings: { screen: SettingsScreen },
-    Signup: { screen: SignupScreen },
-    Test: { screen: TestScreen },
-    Theme: { screen: ThemeScreen },
-    VideoCall: { screen: VideoScreen },
-    Chat: { screen: ChatScreen },
-    Camera: { screen: CameraScreen },
-    Redux: { screen: ReduxScreen }
+    'AltDrawer': { screen: DrawerNavigation.alt },
+    'Calendar': { screen: Calendar },
+    'Camera': { screen: Camera },
+    'Chat': { screen: Chat },
+    'ChangePassword': { screen: ChangePassword },
+    'ForgotPassword': { screen: ForgotPassword },
+    'Login': { screen: Login },
+    'MainDrawer': { screen: DrawerNavigation.main },
+    'NotificationsScreen': { screen: Notifications },
+    'Onboard': { screen: Onboard },
+    'Profile': { screen: Profile },
+    'Search': { screen: Search },
+    'Settings': { screen: Settings },
+    'Signup': { screen: Signup },
+    'Test': { screen: Test },
+    'Theme': { screen: Theme },
+    'Video': { screen: Video }
   },
   {
-    initialRouteName: 'Onboarding',
+    initialRouteName: 'Onboard',
     headerMode: mode
   }
 );

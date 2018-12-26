@@ -1,57 +1,54 @@
-#!/usr/bin/env node
-
-// ~~ Dependencies ~~
 import React from 'react';
 import { DrawerNavigator } from 'react-navigation';
-// ~~ Local Dependencies ~~
-import CalendarScreen from '../../Screens/CalendarScreen';
-import DrawerNavigationContainer from '../../Containers/DrawerNavigationContainer';
-import ForgotPasswordScreen from '../../Screens/ForgotPasswordScreen';
-import LoginScreen from '../../Screens/LoginScreen';
-import NotificationsScreen from '../../Screens/NotificationsScreen';
-import OnboardingScreen from '../../Screens/OnboardingScreen';
-import ProfileScreen from '../../Screens/ProfileScreen';
-import SearchScreen from '../../Screens/SearchScreen';
-import SettingsScreen from '../../Screens/SettingsScreen';
-import SignupScreen from '../../Screens/SignupScreen';
-import TestScreen from '../../Screens/TestScreen';
-import ThemeScreen from '../../Screens/ThemeScreen';
-import VideoScreen from '../../Screens/VideoScreen';
-import ChatScreen from '../../Screens/ChatScreen';
-import CameraScreen from '../../Screens/CameraScreen';
-import ReduxScreen from '../../Screens/ReduxScreen';
 
-const MainDrawerNav = DrawerNavigator(
+import Drawer from '../../Components/Drawer';
+
+import Calendar from '../../Containers/Calendar';
+import Camera from '../../Containers/Camera';
+import Chat from '../../Containers/Chat';
+import Notifications from '../../Containers/Notifications';
+import Search from '../../Containers/Search';
+import Settings from '../../Containers/Settings';
+import Video from '../../Containers/Video';
+
+const DrawerNavMain = DrawerNavigator(
   {
-    'Calendar': { screen: CalendarScreen },
-    'Search': { screen: SearchScreen },
-    'Video': { screen: VideoScreen },
-    'Notifications': { screen: NotificationsScreen },
-    'Chat': { screen: ChatScreen },
-    'Camera': { screen: CameraScreen },
-    'Redux': { screen: ReduxScreen },
-    'Settings': { screen: SettingsScreen }
+    'Calendar': { screen: Calendar },
+    'Search': { screen: Search },
+    'Video': { screen: Video },
+    'Notifications': { screen: Notifications },
+    'Settings': { screen: Settings }
   },
   {
     initialRouteName: 'Calendar',
-    contentComponent: props => <DrawerNavigationContainer { ...props } />
+    contentComponent: props => <Drawer { ...props } />
   }
 );
 
-const AltDrawerNav = DrawerNavigator(
+const DrawerNavAlt = DrawerNavigator(
   {
-    'Test': { screen: TestScreen },
-    'Theme': { screen: ThemeScreen }
+    'Calendar': { screen: Calendar },
+    'Search': { screen: Search },
+    'Video': { screen: Video },
+    'Notifications': { screen: Notifications },
+    'Chat': { screen: Chat },
+    'Camera': { screen: Camera },
+    'Settings': { screen: Settings }
   },
   {
-    initialRouteName: 'Test',
-    contentComponent: props => <DrawerNavigationContainer { ...props } />
+    initialRouteName: 'Notifications',
+    contentComponent: props => <Drawer { ...props } />
   }
 );
 
 const DrawerNavigation = {
-  Main: MainDrawerNav,
-  Alt: AltDrawerNav
+  main: DrawerNavMain,
+  alt: DrawerNavAlt
 }
 
 export default DrawerNavigation;
+
+// export {
+  
+//   DrawerNavAlt
+// };

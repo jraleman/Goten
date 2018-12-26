@@ -1,54 +1,36 @@
-#!/usr/bin/env node
-
-/*
-** App
-** ---------------------------------------------------------------------------|
-** Author: jraleman
-** Date: Fri, Aug 31 2018
-*/
-
-// ~~ Dependencies ~~
 import React from 'react';
-// ~~ Local Dependencies ~~
+import { StatusBar } from 'react-native';
+import {
+  StyleProvider,
+  Container
+} from 'native-base';
+
+import AppNavigation from './Navigation/AppNavigation';
+import NetworkIndicator from './Components/NetworkIndicator';
+
+import variables from './Theme/variables';
+import getTheme from './Theme/Components';
+
 import './Config';
-import RootContainer from './Containers/RootContainer';
 
-
-// -----------------
-
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-
-const initialStates = {
-  count : 0
-}
-const reducers = (state = initialStates, action) => {
-  switch (action.type) {
-    case 'INCREASE_COUNT':
-      state = { count: state.count + 1 }
-      break ;
-    case 'DECREASE_COUNT':
-      state = { count: state.count - 1 }
-      break ;
-  }
-  return (state)
-};
-const reduxStore = createStore(reducers);
-
-// ------------
-
-
-// ~~ React Component ~~
 class App extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {};
   }
   render () {
     return (
-      <Provider store={ reduxStore }>
-        <RootContainer />
-      </Provider>
+      <React.Fragment>
+        <StyleProvider style={ getTheme(variables) }>
+          <React.Fragment>
+          {/* <Container style={ styles.container }> */}
+          { /* <NetworkIndicator /> */}
+            <StatusBar barStyle={ 'light-content' } />
+            {/* Go to ./Containers/Onboard */}
+            <AppNavigation />
+          {/* </Container> */}
+          </React.Fragment>
+        </StyleProvider>
+      </React.Fragment>
     );
   }
 }
