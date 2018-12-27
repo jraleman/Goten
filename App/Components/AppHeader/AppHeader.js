@@ -16,41 +16,67 @@ class AppHeader extends React.Component {
     super(props);
   }
   render () {
-    const { onPress, icon, onPressRight, iconRight, title } = this.props;
+    const { leftOnPress, leftIcon, rightOnPress, rightIcon, title } = this.props;
     return (
       <React.Fragment>
         <Header style={ styles.header }>
-          <Left>
-            <Button
-              transparent={ true }
-              onPress={ onPress }
-            >
-              <Icon name={ icon } />
-            </Button>
-          </Left>
+          <LeftSide leftOnPress={ leftOnPress } leftIcon={ leftIcon } />
           <Body>
             <Title>{ title }</Title>
           </Body>
-          <Right>
-            <Button
-              transparent={ true }
-              onPress={ onPressRight }
-            >
-              <Icon name={ iconRight } />
-            </Button>
-          </Right>
+          <RightSide rightOnPress={ rightOnPress } rightIcon={ rightIcon } />
         </Header>
       </React.Fragment>
     );
   }
 }
 
+const LeftSide = props => {
+  const { leftOnPress, leftIcon } = props;
+  return (
+    <React.Fragment>
+      <Left>
+        <Button
+          transparent
+          onPress={ leftOnPress }
+        >
+          <Icon name={ leftIcon } />
+        </Button>
+      </Left>
+    </React.Fragment>
+  );
+}
+
+const RightSide = props => {
+  const { rightOnPress, rightIcon } = props;
+  return (
+    <React.Fragment>
+      <Right>
+        <Button
+          transparent
+          onPress={ rightOnPress }
+        >
+          <Icon name={ rightIcon } />
+        </Button>
+      </Right>
+    </React.Fragment>
+  );
+}
+
 AppHeader.propTypes = {
-  onPress: PropTypes.func,
-  icon: PropTypes.string,
-  onPressRight: PropTypes.func,
-  iconRight: PropTypes.string,
+  leftOnPress: PropTypes.func,
+  leftIcon: PropTypes.string,
+  rightOnPress: PropTypes.func,
+  rightIcon: PropTypes.string,
   title: PropTypes.string.isRequired
 };
+
+AppHeader.defaultProps = {
+  leftOnPress: props => props.navigation.openDrawer(),
+  leftIcon: 'menu',
+  rightOnPress: () => window.alert('Pass me an action! :)'),
+  rightIcon: '',
+  title: '{ screenTitle }'
+}
 
 export default AppHeader;
