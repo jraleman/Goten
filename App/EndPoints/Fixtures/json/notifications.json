@@ -1,0 +1,19 @@
+{
+  "id": 59433,
+  "date": "2012-21-12 04:20:42",
+  "sender": {
+    "id": 4242,
+    "firstName": "Joe",
+    "middleName": "the",
+    "lastName": "Average"
+  },
+  "receiver": {
+    "id": 6969,
+    "firstName": "Mary",
+    "middleName": "",
+    "lastName": "Sue"
+  },
+  "hidden": 0,
+  "type": 2,
+  "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+}
