@@ -1,6 +1,6 @@
 {
   "components": {
-    "appHeader": {},
+    "header": {},
     "networkIndicator": {}
   },
   "containers": {
@@ -23,6 +23,5 @@
       }
     }
   },
-  "login": {},
-  
+  "login": {}
 }
