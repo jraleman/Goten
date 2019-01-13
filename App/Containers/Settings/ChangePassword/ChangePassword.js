@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Text } from 'native-base';
+
 class ChangePassword extends React.Component {
     constructor (props) {
         super(props);
@@ -7,7 +9,7 @@ class ChangePassword extends React.Component {
     render () {
         return (
             <React.Fragment>
-                { 'ChangePassword' }
+                <Text>{ 'ChangePassword' }</Text>
             </React.Fragment>
         );
     }
