@@ -13,7 +13,7 @@ class Loader extends React.Component {
     return (
       <React.Fragment>
         <Container style={ styles.container }>
-          <Spinner color={ '#121212' } />
+          <Spinner color={ styles.container.color } />
         </Container>
       </React.Fragment>
     );

@@ -33,12 +33,16 @@ class NetworkIndicator extends React.Component {
       this.setState({ isConnected: false });
     }
   }
+  // { /* style it for iPhone X */}
   render () {
+    const message = 'No Internet Connection!';
     if (this.state.isConnected === false) {
       return (
-        <View style={ styles.container }>
-          <Text style={ styles.text }>{ 'No Internet Connection!' }</Text>
-        </View>
+        <React.Fragment>
+          <View style={ styles.container }>
+            <Text style={ styles.text }>{ message }</Text>
+          </View>
+        </React.Fragment>
       );
     }
     return (null);

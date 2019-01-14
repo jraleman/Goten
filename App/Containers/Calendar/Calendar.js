@@ -193,7 +193,7 @@ class Calendar extends React.Component {
           <AppHeader
             title={ 'Calendar' }
             icon={ 'menu' }
-            onPress={ () => { this.props.navigation.openDrawer(); }}
+            onPress={ () => this.props.navigation.openDrawer() }
           />
           <this._renderAgendaComponent />
         </Container>

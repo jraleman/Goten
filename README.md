@@ -19,10 +19,10 @@ git clone https://github.com/jraleman/Basico.git basico/
 cd basico/
 ```
 
-Install all the dependencies needed:
+Install all the needed dependencies:
 
 ```
-npm install
+yarn install
 ```
 
 ### Link
@@ -91,8 +91,7 @@ Describe the functionality of each directory.
 
 #### Containers
 
-- `App.js` ⇢ main application, where Redux store is created and configured
-- `RootContainer.js` ⇢ main view, contains the status bar and navigation component
+-> Screens
 
 #### Config
 
@@ -121,30 +120,12 @@ Primary and other navigation components reside here.
 menu(s) in a StackNavigation
 - `DrawerNavigation/` ⇢ ...
 
-#### Redux
-
-![redux-graph](resources/images/redux.gif)
-
-Summary:
-
-- Store -> Global states
-- Actions -> Type object of state
-- Dispatcher -> Modify states
-- Reducers -> Return a new state
-- Subscribers -> Listen for state changes
-
-Source: [Bumbu's simpe-redux](https://bumbu.github.io/simple-redux/)
-
 #### Services
 
 Contains the API service and other important utilities for the application.
 
 - `Api.js` ⇢ main API service, giving an interface to communicate with the back end
 - `Fixtures/` ⇢ mocks the API service (offline mode), making it faster to develop early on
-
-#### Screens
-
-...
 
 #### Themes
 
@@ -233,50 +214,15 @@ See `./App/Themes/variables.js`
 
 ...
 
-## Goals
-
-  - [ ] DrawerNavigator
-    - [ ] Finish container (menu)
-  - [ ] PathNavigator
-- [ ] Notifications
-  - [x] Show network connectivity status
-    - [ ] Use a [toast component](https://github.com/remobile/react-native-toast)
-  - [ ] Include [push notifications too](https://github.com/zo0r/react-native-push-notification)
-- [ ] Screens
-  - [x] Onboarding screen
-  - [ ] Integrate the login system
-    - [ ] Firebase demo app (test login)
-    - [ ] Forgot password
-    - [ ] Sign up integration
-    - [ ] Data validation
-  - [ ] [Profile screen](https://github.com/nattatorn-dev/react-native-user-profile)
-  - [ ] Settings screen
-  - [ ] Messages screen
-  - [ ] Calendar screen
-  - [ ] Error screen
-- [ ] Languages
-  - [x] Add i18n support
-  - [ ] Integrate to multiple screen
-  - [x] English
-  - [ ] Spanish
-  - [ ] German
-- [ ] [Realm DB](https://www.youtube.com/watch?v=2sI64vaHF98)
-- [x] Themes
-  - [x] NativeBase components screen
-  - [x] Integrate NB's `variables.js`
-- [ ] Housekeeping
-  - [ ] Styling!
-  - [ ] Refactor code
-  - [ ] Ongoing app support
-
-## Known Issues
+## TODO - Knownn Issues
 
 - [ ] Change logo width depending on landscape/portrait orientation
 - [ ] Fetch from API via http (not secure) in iOS
+- [ ] No landscape mode optimization.
 
 ## Attribution
 
-- [Onboarding Icons made by Freepik](http://www.freepik.com)
+- [Abstract blue background, Designed by Kjpargeter](https://www.freepik.com/free-vector/abstract-blue-background_859016.htm)
 
 ## Sauce
 
@@ -288,10 +234,10 @@ See `./App/Themes/variables.js`
 
 ## Attributions
 
-- [LIBRARY 3 AM](https://www.1001fonts.com/library-3-am-font.html)
-- [loginBackground](https://flic.kr/p/25w2ewc)
-- [drawerNavigationBackground](https://flic.kr/p/owtdUV)
-- [drawerNavigationAvatar](https://www.iconfinder.com/icons/1509458/animal_cat_feline_halloween_kitten_icon)
+- [Font - LIBRARY 3 AM](https://www.1001fonts.com/library-3-am-font.html)
+- [Image - loginBackground](https://backgroundcheckall.com/bright-light-background/)
+- [Image - drawerNavigationBackground](https://imgur.com/9eZ3QJu)
+- [Image - avatar](https://www.boldlylead.com/wp-content/uploads/2018/02/male_white_bald_glasses.png)
 
 ## Support Us!
 

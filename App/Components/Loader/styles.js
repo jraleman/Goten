@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
     height: '100%',
     zIndex: 999,
     alignSelf: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    color: '#121212'
   }
 });
 

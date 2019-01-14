@@ -24,7 +24,7 @@ class Camera extends React.Component {
           <AppHeader
             title={ 'Camera' }
             icon={ 'menu' }
-            onPress={ () => { this.props.navigation.openDrawer(); }}
+            onPress={ () => this.props.navigation.openDrawer() }
           />
           <Content>
             <Text>{ "CameraScreen" }</Text>

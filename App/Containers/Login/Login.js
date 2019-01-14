@@ -26,7 +26,7 @@ import '../../Config';
 
 const WALLPAPER_OPACITY = 0.25;
 const WALLPAPER_BLUR = 2.25;
-const WALLPAPER_OVERLAY = '#e4e4a1';
+const WALLPAPER_OVERLAY = '';
 
 class Login extends React.Component {
   constructor (props) {

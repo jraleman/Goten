@@ -48,7 +48,7 @@ class Search extends React.Component {
               <Searchbar
                 placeholder="Search"
                 onChangeText={query => { this.setState({ firstQuery: query }); }}
-                value={ firstQuery }
+                value={ this.state.firstQuery }
               />
             </Form>
           </Content>
