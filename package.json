@@ -1,20 +1,19 @@
 {
   "name": "Basico",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "lint": "node ./node_modules/standardx/bin/cmd.js --verbose './App/**/*.js' | node ./node_modules/snazzy/bin/cmd.js || true",
     "lint-fix": "node ./node_modules/standardx/bin/cmd.js --parser babel-eslint --fix --verbose './App/**/*.js' | node ./node_modules/snazzy/bin/cmd.js || true",
-    "lint-log": "npm run lint > lint.log",
-    "doc": "./node_modules/.bin/jsdoc --verbose -r ./App || true"
+    "lint-log": "npm run lint > lint.log"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "native-base": "^2.10.0",
-    "react": "16.6.0-alpha.8af6728",
-    "react-native": "0.57.3",
+    "react": "16.6.3",
+    "react-native": "0.57.8",
     "react-native-app-intro-slider": "^1.0.1",
     "react-native-calendars": "^1.21.0",
     "react-native-elements": "^0.19.1",
@@ -23,24 +22,18 @@
     "react-native-search-filter": "^0.1.4",
     "react-native-star-rating": "^1.1.0",
     "react-native-true-sight": "^1.0.0-alpha4",
-    "react-native-vector-icons": "^6.0.2",
-    "react-native-video": "^3.2.1",
-    "react-navigation": "^2.18.3",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.1",
-    "redux-persist": "^5.10.0"
+    "react-native-vector-icons": "^6.1.0",
+    "react-native-video": "^4.3.1",
+    "react-navigation": "^2.18.3"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
-    "eslint": "^5.11.0",
+    "eslint": "^5.12.0",
     "jest": "23.6.0",
-    "jsdoc": "^3.5.5",
-    "metro-react-native-babel-preset": "0.48.1",
-    "react-test-renderer": "16.6.0-alpha.8af6728",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3",
     "snazzy": "^8.0.0",
-    "standardx": "^3.0.1",
-    "webpack": "^4.28.2"
+    "standardx": "^3.0.1"
   },
   "jest": {
     "preset": "react-native"
