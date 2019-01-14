@@ -234,10 +234,10 @@ See `./App/Themes/variables.js`
 
 ## Attributions
 
-- [LIBRARY 3 AM](https://www.1001fonts.com/library-3-am-font.html)
-- [loginBackground](https://flic.kr/p/25w2ewc)
-- [drawerNavigationBackground](https://flic.kr/p/owtdUV)
-- [drawerNavigationAvatar](https://www.iconfinder.com/icons/1509458/animal_cat_feline_halloween_kitten_icon)
+- [Font - LIBRARY 3 AM](https://www.1001fonts.com/library-3-am-font.html)
+- [Image - loginBackground](https://backgroundcheckall.com/bright-light-background/)
+- [Image - drawerNavigationBackground](https://imgur.com/9eZ3QJu)
+- [Image - avatar](https://www.boldlylead.com/wp-content/uploads/2018/02/male_white_bald_glasses.png)
 
 ## Support Us!
 

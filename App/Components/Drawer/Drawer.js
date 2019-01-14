@@ -19,7 +19,7 @@ import { Images } from '../../Theme';
 
 const BACKGROUND_OPACITY = 0.35;
 const BACKGROUND_BLUR = 0.75;
-const BACKGROUND_OVERLAY = '#121212';
+const BACKGROUND_OVERLAY = '';
 
 class Drawer extends React.Component {
   constructor (props) {
@@ -40,10 +40,10 @@ class Drawer extends React.Component {
             style={ styles.drawerContent }
           >
             <NavigationHeader
-              avatarImg={{ uri: 'https://api.adorable.io/avatars/256/basico@adorable.io.png' }}
+              avatarImg={{ uri: 'https://www.boldlylead.com/wp-content/uploads/2018/02/male_white_bald_glasses.png' }}
               backgroundImg={ Images.drawerNavigationCover }
-              headerTitle={ 'Joe Doe' }
-              headerSubtitle={ 'Teacher 111' }
+              headerTitle={ 'Johnny Sins' }
+              headerSubtitle={ 'Doctor and Teacher' }
               onPress={ () => this.props.navigation.navigate('Profile') }
             />
             <List
