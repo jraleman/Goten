@@ -1,5 +1,4 @@
-import React from 'react';
-
+import * as React from 'react';
 import {
   Animated,
   Keyboard,
@@ -16,6 +15,8 @@ import {
   Label,
   Text
 } from 'native-base';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 
 import styles from './styles';
 import { Images } from '../../Theme';
@@ -64,10 +65,20 @@ class Login extends React.Component {
   _handleNavigation () {
     // hotfix!
     var self = this;
+
     window.setTimeout(function() {
+      self._fadeAnimation();
       self.setState({ loading: false });
-      self.props.navigation.navigate('MainDrawer');
+
+        // refactor this!
+        const resetAction = StackActions.reset({
+          index: 0,
+          actions: [NavigationActions.navigate({ routeName: 'MainDrawer' })],
+        });
+        self.props.navigation.dispatch(resetAction);
+
     }, 1500);
+
     // this.props.navigation.navigate('AltDrawer');
   }
   _onLoginHandler = () => {
@@ -95,12 +106,14 @@ class Login extends React.Component {
       <React.Fragment>
         <StatusBar hidden={ true } />
         <Container style={ styles.container }>
+          { this.state.loading ? (<Loader />) : (null) }
           <Wallpaper
             image={ Images.loginBackground }
             overlay={ WALLPAPER_OVERLAY }
             opacity={ WALLPAPER_OPACITY }
             blur={ WALLPAPER_BLUR }
           >
+
             <TouchableWithoutFeedback
               onPress={ Keyboard.dismiss }
               accessible={ false }
@@ -111,17 +124,18 @@ class Login extends React.Component {
                 resizeMode={ 'contain' }
               />
             </TouchableWithoutFeedback>
+
             <Form style={ styles.form }>
+
               <Item floatingLabel={ true }>
                 <Label style={ styles.label }>{ 'Email' }</Label>
                 <TextInput
                   keyboardType={ 'email-address' }
                   returnKeyType={ 'next' }
-                  onSubmitEditing={ () => { this._focusNextField('passRef'); } }
-                  ref={ input => { this.inputs['emailRef'] = input; } }
                   style={ styles.input }
                 />
               </Item>
+              
               <Item
                 floatingLabel={ true }
                 last={ true }
@@ -129,7 +143,6 @@ class Login extends React.Component {
                 <Label style={ styles.label }>{ 'Password' }</Label>
                 <TextInput
                   onSubmitEditing={ Keyboard.dismiss }
-                  ref={ input => { this.inputs['passRef'] = input; } }
                   style={ styles.input }
                 />
               </Item>
@@ -172,7 +185,7 @@ class Login extends React.Component {
             ) : (null)
             }
           </Wallpaper>
-          { this.state.loading ? (<Loader />) : (null) }
+          
         </Container>
       </React.Fragment>
     );
