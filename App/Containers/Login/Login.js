@@ -65,11 +65,9 @@ class Login extends React.Component {
   _handleNavigation () {
     // hotfix!
     var self = this;
-
     window.setTimeout(function() {
       self._fadeAnimation();
       self.setState({ loading: false });
-
         // refactor this!
         const resetAction = StackActions.reset({
           index: 0,
@@ -124,9 +122,7 @@ class Login extends React.Component {
                 resizeMode={ 'contain' }
               />
             </TouchableWithoutFeedback>
-
             <Form style={ styles.form }>
-
               <Item floatingLabel={ true }>
                 <Label style={ styles.label }>{ 'Email' }</Label>
                 <TextInput
@@ -134,8 +130,7 @@ class Login extends React.Component {
                   returnKeyType={ 'next' }
                   style={ styles.input }
                 />
-              </Item>
-              
+              </Item> 
               <Item
                 floatingLabel={ true }
                 last={ true }
