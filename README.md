@@ -1,11 +1,8 @@
-# Basico
+# Goten
 
 [![js-standardx-style](https://img.shields.io/badge/code%20style-standardx-brightgreen.svg?style=flat-square)](https://github.com/standard/standardx)
 
-## About
-
-React Native boilerplate (or sample app), with basic redux, native-base and
-login integration.
+React Native boilerplate (or sample app), with basic redux, native-base and login integration.
 
 ## Setup
 
@@ -15,57 +12,14 @@ Follow the steps from the react-native
 Clone the repository:
 
 ```
-git clone https://github.com/jraleman/Basico.git basico/
-cd basico/
+git clone https://github.com/jraleman/Goten.git Goten/
+cd Goten/
 ```
 
 Install all the needed dependencies:
 
 ```
 yarn install
-```
-
-### Link
-
-If you wish to integrate this boilerplate into your project, make sure to
-link the following packages:
-
-- `react-native-i18n`
-- `react-native-push-notification`
-- `react-native-vector-icons`
-
-[Click here](https://facebook.github.io/react-native/docs/linking-libraries-ios.html) to learn more about `react-native link`.
-
-### iOS
-
-To run the iOS version:
-
-```
-react-native run-ios
-```
-
-You can also do it manually:
-
-```
-open ios/Basico.xcodeproj/
-npm start &
-```
-
-and click the build/run icon. :)
-
-### Android
-
-To run the Android version:
-
-```
-react-native run-android
-```
-
-You can also run it manually:
-
-```
-cd android && ./gradlew installDebug
-npm start &
 ```
 
 ## Project Structure
@@ -140,8 +94,7 @@ style file.
 
 ### Code
 
-This project follows the [standardx](https://github.com/standard/standardx
-), based on [standard](https://github.com/standard/standard).
+This project follows the [standardx](https://github.com/standard/standardx), based on [standard](https://github.com/standard/standard).
 
 #### Rules
 
@@ -155,15 +108,15 @@ Check out `.eslintrc` for more info.
 
 #### Lint
 
-After running `npm install`, you can run the following scripts (depending on
+After running `yarn install`, you can run the following scripts (depending on
 your platform), to check if the code follows our `standardx` coding
 style guide.
 
-| Mac OS X           | Description                                            |
-| :----------------- | :----------------------------------------------------- |
-| `npm run lint`     | Checks `App/` code style.                              |
-| `npm run lint-log` | Saves and open the log file.                           |
-| `npm run lint-fix` | Fix the code style of the JavaScript files.            |
+| Command         | Description                                            |
+| :-------------- | :----------------------------------------------------- |
+| `yarn lint`     | Checks `App/` code style.                              |
+| `yarn lint-log` | Saves and open the log file.                           |
+| `yarn lint-fix` | Fix the code style of the JavaScript files.            |
 
 If you have any problem running the lint from the project, try installing the
 following packages globally, like this:
@@ -214,17 +167,16 @@ See `./App/Themes/variables.js`
 
 ...
 
-## TODO - Knownn Issues
+## TODO
 
+- [ ] Clean / Refactor project, use hooks and context
+- [ ] Update dependencies, scripts, and structure
+- [ ] Finish documentation of project
 - [ ] Change logo width depending on landscape/portrait orientation
 - [ ] Fetch from API via http (not secure) in iOS
-- [ ] No landscape mode optimization.
+- [ ] Landscape mode optimization
 
-## Attribution
-
-- [Abstract blue background, Designed by Kjpargeter](https://www.freepik.com/free-vector/abstract-blue-background_859016.htm)
-
-## Sauce
+## Resources
 
 - [React Native Cookbook - by Stan Bernshadskiy, Crysfel Villa](http://shop.oreilly.com/product/0636920090144.do)
 - [Network Indicator](https://medium.com/dailyjs/offline-notice-in-react-native-28a8d01e8cd0)
@@ -238,13 +190,14 @@ See `./App/Themes/variables.js`
 - [Image - loginBackground](https://backgroundcheckall.com/bright-light-background/)
 - [Image - drawerNavigationBackground](https://imgur.com/9eZ3QJu)
 - [Image - avatar](https://www.boldlylead.com/wp-content/uploads/2018/02/male_white_bald_glasses.png)
+- [Abstract blue background, Designed by Kjpargeter](https://www.freepik.com/free-vector/abstract-blue-background_859016.htm)
 
-## Support Us!
+## Support!
 
 If you need help on how to
 get started, please follow [this guideline](CONTRIBUTING.md).
 
-#### Donate
+### Donate
 
 If you like what you see, or if this project help you reduce time to develop
 your own projects, feel free to buy us a pint ;)
